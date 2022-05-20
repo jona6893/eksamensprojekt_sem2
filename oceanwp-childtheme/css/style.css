@@ -54,6 +54,13 @@ Version: 1.0
   box-sizing: border-box;
 }
 
+/* max-width på 1200px med 8px padding ude til siderne på mobil */
+.max-width {
+  max-width: 1200px;
+  padding-inline: 8px;
+  margin-inline: auto;
+}
+
 /* #endregion global */
 
 /* #region color */
