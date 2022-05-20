@@ -102,7 +102,7 @@ get_header(); ?>
 </main>
 
 <script>
-  const url = "https://victor-ly.dk/kea/10_eksamensprodukt/eacegum/wp-json/wp/v2/produkt"; //wp-json
+  const url = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-json/wp/v2/produkt"; //wp-json
 
   let produkter; //json databasen
   let filter = "alle"; //variabel som ændrer sig alt efter hvilken filterknap du klikker på
