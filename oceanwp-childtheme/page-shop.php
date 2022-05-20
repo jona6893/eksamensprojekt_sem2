@@ -12,18 +12,47 @@
 get_header(); ?>
 
 <style>
+  #filter-menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+  }
+  
+  .filter-btn {
+    color: var(--blaa);
+    border: 1px var(--blaa) solid;
+    background-color: transparent;
+    padding: 8px 12px;
+    width: 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-family: "NormsRegular";
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .filter-btn.selected {
+    color: var(--lyse-blaa);
+    background-color: var(--blaa);
+  }
+
   #produkter {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 80px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 60px 40px;
+    margin-block: 80px;
   }
 
   .produkt-card {
-    aspect-ratio: 8 / 5;
+    aspect-ratio: 8 / 13;
     width: 100%;
+    display: grid;
+    grid-template-rows: 8fr 5fr;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 1px 3px 64px rgba(0, 0, 0, 4)
+    box-shadow: 1px 3px 64px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
   }
 
   .produkt-image {
@@ -33,7 +62,7 @@ get_header(); ?>
   }
 
   .bottom-row {
-    padding: 0px 8px 12px 8px;
+    padding: 0px 8px 20px 8px;
     text-align: center;
   }
 
@@ -41,29 +70,40 @@ get_header(); ?>
     color: var(--black);
     font-family: "NormsRegular";
     font-size: 1.5rem !important;
+    margin-bottom: 4px;
   }
 
   .produkt-slogan {
     color: var(--black);
     font-family: "NormsRegular";
     font-size: 1.25rem !important;
+    margin-bottom: 2px;
   }
 
   .produkt-beskrivelse {
     color: var(--black);
     font-family: "NormsRegular";
     font-size: 0.875rem !important;
+    margin-bottom: 2px;
   }
 
   .pris {
     color: var(--black);
     font-family: "NormsBold";
     font-size: 1.5rem;
-    margin-block: 32px;
+    margin-block: 8px;
+  }
+
+  .bottom-row {
+    height: 100%;
+    position: relative;
   }
 
   .bottom-row button {
-    margin-inline: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--sort);
     color: white;
     border: none;
@@ -77,7 +117,7 @@ get_header(); ?>
   }
 
   .bottom-row button:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 </style>
 
@@ -96,8 +136,10 @@ get_header(); ?>
     </article>
   </template>
 
-  <section id="filter-menu">
-
+  <section id="filter-menu" class="max-width">
+    <button class="filter-btn selected" data-category="alle">Alle</button>
+    <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
+    <button class="filter-btn" data-category="merchandise">Merchandise</button>
   </section>
   <section id="produkter" class="max-width"></section>
 </main>
@@ -146,6 +188,7 @@ get_header(); ?>
         const clone = template.cloneNode(true);
         clone.querySelector(".produkt-image").style.backgroundImage = `url(${produkt.billede.guid})`;
         clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
+        clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
         clone.querySelector(".produkt-beskrivelse").textContent = `${produkt.beskrivelsekort}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
         //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
