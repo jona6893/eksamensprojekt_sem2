@@ -91,7 +91,10 @@ get_header(); ?>
     color: var(--black);
     font-family: "NormsBold";
     font-size: 1.5rem;
-    margin-block: 8px;
+    position: absolute;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .bottom-row {
