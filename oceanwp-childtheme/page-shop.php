@@ -13,7 +13,7 @@ get_header(); ?>
 
 <style>
   #produkter {
-    display: grid:
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 80px 60px;
   }
@@ -29,6 +29,7 @@ get_header(); ?>
   .produkt-image {
     aspect-ratio: 1 / 1;
     width: 100%;
+    background-size: contain;
   }
 
   .bottom-row {
@@ -39,26 +40,26 @@ get_header(); ?>
   .produkt-navn {
     color: var(--black);
     font-family: "NormsRegular";
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 
   .produkt-slogan {
     color: var(--black);
     font-family: "NormsRegular";
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 
   .produkt-beskrivelse {
     color: var(--black);
     font-family: "NormsRegular";
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
   }
 
   .pris {
     color: var(--black);
     font-family: "NormsBold";
     font-size: 1.5rem;
-    margin-block: 32px
+    margin-block: 32px;
   }
 
   .bottom-row button {
@@ -147,7 +148,7 @@ get_header(); ?>
         clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
         clone.querySelector(".produkt-beskrivelse").textContent = `${produkt.beskrivelsekort}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
-        clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
+        //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
         mainContent.appendChild(clone);
       }
     });

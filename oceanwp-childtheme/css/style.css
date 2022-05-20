@@ -54,6 +54,10 @@ Version: 1.0
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100% !important;
+}
+
 /* max-width på 1200px med 8px padding ude til siderne på mobil */
 .max-width {
   max-width: 1200px;
