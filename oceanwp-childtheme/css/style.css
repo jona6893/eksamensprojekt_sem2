@@ -43,3 +43,27 @@ Version: 1.0
 }
 
 /* #endregion font */
+
+/* #region global */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #endregion global */
+
+/* #region color */
+
+:root {
+  --farve-1: ;
+  --farve-2: ;
+  --farve-3: ;
+  --farve-4: ;
+  --farve-5: ;
+}
+
+/* #endregion color */
