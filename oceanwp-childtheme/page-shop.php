@@ -135,7 +135,7 @@ get_header(); ?>
 
   function display() {
     //kaldes når databasen er hentet eller når en filterknap klikkes
-    const mainContent = document.getElementById("main-content");
+    const mainContent = document.getElementById("produkter");
     const template = document.querySelector("template").content;
     mainContent.textContent = ""; //fjerner sektionens indhold
 
