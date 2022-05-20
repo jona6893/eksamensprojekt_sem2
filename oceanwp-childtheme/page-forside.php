@@ -11,47 +11,72 @@
 
 get_header(); ?>
 
-	<?php do_action( 'ocean_before_content_wrap' ); ?>
+	<style>
+		.swiper {
+  width: 600px;
+  height: 300px;
+}
+	</style>
 
-	<div id="content-wrap" class="container clr">
 
-		<?php do_action( 'ocean_before_primary' ); ?>
 
-		<div id="primary" class="content-area clr">
+	<main>
+	<section id="splashimage">
+	<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
 
-			<?php do_action( 'ocean_before_content' ); ?>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-			<div id="content" class="site-content clr">
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
 
-				<?php do_action( 'ocean_before_content_inner' ); ?>
+	</section>
+	<section>
 
-				<?php
-				// Elementor `single` location.
-				if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
+	</section>
 
-					// Start loop.
-					while ( have_posts() ) :
-						the_post();
+	</main>
 
-						get_template_part( 'partials/page/layout' );
 
-					endwhile;
+	<script type="module">
+		import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
-				}
-				?>
+		const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-				<?php do_action( 'ocean_after_content_inner' ); ?>
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-			</div><!-- #content -->
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-			<?php do_action( 'ocean_after_content' ); ?>
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+		
 
-		</div><!-- #primary -->
-
-		<?php do_action( 'ocean_after_primary' ); ?>
-
-	</div><!-- #content-wrap -->
-
-	<?php do_action( 'ocean_after_content_wrap' ); ?>
+	</script>
 
 <?php get_footer(); ?>
