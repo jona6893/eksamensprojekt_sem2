@@ -12,6 +12,35 @@
 get_header(); ?>
 
 <style>
+  #splash-image {
+    position: relative;
+    background-color: #D8F5F6;
+    background-size: cover;
+    height: 70vh;
+    margin-bottom: 80px;
+  }
+
+  #splash-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/Alle-3-web-.webp");
+    background-position: center;
+    opacity: 0.15;
+  }
+
+  #splash-image h1 {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "NormsRegular";
+    font-size: 4rem;
+  }
+
   #filter-menu {
     display: flex;
     justify-content: space-between;
@@ -58,7 +87,7 @@ get_header(); ?>
   .produkt-image {
     aspect-ratio: 1 / 1;
     width: 100%;
-    background-size: contain;
+    background-size: cover;
   }
 
   .bottom-row {
@@ -138,7 +167,9 @@ get_header(); ?>
       </div>
     </article>
   </template>
-
+  <section id="splash-image">
+    <h1>Produkter</h1>
+</section>
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
     <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
