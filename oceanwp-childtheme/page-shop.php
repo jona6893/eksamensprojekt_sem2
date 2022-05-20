@@ -144,7 +144,7 @@ get_header(); ?>
         //hvis objektet har samme værdi som filterknappen
         const clone = template.cloneNode(true);
         clone.querySelector(".produkt-image").style.backgroundImage = `url(${produkt.billede.guid})`;
-        clone.querySelector(".produkt_navn").textContent = `${produkt.title.rendered}`;
+        clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
         clone.querySelector(".produkt-beskrivelse").textContent = `${produkt.beskrivelsekort}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
         clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
