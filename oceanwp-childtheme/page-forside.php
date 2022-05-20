@@ -8,13 +8,20 @@
  *
  * @package OceanWP WordPress theme
  */
-
 get_header(); ?>
 
 	<style>
+
+#splashimage{
+	width: 100%;
+	height: 90vh;
+	display: grid;
+    justify-items: center;
+}
+
 		.swiper {
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 	</style>
 
@@ -27,9 +34,10 @@ get_header(); ?>
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+	<img class="swiper-slide" src="https://ucarecdn.com/21559504-fb8f-4ef1-84f9-d4b00609a601/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202021-11-12%20kl.%2016.45.52.png" alt="">
+	<img class="swiper-slide" src="https://ucarecdn.com/103a14b8-1b2b-4986-97ee-d77280cf8ed2/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202021-11-12%20kl.%2014.34.32.png" alt="">
+	<img class="swiper-slide" src="https://ucarecdn.com/6dfe6abf-ff50-4566-93bd-d95bacf05b3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/EACE%20HEALTHY%20TEETH%20MOCKUP%20ISOLATED.jpg" alt="">
+  
     ...
   </div>
   <!-- If we need pagination -->
@@ -56,7 +64,7 @@ get_header(); ?>
 
 		const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
 
   // If we need pagination
