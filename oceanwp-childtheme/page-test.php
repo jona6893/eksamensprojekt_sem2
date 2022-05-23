@@ -83,11 +83,11 @@ get_header(); ?>
     border: 0;
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    z-index: 10;
   }
 
   .fan-btn:hover {
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 10;
   }
 
   .previous {
