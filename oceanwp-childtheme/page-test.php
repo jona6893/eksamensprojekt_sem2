@@ -87,6 +87,7 @@ get_header(); ?>
 
   .fan-btn:hover {
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
   }
 
   .previous {
