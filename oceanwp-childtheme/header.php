@@ -32,6 +32,7 @@ header {
     height: 75px;
     align-items: center;
 	justify-content: space-between;
+	z-index: 999;
 }
 header img{
 	width: 125px;
@@ -41,7 +42,8 @@ header img{
 	position: fixed;
 	display: grid;
 	background-color: #f1f1f1;
-	z-index: 2;
+	z-index: 100;
+
 }
 .hidemenu{
 	display:none;
@@ -98,19 +100,19 @@ header img{
 </style>
 
 <header>
-	<div class="logo"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/eacelogo.png" alt="eace gum logo"></div>
+	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/" class="logo"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/eacelogo.png" alt="eace gum logo"></a>
 	<div class="burger-ikon">
 		<img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/menu_FILL0_wght400_GRAD0_opsz48.png" alt="">
 	</div>
 	<div class="menulinks">
-	<a href="">SHOP</a>
+	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
 	<a href="">ABONNEMENTER</a>
 	<div class="hover-mig"><a href="">BAG OM EACEGUM</a>
 	<div class="drop-down-menu hidemenu">
-		<a href="">PRODUKTION</a>
-		<a href="">ANSVAR</a>
+		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
+		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
 	</div></div>
-	<a href="">VORES HISTORIE</a>
+	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/vores-historie/">VORES HISTORIE</a>
 	<a href="">BLOG</a>
 	
 	<div class="menu-ikoner">
