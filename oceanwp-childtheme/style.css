@@ -15,31 +15,36 @@ Version: 1.0
 /* regular */
 @font-face {
   font-family: "NormsRegular";
-  src: url("../fonts/TTNorms-Regular.woff2") format("woff2");
+  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Regular.woff2")
+    format("woff2");
 }
 
 /* bold */
 @font-face {
   font-family: "NormsBold";
-  src: url("../fonts/TTNorms-Bold.woff2") format("woff2");
+  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Bold.woff2")
+    format("woff2");
 }
 
 /* italic */
 @font-face {
   font-family: "NormsItalic";
-  src: url("../fonts/TTNorms-Italic.woff2") format("woff2");
+  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Italic.woff2")
+    format("woff2");
 }
 
 /* bold italic */
 @font-face {
   font-family: "NormsBoldItalic";
-  src: url("../fonts/TTNorms-BoldItalic.woff2") format("woff2");
+  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-BoldItalic.woff2")
+    format("woff2");
 }
 
 /* light */
 @font-face {
   font-family: "NormsLight";
-  src: url("../fonts/TTNorms-Light.woff2") format("woff2");
+  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Light.woff2")
+    format("woff2");
 }
 
 /* #endregion font */
