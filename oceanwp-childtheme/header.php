@@ -41,7 +41,7 @@ header img{
 	position: fixed;
 	display: grid;
 	background-color: #f1f1f1;
-
+	z-index: 2;
 }
 .hidemenu{
 	display:none;
