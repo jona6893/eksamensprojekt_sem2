@@ -70,6 +70,7 @@ header img{
 	width: 50px;
 	z-index: 999;
 }
+
 .logo{
 	width: 100px;
 }
@@ -127,20 +128,18 @@ header img{
 
 let burgerikon = document.querySelector(".burger-ikon");
 let slideout = document.querySelector(".menulinks");
-
-
-
-
-
+let ikon = document.querySelector(".burger-ikon img");
 
 burgerikon.addEventListener("click", () => {
-	slideout.classList.toggle("burger-open")
+  slideout.classList.toggle("burger-open");
+  burgerikon.classList.toggle("burger-open");
+  if (burgerikon.classList.contains("burger-open")) {
+    ikon.src =
+      "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/close_FILL0_wght400_GRAD0_opsz48.png";
+  } else {
+    ikon.src = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/menu_FILL0_wght400_GRAD0_opsz48.png";
+  }
 });
-
-
-
-
-
 
 console.log("yes this works ");
 
