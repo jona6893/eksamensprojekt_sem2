@@ -15,26 +15,131 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php oceanwp_schema_markup( 'html' ); ?>>
+<style> 
+.burger-ikon{
+	display: none;
+}
+.menulinks{
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
+}
 
-	<?php wp_body_open(); ?>
+header {
+	padding-inline: 5%;
+	display: flex;
+    flex-direction: row;
+    height: 75px;
+    align-items: center;
+	justify-content: space-between;
+}
+header img{
+	width: 125px;
+}
 
-	<?php do_action( 'ocean_before_outer_wrap' ); ?>
+.drop-down-menu{
+	position: fixed;
+	display: grid;
+	background-color: #f1f1f1;
 
-	<div id="outer-wrap" class="site clr">
+}
+.hidemenu{
+	display:none;
+}
+.hover-mig:hover .hidemenu{
+	display:grid;
+}
+.menu-ikoner{
+	display:flex;
+	column-gap: 10px;
+    align-items: center;
+}
+.menu-user{
+	width:16px;
+}
+.menu-cart{
+	width:22px;
+}
+@media (max-width: 900px) {
+	.burger-ikon{
+	display: block;
+	width: 50px;
+	z-index: 999;
+}
+.logo{
+	width: 100px;
+}
+.menulinks{
+	    position: fixed;
+    flex-direction: column;
+    column-gap: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff9f1;
+    top: 0%;
+    left: 100%;
+    z-index: 998;
+    margin-top: 30px;
+    transition: 0.5s;
+    padding-top: 5%;
+    padding-left: 5%;
+}
 
-		<a class="skip-link screen-reader-text" href="#main"><?php oceanwp_theme_strings( 'owp-string-header-skip-link', 'oceanwp' ); ?></a>
+.burger-open{
+	left:0%
+}
 
-		<?php do_action( 'ocean_before_wrap' ); ?>
 
-		<div id="wrap" class="clr">
+}
 
-			<?php do_action( 'ocean_top_bar' ); ?>
 
-			<?php do_action( 'ocean_header' ); ?>
+</style>
 
-			<?php do_action( 'ocean_before_main' ); ?>
+<header>
+	<div class="logo"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/eacelogo.png" alt="eace gum logo"></div>
+	<div class="burger-ikon">
+		<img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/menu_FILL0_wght400_GRAD0_opsz48.png" alt="">
+	</div>
+	<div class="menulinks">
+	<a href="">SHOP</a>
+	<a href="">ABONNEMENTER</a>
+	<div class="hover-mig"><a href="">BAG OM EACEGUM</a>
+	<div class="drop-down-menu hidemenu">
+		<a href="">PRODUKTION</a>
+		<a href="">ANSVAR</a>
+	</div></div>
+	<a href="">VORES HISTORIE</a>
+	<a href="">BLOG</a>
+	
+	<div class="menu-ikoner">
+		<a href=""><img class="menu-user" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/user.png" alt=""></a>
+		<a href=""><img class="menu-cart" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/cart.png" alt=""></a>
+	</div>
+	</div>	
+	
+</header>
 
-			<main id="main" class="site-main clr"<?php oceanwp_schema_markup( 'main' ); ?> role="main">
+<script>
 
-				<?php do_action( 'ocean_page_header' ); ?>
+let burgerikon = document.querySelector(".burger-ikon");
+let slideout = document.querySelector(".menulinks");
+
+
+
+
+
+
+burgerikon.addEventListener("click", () => {
+	slideout.classList.toggle("burger-open")
+});
+
+
+
+
+
+
+console.log("yes this works ");
+
+
+
+</script>
