@@ -73,14 +73,22 @@
 
 	.icon-facebook {
 		background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/facebook.png");
+		background-size: cover;
 		aspect-ratio: 1 / 1;
+		height: 28px;
 		width: 28px;
+		align-self: center;
+		margin-bottom: 20px;
 	}
 
 	.icon-instagram {
 		background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/instagram.png");
+		background-size: cover;
 		aspect-ratio: 1 / 1;
+		height: 28px;
 		width: 28px;
+		align-self: center;
+		margin-bottom: 20px;
 	}
 
 	.opening-time {
