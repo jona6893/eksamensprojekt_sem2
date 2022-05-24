@@ -26,7 +26,7 @@ function oceanwp_child_enqueue_parent_style() {
 	$version = $theme->get( 'Version' );
 
 	// Load the stylesheet.
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/css/style.css', array( 'oceanwp-style' ), $version );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
 
 	//load the script.
 	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', 1.1, true);
