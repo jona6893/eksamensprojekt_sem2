@@ -22,7 +22,7 @@
 .menulinks{
 	display: flex;
 	flex-direction: row;
-	column-gap: 10px;
+	column-gap: 20px;
 }
 
 header {
@@ -56,9 +56,11 @@ header img{
 }
 .menu-user{
 	width:16px;
+	transform: translateY(-2px);
 }
 .menu-cart{
 	width:22px;
+	transform: translateY(-2px);
 }
 @media (max-width: 900px) {
 	.burger-ikon{
