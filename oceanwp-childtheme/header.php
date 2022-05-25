@@ -76,6 +76,7 @@ header img{
 }
 .menulinks{
 	    position: fixed;
+	display: flex;
     flex-direction: column;
     column-gap: 10px;
     width: 100vw;
@@ -84,10 +85,9 @@ header img{
     top: 0%;
     left: 100%;
     z-index: 998;
-    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s;
-    padding-top: 5%;
-    padding-left: 5%;
 }
 
 .burger-open{
