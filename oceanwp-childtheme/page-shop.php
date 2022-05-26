@@ -12,6 +12,10 @@
 get_header(); ?>
 
 <style>
+  :root{
+    --viste-produkter: 6;
+  }
+
   #splash-image {
     position: relative;
     background-color: #D8F5F6;
@@ -68,26 +72,57 @@ get_header(); ?>
 
   #produkter {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 60px 40px;
-    margin-block: 80px;
+    margin-block: 20px 80px;
+    padding: 32px 16px;
   }
 
   .produkt-card {
-    aspect-ratio: 8 / 13;
+    aspect-ratio: 1 / 2;
     width: 100%;
     display: grid;
-    grid-template-rows: 8fr 5fr;
+    grid-template-rows: 6fr 8fr;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 1px 3px 64px rgba(0, 0, 0, 0.04);
     overflow: hidden;
+    transition: background-color 0.3s;
   }
 
-  .produkt-image {
-    aspect-ratio: 1 / 1;
+  .produkt-card:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 730px) {
+    #produkter {
+      grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
+      gap: 10px;
+      overflow-x: scroll;
+    }
+
+    .produkt-card {
+      box-shadow: 1px 3px 32px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  .produkt-image, .produkt-hoverimage {
+    position: relative;
+    aspect-ratio: 8 / 7;
     width: 100%;
     background-size: cover;
+  }
+
+  .produkt-hoverimage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .produkt-card:hover .produkt-hoverimage {
+    opacity: 1;
   }
 
   .bottom-row {
@@ -106,14 +141,15 @@ get_header(); ?>
     color: var(--black);
     font-family: "NormsRegular";
     font-size: 1.25rem !important;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
   }
 
   .produkt-beskrivelse {
     color: var(--black);
     font-family: "NormsRegular";
-    font-size: 0.875rem !important;
+    font-size: 0.75rem !important;
     margin-bottom: 2px;
+    padding-inline: 16px;
   }
 
   .pris {
@@ -151,13 +187,61 @@ get_header(); ?>
   .bottom-row button:hover {
     opacity: 0.8;
   }
+
+  #features {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-inline: 24px;
+    margin-block: 40px;
+  }
+
+  @media (max-width: 570px) {
+    #features {
+      gap: 100px;
+      padding-inline: 40px;
+    }
+  }
+
+  #features figure {
+    width: 96px;
+  }
+
+  figure {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+  }
+
+  figure img {
+    place-self: end;
+  }
+
+  #testimonial {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    overflow-x: scroll;
+    padding-inline: 24px;
+    margin-block: 40px;
+  }
+
+  .testimonial-container {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 16px;
+  }
 </style>
 
 <main id="main-content">
 
   <template>
     <article class="produkt-card">
-      <div class="top-row produkt-image"></div>
+      <div class="top-row produkt-image">
+        <div class="produkt-hoverimage"></div>
+      </div>
       <div class="bottom-row">
         <h2 class="produkt-navn"></h2>
         <h3 class="produkt-slogan"></h3>
@@ -167,15 +251,44 @@ get_header(); ?>
       </div>
     </article>
   </template>
+
   <section id="splash-image">
     <h1>Produkter</h1>
 </section>
+
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
     <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
     <button class="filter-btn" data-category="merchandise">Merchandise</button>
   </section>
+
   <section id="produkter" class="max-width"></section>
+
+  <section id="features" class="max-width">
+    <figure id="mint">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint.svg">
+      <caption>Frisk & langvarig mint smag</caption>
+    </figure>
+    <figure id="dk">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_dk.svg">
+      <caption>Udviklet & produceret i Danmark</caption>
+    </figure>
+    <figure id="levering">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_levering.svg">
+      <caption>Effektiv levering</caption>
+    </figure>
+    <figure id="sukkerfrit">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_sukkerfrit.svg">
+      <caption>Sukkerfrit tyggegummi</caption>
+    </figure>
+  </section>
+
+  <section id="testimonial" class="max-width">
+    <article class="testimonial-container">
+
+    </article>
+  </section>
+
 </main>
 
 <script>
@@ -214,6 +327,7 @@ get_header(); ?>
     //kaldes når databasen er hentet eller når en filterknap klikkes
     const mainContent = document.getElementById("produkter");
     const template = document.querySelector("template").content;
+    let visteProdukter;
     mainContent.textContent = ""; //fjerner sektionens indhold
 
     produkter.forEach((produkt) => {
@@ -221,14 +335,17 @@ get_header(); ?>
         //hvis objektet har samme værdi som filterknappen
         const clone = template.cloneNode(true);
         clone.querySelector(".produkt-image").style.backgroundImage = `url(${produkt.billede.guid})`;
+        clone.querySelector(".produkt-hoverimage").style.backgroundImage = `url(${produkt.hoverbillede.guid})`;
         clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
         clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
-        clone.querySelector(".produkt-beskrivelse").textContent = `${produkt.beskrivelsekort}`;
+        clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.beskrivelsekort}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
         //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
         mainContent.appendChild(clone);
+        visteProdukter = document.getElementById("produkter").childElementCount;
       }
     });
+    document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
   }
 </script>
 
