@@ -79,6 +79,7 @@ header img{
 	display: flex;
     flex-direction: column;
     column-gap: 10px;
+	padding-top: 200px;
     width: 100vw;
     height: 100vh;
     background-color: #fff9f1;
@@ -86,14 +87,22 @@ header img{
     left: 100%;
     z-index: 998;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     transition: 0.5s;
+	font-size: 1.3rem;
 }
 
 .burger-open{
 	left:0%
 }
-
+.drop-down-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff9f1;
+    z-index: 100;
+    align-items: center;
+}
 
 }
 
