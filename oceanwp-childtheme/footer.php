@@ -119,12 +119,14 @@
 	}
 
 	.feedback {
+		color: green;
 		display: none;
 	}
 
 	.btn-signup.disabled {
 		cursor: default;
-		opacity: 0.6;
+		opacity: 0.4;
+		background-color: green;
 	}
 </style>
 
@@ -170,7 +172,7 @@
 					<input class="input-email" type="text" placeholder="email">
 					<button class="btn-signup">Tilmeld</button>
 				</div>
-				<p class="feedback">Tak fordi du har tilmeldt dig vores nyhedsbrev!</p>
+				<p class="feedback">✅ Tak fordi du har tilmeldt dig vores nyhedsbrev!</p>
 			</div>
 		</article>
 	</section>
