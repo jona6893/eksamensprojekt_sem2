@@ -110,6 +110,21 @@
 		border: none;
 		background-color: var(--sort);
 		color: white;
+		transition: opacity 0.3s;
+		width: 120px;
+	}
+
+	.btn-signup:hover {
+		opacity: 0.8;
+	}
+
+	.feedback {
+		display: none;
+	}
+
+	.btn-signup.disabled {
+		cursor: default;
+		opacity: 0.6;
 	}
 </style>
 
@@ -155,8 +170,33 @@
 					<input class="input-email" type="text" placeholder="email">
 					<button class="btn-signup">Tilmeld</button>
 				</div>
+				<p class="feedback">Tak fordi du har tilmeldt dig vores nyhedsbrev!</p>
 			</div>
 		</article>
 	</section>
 </footer>
+
+<script>
+	const input = document.querySelector(".input-email");
+	const signup = document.querySelector(".btn-signup");
+	const feedback = document.querySelector(".feedback");
+
+	signup.addEventListener("click", () => {
+		//hvis knappen IKKE har klassen .disabled
+		if (!signup.classList.contains("disabled")) {
+			//tilføj klassen .disabled
+			signup.classList.add("disabled");
+			input.value = ""; //fjerner indhold
+			signup.textContent = "Tak!";
+			feedback.style.display = "block";
+
+			//gør teksten usynlig igen og knappen klikbart efter 5 sekunder
+			setTimeout(() => {
+				signup.classList.remove("disabled")
+				signup.textContent = "Tilmeld";
+      	feedback.style.display = null;
+    	}, "5000") //5000 millisekunder
+		}
+	});
+</script>
 
