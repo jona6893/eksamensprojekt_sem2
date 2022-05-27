@@ -79,6 +79,7 @@
 		width: 28px;
 		align-self: center;
 		margin-bottom: 20px;
+		transition: opacity 0.3s;
 	}
 
 	.icon-instagram {
@@ -89,6 +90,11 @@
 		width: 28px;
 		align-self: center;
 		margin-bottom: 20px;
+		transition: opacity 0.3s;
+	}
+
+	.social-media a:hover {
+		opacity: 0.7;
 	}
 
 	.opening-time {
