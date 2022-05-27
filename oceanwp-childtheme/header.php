@@ -126,7 +126,7 @@ header img{
 	</div>
 	<div class="menulinks">
 	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
-	<a href="">ABONNEMENTER</a>
+	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/">ABONNEMENTER</a>
 	<div class="hover-mig">
 		<a href="">BAG OM EACEGUM</a>
 		<img class="arrow-down" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="">
