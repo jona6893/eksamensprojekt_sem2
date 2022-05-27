@@ -206,6 +206,7 @@ height:25px;
   let produkter; //json databasen
   let filter = "alle"; //variabel som ændrer sig alt efter hvilken filterknap du klikker på
 
+
   document.addEventListener("DOMContentLoaded", () => {
     //venter indtil siden er loadet før knapperne bliver funktionelle
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -251,7 +252,29 @@ height:25px;
       }
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
+     let minus = document.querySelectorAll(".minus")
+  let plus = document.querySelectorAll(".plus")
+  let tal = document.querySelectorAll(".add-tal").value
+
+
+    tilføjTal(minus, plus, tal);
   }
+ 
+function tilføjTal(minus, plus, tal) {
+  console.log(minus, plus, tal)
+
+  plus.forEach((e, i) => {
+    e.addEventListener("click", () =>{
+      tal[i]
+    })
+  })
+
+
+}  
+
+  
+  
 </script>
+
 
 <?php get_footer(); ?>
