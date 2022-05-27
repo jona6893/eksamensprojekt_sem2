@@ -103,7 +103,7 @@ get_header(); ?>
     @media (min-width: 750px) {
 
       #section2_mobile{
-        display:none;
+        display:grid;
       }
       #section2_desktop{
         display: grid;
@@ -111,7 +111,7 @@ get_header(); ?>
         padding: 3%;
       }
 
-      .videntekst-d{
+      .videntekst{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -182,7 +182,7 @@ get_header(); ?>
     </div>
   
   </section>
-  <section id="section2_desktop">
+  <!-- <section id="section2_desktop">
 
     <h2>Videnskaben</h2>
     <div class="videntekst-d">
@@ -224,7 +224,7 @@ get_header(); ?>
       </div>
     </div>
   
-  </section>
+  </section> -->
   <section id="section3">
       <div class="container">
         <div class="accordion">

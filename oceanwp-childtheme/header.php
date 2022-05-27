@@ -43,6 +43,7 @@ header img{
     display: grid;
     background-color: #ffffff;
     z-index: 100;
+	padding: 1rem;
 }
 .hidemenu{
 	display:none;
@@ -62,6 +63,10 @@ header img{
 .menu-cart{
 	width:22px;
 	transform: translateY(-2px);
+}
+
+.arrow-down{
+	width: 15px;
 }
 @media (max-width: 900px) {
 	.burger-ikon{
@@ -93,7 +98,9 @@ header img{
     transition: 0.5s;
 	font-size: 1.3rem;
 }
-
+.hover-mig:hover .hidemenu{
+	display:flex;
+}
 .burger-open{
 	left:0%
 }
@@ -104,6 +111,7 @@ header img{
     background-color: #fff9f1;
     z-index: 100;
     align-items: center;
+	padding: 0;
 }
 
 }
@@ -121,6 +129,7 @@ header img{
 	<a href="">ABONNEMENTER</a>
 	<div class="hover-mig">
 		<a href="">BAG OM EACEGUM</a>
+		<img class="arrow-down" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="">
 	<div class="drop-down-menu hidemenu">
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
