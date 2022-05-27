@@ -219,17 +219,20 @@ get_header(); ?>
 
   figure img {
     place-self: end;
+    aspect-ratio: 1 / 1;
+    width: 80%;
   }
 
   #testimonial {
     position: relative;
     padding-inline: 24px;
     margin-block: 40px;
-    height: 15rem;
+    height: 17.5rem;
   }
 
   .testimonial-container {
     position: absolute;
+    top: 10%;
     text-align: center;
     width: clamp(100px, 25vw, 320px);
     display: flex;
@@ -369,26 +372,26 @@ get_header(); ?>
     <button class="filter-btn" data-category="merchandise">Merchandise</button>
   </section>
 
-  <section id="produkter" class="max-width"></section>
-
   <section id="features" class="max-width">
     <figure id="mint">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint.svg">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint_sort.svg">
       <caption>Frisk & langvarig mint smag</caption>
     </figure>
     <figure id="dk">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_dk.svg">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_dk_sort.svg">
       <caption>Udviklet & produceret i Danmark</caption>
     </figure>
     <figure id="levering">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_levering.svg">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_levering_sort.svg">
       <caption>Effektiv levering</caption>
     </figure>
     <figure id="sukkerfrit">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_sukkerfrit.svg">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_sukkerfrit_sort.svg">
       <caption>Sukkerfrit tyggegummi</caption>
     </figure>
   </section>
+
+  <section id="produkter" class="max-width"></section>
 
   <section id="testimonial" class="max-width">
     <article class="testimonial-container" data-index="1">
