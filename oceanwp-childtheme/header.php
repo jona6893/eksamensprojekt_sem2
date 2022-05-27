@@ -40,10 +40,10 @@ header img{
 
 .drop-down-menu{
 	position: fixed;
-	display: grid;
-	background-color: #f1f1f1;
-	z-index: 100;
-
+    display: grid;
+    background-color: #ffffff;
+    z-index: 100;
+	padding: 1rem;
 }
 .hidemenu{
 	display:none;
@@ -64,12 +64,19 @@ header img{
 	width:22px;
 	transform: translateY(-2px);
 }
+
+.arrow-down{
+	width: 15px;
+}
 @media (max-width: 900px) {
 	.burger-ikon{
 	display: block;
 	width: 50px;
 	z-index: 999;
 }
+	.burger-ikon img{
+		width: 40px;
+	}
 
 .logo{
 	width: 100px;
@@ -79,6 +86,7 @@ header img{
 	display: flex;
     flex-direction: column;
     column-gap: 10px;
+	padding-top: 200px;
     width: 100vw;
     height: 100vh;
     background-color: #fff9f1;
@@ -86,14 +94,25 @@ header img{
     left: 100%;
     z-index: 998;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     transition: 0.5s;
+	font-size: 1.3rem;
 }
-
+.hover-mig:hover .hidemenu{
+	display:flex;
+}
 .burger-open{
 	left:0%
 }
-
+.drop-down-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff9f1;
+    z-index: 100;
+    align-items: center;
+	padding: 0;
+}
 
 }
 
@@ -108,7 +127,9 @@ header img{
 	<div class="menulinks">
 	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
 	<a href="">ABONNEMENTER</a>
-	<div class="hover-mig"><a href="">BAG OM EACEGUM</a>
+	<div class="hover-mig">
+		<a href="">BAG OM EACEGUM</a>
+		<img class="arrow-down" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="">
 	<div class="drop-down-menu hidemenu">
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
@@ -117,7 +138,7 @@ header img{
 	<a href="">BLOG</a>
 	
 	<div class="menu-ikoner">
-		<a href=""><img class="menu-user" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/user.png" alt=""></a>
+		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/bruger/"><img class="menu-user" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/user.png" alt=""></a>
 		<a href=""><img class="menu-cart" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/cart.png" alt=""></a>
 	</div>
 	</div>	
