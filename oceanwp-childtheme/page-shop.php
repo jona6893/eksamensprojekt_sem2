@@ -197,6 +197,7 @@ get_header(); ?>
     flex-wrap: wrap;
     padding-inline: 24px;
     margin-block: 40px;
+    max-width: 600px;
   }
 
   @media (max-width: 570px) {
