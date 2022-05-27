@@ -138,7 +138,7 @@ header img{
 	<a href="">BLOG</a>
 	
 	<div class="menu-ikoner">
-		<a href=""><img class="menu-user" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/user.png" alt=""></a>
+		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/bruger/"><img class="menu-user" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/user.png" alt=""></a>
 		<a href=""><img class="menu-cart" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/cart.png" alt=""></a>
 	</div>
 	</div>	
