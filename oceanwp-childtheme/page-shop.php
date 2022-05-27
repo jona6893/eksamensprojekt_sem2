@@ -445,6 +445,7 @@ get_header(); ?>
     //kaldes når siden er loadet
     let response = await fetch(url);
     produkter = await response.json();
+    produkter.reverse();
     display(produkter); //kalder på display() funktionen med produkter som parameter
     //console.log(produkter);
   }
