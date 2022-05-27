@@ -52,8 +52,8 @@ get_header(); ?>
   }
   
   .filter-btn {
-    color: var(--blaa);
-    border: 1px var(--blaa) solid;
+    color: var(--sort);
+    border: 1px var(--sort) solid;
     background-color: transparent;
     padding: 8px 12px;
     width: 110px;
@@ -66,8 +66,8 @@ get_header(); ?>
   }
 
   .filter-btn.selected {
-    color: var(--lyse-blaa);
-    background-color: var(--blaa);
+    color: white;
+    background-color: var(--sort);
   }
 
   #produkter {
@@ -220,18 +220,78 @@ get_header(); ?>
   }
 
   #testimonial {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    overflow-x: scroll;
+    position: relative;
     padding-inline: 24px;
     margin-block: 40px;
+    height: 12rem;
   }
 
   .testimonial-container {
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
+    position: absolute;
+    text-align: center;
+    width: clamp(100px, 25vw, 320px);
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+    transform: translateX(-50%);
+    transition: left 0.75s ease-out, opacity 0.75s ease-in-out;
+  }
+
+  [data-index="1"] {
+    left: -20%;
+    opacity: 0;
+  }
+
+  [data-index="2"] {
+    left: 15%;
+    opacity: 1;
+  }
+
+  [data-index="3"] {
+    left: 50%;
+    opacity: 1;
+  }
+
+  [data-index="4"] {
+    left: 85%;
+    opacity: 1;
+  }
+
+  [data-index="5"] {
+    left: 120%;
+    opacity: 0;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    padding: 16px 8px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .previous {
+    left: 0px;
+  }
+
+  .next {
+    right: 0px;
+  }
+
+  .testimonial-container img {
+    width: 200px;
+    margin-inline: auto;
+  }
+
+  .testimonial-container > * {
+    margin: 0;
   }
 </style>
 
@@ -284,9 +344,33 @@ get_header(); ?>
   </section>
 
   <section id="testimonial" class="max-width">
-    <article class="testimonial-container">
-
+    <article class="testimonial-container" data-index="1">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Lækkert tyggegummi med dejlig frisk smag! Kan varmt anbefales som supplement til den daglige kost."</i></p>
+      <p class="quote_author"><b>Rasmus</b></p>
     </article>
+    <article class="testimonial-container" data-index="2">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Når jeg alligevel tygger tyggegummi, så er det perfekt at jeg kan få mine vitaminer samtidigt"</i></p>
+      <p class="quote_author"><b>Philip</b></p>
+    </article>
+    <article class="testimonial-container" data-index="3">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Fantastisk vitamintyggegummi som jeg helt sikkert kan anbefale. Herudover er der ekstraordinær god service ved bestilling. Helt klart 5 stjerner!"</i></p>
+      <p class="quote_author"><b>Mikael</b></p>
+    </article>
+    <article class="testimonial-container" data-index="4">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Mega let måde at få mine vitaminer over den mørke vinter. Der udover giver den dig god mint-ånde."</i></p>
+      <p class="quote_author"><b>Søren</b></p>
+    </article>
+    <article class="testimonial-container" data-index="5">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Skøn smag og en nem måde at få sine vitaminer. Får tilsendt en pakke månedligt og har aldrig haft nogen problemer."</i></p>
+      <p class="quote_author"><b>Josefine</b></p>
+    </article>
+    <button class="carousel-btn previous">←</button>
+    <button class="carousel-btn next">→</button>
   </section>
 
 </main>
@@ -348,5 +432,67 @@ get_header(); ?>
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
   }
 </script>
+<script>
+  /* konfigurer nedestående variabler efter behov */
+	//antallet af anmeldelser
+	const maxRatingsIndex = 5;
+	/* ^------------------------------------------^ */
 
+	//laver en array af elementer med klassen .testimonial-container
+	const ratings = document.querySelectorAll(".testimonial-container");
+
+  const carousel = document.getElementById("testimonial");
+
+	//bladre frem knap
+  const next = document.querySelector(".next");
+	next.addEventListener("click", () => {
+    //hvis karrousellen IKKE har klassen .animating
+    if (!carousel.classList.contains("animating")) {
+      //tilføj klassen .animating og sætter knapperne på pause indtil animationen er færdig
+      carousel.classList.add("animating")
+      ratings.forEach((rating) => {
+        //hvis data-index værdien er lig med eller mindre end 1
+        if (rating.dataset.index <= 1) {
+          //sæt data-index værdien til antallet af produkter
+          rating.dataset.index = maxRatingsIndex;
+        } else {
+          //ellers træk 1 fra data-index værdien
+          rating.dataset.index--;
+        }
+      });
+
+      //fjerner klassen .animating når animationen er færdig efter 750ms og gør knapperne klikbart igen
+      setTimeout(() => {
+        carousel.classList.remove("animating")
+      }, "750") //750 millisekunder
+
+    }
+	});
+
+	//bladre tilbage knap
+  const previous = document.querySelector(".previous");
+	previous.addEventListener("click", () => {
+    //hvis karrousellen IKKE har klassen .animating
+    if (!carousel.classList.contains("animating")) {
+      //tilføj klassen .animating og sætter knapperne på pause indtil animationen er færdig
+      carousel.classList.add("animating")
+      ratings.forEach((rating) => {
+        //hvis data-index værdien er lig med eller større end antallet af produkter
+        if (rating.dataset.index >= maxRatingsIndex) {
+          //sæt data-index værdien til 1
+          rating.dataset.index = 1;
+        } else {
+          //ellers læg 1 til data-index værdien
+          rating.dataset.index++;
+        }
+      });
+
+      //fjerner klassen .animating når animationen er færdig efter 750ms og gør knapperne klikbart igen
+      setTimeout(() => {
+        carousel.classList.remove("animating")
+      }, "750") //750 millisekunder
+
+    }
+	});
+</script>
 <?php get_footer(); ?>
