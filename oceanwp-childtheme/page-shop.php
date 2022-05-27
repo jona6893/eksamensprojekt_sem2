@@ -12,6 +12,7 @@
 get_header(); ?>
 
 <style>
+  /* variabel brugt til horisontal scroll som reference tal*/
   :root{
     --viste-produkter: 6;
   }
@@ -94,6 +95,7 @@ get_header(); ?>
     background-color: #f0f0f0;
   }
 
+  /* laver grid om til en horisontal scroll på mobil */
   @media (max-width: 730px) {
     #produkter {
       grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
@@ -223,7 +225,7 @@ get_header(); ?>
     position: relative;
     padding-inline: 24px;
     margin-block: 40px;
-    height: 12rem;
+    height: 15rem;
   }
 
   .testimonial-container {
@@ -262,15 +264,49 @@ get_header(); ?>
     opacity: 0;
   }
 
+  /* viser 1 i stedet for 3 på mobil */
+  @media (max-width: 678px) {
+    .testimonial-container {
+      width: 80%;
+    }
+
+    [data-index="1"], [data-index="2"] {
+      left: -50%;
+      opacity: 0;
+    }
+
+    [data-index="3"] {
+      left: 50%;
+      opacity: 1;
+    }
+
+    [data-index="4"], [data-index="5"] {
+      left: 150%;
+      opacity: 0;
+    }
+  }
+
   .carousel-btn {
     position: absolute;
     padding: 16px 8px;
     border: 0;
     background-color: rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    opacity: 0;
+    transition: background-color 0.3s, opacity 0.15s;
     z-index: 10;
     top: 50%;
     transform: translateY(-50%)
+  }
+
+  /* knapperne er altid synlige på mobil */
+  @media (hover: none) {
+    .carousel-btn {
+      opacity: 1;
+    }
+  }
+
+  #testimonial:hover .carousel-btn {
+    opacity: 1;
   }
 
   .carousel-btn:hover {
@@ -283,6 +319,17 @@ get_header(); ?>
 
   .next {
     right: 0px;
+  }
+
+  /* rykker knapperne lidt ud til siderne så de ikke er ovenpå teksten */
+  @media (min-width: 1200px) {
+      .previous {
+      left: -12px;
+    }
+
+    .next {
+      right: -12px;
+    }
   }
 
   .testimonial-container img {
