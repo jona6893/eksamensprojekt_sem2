@@ -296,10 +296,10 @@ get_header(); ?>
     border: 0;
     background-color: rgba(0, 0, 0, 0.1);
     opacity: 0;
-    transition: background-color 0.3s, opacity 0.15s;
+    transition: background-color 0.3s, opacity 0.15s, transform 0.3s ease-in-out;
     z-index: 10;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
   }
 
   /* knapperne er altid synlige på mobil */
@@ -311,6 +311,7 @@ get_header(); ?>
 
   #testimonial:hover .carousel-btn {
     opacity: 1;
+    transform: translateX(0);
   }
 
   .carousel-btn:hover {
@@ -319,10 +320,12 @@ get_header(); ?>
 
   .previous {
     left: 0px;
+    transform: translateX(-6px);
   }
 
   .next {
     right: 0px;
+    transform: translateX(6px);
   }
 
   /* rykker knapperne lidt ud til siderne så de ikke er ovenpå teksten */

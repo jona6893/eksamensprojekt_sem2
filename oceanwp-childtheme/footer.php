@@ -79,6 +79,7 @@
 		width: 28px;
 		align-self: center;
 		margin-bottom: 20px;
+		transition: opacity 0.3s;
 	}
 
 	.icon-instagram {
@@ -89,6 +90,11 @@
 		width: 28px;
 		align-self: center;
 		margin-bottom: 20px;
+		transition: opacity 0.3s;
+	}
+
+	.social-media a:hover {
+		opacity: 0.7;
 	}
 
 	.opening-time {
@@ -119,12 +125,14 @@
 	}
 
 	.feedback {
+		color: green;
 		display: none;
 	}
 
 	.btn-signup.disabled {
 		cursor: default;
-		opacity: 0.6;
+		opacity: 0.4;
+		background-color: green;
 	}
 </style>
 
@@ -170,7 +178,7 @@
 					<input class="input-email" type="text" placeholder="email">
 					<button class="btn-signup">Tilmeld</button>
 				</div>
-				<p class="feedback">Tak fordi du har tilmeldt dig vores nyhedsbrev!</p>
+				<p class="feedback">✅ Tak fordi du har tilmeldt dig vores nyhedsbrev!</p>
 			</div>
 		</article>
 	</section>
@@ -186,8 +194,8 @@
 		if (!signup.classList.contains("disabled")) {
 			//tilføj klassen .disabled
 			signup.classList.add("disabled");
-			input.value = ""; //fjerner indhold
 			signup.textContent = "Tak!";
+			input.value = ""; //fjerner indhold
 			feedback.style.display = "block";
 
 			//gør teksten usynlig igen og knappen klikbart efter 5 sekunder
