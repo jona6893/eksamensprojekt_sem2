@@ -252,6 +252,9 @@ height:25px;
       }
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
+
+/* ---------- Her start tæller funktionen. ---------- */
+
     //De her variabler taget fat i all de elementer der har den valgte class. Da der er mere end en, indeholder hver variable en Array.
      let minus = document.querySelectorAll(".minus")
     let plus = document.querySelectorAll(".plus")
