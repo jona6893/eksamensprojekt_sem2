@@ -40,10 +40,9 @@ header img{
 
 .drop-down-menu{
 	position: fixed;
-	display: grid;
-	background-color: #f1f1f1;
-	z-index: 100;
-
+    display: grid;
+    background-color: #ffffff;
+    z-index: 100;
 }
 .hidemenu{
 	display:none;
@@ -70,6 +69,9 @@ header img{
 	width: 50px;
 	z-index: 999;
 }
+	.burger-ikon img{
+		width: 40px;
+	}
 
 .logo{
 	width: 100px;
@@ -117,7 +119,8 @@ header img{
 	<div class="menulinks">
 	<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
 	<a href="">ABONNEMENTER</a>
-	<div class="hover-mig"><a href="">BAG OM EACEGUM</a>
+	<div class="hover-mig">
+		<a href="">BAG OM EACEGUM</a>
 	<div class="drop-down-menu hidemenu">
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
 		<a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
