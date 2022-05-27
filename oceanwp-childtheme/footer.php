@@ -194,8 +194,8 @@
 		if (!signup.classList.contains("disabled")) {
 			//tilføj klassen .disabled
 			signup.classList.add("disabled");
-			input.value = ""; //fjerner indhold
 			signup.textContent = "Tak!";
+			input.value = ""; //fjerner indhold
 			feedback.style.display = "block";
 
 			//gør teksten usynlig igen og knappen klikbart efter 5 sekunder
