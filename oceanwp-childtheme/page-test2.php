@@ -145,9 +145,18 @@ get_header(); ?>
   .minus{
     color: red;
   }
+  .minusClicked{
+    background-color: red;
+    color: white;
+  }
   .plus{
     color: green;
   }
+  .plusClicked{
+    background-color: green;
+    color: white;
+  }
+
 .add-grid-container{
        display: flex;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
