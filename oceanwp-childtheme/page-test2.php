@@ -145,16 +145,19 @@ get_header(); ?>
   .minus{
     color: red;
   }
-  .minusClicked{
+  .minus:hover{
     background-color: red;
     color: white;
   }
   .plus{
     color: green;
   }
-  .plusClicked{
+  .plus:hover{
     background-color: green;
     color: white;
+  }
+  .add-tal{
+    padding-inline: 3px;
   }
 
 .add-grid-container{
