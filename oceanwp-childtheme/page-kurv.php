@@ -29,6 +29,9 @@ get_header(); ?>
             width:100%;
         }
 
+        input{
+            color:white;
+        }
     /* ---------- Kurv ---------- */
         .kurv{
             display: grid;       
@@ -43,6 +46,9 @@ get_header(); ?>
             border-bottom: 1px solid black;
         }
 
+        .produkt img{
+            max-width: 40%;
+        }
         .total{
             display: grid;
             justify-items: end;
@@ -123,11 +129,44 @@ get_header(); ?>
         .kortnr input{
             width:100%;
         }
+        .kortnr{
+            display: grid;
+            padding: 2% 0%;
+            gap: 20px;
+        }
         .betal {
             border: none;
             background-color: white;
         }
-
+        .kort p{
+            color:white;
+            margin:0;
+        }
+        .kort{
+            display: grid;
+            aspect-ratio: 1.7/1;
+            /* background: rgb(255,181,132); */
+            background: linear-gradient(0deg, rgba(255,181,132,1) 0%, rgba(171,191,173,1) 43%, rgba(0,212,255,1) 100%);
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+        .kortfigur{
+            aspect-ratio: 1.1/1;
+            width: 20%;
+            /* background: rgb(255,215,0);
+            background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(255,224,59,1) 31%, rgba(192,192,192,1) 100%); */
+            background-image: url("https://cdn-icons-png.flaticon.com/512/6404/6404100.png");
+            background-size: cover;
+        }
+        .chipnbrand{
+            display: flex;
+            justify-content: space-between;
+        }
+        .day-month{
+            display:flex;
+            justify-content: center;
+        }
 /* -------------------- DESKTOP -------------------- */
         
         
@@ -154,7 +193,7 @@ get_header(); ?>
                 <h2>Kurv</h2>
             
                 <div class="produkt pro">
-                <img src="" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/VITAMIN-BOOST-KOLLI_900x.jpg?v=1650460271" alt="">
                 <div>
                 <h3>Produkt 1</h3>
                 <p class="pris">150</p>
@@ -162,7 +201,7 @@ get_header(); ?>
                 <h3 class="remove">X</h3>
                 </div>
                 <div class="produkt pro">
-                <img src="" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/HEALTHY-TEETH-KOLLI_900x.jpg?v=1650460506" alt="">
                 <div>
                 <h3>Produkt 2</h3>
                 <p class="pris">250</p>
@@ -192,18 +231,26 @@ get_header(); ?>
             <div class="betaling">
                 <h2>Betalings Informationer</h2>
                 <div class="kort">
+                    <div class="chipnbrand">
                     <div class="kortfigur"></div>
-                    <p class="credit-nr"></p>
-                    <p class="credit-navn"></p>
+                    <p>eace kredit</p>
+                    </div>
+                    <p class="credit-navn">1234-1234-1234-1234</p>
+                    <div class="day-month">
+                        <p class="credit-day">12</p>
+                        <p>/</p>
+                        <p class="credit-month">2022</p>
+                    </div>
+                    <p class="credit-nr">Jane Doe</p>
                 </div>
                 <div class="kortnr">
-                   <input type="text" placeholder="Navn"> 
-                   <input type="text" placeholder="Kort Nummer"> 
+                    <input class="cc-navn" type="text" placeholder="Navn"> 
+                    <input class="cc-nummer" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="19" placeholder="Kort Nummer"> 
                 </div>
                 <div class="datoer">
-                    <input type="text" placeholder="MM">
-                    <input type="text" placeholder="YYYY">
-                    <input type="text" placeholder="CVV">
+                    <input class="cc-mm" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="2" placeholder="MM">
+                    <input class="cc-yyyy" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="4" placeholder="YYYY">
+                    <input type="number" placeholder="CVC">
                 </div>
                 <button class="betal">Betal</button>
             </div>
@@ -222,46 +269,31 @@ const pris = document.querySelectorAll(".pris");
 const pro = document.querySelectorAll(".pro");
 let allPrices = []
 let totalvalue = 0
+let creditname = document.querySelector(".cc-navn")
+let creditnumber = document.querySelector(".cc-nummer")
+let creditmonth = document.querySelector(".cc-mm")
+let credityear = document.querySelector(".cc-yyyy")
 
 console.log(remove)
-remove.forEach((e, i) => {
-    e.addEventListener("click", () => {
-    pro[i].classList.add("disapear")
 
-    printValue();
+creditname.addEventListener("input", () => {
+    document.querySelector(".credit-navn").textContent = `${creditname.value}`
 })
+creditnumber.addEventListener("input", () => {
+    document.querySelector(".credit-nr").textContent = `${creditnumber.value}`
+})
+creditmonth.addEventListener("input", () => {
+    document.querySelector(".credit-day").textContent = `${creditmonth.value}`
+})
+credityear.addEventListener("input", () => {
+    document.querySelector(".credit-month").textContent = `${credityear.value}`
 })
 
 
- /* const clone = template.cloneNode(true);
- clone.querySelector(".produkt-image").style.backgroundImage = `url(${produkt.billede.guid})`; */
+    
 
-/* 
- function display() {
-    //kaldes når databasen er hentet eller når en filterknap klikkes
-    const mainContent = document.getElementById("produkter");
-    const template = document.querySelector("template").content;
-    let visteProdukter;
-    mainContent.textContent = ""; //fjerner sektionens indhold
-
-    produkter.forEach((produkt) => {
-       
-        const clone = template.cloneNode(true);
-        clone.querySelector(".produktBillede").scr = "";
-        clone.querySelector(".produkt-hoverimage").style.backgroundImage = `url(${produkt.hoverbillede.guid})`;
-        clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
-        clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
-        clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.beskrivelsekort}`;
-        clone.querySelector(".pris").textContent = `${produkt.pris}`;
-       
-        mainContent.appendChild(clone);
-        visteProdukter = document.getElementById("produkter").childElementCount;
-    });
-    document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
-  }
- */
-
-
+    console.log(creditname)
+    
 
 
 
@@ -270,7 +302,7 @@ console.log(pris)
 printValue();
 
 function printValue () {
-
+    allPrices = []
     totalvalue = 0
 
 pris.forEach(e =>{
@@ -285,13 +317,13 @@ allPrices.forEach(e => {
     console.log(totalvalue)
 });
 
-    document.querySelector(".totalnr").textContent = `${totalvalue}`;
+    document.querySelector(".totalnr").textContent = `${totalvalue} DKK`;
 };
 
 remove.forEach((e, i) => {
     e.addEventListener("click", () => {
+    pris[i].textContent = "0"    
     pro[i].classList.add("disapear")
-    allPrices.splice([i], 1)
     printValue();
 })
 })
