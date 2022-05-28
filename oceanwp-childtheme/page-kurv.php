@@ -135,7 +135,16 @@ get_header(); ?>
 @media (min-width: 750px) {}
 </style>
 
-
+        <!-- <template>
+            <article class="produkt">
+            <img class="produktBillede"src="" alt="">
+            <div>
+            <h3 class="title"></h3>
+            <p class="pris"></p>
+            </div>
+            <h3 class="remove"></h3>
+            </article>
+        </template> -->
 <main>
 
     <section id="first_section">
@@ -143,20 +152,27 @@ get_header(); ?>
         <div class="de-tre-felter">
             <div class="kurv">
                 <h2>Kurv</h2>
-                <div class="produkt pro1">
+            
+                <div class="produkt pro">
                 <img src="" alt="">
+                <div>
                 <h3>Produkt 1</h3>
+                <p class="pris">150</p>
+                </div>
                 <h3 class="remove">X</h3>
                 </div>
-                <div class="produkt pro2">
+                <div class="produkt pro">
                 <img src="" alt="">
-                <h3>Produkt 1</h3>
-                <h3>X</h3>
+                <div>
+                <h3>Produkt 2</h3>
+                <p class="pris">250</p>
+                </div>
+                <h3 class="remove">X</h3>
                 </div>
                 <div class="total">
                     <div>
                         <h4>Total</h4>
-                        <h3>250 DKK</h3>
+                        <h3 class="totalnr">250</h3>
                     </div>
                 </div>
             </div>
@@ -201,11 +217,85 @@ get_header(); ?>
 
 <script>
 
-const remove = document.querySelector(".remove")
+const remove = document.querySelectorAll(".remove");
+const pris = document.querySelectorAll(".pris");
+const pro = document.querySelectorAll(".pro");
+let allPrices = []
+let totalvalue = 0
 
-remove.addEventListener("click", () => {
-    document.querySelector(".pro1").classList.add("disapear")
+console.log(remove)
+remove.forEach((e, i) => {
+    e.addEventListener("click", () => {
+    pro[i].classList.add("disapear")
+
+    printValue();
+})
+})
+
+
+ /* const clone = template.cloneNode(true);
+ clone.querySelector(".produkt-image").style.backgroundImage = `url(${produkt.billede.guid})`; */
+
+/* 
+ function display() {
+    //kaldes når databasen er hentet eller når en filterknap klikkes
+    const mainContent = document.getElementById("produkter");
+    const template = document.querySelector("template").content;
+    let visteProdukter;
+    mainContent.textContent = ""; //fjerner sektionens indhold
+
+    produkter.forEach((produkt) => {
+       
+        const clone = template.cloneNode(true);
+        clone.querySelector(".produktBillede").scr = "";
+        clone.querySelector(".produkt-hoverimage").style.backgroundImage = `url(${produkt.hoverbillede.guid})`;
+        clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
+        clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
+        clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.beskrivelsekort}`;
+        clone.querySelector(".pris").textContent = `${produkt.pris}`;
+       
+        mainContent.appendChild(clone);
+        visteProdukter = document.getElementById("produkter").childElementCount;
+    });
+    document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
+  }
+ */
+
+
+
+
+
+
+console.log(pris)
+printValue();
+
+function printValue () {
+
+    totalvalue = 0
+
+pris.forEach(e =>{
+
+   allPrices.push(parseInt(e.textContent))
+   console.log(allPrices)
 });
+
+
+allPrices.forEach(e => {
+    totalvalue += e
+    console.log(totalvalue)
+});
+
+    document.querySelector(".totalnr").textContent = `${totalvalue}`;
+};
+
+remove.forEach((e, i) => {
+    e.addEventListener("click", () => {
+    pro[i].classList.add("disapear")
+    allPrices.splice([i], 1)
+    printValue();
+})
+})
+
 
 </script>
 
