@@ -12,6 +12,8 @@ get_header(); ?>
 
 <style>
 /* -------------------- MOBILE -------------------- */
+
+        
     /* ---------- Layout ---------- */
         #first_section {
             display: grid;
@@ -24,14 +26,24 @@ get_header(); ?>
 
         .de-tre-felter {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
             gap: 50px;
-            width:100%;
+            width: 100%;
+            justify-content: center;
         }
 
         input{
-            color:white;
+            color:black;
         }
+
+        @media (max-width: 1112px) {
+            .de-tre-felter{
+                --repeat:1;
+                display: grid;
+                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 600px));
+            }
+        }
+
     /* ---------- Kurv ---------- */
         .kurv{
             display: grid;       
@@ -67,6 +79,7 @@ get_header(); ?>
             display: grid;
             padding: 2%;
             align-items: center;
+            max-height: 100px;
         }
         .disapear{
             display:none !important;
@@ -74,15 +87,18 @@ get_header(); ?>
     /* ---------- Adresse ---------- */
         .adresse{
             display:grid;
-            background: rgb(2,0,36);
-            background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%);
+            /* background: rgb(2,0,36);
+            background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
             border-radius: 10px;
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: #d2d8d6;
+            background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+
         }    
         .adresse h2{
-            color:white;
+            color:black;
         }
         .navn-tel{
             display:grid;
@@ -95,25 +111,28 @@ get_header(); ?>
         .adresse input{
             background-color:rgb(0 0 0 / 0%);
             border: none;
-            border-bottom: solid 1px white;
+            border-bottom: solid 1px black;
         }
 
         ::placeholder{
-            color:#ffffffa6;
+            /* color:#ffffffa6; */
         }
         
     /* ---------- Betaling ---------- */
         .betaling{
             display:grid;
-            background: rgb(2,0,36);
-            background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%);
+            /* background: rgb(2,0,36);
+            background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
             border-radius: 10px;
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: #d2d8d6;
+            background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+
         }
         .betaling h2{
-            color:white;
+            color:black;
         }
         .datoer{
             display:flex;
@@ -123,7 +142,7 @@ get_header(); ?>
         .betaling input{
             background-color:rgb(0 0 0 / 0%);
             border: none;
-            border-bottom: solid 1px white;
+            border-bottom: solid 1px black;
         }
 
         .datoer input{
@@ -140,7 +159,14 @@ get_header(); ?>
         }
         .betal {
             border: none;
-            background-color: white;
+            background-color: black;
+            color:white;
+            border: solid 1px black;
+        }
+        .betal:hover{
+            background-color: #ffffff00;
+            color: black;
+            border: solid 1px black;
         }
         .kort p{
             color:white;
@@ -191,7 +217,6 @@ get_header(); ?>
 <main>
 
     <section id="first_section">
-        <h1>KURV</h1>
         <div class="de-tre-felter">
             <div class="kurv">
                 <h2>Kurv</h2>
