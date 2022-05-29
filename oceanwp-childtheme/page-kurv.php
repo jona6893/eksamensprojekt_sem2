@@ -34,6 +34,7 @@ get_header(); ?>
 
         input{
             color:black;
+            font-size:1rem;
         }
 
         @media (max-width: 1112px) {
@@ -95,6 +96,7 @@ get_header(); ?>
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: #d2d8d6;
             background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+            min-height:600px;
 
         }    
         .adresse h2{
@@ -129,7 +131,7 @@ get_header(); ?>
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: #d2d8d6;
             background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
-
+            min-height:700px;
         }
         .betaling h2{
             color:black;
