@@ -49,6 +49,10 @@ get_header(); ?>
         .produkt img{
             max-width: 40%;
         }
+        .produkt h3{
+            display: grid;
+            align-items: center;
+        }
         .total{
             display: grid;
             justify-items: end;
@@ -144,7 +148,7 @@ get_header(); ?>
         }
         .kort{
             display: grid;
-            aspect-ratio: 1.7/1;
+            aspect-ratio: 1.8/1;
             /* background: rgb(255,181,132); */
             background: linear-gradient(0deg, rgba(255,181,132,1) 0%, rgba(171,191,173,1) 43%, rgba(0,212,255,1) 100%);
             border-radius: 10px;
