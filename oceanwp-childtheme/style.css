@@ -101,7 +101,7 @@ h1 {
   font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
 }
 
-h2:not(#footer) {
+h2 :not(#footer) {
   font-size: 2rem;
   font-size: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
 }
@@ -116,7 +116,7 @@ h4 {
   font-size: clamp(1.25rem, 1.18rem + 0.3500000000000001vw, 1.6rem);
 }
 
-p:not(#footer) {
+p :not(#footer) {
   font-size: 1rem;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 }
