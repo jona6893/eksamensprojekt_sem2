@@ -43,7 +43,8 @@ get_header(); ?>
 
       #heroimage h1{
         color: white;
-        font-size: 3rem;
+      
+      
 
       }
 
@@ -419,7 +420,7 @@ get_header(); ?>
   <section id="heroimage">
   <h1>ANSVAR</h1>
   </section>
-  <section id="maincontent">
+  <section id="maincontent" >
 
   <div id="sidebar">
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject1';">BÆREDYGTIG PRODUKTION</button>
@@ -431,7 +432,7 @@ get_header(); ?>
   </div>
   <div id="indhold">
 
-  <div id="subject1">
+  <div id="subject1" class="max-width">
     <div class="overskrift1">
     <h2>BÆREDYGTIG PRODUKTION</h2>
     <p>Alle Eace-produkter er produceret i Danmark, for at sikre transparens og bedst mulig kvalitet. Tyggegummiet produceres med FN’s principper for bæredygtig udvikling og FN’s 17 verdensmål. De mest relevante verdensmål som indgår i vores produktion er:</p>
@@ -463,7 +464,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div id="subject2">
+  <div id="subject2" class="max-width">
     <div class="overskrift2">
     <h2>CERTIFICERET EMBALLAGE</h2>
     <p>Alt emballage er, ligesom vores tyggegummi, også produceret i Danmark. Vores emballage har fået certifikaterne FSC, ClimateCalc og Svanemærket, for at garantere bæredygtig emballage og formindske vores indvirkning på miljøet så meget som muligt.</p>
@@ -485,7 +486,7 @@ get_header(); ?>
       
     </div></div>
   </div>
-  <div id="subject3">
+  <div id="subject3" class="max-width">
     <div class="sub3_img">
       <img src="https://ucarecdn.com/21ed9a7e-7ea7-45d2-9e96-729851d3e280/-/format/auto/-/preview/3000x3000/-/quality/lighter/BAEREDYGTIGT-MERCH.jpg" alt="">
     </div>
@@ -516,7 +517,7 @@ get_header(); ?>
     <video src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/VB-H264-Proxy-half-size.mov" autoplay loop muted></video>
   </div>
   </div>
-  <div id="subject5">
+  <div id="subject5" class="max-width">
     <div class="overskrift5">
     <h2>SME CLIMATE HUB: VI FORPLIGTER OS TIL AT NÅ KLIMAMÅLENE</h2>
     <p>Vi tror på at klimamålene er fundamentale for at gøre en forskel for miljøet, og vi har derfor i samarbejde med SME Climate Hub forpligtet os til at nå disse mål.
