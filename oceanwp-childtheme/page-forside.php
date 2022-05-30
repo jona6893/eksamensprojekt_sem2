@@ -186,7 +186,11 @@ get_header(); ?>
 		font-size: 1.3rem;
 	}  
   .level {
+    font-family: "adrianna", sans-serif;
+  font-weight: 800;
+  font-style: normal;
     color: var(--blaa);
+    font-size: 1.3rem;
   }
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {

@@ -78,7 +78,6 @@ get_header(); ?>
 
         .total div{
             border: 1px solid black;
-            border-radius: 10px;
             display: grid;
             padding: 2%;
             align-items: center;
@@ -92,7 +91,7 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            border-radius: 10px;
+            
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -126,7 +125,7 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            border-radius: 10px;
+            
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

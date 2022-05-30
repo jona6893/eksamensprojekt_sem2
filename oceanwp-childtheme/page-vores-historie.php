@@ -31,7 +31,7 @@ get_header(); ?>
         background-position: 48%;
         width: 100%;
         height:100%;
-
+        aspect-ratio: 1;
     }
 /* ---------- SECTION3 ---------- */
 

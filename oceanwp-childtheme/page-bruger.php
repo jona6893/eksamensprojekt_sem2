@@ -61,7 +61,7 @@ get_header(); ?>
         color: white;
         border: none;
         width: 150px;
-        height: 30px;
+        height: 40px;
       }
     /* ---------- OPRET ---------- */
       .opret-container {
@@ -100,7 +100,7 @@ get_header(); ?>
     <h1>KONTO</h1>
     <div class="de-to-felter">
     <div class="login-container">
-      <h1>Login på din Eacegum Konto</h1>
+      <h3>Login på din Eacegum Konto</h3>
       <div class="login-felter">
         <input type="text" placeholder="Brugernavn">
         <input type="text" placeholder="Adgangskode">
@@ -110,7 +110,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="opret-container">
-      <h1>Login på din Eacegum Konto</h1>
+      <h3>Opret en Eacegum Konto</h3>
       <div class="opret-felter">
         <input type="text" placeholder="Fornavn">
         <input type="text" placeholder="Efternavn">

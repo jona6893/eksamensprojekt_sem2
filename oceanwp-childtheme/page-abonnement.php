@@ -35,7 +35,7 @@ get_header(); ?>
     top: 0;
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
-    
+    background-size: cover;
   }
 /* h1 på splashbilledet */
   #splash-image h1 {
@@ -160,12 +160,26 @@ get_header(); ?>
      height:25px;
      background-color: white;
     border:none;
+    padding:0%;
   }
   .minus{
     color: red;
   }
+  .minus:hover{
+    background: red;
+    color:white;
+  }
   .plus{
     color: green;
+  }
+  .plus:hover{
+    color: white;
+    background: green;
+  }
+  .add-tal{
+    display: grid;
+    align-content: center;
+    margin: 0%;
   }
 .add-grid-container{
        display: flex;
@@ -230,7 +244,7 @@ height:25px;
   grid-template-columns:1fr 1fr;
 }
 .total{
-  grid-area:1/2;
+  grid-column:2/3;
 }
 </style>
 
