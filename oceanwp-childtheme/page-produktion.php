@@ -46,7 +46,10 @@ get_header(); ?>
 
 /* ---------- SECTION3 ---------- */
 #section3 {
-    padding: 5% 0;
+    padding: 100px 0;
+    display: grid;
+    justify-items: center;
+    gap:50px;
 }
 
 .container {
@@ -138,7 +141,7 @@ hr {
     .tekstcontainer1-d  p, .tekstcontainer2-d p{
         width:48ch;
     }
-    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4{
+    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4-d{
         display: grid;
         justify-items: center;
     }
@@ -260,6 +263,7 @@ hr {
   
 </section> 
 <section id="section3">
+    <h3>DOKUMENTATION</h3>
     <div class="container">
         <div class="accordion">
             <div class="accordionItem" id="question1">
