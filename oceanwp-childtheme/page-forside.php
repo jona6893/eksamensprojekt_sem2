@@ -14,6 +14,7 @@ get_header(); ?>
  body{
   background-color: var(--lyse-blaa); 
  }
+    /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
 #splash-section {
     width: 100vw;
     height: 100vh;
@@ -137,9 +138,11 @@ get_header(); ?>
     color: #354E57;
     font-style: italic;
   }
+     /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
   .splash_button {
     grid-row: 3/4;
-    
+    display: flex;
+    flex-direction:column;
     gap: 20px;
     
   }
@@ -151,6 +154,7 @@ get_header(); ?>
     color: var(--sort);
    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
    border: none;
+   min-width: 200px;
    
   }
   .til_abonnement_knap {
@@ -160,10 +164,11 @@ get_header(); ?>
     background-color: var(--sort);
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
-    
+    min-width: 200px;
   }
+  /* -------------------- DE SORTE BARRER -------------------- */
 
-	#sort_bar1{
+	#sort_bar1,	#sort_bar2{
 		background-color: var(--sort);
 		height: 200px;
 		display: grid;
@@ -173,13 +178,17 @@ get_header(); ?>
     margin-bottom: 200px;
 
 	}
-	#sort_bar1 h1{
+	#sort_bar1 h1, #sort_bar2 h1{
     font-family: "adrianna", sans-serif;
   font-weight: 800;
   font-style: normal;
 		color:white;
 		font-size: 1.3rem;
-	}
+	}  
+  .level {
+    color: var(--blaa);
+  }
+   /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
     display:grid;
     margin-left: 50px;
@@ -188,21 +197,34 @@ get_header(); ?>
   #intro .intro_start {
     text-align:center;
   }
+     /* -------------------- FIND OS HER SEKTION -------------------- */
   #find_os {
     position: sticky;
     padding: 20px;
     margin-top:100px;
     margin-bottom: 100px;
   }
+     /* -------------------- BLOG SEKTION -------------------- */
+  #forside_blog .seneste_artikler{
+    padding: 2%;
+
+  }
+  #forside_blog h1 {
+    text-align: center;
+  }
+
+  #forside_some {
+    margin-top: -200px;
+  }
 
 
   /* -------------------- DESKTOP -------------------- */
 
   @media (min-width: 750px) {
-    #sort_bar1{
+    #sort_bar1, #sort_bar2{
       height: 400px;
     }
-    #sort_bar1 h1{
+    #sort_bar1 h1, #sort_bar2 h1{
 		font-size: 4.5rem;
 	}
   #intro .intro_om_os {
@@ -224,14 +246,20 @@ get_header(); ?>
     margin-top:200px;
     margin-bottom: 200px;
   }
-  #forside_blog .seneste_artikler hr{
-    background-color: var(--sort) !important;
+  #forside_blog .forside_blog_indhold {
+    display: flex;
+    justify-content: space-between;
+    
   }
-  #forside_blog .seneste_artikler{
-    width: 300px;
-    height: 400px;
-
+  #forside_blog .forside_hand {
+    max-width: 50%;
   }
+  
+  #sort_bar2 {
+    margin-top: -80px;
+    z-index: -10;
+  }
+ 
      
 }
 
@@ -281,6 +309,7 @@ get_header(); ?>
 </section>
 <section id="forside_blog">
   <h1>BLOGINDLÆG</h1>
+  <div class="forside_blog_indhold">
   <div class="seneste_artikler">
     <h2>Seneste Artikler</h2>
     <hr>
@@ -298,7 +327,17 @@ get_header(); ?>
     <hr>
   </div>
   <div class="forside_hand">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke.png" alt="Eace Gum collagen boost">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="Eace Gum collagen boost">
+  </div>
+  </div>
+</section>
+<section id="sort_bar2">
+	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
+</section>
+
+<section id="forside_some">
+  <div class="some">
+  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
   </div>
 </section>
 

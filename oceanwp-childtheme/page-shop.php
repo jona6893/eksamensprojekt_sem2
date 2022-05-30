@@ -19,9 +19,8 @@ get_header(); ?>
 
   #splash-image {
     position: relative;
-    background-color: #D8F5F6;
     background-size: cover;
-    height: 70vh;
+    height: 65vh;
     margin-bottom: 80px;
   }
 
@@ -33,17 +32,16 @@ get_header(); ?>
     top: 0;
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
-    opacity: 0.15;
   }
 
   #splash-image h1 {
     position: absolute;
-    bottom: 5vh;
+    bottom: 30vh;
     left: 0;
     right: 0;
     text-align: center;
-    font-family: "NormsRegular";
-    font-size: 4rem;
+    
+   
   }
 
   #filter-menu {
@@ -62,7 +60,7 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    font-family: "NormsRegular";
+    
     transition: color 0.2s, background-color 0.2s;
   }
 
@@ -134,21 +132,21 @@ get_header(); ?>
 
   .produkt-navn {
     color: var(--black);
-    font-family: "NormsRegular";
+    
     font-size: 1.5rem !important;
     margin-bottom: 4px;
   }
 
   .produkt-slogan {
     color: var(--black);
-    font-family: "NormsRegular";
+    
     font-size: 1.25rem !important;
     margin-bottom: 8px;
   }
 
   .produkt-beskrivelse {
     color: var(--black);
-    font-family: "NormsRegular";
+    
     font-size: 0.75rem !important;
     margin-bottom: 2px;
     padding-inline: 16px;
@@ -156,7 +154,7 @@ get_header(); ?>
 
   .pris {
     color: var(--black);
-    font-family: "NormsBold";
+    
     font-size: 1.5rem;
     position: absolute;
     bottom: 56px;
@@ -182,7 +180,7 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    font-family: "NormsRegular";
+    
     transition: opacity 0.3s;
   }
 

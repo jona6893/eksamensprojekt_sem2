@@ -18,9 +18,8 @@ get_header(); ?>
 
   #splash-image {
     position: relative;
-    background-color: #D8F5F6;
     background-size: cover;
-    height: 70vh;
+    height: 65vh;
     margin-bottom: 80px;
     display: grid;
     justify-items:center;
@@ -34,15 +33,17 @@ get_header(); ?>
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/Alle-3-web-.webp");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
-    opacity: 0.15;
+    
   }
 
   #splash-image h1 {
+    position: absolute;
+    bottom: 30vh;
+    left: 0;
+    right: 0;
     text-align: center;
-    font-family: "NormsRegular";
-    font-size: 4rem;
 
   }
  
@@ -78,7 +79,7 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    font-family: "NormsRegular";
+    
     transition: color 0.2s, background-color 0.2s;
     
   } 
@@ -124,7 +125,7 @@ get_header(); ?>
 
   .produkt-navn {
     color: var(--black);
-    font-family: "NormsRegular";
+   
     font-size: 1.5rem !important;
     margin-bottom: 4px;
   }

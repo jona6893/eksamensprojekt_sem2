@@ -20,6 +20,8 @@ get_header(); ?>
         justify-items: center;
         gap: 20px;
         padding: 5%;
+        background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
+        background-size: cover;
       }
       .de-to-felter{
         display: grid;

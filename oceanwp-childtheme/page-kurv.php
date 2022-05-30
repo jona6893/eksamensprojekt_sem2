@@ -22,6 +22,8 @@ get_header(); ?>
             justify-items: center;
             gap: 20px;
             padding: 5%;
+            background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
+            background-size: cover;
         }
 
         .de-tre-felter {
@@ -94,9 +96,8 @@ get_header(); ?>
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            background-color: #d2d8d6;
-            background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
-            min-height:600px;
+            background-color: white;
+            min-height:100%;
 
         }    
         .adresse h2{
@@ -129,9 +130,9 @@ get_header(); ?>
             padding: 50px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            background-color: #d2d8d6;
-            background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
-            min-height:700px;
+            background-color: white;
+            
+            min-height:100%;
         }
         .betaling h2{
             color:black;
