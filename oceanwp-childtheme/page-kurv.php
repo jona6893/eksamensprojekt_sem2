@@ -247,7 +247,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="adresse">
-                <h2>Adress</h2>
+                <h2>Adresse</h2>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
                 <input type="text" placeholder="Telefon">
