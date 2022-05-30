@@ -14,6 +14,7 @@ get_header(); ?>
  body{
   background-color: var(--lyse-blaa); 
  }
+    /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
 #splash-section {
     width: 100vw;
     height: 100vh;
@@ -137,6 +138,7 @@ get_header(); ?>
     color: #354E57;
     font-style: italic;
   }
+     /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
   .splash_button {
     grid-row: 3/4;
     display: flex;
@@ -164,6 +166,7 @@ get_header(); ?>
     border: none;
     min-width: 200px;
   }
+  /* -------------------- DE SORTE BARRER -------------------- */
 
 	#sort_bar1,	#sort_bar2{
 		background-color: var(--sort);
@@ -181,7 +184,11 @@ get_header(); ?>
   font-style: normal;
 		color:white;
 		font-size: 1.3rem;
-	}
+	}  
+  .level {
+    color: var(--blaa);
+  }
+   /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
     display:grid;
     margin-left: 50px;
@@ -190,12 +197,14 @@ get_header(); ?>
   #intro .intro_start {
     text-align:center;
   }
+     /* -------------------- FIND OS HER SEKTION -------------------- */
   #find_os {
     position: sticky;
     padding: 20px;
     margin-top:100px;
     margin-bottom: 100px;
   }
+     /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
 
@@ -203,9 +212,7 @@ get_header(); ?>
   #forside_blog h1 {
     text-align: center;
   }
-  .level {
-    color: var(--blaa);
-  }
+
   #forside_some {
     margin-top: -200px;
   }
