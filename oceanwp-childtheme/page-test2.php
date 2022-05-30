@@ -12,19 +12,23 @@
 get_header(); ?>
 
 <style>
-:root {
+  :root{
     --viste-produkter: 6;
-}
+  }
 
-#splash-image {
+  #splash-image {
     position: relative;
     background-color: #D8F5F6;
     background-size: cover;
     height: 70vh;
     margin-bottom: 80px;
-}
+    display: grid;
+    justify-items:center;
+    align-items:center;
 
-#splash-image::before {
+  }
+
+  #splash-image::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -33,36 +37,33 @@ get_header(); ?>
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/Alle-3-web-.webp");
     background-position: center;
     opacity: 0.15;
-}
+  }
 
-#splash-image h1 {
-    position: absolute;
-    bottom: 5vh;
-    left: 0;
-    right: 0;
+  #splash-image h1 {
     text-align: center;
     font-family: "NormsRegular";
     font-size: 4rem;
-}
 
-
-.filter-menu {
+  }
+ 
+  .filter-menu {
     --repeat: auto-fit;
+  }
+  
+    @media (min-width: 805px) {
+  #filter-menu {
+    --repeat: 4;
+  }
 }
-
-@media (min-width: 805px) {
-    #filter-menu {
-        --repeat: 4;
-    }
-}
-
-#filter-menu {
+   #filter-menu {
     gap: 10px;
-    display: grid;
+  display: grid;
     grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
-}
-
-.filter-btn {
+    padding-bottom:60px;
+    justify-items:center;
+  }
+  
+  .filter-btn {
     color: var(--blaa);
     border: 1px var(--blaa) solid;
     background-color: transparent;
@@ -74,30 +75,33 @@ get_header(); ?>
     font-size: 0.875rem;
     font-family: "NormsRegular";
     transition: color 0.2s, background-color 0.2s;
+    
+  } 
 
-}
-
-.filter-btn.selected {
+  .filter-btn.selected {
     color: var(--lyse-blaa);
     background-color: var(--blaa);
-}
+  }
 
-#produkter {
+  #produkter {
     display: flex;
-    /*  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
-    flex-direction: column
-}
+   /*  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+   flex-direction: column
+  }
 
 
 .produkt-card {
     display: grid;
-    border-top: solid 3px grey;
+    border-top: solid 1px grey;
     gap: 20px;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 200px;
+     grid-template-rows: 300px;
+     padding:25px;
 
 }
-
+ p{
+  max-width:55ch;
+}
 
 /*   @media (max-width: 730px) {
     #produkter {
@@ -113,146 +117,199 @@ get_header(); ?>
     }
   } */
 
-.produkt-navn {
+  .produkt-navn {
     color: var(--black);
     font-family: "NormsRegular";
     font-size: 1.5rem !important;
     margin-bottom: 4px;
+  }
+
+  @media (max-width:974px) {
+    .produkt-card{
+      grid-template-columns:1fr 0.2fr;
+    }
+    .om-produktet{
+  grid-column:1/2;
 }
-
-@media (max-width: 570px) {}
-
-.abo-img {
+.add-container{
+   align-items: flex-end;
+   
+  }
+  }
+  .abo-img{
     position: relative;
-    aspect-ratio: 738 /1417;
-
+    aspect-ratio:738 /1417 ;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 100%;
-}
-
-.add-container {
-    display: flex;
+  }
+  .add-container{
+     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 5%;
-}
+    align-items:center;
+   
+  }
 
 
-.add-container button {
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border: none;
-}
-
-.minus {
+.add-container button{
+     width:25px;
+     height:25px;
+     background-color: white;
+    border:none;
+  }
+  .minus{
     color: red;
-}
-
-.minus:hover {
-    background-color: red;
-    color: white;
-}
-
-.plus {
+  }
+  .plus{
     color: green;
+  }
+.add-grid-container{
+       display: flex;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+height:25px;
+}
+/* drop-down menu til hyppighed */
+/* knappens udseende */
+.dropbtn {
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+  cursor: pointer;
+}
+/* knap på hover */
+/* .dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+} */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.plus:hover {
-    background-color: green;
-    color: white;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.add-tal {
-    padding-inline: 3px;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.add-grid-container {
-    display: flex;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 25px;
+.dropdown a:hover {background-color: #ddd;}
 
-}
+.show {display: block;}
+
 </style>
 
 <main id="main-content">
 
-    <template>
-        <article class="produkt-card">
-            <div class="abo-img">
-            </div>
-            <div>
-                <p class="produkt-info"></p>
-                <button class="read-more">LÆS MERE OM PRODUKTET</button>
-            </div>
+  <template>
+    <article class="produkt-card">
+    <div class="abo-img">
+    </div >
+    <div class="om-produktet">
+      <h3 class="produkt-navn"></h3>
+      <p class="produkt-info"></p>
+      <button class="read-more">LÆS MERE</button>
+    </div>
+    
+    <div class="add-container">
+      <div class="add-grid-container">
+     <button class="minus">-</button>
+     <p class="add-tal">0</p>
+     <button class="plus">+</button>
+     </div>
+    </div>
+    </article>
+  </template>
 
-            <div class="add-container">
-                <div class="add-grid-container">
-                    <button class="minus">-</button>
-                    <p class="add-tal">0</p>
-                    <button class="plus">+</button>
-                </div>
-            </div>
-        </article>
-    </template>
+  <section id="splash-image">
+    <div>
+    <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
+    <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+    i din postkasse hver måned eller hver anden måned.</P>
+    </div>
+</section>
+ <!-- knapper til filtrering -->
+  <section id="filter-menu" class="max-width">
+    <button class="filter-btn selected" data-category="alle">ALLE</button>
+    <button class="filter-btn" data-category="tyggegummi">VITAMIN BOOST</button>
+    <button class="filter-btn" data-category="merchandise">HEALTHY TEETH</button>
+    <button class="filter-btn" data-category="merchandise">ENERGY BOOST</button>
+    <button class="filter-btn" data-category="merchandise">DEFENCE BOOST</button>
+    <button class="filter-btn" data-category="merchandise">FOCUS</button>
+    <button class="filter-btn" data-category="merchandise">RELAX</button>
+    <button class="filter-btn" data-category="merchandise">COLLAGEN BOOST</button>
+  </section>
 
-    <section id="splash-image">
-        <h1>Abonnement</h1>
-        <P>Få 12 pakker tyggegummi til 199kr efter eget valg leveret
-            i din postkasse hver måned eller hver anden måned.</P>
-    </section>
-    <!-- knapper til filtrering -->
-    <section id="filter-menu" class="max-width">
-        <button class="filter-btn selected" data-category="alle">ALLE</button>
-        <button class="filter-btn" data-category="tyggegummi">VITAMIN BOOST</button>
-        <button class="filter-btn" data-category="merchandise">HEALTHY TEETH</button>
-        <button class="filter-btn" data-category="merchandise">ENERGY BOOST</button>
-        <button class="filter-btn" data-category="merchandise">DEFENCE BOOST</button>
-        <button class="filter-btn" data-category="merchandise">FOCUS</button>
-        <button class="filter-btn" data-category="merchandise">RELAX</button>
-        <button class="filter-btn" data-category="merchandise">COLLAGEN BOOST</button>
-    </section>
+  <section id="produkter" class="max-width"></section>
+<section id="add-cart">
+  <div>
+    <div>
+    <h3>TILFØJET TIL DIT ABONNEMENT</h3>
+    </div>
+    <div>
+    <h3>VÆLG HYPPIGHED</h3>
+    </div>
+    <div>
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#0">HVER MÅNED</a>
+    <a href="#0">HVER ANDEN MÅNED</a>
+    
+  </div>
+</div>
+  <button> GÅ TIL KURV</button>
+    </div>
+  </div>
 
-    <section id="produkter" class="max-width"></section>
-
+</section>
 
 </main>
 
 <script>
-const url = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-json/wp/v2/abonnement"; //wp-json
+  const url = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-json/wp/v2/abonnement"; //wp-json
 
-let produkter; //json databasen
-let filter = "alle"; //variabel som ændrer sig alt efter hvilken filterknap du klikker på
+  let produkter; //json databasen
+  let filter = "alle"; //variabel som ændrer sig alt efter hvilken filterknap du klikker på
 
-
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     //venter indtil siden er loadet før knapperne bliver funktionelle
     const filterButtons = document.querySelectorAll(".filter-btn");
     filterButtons.forEach((button) => {
-        button.addEventListener("click",
-            filterProdukter); //knapperne kalder på filterProdukter() funktionen, når man klikker
-    });
+      button.addEventListener("click", filterProdukter); //knapperne kalder på filterProdukter() funktionen, når man klikker
+    }); 
     fetchData(); //kalder på fetchData() funktionen
-});
+  });
 
-async function fetchData() {
+  async function fetchData() {
     //kaldes når siden er loadet
     let response = await fetch(url);
     produkter = await response.json();
+    produkter.reverse();
     display(produkter); //kalder på display() funktionen med produkter som parameter
     //console.log(produkter);
-}
+  }
 
-function filterProdukter() {
+  function filterProdukter() {
     //bliver kaldt når knapperne klikkes på
     filter = this.dataset.category; //variablen ændres til den knap man klikker på
     document.querySelector(".selected").classList.remove("selected");
     this.classList.add("selected");
 
     display(); //kalder på display() funktionen
-}
+  }
 
-function display() {
+  function display() {
     //kaldes når databasen er hentet eller når en filterknap klikkes
     const mainContent = document.getElementById("produkter");
     const template = document.querySelector("template").content;
@@ -317,7 +374,27 @@ function tilføjTal(minus, plus, tal) {
 
 
 }
-</script>
 
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 <?php get_footer(); ?>
