@@ -224,6 +224,13 @@ height:25px;
   display:grid;
   gap:120px;
 }
+.oversigt{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.total{
+  grid-area:1/2;
+}
 </style>
 
 <main id="main-content">
@@ -274,6 +281,9 @@ height:25px;
 
     <div class="box-1">
     <h4>TILFØJET TIL DIT ABONNEMENT</h4>
+    <div class="oversigt">
+      <p class="total">PAKKER I ALT:</p>
+    </div>
     </div>
 
     <div  class="box-2">
