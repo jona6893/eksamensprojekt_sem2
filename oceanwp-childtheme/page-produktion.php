@@ -118,24 +118,37 @@ hr {
         display: grid;
         justify-items: center;
         padding: 3%;
+        gap: 50px;
     }
 
-    .videntekst {
+    .videntekst-d {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 50px;
         align-items: center;
         justify-items: center;
     }
+    
 
-    .tekstcontainer-d p {
-        max-width: 48ch;
-
+    .tekstcontainer1-d, .tekstcontainer2-d {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
     }
+    .tekstcontainer1-d  p, .tekstcontainer2-d p{
+        width:48ch;
+    }
+    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4{
+        display: grid;
+        justify-items: center;
+    }
+    
 
     .imagecontainer-d {
-        display: grid;
-        align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
     }
 }
 </style>
@@ -227,7 +240,7 @@ hr {
         <img src="https://ucarecdn.com/4c959399-154f-49a7-a416-7f8a2f07069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202022-01-11%20kl.%2009.17.53.png" alt="">
         <img src="https://ucarecdn.com/58fc6808-c0c7-4772-a4ab-acb204ebee3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.41.38.png" alt="">
       </div>
-      <div class="tekstcontainer1-d"> 
+      <div class="tekstcontainer2-d"> 
           <div class="afsnit3-d">
           <h4>Research</h4>
           <p>
