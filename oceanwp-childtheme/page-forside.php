@@ -205,8 +205,7 @@ get_header(); ?>
     color: var(--blaa);
   }
   #forside_some .some {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png");
-    background-size:cover;
+    
   }
 
 
