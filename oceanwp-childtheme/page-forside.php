@@ -11,13 +11,16 @@
 get_header(); ?>
 
 <style>
-
+ body{
+  background-color: var(--lyse-blaa); 
+ }
 #splash-section {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    
   }
 
   .column-right {
@@ -130,13 +133,44 @@ get_header(); ?>
   .splash_text h1 {
     font-size: 3rem;
   }
+  .splash_vitamin {
+    color: #354E57;
+    font-style: italic;
+  }
+  .splash_button {
+    grid-row: 3/4;
+    
+    gap: 20px;
+    
+  }
+  .til_shop_knap {
+    font-family: "termina", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    background-color: transparent;
+    color: var(--sort);
+   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+   border: none;
+   
+  }
+  .til_abonnement_knap {
+    font-family: "termina", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--sort);
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border: none;
+    
+  }
 
 	#sort_bar1{
-		background-color:black;
+		background-color: var(--sort);
 		height: 400px;
 		display: grid;
 		align-items: center;
     justify-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
 
 	}
 	#sort_bar1 h1{
@@ -153,7 +187,11 @@ get_header(); ?>
 <section id="splash-section">
   <div class="column-left">
 		<div class="splash_text">
-  		<h1>GUM + <br>VITAMIN <br>BOOST </h1>
+  		<h1>GUM + <strong class="splash_vitamin"><br>VITAMIN <br>BOOST</strong> </h1>
+      <div class="splash_button">
+        <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
+        <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Design dit eget abonnement</button>
+      </div>
 		</div>
 	</div>
   <div class="column-right">
@@ -169,6 +207,16 @@ get_header(); ?>
 
 <section id="sort_bar1">
 	<h1>NEXT GENERATION CHEWING GUM </h1>
+
+</section>
+<section id="intro">
+  <h1>Eace Gum</h1>
+  <p>Tyggegummi med funktioner for sundhed og velvære </p>
+  <section id="om_os"></section>
+  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
+  <h2>Om Os</h2>
+  <p>Vi er tyggegummi eksperter. Vi laver danskproduceret kvalitetstyggegummi, der kan meget mere end bare at smage ekstremt godt og give frisk ånde. Eace Gum indeholder nemlig samtidig funktioner for sundhed og velvære. Vi vil nemlig være en hjælpende hånd, som styrker dig i hverdagen, lige meget hvad du står overfor.</p>
+
 
 </section>
 
