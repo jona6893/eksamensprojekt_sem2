@@ -36,7 +36,7 @@ get_header(); ?>
 
   #splash-image h1 {
     position: absolute;
-    bottom: 5vh;
+    bottom: 30vh;
     left: 0;
     right: 0;
     text-align: center;

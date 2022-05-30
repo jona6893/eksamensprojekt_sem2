@@ -97,6 +97,7 @@ main h1 {
   font-style: normal;
   font-size: 2.5rem;
   font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
+  color: var(--sort);
 }
 
 main h2 {

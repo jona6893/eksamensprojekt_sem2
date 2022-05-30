@@ -39,9 +39,11 @@ get_header(); ?>
   }
 
   #splash-image h1 {
+    position: absolute;
+    bottom: 30vh;
+    left: 0;
+    right: 0;
     text-align: center;
-    font-family: "NormsRegular";
-    font-size: 4rem;
 
   }
  
@@ -77,7 +79,7 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    font-family: "NormsRegular";
+    
     transition: color 0.2s, background-color 0.2s;
     
   } 
@@ -123,7 +125,7 @@ get_header(); ?>
 
   .produkt-navn {
     color: var(--black);
-    font-family: "NormsRegular";
+   
     font-size: 1.5rem !important;
     margin-bottom: 4px;
   }
