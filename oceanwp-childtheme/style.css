@@ -13,38 +13,38 @@ Version: 1.0
 /* #region font */
 
 /* sofia regular */
-@font-face {
-  font-family: sofia-pro, sans-serif;
+
+  /* font-family: sofia-pro, sans-serif;
   font-weight: 400;
-font-style: normal;
-}
+font-style: normal; */
+
 
 /* sofia bold */
-@font-face {
-  font-family: sofia-pro, sans-serif;
+
+  /* font-family: "sofia-pro", sans-serif;
   font-weight: 700;
-  font-style: normal;
-}
+  font-style: normal; */
+
 
 /* helvetica */
-@font-face {
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: normal;
-}
+
+  /* font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal; */
+
 
 /* adrianna extra bold */
-@font-face {
-  font-family: adrianna, sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
 
-/* light */
-@font-face {
-  font-family: termina, sans-serif;
+  /* font-family: "adrianna, sans-serif;
   font-weight: 800;
-  font-style: normal;
-}
+  font-style: normal; */
+
+
+/* Termina heavy */
+
+  /* font-family: termina, sans-serif;
+  font-weight: 800;
+  font-style: normal; */
+
 
 /* #endregion font */
 
@@ -96,6 +96,9 @@ html {
 /* Font Størrelser */
 
 main h1 {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.5rem;
   font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
 }
@@ -116,6 +119,8 @@ main h4 {
 }
 
 main p {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal;
   font-size: 1rem;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 }
