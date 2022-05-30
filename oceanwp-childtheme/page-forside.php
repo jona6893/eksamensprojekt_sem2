@@ -224,13 +224,19 @@ get_header(); ?>
     margin-bottom: 100px;
   }
   #forside_blog .forside_hand {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png");
-    background-size: cover;
-    aspect-ratio: 1;
+    display: grid;
+    justify-items: end;
   }
 
   #forside_some {
     margin-top: -200px;
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-size: cover;
+    height: 90vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 
 
@@ -262,10 +268,18 @@ get_header(); ?>
     margin-top:200px;
     margin-bottom: 200px;
   }
+  #forside_blog .seneste_artikler {
+    padding: 2%;
+    padding-left: 100px;
+  }
+  .forside_hand img{
+    max-width: 65%;
+  }
 
   #forside_blog .forside_blog_indhold {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 75px;
     
   }
   #forside_ blog .seneste_artikler {
@@ -273,6 +287,7 @@ get_header(); ?>
   }
   #forside_blog .forside_hand {
     grid-column: 2/3;
+    grid-row: 1/3;
   }
   
   #sort_bar2 {
@@ -332,23 +347,23 @@ get_header(); ?>
   <h1>BLOGINDLÆG</h1>
   <div class="forside_blog_indhold">
   <div class="seneste_artikler">
-    <h2>Seneste Artikler</h2>
+    <h3>Seneste Artikler</h3>
     <hr>
-    <h3>Alt om Energi Boost</h3>
+    <h4>Alt om Energi Boost</h4>
     <p>Maj 12, 2022</p>
     <hr>
-    <h3>Eace Sommerfest</h3>
+    <h4>Eace Sommerfest</h4>
     <p>Maj 04, 2022</p>
     <hr>
-    <h3>NEXT GENERATION MERCH</h3>
+    <h4>NEXT GENERATION MERCH</h4>
     <p>December 17, 2021</p>
     <hr>
-    <h3>EN LILLE HJÆLP I JULEDAGENE</h3>
+    <h4>EN LILLE HJÆLP I JULEDAGENE</h4>
     <p>December 07, 2021</p>
     <hr>
   </div>
   <div class="forside_hand">
-    
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="">
   </div>
   </div>
 </section>
@@ -357,9 +372,11 @@ get_header(); ?>
 </section>
 
 <section id="forside_some">
-  <div class="some">
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
-  </div>
+    <div class="some">
+     <h2>FØLG OS PÅ SOCIALE MEDIER</h2>
+     <button>@eace_gum</button>
+    </div>
+    
 </section>
 </main>
 
