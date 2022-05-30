@@ -173,12 +173,13 @@ height:25px;
 .dropbtn {
   background-color: white;
   color: black;
-  border:none;
+  border: solid black 1px;
   cursor: pointer;
+  text-align:end;
 }
-/* knap på hover */
+
 /* .dropbtn:hover, .dropbtn:focus {
-  background-color: white;
+  background-color: #2980B9;
 } */
 
 .dropdown {
@@ -192,8 +193,10 @@ height:25px;
   background-color: white;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border:solid black 1px;
+  
+  
 }
 
 .dropdown-content a {
@@ -201,15 +204,33 @@ height:25px;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  
+  
 }
 
-.dropdown a:hover {background-color: #ddd;}
+/* .dropdown a:hover {background-color: #ddd;} */
 
 .show {display: block;}
-.drop-arrow{
-   border: solid black 1px;
-}
 
+#grid-container-cart{
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr ;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.box-3{
+  display:grid;
+  gap:120px;
+}
+.oversigt{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.total{
+  grid-area:1/2;
+}
 </style>
 
 <main id="main-content">
@@ -254,28 +275,33 @@ height:25px;
   </section>
 
   <section id="produkter" class="max-width"></section>
+
 <section id="add-cart">
-  <div>
-    <div>
-    <h3>TILFØJET TIL DIT ABONNEMENT</h3>
+  <div id="grid-container-cart">
+
+    <div class="box-1">
+    <h4>TILFØJET TIL DIT ABONNEMENT</h4>
+    <div class="oversigt">
+      <p class="total">PAKKER I ALT:</p>
     </div>
-    <div>
-    <h3>VÆLG HYPPIGHED</h3>
     </div>
-    <div>
+
+    <div  class="box-2">
+    <h4>VÆLG HYPPIGHED</h4>
+    </div>
+
+    <div  class="box-3">
       <div class="dropdown">
-        <div class="drop-arrow" onclick="myFunction()">
-  <button class="dropbtn"></button>
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="">
+      <button onclick="myFunction()" class="dropbtn">v</button>
+      <div id="myDropdown" class="dropdown-content">
+      <a href="#0">HVER MÅNED</a>
+      <a href="#0">HVER ANDEN MÅNED</a>
+      
   </div>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#0">HVER MÅNED</a>
-    <a href="#0">HVER ANDEN MÅNED</a>
-    
   </div>
-</div>
-  <button> GÅ TIL KURV</button>
+    <button> GÅ TIL KURV</button>
     </div>
+
   </div>
 
 </section>
@@ -341,7 +367,8 @@ height:25px;
     let minus = document.querySelectorAll(".minus")
     let plus = document.querySelectorAll(".plus")
     let tal = document.querySelectorAll(".add-tal")
-
+    let overskrfit = document.querySelectorAll(".produkt-navn")
+    
 
     tilføjTal(minus, plus, tal);
 }
@@ -349,6 +376,9 @@ height:25px;
 function tilføjTal(minus, plus, tal) {
     //opretter en tomt Array som vi senere fylder med 0 taller
     let counter = []
+    const oversigt = document.querySelector(".oversigt");
+    oversigt.appendChild(node)
+    
 
     console.log(minus, plus, tal)
     // en foreach function der skubber et 0 tal ind i "counter" for hvert element der er i tal variablen. 
@@ -367,6 +397,7 @@ function tilføjTal(minus, plus, tal) {
             // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
             // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
             tal[i].textContent = `${counter[i]}`;
+            if (counter )
         })
     })
 
@@ -381,22 +412,21 @@ function tilføjTal(minus, plus, tal) {
 
 }
 
-
-/*toggler mellem at vise og skjule indholdet i dropdown menuennår brugeren klikker på den*/
+ /* ---------- Her starter Dropdown funktionen. ---------- */
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// lukker dropdown når brugeren klikker ved siden af
+// Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.drop-arrow')) {
-    console.log("hello")
+  if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
-        console.log("hello2")
         openDropdown.classList.remove('show');
       }
     }

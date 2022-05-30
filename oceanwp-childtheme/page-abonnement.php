@@ -46,6 +46,11 @@ get_header(); ?>
 
   }
  
+  #grid-box{
+    display:grid;
+    justify-items: center;
+  }
+
   .filter-menu {
     --repeat: auto-fit;
   }
@@ -224,6 +229,13 @@ height:25px;
   display:grid;
   gap:120px;
 }
+.oversigt{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.total{
+  grid-area:1/2;
+}
 </style>
 
 <main id="main-content">
@@ -249,7 +261,7 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <div>
+    <div id="grid-box">
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
     <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
     i din postkasse hver måned eller hver anden måned.</P>
@@ -274,6 +286,9 @@ height:25px;
 
     <div class="box-1">
     <h4>TILFØJET TIL DIT ABONNEMENT</h4>
+    <div class="oversigt">
+      <p class="total">PAKKER I ALT:</p>
+    </div>
     </div>
 
     <div  class="box-2">
@@ -343,6 +358,7 @@ height:25px;
             //hvis objektet har samme værdi som filterknappen
             const clone = template.cloneNode(true);
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
+            clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
             clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
             //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
             mainContent.appendChild(clone);

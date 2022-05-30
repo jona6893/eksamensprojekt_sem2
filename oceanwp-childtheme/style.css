@@ -14,37 +14,32 @@ Version: 1.0
 
 /* sofia regular */
 
-  /* font-family: sofia-pro, sans-serif;
+/* font-family: sofia-pro, sans-serif;
   font-weight: 400;
 font-style: normal; */
 
-
 /* sofia bold */
 
-  /* font-family: "sofia-pro", sans-serif;
+/* font-family: "sofia-pro", sans-serif;
   font-weight: 700;
   font-style: normal; */
 
-
 /* helvetica */
 
-  /* font-family: "Helvetica Neue", sans-serif;
+/* font-family: "Helvetica Neue", sans-serif;
   font-weight: normal; */
-
 
 /* adrianna extra bold */
 
-  /* font-family: "adrianna, sans-serif;
+/* font-family: "adrianna, sans-serif;
   font-weight: 800;
   font-style: normal; */
-
 
 /* Termina heavy */
 
-  /* font-family: termina, sans-serif;
+/* font-family: termina, sans-serif;
   font-weight: 800;
   font-style: normal; */
-
 
 /* #endregion font */
 
@@ -86,10 +81,10 @@ html {
   --farve-4: ;
   --farve-5: ;
 
-  --sort: #08121E;
+  --sort: #08121e;
   --blaa: #3293fc;
   --lyse-blaa: #e3effc;
-  --lyse-graa: #F2F2F2;
+  --lyse-graa: #f2f2f2;
 }
 
 /* #endregion color */
@@ -136,19 +131,18 @@ main p {
 }
 
 button {
-    color: white;
-    border: 1px var(--sort) solid;
-    background-color: black;
-    padding: 8px 12px;
-    width: 110px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 0.875rem;
-    font-family: "sofia-pro", sans-serif !important;
-    font-style: bold;
-    transition: color 0.2s, background-color 0.2s;
-  }
-  hr {
-    color: var(--sort)!important;
-  }
+  color: white;
+  border: 1px var(--sort) solid;
+  background-color: black;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-family: "sofia-pro", sans-serif !important;
+  font-style: bold;
+  transition: color 0.2s, background-color 0.2s;
+}
+hr {
+  color: var(--sort) !important;
+}
