@@ -12,39 +12,38 @@ Version: 1.0
 
 /* #region font */
 
-/* regular */
+/* sofia regular */
 @font-face {
-  font-family: "NormsRegular";
-  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Regular.woff2")
-    format("woff2");
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+font-style: normal;
 }
 
-/* bold */
+/* sofia bold */
 @font-face {
-  font-family: "NormsBold";
-  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Bold.woff2")
-    format("woff2");
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-/* italic */
+/* helvetica */
 @font-face {
-  font-family: "NormsItalic";
-  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Italic.woff2")
-    format("woff2");
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal;
 }
 
-/* bold italic */
+/* adrianna extra bold */
 @font-face {
-  font-family: "NormsBoldItalic";
-  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-BoldItalic.woff2")
-    format("woff2");
+  font-family: adrianna, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* light */
 @font-face {
-  font-family: "NormsLight";
-  src: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/fonts/TTNorms-Light.woff2")
-    format("woff2");
+  font-family: termina, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* #endregion font */
