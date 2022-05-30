@@ -173,7 +173,7 @@ height:25px;
 .dropbtn {
   background-color: white;
   color: black;
-  border: solid black 1px;
+  border:none;
   cursor: pointer;
 }
 /* knap på hover */
@@ -206,6 +206,9 @@ height:25px;
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+.drop-arrow{
+   border: solid black 1px;
+}
 
 </style>
 
@@ -261,7 +264,10 @@ height:25px;
     </div>
     <div>
       <div class="dropdown">
+        <div class="drop-arrow">
   <button onclick="myFunction()" class="dropbtn"></button>
+  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png" alt="">
+  </div>
   <div id="myDropdown" class="dropdown-content">
     <a href="#0">HVER MÅNED</a>
     <a href="#0">HVER ANDEN MÅNED</a>
@@ -374,17 +380,20 @@ function tilføjTal(minus, plus, tal) {
 
 
 }
+document.querySelector(".drop-arrow").addEventListener("click", () =>{
+  console.log("hej")
+  myFunction()
+})
 
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+/*toggler mellem at vise og skjule indholdet i dropdown menuennår brugeren klikker på den*/
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  /* document.getElementById("myDropdown").classList.toggle("show"); */
+  document.querySelector(".dropdown-content").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
+// lukker dropdown når brugeren klikker ved siden af
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+  if (!event.target.matches('.drop-arrow')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
