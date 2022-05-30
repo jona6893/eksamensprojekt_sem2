@@ -13,7 +13,10 @@ get_header(); ?>
 <style>
     body {
     background-color: #FFFDFC;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
+    background-size: cover;
   }
+ 
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
 #section1 {
@@ -21,10 +24,14 @@ get_header(); ?>
     justify-items: center;
     padding-inline: 3%;
     padding-block: 100px;
+    margin-top: 20px;
 }
 
 #section1 p {
-    max-width: 48ch;
+    max-width: 44ch;
+    margin-top: 10px;
+    font-size: 0.8rem;
+
 }
 
 /* ---------- SECTION2 ---------- */
@@ -168,6 +175,7 @@ hr {
 <section id="section2_mobile">
 
     <h2>Videnskaben</h2>
+    
     <div class="videntekst">
         <div class="afsnit1">
             <h4>Udviklet og produceret i Danmark</h4>
@@ -223,6 +231,7 @@ hr {
 <section id="section2_desktop">
 
     <h2>Videnskaben</h2>
+   
     <div class="videntekst-d">
       <div class="tekstcontainer1-d">
         <div class="afsnit1-d">

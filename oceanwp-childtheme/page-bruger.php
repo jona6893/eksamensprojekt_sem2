@@ -14,6 +14,7 @@ get_header(); ?>
   body {
     background-color: #FFFDFC;
   }
+  
   /* -------------------- MOBILE -------------------- */
     /* ---------- LOGIN ---------- */
       #first_section{
