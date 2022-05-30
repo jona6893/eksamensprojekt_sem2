@@ -36,7 +36,15 @@ get_header(); ?>
             width: 100%;
             justify-content: center;
         }
-
+        .trin{
+            display: grid;
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+            gap: 50px;
+            width: 100%;
+        }
+        .step{
+            display:none;
+        }
         input{
             color:black;
             font-size:1rem;
@@ -47,6 +55,12 @@ get_header(); ?>
                 --repeat:1;
                 display: grid;
                 grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 600px));
+            }
+             .trin{
+                display:none;
+             }
+            .step{
+                display: block;
             }
         }
 
@@ -222,8 +236,14 @@ get_header(); ?>
 <main>
 
     <section id="first_section" class="max-width">
+        <div class="trin">
+            <p>Step 1.</p>
+            <p>Step 2.</p>
+            <p>Step 3.</p>
+        </div>
         <div class="de-tre-felter">
             <div class="kurv">
+                <p class="step step1">Step 1.</p>
                 <h3>Kurv</h3>
             
                 <div class="produkt pro">
@@ -250,6 +270,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="adresse">
+                <p class="step step2">Step 2.</p>
                 <h3>Adresse</h3>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
@@ -263,6 +284,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="betaling">
+                <p class="step step3">Step 2.</p>
                 <h3>Betalings Informationer</h3>
                 <div class="kort">
                     <div class="chipnbrand">
