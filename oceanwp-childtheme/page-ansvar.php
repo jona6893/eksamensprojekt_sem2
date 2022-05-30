@@ -79,6 +79,7 @@ get_header(); ?>
         color: white;
         text-align: start;
         padding-inline: 3%;
+        width: 100%;
       }
       .sidebarSelect{
         border: solid black 2px !important;
@@ -390,6 +391,7 @@ get_header(); ?>
 
 
 </style>
+<main>
   <section id="heroimage">
   <h1>ANSVAR</h1>
   </section>
@@ -505,7 +507,7 @@ get_header(); ?>
   </div>
 
   </section>
-
+</main>
 <script>
 
 window.addEventListener('scroll', function() {
