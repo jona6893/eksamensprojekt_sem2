@@ -152,7 +152,7 @@ hr {
     }
 }
 </style>
-
+<main>
 <section id="section1">
     <h1>PRODUKTION</h1>
     <p>Her på siden kan du læse mere om ingredienser, produktionen og videnskaben bag.
@@ -399,7 +399,7 @@ hr {
 
     </div>
 </section>
-
+</main>
 
 <script>
 
