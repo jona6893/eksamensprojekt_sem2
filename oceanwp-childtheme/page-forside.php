@@ -227,16 +227,32 @@ get_header(); ?>
     display: grid;
     justify-items: end;
   }
+  /* -------------------- SoMe SEKTION -------------------- */
 
   #forside_some {
     margin-top: -200px;
+  }
+  #forside_some .some {
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
     background-size: cover;
+    background-position: 100% 20%;
     height: 90vh;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+  }
+  #forside_some .some_text {
+    text-align: center;
+    margin: 20px;
+    font-weight: 800;
+    
+  }
+  #forside_some .some_text h2 {
+    margin-bottom: 50px;
+  }
+
+  #forside_some .some_text button {
+    background-color: transparent;
+    color: var(--sort);
+   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+   border: none;
   }
 
 
@@ -293,6 +309,18 @@ get_header(); ?>
   #sort_bar2 {
     margin-top: -80px;
     z-index: -10;
+  }
+  #forside_some {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-size: cover;
+  }
+  #forside_some .some_text button {
+    font-size: 2rem;
+    padding: 3%;
   }
  
      
@@ -371,11 +399,12 @@ get_header(); ?>
 	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
 </section>
 
-<section id="forside_some">
+<section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
+     <button>@eace_gum</button></div>
     <div class="some">
-     <h2>FØLG OS PÅ SOCIALE MEDIER</h2>
-     <button>@eace_gum</button>
+     
     </div>
+    
     
 </section>
 </main>
