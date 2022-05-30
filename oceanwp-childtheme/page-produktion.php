@@ -111,7 +111,7 @@ hr {
 @media (min-width: 750px) {
 
     #section2_mobile {
-        display: grid;
+        display: none;
     }
 
     #section2_desktop {
@@ -201,11 +201,11 @@ hr {
     </div>
 
 </section>
-<!-- <section id="section2_desktop">
+<section id="section2_desktop">
 
     <h2>Videnskaben</h2>
     <div class="videntekst-d">
-      <div class="tekstcontainer-d">
+      <div class="tekstcontainer1-d">
         <div class="afsnit1-d">
         <h4>Udviklet og produceret i Danmark</h4>
         <p>Alle Eace Gum produkter er udviklet og produceret i Danmark. De aktive Ingredienser er nøje udvalgt og af højeste kvalitet, for at sikre at de kan hjælpe dig i din hverdag. 
@@ -221,7 +221,14 @@ hr {
             Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre produkternes effekt. 
           </p>
         </div>
-        <div class="afsnit3-d">
+      </div>
+      <div class="imagecontainer-d">
+        <img src="https://ucarecdn.com/bb6f27e9-df38-4daf-8c5c-68934bfd49d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.36.51.png" alt="">
+        <img src="https://ucarecdn.com/4c959399-154f-49a7-a416-7f8a2f07069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202022-01-11%20kl.%2009.17.53.png" alt="">
+        <img src="https://ucarecdn.com/58fc6808-c0c7-4772-a4ab-acb204ebee3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.41.38.png" alt="">
+      </div>
+      <div class="tekstcontainer1-d"> 
+          <div class="afsnit3-d">
           <h4>Research</h4>
           <p>
             Hos Eace Gum er det essentielt at der er dokumentation for voresprodukters funktionalitet. Derfor benytter vi kun næringsstoffer vis egenskaber er godkendt af European Food Safety Authority (EFSA), og hvor der er videnskabelige studier der påviser deres effekt. 
@@ -236,14 +243,9 @@ hr {
           </p>
         </div>
       </div>
-      <div class="imagecontainer-d">
-        <img src="https://ucarecdn.com/bb6f27e9-df38-4daf-8c5c-68934bfd49d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.36.51.png" alt="">
-        <img src="https://ucarecdn.com/4c959399-154f-49a7-a416-7f8a2f07069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202022-01-11%20kl.%2009.17.53.png" alt="">
-        <img src="https://ucarecdn.com/58fc6808-c0c7-4772-a4ab-acb204ebee3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.41.38.png" alt="">
-      </div>
     </div>
   
-  </section> -->
+</section> 
 <section id="section3">
     <div class="container">
         <div class="accordion">
