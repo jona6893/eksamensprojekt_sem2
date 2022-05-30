@@ -45,7 +45,9 @@ get_header(); ?>
     font-size: 4rem;
 
   }
- 
+  #splash-image P {
+    text-align: center;
+  }
   .filter-menu {
     --repeat: auto-fit;
   }
@@ -353,6 +355,7 @@ height:25px;
             //hvis objektet har samme værdi som filterknappen
             const clone = template.cloneNode(true);
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
+            clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
             clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
             //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
             mainContent.appendChild(clone);
