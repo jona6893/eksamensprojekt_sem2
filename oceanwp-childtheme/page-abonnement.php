@@ -260,19 +260,63 @@ height:25px;
     mainContent.textContent = ""; //fjerner sektionens indhold
 
     produkter.forEach((abonnement) => {
-      if (filter == "alle" || filter == abonnement.kategori) {
-        //hvis objektet har samme værdi som filterknappen
-        const clone = template.cloneNode(true);
-        clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
-        clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
-        clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
-        //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
-        mainContent.appendChild(clone);
-        visteProdukter = document.getElementById("produkter").childElementCount;
-      }
+        if (filter == "alle" || filter == abonnement.kategori) {
+            //hvis objektet har samme værdi som filterknappen
+            const clone = template.cloneNode(true);
+            clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
+            clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
+            //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
+            mainContent.appendChild(clone);
+            visteProdukter = document.getElementById("produkter").childElementCount;
+        }
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
-  }
+
+    /* ---------- Her start tæller funktionen. ---------- */
+
+    //De her variabler taget fat i all de elementer der har den valgte class. Da der er mere end en, indeholder hver variable en Array.
+    let minus = document.querySelectorAll(".minus")
+    let plus = document.querySelectorAll(".plus")
+    let tal = document.querySelectorAll(".add-tal")
+
+
+    tilføjTal(minus, plus, tal);
+}
+
+function tilføjTal(minus, plus, tal) {
+    //opretter en tomt Array som vi senere fylder med 0 taller
+    let counter = []
+
+    console.log(minus, plus, tal)
+    // en foreach function der skubber et 0 tal ind i "counter" for hvert element der er i tal variablen. 
+    // så hvis der er 7 elementer så bliver der skubbet et 0 tal ind counter array'en så der er sådan ud: counter = [0,0,0,0,0,0,0]
+    tal.forEach(e => {
+        counter.push(0)
+    })
+
+    console.log(counter)
+    // for hvert plus tegn, sætter vi en eventlistener på. "e" står for hvert element i plus variablen. "i" står for index.
+    // hvert element i en array har et index.
+    plus.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            // tilføjer et til det objekt i counter der er = "i", altså dens index number.
+            counter[i]++
+            // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
+            // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
+            tal[i].textContent = `${counter[i]}`;
+        })
+    })
+
+    // denne forEach funktion gør det samme som for oven, den fjerner bare et tal med "counter--" i stedet for "counter++"
+    minus.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            counter[i]--
+            tal[i].textContent = `${counter[i]}`;
+        })
+    })
+
+
+}
 </script>
 
 <?php get_footer(); ?>
