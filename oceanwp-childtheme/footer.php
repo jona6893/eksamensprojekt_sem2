@@ -155,8 +155,8 @@
 					<p>E-mail: hello@eace.dk</p>
 				</div>
 				<div class="social-media">
-					<a class="icon-facebook" href="https://www.facebook.com/eacegum"></a>
-					<a class="icon-instagram" href="https://www.instagram.com/eace_gum/"></a>
+					<a class="icon-facebook" href="https://www.facebook.com/eacegum" target="_blank"></a>
+					<a class="icon-instagram" href="https://www.instagram.com/eace_gum/" target="_blank"></a>
 				</div>
 				<div class="opening-time">
 					<div class="flex-items">

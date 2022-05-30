@@ -12,7 +12,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/jlq6fcy.css">
     <?php wp_head(); ?>
 </head>
 
