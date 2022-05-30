@@ -214,7 +214,20 @@ height:25px;
   </section>
 
   <section id="produkter" class="max-width"></section>
+<section id="add-cart">
+  <div>
+    <div>
+    <h3>TILFØJET TIL DIT ABONNEMENT</h3>
+    </div>
+    <div>
+    <h3>VÆLG HYPPIGHED</h3>
+    </div>
+    <div>
+  <button> GÅ TIL KURV</button>
+    </div>
+  </div>
 
+</section>
 
 </main>
 

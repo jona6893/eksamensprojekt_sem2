@@ -113,12 +113,23 @@ get_header(); ?>
   width: 37vh;
     height: auto;
 }
+.column-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr
+}
 	.splash_text{
+    font-family: "termina", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 		display: grid;
 		height:auto;
 		align-items: center;
     justify-items: center;
+    grid-row: 2/3;
 	}
+  .splash_text h1 {
+    font-size: 3rem;
+  }
 
 	#sort_bar1{
 		background-color:black;
@@ -129,8 +140,11 @@ get_header(); ?>
 
 	}
 	#sort_bar1 h1{
+    font-family: "adrianna", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 		color:white;
-		font-size: 5rem;
+		font-size: 4.5rem;
 	}
 
 	</style>

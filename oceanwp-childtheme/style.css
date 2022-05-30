@@ -86,9 +86,10 @@ html {
   --farve-4: ;
   --farve-5: ;
 
-  --sort: #202020;
+  --sort: #08121E;
   --blaa: #3293fc;
   --lyse-blaa: #e3effc;
+  --lyse-graa: #F2F2F2;
 }
 
 /* #endregion color */
@@ -96,7 +97,7 @@ html {
 /* Font Størrelser */
 
 main h1 {
-  font-family: sofia-pro, sans-serif !important;
+  font-family: "sofia-pro", sans-serif !important;
   font-weight: 400;
   font-style: normal;
   font-size: 2.5rem;
@@ -119,7 +120,7 @@ main h4 {
 }
 
 main p {
-  font-family: "Helvetica Neue", sans-serif !important;
+  font-family: "Helvetica", sans-serif !important;
   font-weight: normal;
   font-size: 1rem;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
