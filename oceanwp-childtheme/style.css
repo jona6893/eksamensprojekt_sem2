@@ -143,3 +143,6 @@ button {
   font-style: bold;
   transition: color 0.2s, background-color 0.2s;
 }
+hr {
+  color: var(--sort) !important;
+}
