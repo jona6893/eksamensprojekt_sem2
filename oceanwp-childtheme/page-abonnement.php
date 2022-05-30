@@ -39,7 +39,7 @@ get_header(); ?>
     opacity: 0.15;
   }
 
-  #splash-image h1 {
+/*   #splash-image h1 {
     text-align: center;
     font-family: "NormsRegular";
     font-size: 4rem;
@@ -47,7 +47,12 @@ get_header(); ?>
   }
   #splash-image P {
     text-align: center;
+  } */
+  #grid-box{
+    display:grid;
+    text-align: center;
   }
+
   .filter-menu {
     --repeat: auto-fit;
   }
@@ -258,7 +263,7 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <div>
+    <div id="grid-box">
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
     <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
     i din postkasse hver måned eller hver anden måned.</P>
