@@ -15,39 +15,43 @@ get_header(); ?>
   :root{
     --viste-produkter: 6;
   }
-
+/* splashbillede, samt placering af teksten oven på */
   #splash-image {
     position: relative;
-    background-color: #D8F5F6;
     background-size: cover;
-    height: 70vh;
+    height: 65vh;
     margin-bottom: 80px;
     display: grid;
     justify-items:center;
     align-items:center;
 
   }
-
+/* selve splashbilledet og placering */
   #splash-image::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/Alle-3-web-.webp");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
-    opacity: 0.15;
+    
   }
-
+/* h1 på splashbilledet */
   #splash-image h1 {
+    position: absolute;
+    bottom: 30vh;
+    left: 0;
+    right: 0;
     text-align: center;
-    font-family: "NormsRegular";
-    font-size: 4rem;
 
   }
-  #splash-image P {
-    text-align: center;
+ /* grid til teksten på splashbilledet */
+  #grid-box{
+    display:grid;
+    justify-items: center;
   }
+/* ? */
   .filter-menu {
     --repeat: auto-fit;
   }
@@ -64,25 +68,25 @@ get_header(); ?>
     padding-bottom:60px;
     justify-items:center;
   }
-  
+  /* filtrerings knappers udseende */
   .filter-btn {
-    color: var(--blaa);
-    border: 1px var(--blaa) solid;
-    background-color: transparent;
+    color: white;
+    border: 1px var(--sort) solid;
+    background-color:var(--sort) ;
     padding: 8px 12px;
     width: 160px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    font-family: "NormsRegular";
+    
     transition: color 0.2s, background-color 0.2s;
     
   } 
 
   .filter-btn.selected {
-    color: var(--lyse-blaa);
-    background-color: var(--blaa);
+    color: var(--sort);
+    background-color: white;
   }
 
   #produkter {
@@ -121,7 +125,7 @@ get_header(); ?>
 
   .produkt-navn {
     color: var(--black);
-    font-family: "NormsRegular";
+   
     font-size: 1.5rem !important;
     margin-bottom: 4px;
   }
@@ -141,7 +145,7 @@ get_header(); ?>
   .abo-img{
     position: relative;
     aspect-ratio:738 /1417 ;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 100%;
   }
@@ -149,9 +153,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
      display: flex;
     justify-content: flex-end;
     align-items:center;
-   
   }
-
 
 .add-container button{
      width:25px;
@@ -198,7 +200,6 @@ height:25px;
   z-index: 1;
   border:solid black 1px;
   
-  
 }
 
 .dropdown-content a {
@@ -206,8 +207,6 @@ height:25px;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  
-  
 }
 
 /* .dropdown a:hover {background-color: #ddd;} */
@@ -217,8 +216,8 @@ height:25px;
 #grid-container-cart{
   display:grid;
   grid-template-columns: 2fr 1fr 1fr ;
-  border-top:1px solid black;
-  border-bottom:1px solid black;
+  border-top:1px solid grey;
+  border-bottom:1px solid grey;
   padding-top:30px;
   padding-bottom:30px;
 }
@@ -258,10 +257,10 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <div>
+    <div id="grid-box">
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
-    <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
-    i din postkasse hver måned eller hver anden måned.</P>
+    <p class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+    i din postkasse hver måned eller hver anden måned.</p>
     </div>
 </section>
  <!-- knapper til filtrering -->
