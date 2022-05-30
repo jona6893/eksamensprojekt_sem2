@@ -19,9 +19,12 @@ get_header(); ?>
 
     @media (min-width: 1121px) {
       .fngoals {
-        --repeat: 3;
+        --repeat: 2;
       }
 
+    }
+    body {
+      background-color: #FFFDFC;
     }
   
   /* -------------------- DESKTOP -------------------- */
@@ -31,8 +34,9 @@ get_header(); ?>
         display: grid;
         width:100%;
         height: 80vh;
-        background-image:url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/screenshot.webp");
+        background-image:url("https://ucarecdn.com/4f84cc15-95e5-4635-a781-fc4294a3148e/-/format/auto/-/preview/3000x3000/-/quality/lighter/");
         background-size:cover;
+        background-position: 100%;
         justify-items: center;
         align-items: center;
       }
@@ -68,7 +72,7 @@ get_header(); ?>
         gap: 20px;
         grid-area:1/1;
         padding-inline: 1.5rem;
-        background-color:white;
+        background-color: #ffffff8c;
         z-index:3;
         margin-left: 2%;
       }
@@ -97,16 +101,24 @@ get_header(); ?>
         padding-block: 5%;
         padding-right: 1.5rem;
         justify-items: center;
+        gap: 50px;
       }
       .overskrift1{
         display: grid;
+        justify-items: center;
+      }
+      .overskrift1 p{
         max-width: 48ch;
-        justify-items: start;
       }
       .fngoals{
         display:grid;
         grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
         gap: 20px;
+      }
+      .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
+        display: grid;
+        justify-items: center;
+        text-align:center;
       }
 
     /* ---------- CERTIFICERET EMBALLAGE ---------- */
@@ -118,12 +130,15 @@ get_header(); ?>
         padding-right: 1.5rem;
         justify-items: center;
         gap:20px;
+        column-gap: 50px;
       }
 
       .overskrift2{
         display: grid;
         justify-items: start;
         align-items: center;
+      }
+      .overskrift2 p {
         max-width: 48ch;
       }
       .sub2_indhold{
@@ -131,6 +146,8 @@ get_header(); ?>
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 20px;
+        column-gap: 50px;
+        align-items: center;
       }
       .sub2_text1{
         grid-area: 1/1;
@@ -143,6 +160,13 @@ get_header(); ?>
       .sub2_text3{
         grid-area: 2/1;
         max-width: 48ch;
+      }
+
+      .sub2_imgs{
+        background-image: url(https://ucarecdn.com/39625410-2c45-4480-a772-79d32ad8a234/-/format/auto/-/preview/3000x3000/-/quality/lighter/);
+        background-size: cover;
+        background-position: 50%;
+        aspect-ratio: 1;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
@@ -241,7 +265,7 @@ get_header(); ?>
           display: grid;
           width:100%;
           height: 80vh;
-          background-image:url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/screenshot.webp");
+          background-image:url("https://ucarecdn.com/4f84cc15-95e5-4635-a781-fc4294a3148e/-/format/auto/-/preview/3000x3000/-/quality/lighter/");
           background-position:50%;
           background-size:cover;
           justify-items: center;
@@ -414,28 +438,28 @@ get_header(); ?>
     </div>
     <div class="fngoals">
       <div class="goal_one">
-      <img src="" alt="">
-      <h4>SUNDHED OG TRIVSEL</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/3_maal.png" alt="">
+      <h4>3. SUNDHED OG TRIVSEL</h4>
       </div>
       <div class="goal_two">
-      <img src="" alt="">
-      <h4>LIGESTILLING MELLEM KØNNENE</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/5_maal.png" alt="">
+      <h4>5. LIGESTILLING MELLEM KØNNENE</h4>
       </div>
       <div class="goal_three">
-      <img src="" alt="">
-      <h4>ANSVARLIGT FORBRUG OG PRODUKTION</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/12_maal.png" alt="">
+      <h4>12. ANSVARLIGT FORBRUG OG PRODUKTION</h4>
       </div>
       <div class="goal_fouth">
-      <img src="" alt="">
-      <h4>KLIMAINDSATS</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/13_maal.png" alt="">
+      <h4>13. KLIMAINDSATS</h4>
       </div>
       <div class="goal_fith">
-      <img src="" alt="">
-      <h4>LIVET PÅ LAND</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/15_maal.png" alt="">
+      <h4>15. LIVET PÅ LAND</h4>
       </div>
       <div class="goal_sixth">
-      <img src="" alt="">
-      <h4>FRED, RETFÆRDIGHED OG STÆRKE INSTITUTIONER</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/16_maal.png" alt="">
+      <h4>16. FRED, RETFÆRDIGHED OG STÆRKE INSTITUTIONER</h4>
       </div>
     </div>
   </div>
@@ -458,7 +482,7 @@ get_header(); ?>
     <p>Svanemærket er Danmarks officielle miljømærke, og er en garanti for bæredygtigt papir og produktion. Alt Eace kartonnage er produceret på et svanemærket trykkeri i Danmark.</p>
     </div>
     <div class="sub2_imgs">
-
+      
     </div></div>
   </div>
   <div id="subject3">
