@@ -243,6 +243,10 @@ get_header(); ?>
     transition: left 0.75s ease-out, opacity 0.75s ease-in-out;
   }
 
+  .quote {
+    font-size: 1rem;
+  }
+
   [data-index="1"] {
     left: -20%;
     opacity: 0;

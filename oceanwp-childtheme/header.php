@@ -154,7 +154,7 @@ header img {
             </div>
         </div>
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/vores-historie/">VORES HISTORIE</a>
-        <a href="">BLOG</a>
+        <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/blog/">BLOG</a>
 
         <div class="menu-ikoner">
             <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/bruger/"><img class="menu-user"

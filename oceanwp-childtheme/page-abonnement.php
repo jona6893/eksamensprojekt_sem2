@@ -22,6 +22,10 @@ get_header(); ?>
     background-size: cover;
     height: 70vh;
     margin-bottom: 80px;
+    display: grid;
+    justify-items:center;
+    align-items:center;
+
   }
 
   #splash-image::before {
@@ -36,15 +40,11 @@ get_header(); ?>
   }
 
   #splash-image h1 {
-    position: absolute;
-    bottom: 5vh;
-    left: 0;
-    right: 0;
     text-align: center;
     font-family: "NormsRegular";
     font-size: 4rem;
-  }
 
+  }
  
   .filter-menu {
     --repeat: auto-fit;
@@ -59,6 +59,8 @@ get_header(); ?>
     gap: 10px;
   display: grid;
     grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+    padding-bottom:60px;
+    justify-items:center;
   }
   
   .filter-btn {
@@ -90,13 +92,16 @@ get_header(); ?>
 
 .produkt-card {
     display: grid;
-    border-top: solid 3px grey;
+    border-top: solid 1px grey;
     gap: 20px;
     grid-template-columns: 1fr 2fr 1fr;
-     grid-template-rows: 200px;
+     grid-template-rows: 300px;
+     padding:25px;
 
 }
-
+ p{
+  max-width:55ch;
+}
 
 /*   @media (max-width: 730px) {
     #produkter {
@@ -119,12 +124,22 @@ get_header(); ?>
     margin-bottom: 4px;
   }
 
-  @media (max-width: 570px) {
+  @media (max-width:974px) {
+    .produkt-card{
+      grid-template-columns:1fr 0.2fr;
+    }
+    .om-produktet{
+  grid-column:1/2;
+}
+.add-container{
+   align-items: flex-end;
+   
+  }
   }
   .abo-img{
     position: relative;
     aspect-ratio:738 /1417 ;
-
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 100%;
   }
@@ -132,7 +147,7 @@ get_header(); ?>
      display: flex;
     justify-content: flex-end;
     align-items:center;
-    padding-right:5%;
+   
   }
 
 
@@ -150,10 +165,10 @@ get_header(); ?>
   }
 .add-grid-container{
        display: flex;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 height:25px;
-
 }
+
 
 </style>
 
@@ -162,10 +177,11 @@ height:25px;
   <template>
     <article class="produkt-card">
     <div class="abo-img">
-    </div>
-    <div>
+    </div >
+    <div class="om-produktet">
+      <h3 class="produkt-navn"></h3>
       <p class="produkt-info"></p>
-      <button class="read-more">LÆS MERE OM PRODUKTET</button>
+      <button class="read-more">LÆS MERE</button>
     </div>
     
     <div class="add-container">
@@ -179,9 +195,11 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <h1>Abonnement</h1>
-    <P>Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+    <div>
+    <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
+    <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
     i din postkasse hver måned eller hver anden måned.</P>
+    </div>
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
@@ -219,6 +237,7 @@ height:25px;
     //kaldes når siden er loadet
     let response = await fetch(url);
     produkter = await response.json();
+    produkter.reverse();
     display(produkter); //kalder på display() funktionen med produkter som parameter
     //console.log(produkter);
   }
@@ -240,18 +259,63 @@ height:25px;
     mainContent.textContent = ""; //fjerner sektionens indhold
 
     produkter.forEach((abonnement) => {
-      if (filter == "alle" || filter == abonnement.kategori) {
-        //hvis objektet har samme værdi som filterknappen
-        const clone = template.cloneNode(true);
-        clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
-        clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
-        //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
-        mainContent.appendChild(clone);
-        visteProdukter = document.getElementById("produkter").childElementCount;
-      }
+        if (filter == "alle" || filter == abonnement.kategori) {
+            //hvis objektet har samme værdi som filterknappen
+            const clone = template.cloneNode(true);
+            clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
+            clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
+            //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
+            mainContent.appendChild(clone);
+            visteProdukter = document.getElementById("produkter").childElementCount;
+        }
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
-  }
+
+    /* ---------- Her start tæller funktionen. ---------- */
+
+    //De her variabler taget fat i all de elementer der har den valgte class. Da der er mere end en, indeholder hver variable en Array.
+    let minus = document.querySelectorAll(".minus")
+    let plus = document.querySelectorAll(".plus")
+    let tal = document.querySelectorAll(".add-tal")
+
+
+    tilføjTal(minus, plus, tal);
+}
+
+function tilføjTal(minus, plus, tal) {
+    //opretter en tomt Array som vi senere fylder med 0 taller
+    let counter = []
+
+    console.log(minus, plus, tal)
+    // en foreach function der skubber et 0 tal ind i "counter" for hvert element der er i tal variablen. 
+    // så hvis der er 7 elementer så bliver der skubbet et 0 tal ind counter array'en så der er sådan ud: counter = [0,0,0,0,0,0,0]
+    tal.forEach(e => {
+        counter.push(0)
+    })
+
+    console.log(counter)
+    // for hvert plus tegn, sætter vi en eventlistener på. "e" står for hvert element i plus variablen. "i" står for index.
+    // hvert element i en array har et index.
+    plus.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            // tilføjer et til det objekt i counter der er = "i", altså dens index number.
+            counter[i]++
+            // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
+            // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
+            tal[i].textContent = `${counter[i]}`;
+        })
+    })
+
+    // denne forEach funktion gør det samme som for oven, den fjerner bare et tal med "counter--" i stedet for "counter++"
+    minus.forEach((e, i) => {
+        e.addEventListener("click", () => {
+            counter[i]--
+            tal[i].textContent = `${counter[i]}`;
+        })
+    })
+
+
+}
 </script>
 
 <?php get_footer(); ?>
