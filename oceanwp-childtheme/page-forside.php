@@ -139,7 +139,8 @@ get_header(); ?>
   }
   .splash_button {
     grid-row: 3/4;
-    
+    display: flex;
+    flex-direction:column;
     gap: 20px;
     
   }
@@ -151,6 +152,7 @@ get_header(); ?>
     color: var(--sort);
    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
    border: none;
+   min-width: 200px;
    
   }
   .til_abonnement_knap {
@@ -160,7 +162,7 @@ get_header(); ?>
     background-color: var(--sort);
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
-    
+    min-width: 200px;
   }
 
 	#sort_bar1,	#sort_bar2{
@@ -173,7 +175,7 @@ get_header(); ?>
     margin-bottom: 200px;
 
 	}
-	#sort_bar1 h1{
+	#sort_bar1 h1, #sort_bar2 h1{
     font-family: "adrianna", sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -204,8 +206,8 @@ get_header(); ?>
   .level {
     color: var(--blaa);
   }
-  #forside_some .some {
-    
+  #forside_some {
+    margin-top: -200px;
   }
 
 
@@ -325,9 +327,10 @@ get_header(); ?>
 <section id="sort_bar2">
 	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
 </section>
+
 <section id="forside_some">
   <div class="some">
-<img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
+  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
   </div>
 </section>
 
