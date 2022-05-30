@@ -264,8 +264,8 @@ height:25px;
   <section id="splash-image">
     <div id="grid-box">
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
-    <P class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
-    i din postkasse hver måned eller hver anden måned.</P>
+    <p class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+    i din postkasse hver måned eller hver anden måned.</p>
     </div>
 </section>
  <!-- knapper til filtrering -->
