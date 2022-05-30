@@ -165,7 +165,7 @@ get_header(); ?>
 
 	#sort_bar1{
 		background-color: var(--sort);
-		height: 400px;
+		height: 200px;
 		display: grid;
 		align-items: center;
     justify-items: center;
@@ -178,8 +178,63 @@ get_header(); ?>
   font-weight: 800;
   font-style: normal;
 		color:white;
+		font-size: 1.3rem;
+	}
+  #intro {
+    display:grid;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  #intro .intro_start {
+    text-align:center;
+  }
+  #find_os {
+    position: sticky;
+    padding: 20px;
+    margin-top:100px;
+    margin-bottom: 100px;
+  }
+
+
+  /* -------------------- DESKTOP -------------------- */
+
+  @media (min-width: 750px) {
+    #sort_bar1{
+      height: 400px;
+    }
+    #sort_bar1 h1{
 		font-size: 4.5rem;
 	}
+  #intro .intro_om_os {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #intro .intro_om_os img {
+    grid-column: 1/2;
+    max-width: 70%;
+    margin: auto;
+  }
+  #intro .intro_om_os_text {
+    grid-column:2/3;
+    
+
+  }
+  #find_os {
+    padding: 40px;
+    margin-top:200px;
+    margin-bottom: 200px;
+  }
+  #forside_blog .seneste_artikler hr{
+    background-color: var(--sort) !important;
+  }
+  #forside_blog .seneste_artikler{
+    width: 300px;
+    height: 400px;
+
+  }
+     
+}
+
 
 	</style>
 
@@ -210,13 +265,41 @@ get_header(); ?>
 
 </section>
 <section id="intro">
-  <h1>Eace Gum</h1>
-  <p>Tyggegummi med funktioner for sundhed og velvære </p>
-  <section id="om_os"></section>
+  <div class="intro_start">
+  <h1>EACE GUM</h1>
+  <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
+  <div class="intro_om_os">
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
+  <div class="intro_om_os_text">
   <h2>Om Os</h2>
   <p>Vi er tyggegummi eksperter. Vi laver danskproduceret kvalitetstyggegummi, der kan meget mere end bare at smage ekstremt godt og give frisk ånde. Eace Gum indeholder nemlig samtidig funktioner for sundhed og velvære. Vi vil nemlig være en hjælpende hånd, som styrker dig i hverdagen, lige meget hvad du står overfor.</p>
-
+</div>
+  </div>  
+</section>
+<section id="find_os">
+  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
+</section>
+<section id="forside_blog">
+  <h1>BLOGINDLÆG</h1>
+  <div class="seneste_artikler">
+    <h2>Seneste Artikler</h2>
+    <hr>
+    <h3>Alt om Energi Boost</h3>
+    <p>Maj 12, 2022</p>
+    <hr>
+    <h3>Eace Sommerfest</h3>
+    <p>Maj 04, 2022</p>
+    <hr>
+    <h3>NEXT GENERATION MERCH</h3>
+    <p>December 17, 2021</p>
+    <hr>
+    <h3>EN LILLE HJÆLP I JULEDAGENE</h3>
+    <p>December 07, 2021</p>
+    <hr>
+  </div>
+  <div class="forside_hand">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke.png" alt="Eace Gum collagen boost">
+  </div>
 </section>
 
 <script>
