@@ -163,7 +163,7 @@ get_header(); ?>
     
   }
 
-	#sort_bar1{
+	#sort_bar1,	#sort_bar2{
 		background-color: var(--sort);
 		height: 200px;
 		display: grid;
@@ -194,15 +194,29 @@ get_header(); ?>
     margin-top:100px;
     margin-bottom: 100px;
   }
+  #forside_blog .seneste_artikler{
+    padding: 2%;
+
+  }
+  #forside_blog h1 {
+    text-align: center;
+  }
+  .level {
+    color: var(--blaa);
+  }
+  #forside_some .some {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png");
+    background-size:cover;
+  }
 
 
   /* -------------------- DESKTOP -------------------- */
 
   @media (min-width: 750px) {
-    #sort_bar1{
+    #sort_bar1, #sort_bar2{
       height: 400px;
     }
-    #sort_bar1 h1{
+    #sort_bar1 h1, #sort_bar2 h1{
 		font-size: 4.5rem;
 	}
   #intro .intro_om_os {
@@ -224,14 +238,20 @@ get_header(); ?>
     margin-top:200px;
     margin-bottom: 200px;
   }
-  #forside_blog .seneste_artikler hr{
-    background-color: var(--sort) !important;
+  #forside_blog .forside_blog_indhold {
+    display: flex;
+    justify-content: space-between;
+    
   }
-  #forside_blog .seneste_artikler{
-    width: 300px;
-    height: 400px;
-
+  #forside_blog .forside_hand {
+    max-width: 50%;
   }
+  
+  #sort_bar2 {
+    margin-top: -80px;
+    z-index: -10;
+  }
+ 
      
 }
 
@@ -281,6 +301,7 @@ get_header(); ?>
 </section>
 <section id="forside_blog">
   <h1>BLOGINDLÆG</h1>
+  <div class="forside_blog_indhold">
   <div class="seneste_artikler">
     <h2>Seneste Artikler</h2>
     <hr>
@@ -298,7 +319,16 @@ get_header(); ?>
     <hr>
   </div>
   <div class="forside_hand">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke.png" alt="Eace Gum collagen boost">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="Eace Gum collagen boost">
+  </div>
+  </div>
+</section>
+<section id="sort_bar2">
+	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
+</section>
+<section id="forside_some">
+  <div class="some">
+<img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
   </div>
 </section>
 
