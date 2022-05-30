@@ -15,6 +15,9 @@ get_header(); ?>
   :root{
     --viste-produkter: 6;
   }
+  body {
+    background-color: #FFFDFC;
+  }
 /* splashbillede, samt placering af teksten oven på */
   #splash-image {
     position: relative;

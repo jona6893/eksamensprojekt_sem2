@@ -200,6 +200,7 @@ get_header(); ?>
   }
   #intro .intro_start {
     text-align:center;
+    margin-bottom: 100px;
   }
      /* -------------------- FIND OS HER SEKTION -------------------- */
   #find_os {
@@ -208,6 +209,11 @@ get_header(); ?>
     margin-top:100px;
     margin-bottom: 100px;
   }
+  #find_os h1 {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
@@ -215,6 +221,12 @@ get_header(); ?>
   }
   #forside_blog h1 {
     text-align: center;
+    margin-bottom: 100px;
+  }
+  #forside_blog .forside_hand {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png");
+    background-size: cover;
+    aspect-ratio: 1;
   }
 
   #forside_some {
@@ -242,7 +254,7 @@ get_header(); ?>
   }
   #intro .intro_om_os_text {
     grid-column:2/3;
-    
+    max-width: 400px;
 
   }
   #find_os {
@@ -250,13 +262,17 @@ get_header(); ?>
     margin-top:200px;
     margin-bottom: 200px;
   }
+
   #forside_blog .forside_blog_indhold {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     
   }
+  #forside_ blog .seneste_artikler {
+    grid-column: 1/2;
+  }
   #forside_blog .forside_hand {
-    max-width: 50%;
+    grid-column: 2/3;
   }
   
   #sort_bar2 {
@@ -270,7 +286,7 @@ get_header(); ?>
 
 	</style>
 
-
+<main>
 <section id="splash-section">
   <div class="column-left">
 		<div class="splash_text">
@@ -309,6 +325,7 @@ get_header(); ?>
   </div>  
 </section>
 <section id="find_os">
+  <h1>Find Os Her</h1>
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
 </section>
 <section id="forside_blog">
@@ -331,7 +348,7 @@ get_header(); ?>
     <hr>
   </div>
   <div class="forside_hand">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="Eace Gum collagen boost">
+    
   </div>
   </div>
 </section>
@@ -344,6 +361,7 @@ get_header(); ?>
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
   </div>
 </section>
+</main>
 
 <script>
 

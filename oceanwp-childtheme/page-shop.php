@@ -16,12 +16,16 @@ get_header(); ?>
   :root{
     --viste-produkter: 6;
   }
+  body {
+    background-color: #FFFDFC;
+  }
 
   #splash-image {
     position: relative;
     background-size: cover;
     height: 65vh;
     margin-bottom: 80px;
+    
   }
 
   #splash-image::before {
@@ -32,6 +36,8 @@ get_header(); ?>
     top: 0;
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
+    color: var(--lyse-blaa);
+    opacity: 0.5;
   }
 
   #splash-image h1 {
@@ -369,7 +375,7 @@ get_header(); ?>
   </template>
 
   <section id="splash-image">
-    <h1>Produkter</h1>
+    <h1>SHOP</h1>
 </section>
 
   <section id="filter-menu" class="max-width">

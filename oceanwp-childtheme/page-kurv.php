@@ -11,6 +11,9 @@
 get_header(); ?>
 
 <style>
+    body {
+    background-color: #FFFDFC;
+  }
 /* -------------------- MOBILE -------------------- */
 
         
