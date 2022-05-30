@@ -39,18 +39,16 @@ get_header(); ?>
     opacity: 0.15;
   }
 
-/*   #splash-image h1 {
+  #splash-image h1 {
     text-align: center;
     font-family: "NormsRegular";
     font-size: 4rem;
 
   }
-  #splash-image P {
-    text-align: center;
-  } */
+ 
   #grid-box{
     display:grid;
-    text-align: center;
+    justify-items: center;
   }
 
   .filter-menu {
