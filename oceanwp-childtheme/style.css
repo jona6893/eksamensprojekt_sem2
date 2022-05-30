@@ -125,3 +125,18 @@ main p {
   font-size: 1rem;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 }
+
+button {
+    color: white;
+    border: 1px var(--sort) solid;
+    background-color: black;
+    padding: 8px 12px;
+    width: 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-family: "sofia-pro", sans-serif !important;
+    font-style: bold;
+    transition: color 0.2s, background-color 0.2s;
+  }

@@ -168,7 +168,44 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 height:25px;
 }
+/* drop-down menu til hyppighed */
+/* knappens udseende */
+.dropbtn {
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+  cursor: pointer;
+}
+/* knap på hover */
+/* .dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+} */
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 
 </style>
 
@@ -214,7 +251,28 @@ height:25px;
   </section>
 
   <section id="produkter" class="max-width"></section>
+<section id="add-cart">
+  <div>
+    <div>
+    <h3>TILFØJET TIL DIT ABONNEMENT</h3>
+    </div>
+    <div>
+    <h3>VÆLG HYPPIGHED</h3>
+    </div>
+    <div>
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#0">HVER MÅNED</a>
+    <a href="#0">HVER ANDEN MÅNED</a>
+    
+  </div>
+</div>
+  <button> GÅ TIL KURV</button>
+    </div>
+  </div>
 
+</section>
 
 </main>
 
@@ -315,6 +373,27 @@ function tilføjTal(minus, plus, tal) {
     })
 
 
+}
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 
