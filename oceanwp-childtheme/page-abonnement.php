@@ -15,7 +15,7 @@ get_header(); ?>
   :root{
     --viste-produkter: 6;
   }
-
+/* splashbillede, samt placering af teksten oven på */
   #splash-image {
     position: relative;
     background-size: cover;
@@ -26,7 +26,7 @@ get_header(); ?>
     align-items:center;
 
   }
-
+/* selve splashbilledet og placering */
   #splash-image::before {
     content: "";
     position: absolute;
@@ -37,7 +37,7 @@ get_header(); ?>
     background-position: center;
     
   }
-
+/* h1 på splashbilledet */
   #splash-image h1 {
     position: absolute;
     bottom: 30vh;
@@ -46,12 +46,12 @@ get_header(); ?>
     text-align: center;
 
   }
- 
+ /* grid til teksten på splashbilledet */
   #grid-box{
     display:grid;
     justify-items: center;
   }
-
+/* ? */
   .filter-menu {
     --repeat: auto-fit;
   }
@@ -68,7 +68,7 @@ get_header(); ?>
     padding-bottom:60px;
     justify-items:center;
   }
-  
+  /* filtrerings knappers udseende */
   .filter-btn {
     color: white;
     border: 1px var(--sort) solid;
@@ -145,7 +145,7 @@ get_header(); ?>
   .abo-img{
     position: relative;
     aspect-ratio:738 /1417 ;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 100%;
   }
@@ -153,9 +153,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
      display: flex;
     justify-content: flex-end;
     align-items:center;
-   
   }
-
 
 .add-container button{
      width:25px;
@@ -202,7 +200,6 @@ height:25px;
   z-index: 1;
   border:solid black 1px;
   
-  
 }
 
 .dropdown-content a {
@@ -210,8 +207,6 @@ height:25px;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  
-  
 }
 
 /* .dropdown a:hover {background-color: #ddd;} */
@@ -221,8 +216,8 @@ height:25px;
 #grid-container-cart{
   display:grid;
   grid-template-columns: 2fr 1fr 1fr ;
-  border-top:1px solid black;
-  border-bottom:1px solid black;
+  border-top:1px solid grey;
+  border-bottom:1px solid grey;
   padding-top:30px;
   padding-bottom:30px;
 }
