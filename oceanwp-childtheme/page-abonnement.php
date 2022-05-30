@@ -294,7 +294,7 @@ height:25px;
 
   <section id="produkter" class="max-width"></section>
 
-<section id="add-cart">
+<section id="add-cart" class="max-width">
   <div id="grid-container-cart">
 
     <div class="box-1">
@@ -380,7 +380,7 @@ height:25px;
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
 
-        /* ---------- Her start tæller funktionen. ---------- */
+        /* ---------- Her starter tæller funktionen. ---------- */
 
     //De her variabler taget fat i all de elementer der har den valgte class. Da der er mere end en, indeholder hver variable en Array.
     let minus = document.querySelectorAll(".minus")
@@ -417,45 +417,30 @@ function tilføjTal(minus, plus, tal, overskrift) {
             // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
             tal[i].textContent = `${counter[i]}`;
             
-            // nulstiller "total & allePriser"
             total = 0
             allePriser = []
-            // henter alle klasser med .add-tal og laver en array
             allePriser = Array.from(document.querySelectorAll(".add-tal"))
-
             allePriser.forEach(e => {
-            // for hver objekt i "allePriser" lave den indholdet om til et tal ved hjælp af parseInt. derefter ligger den dem sammen.
             total += parseInt(e.innerText)
             })
             console.log("Total = " + total)
-            // Opdatere klassen ".total" med det nye nummer
             document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
 
 
             /* tjekker om de "p" tags vi laver eksistere */
             const classExists = document.getElementsByClassName(`titel${[i]}`).length > 0;
 
-            // hvis der eksistere 
             if (classExists) {
-
               console.log("overskrift findes allrede")
               document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
 
-            } 
-            // hvis taller ved siden af plus minus tegnet er = 0, her sker intet. 
-            else if (tal[i].innerText <= 0){
+            } else if (tal[i].innerText <= 0){
               console.log("tallet er 0")
-            } 
-            // ellers tilføjes et nyt element med det tal der svar til hvad der står i tal.
-            else{
-              // lavet en ny paragragh.
+            } else{
               let makeP = document.createElement("p")
-              //tilføjer en klasse med et nummer(det er det [i] er). 
             makeP.classList.add(`titel${[i]}`)
             console.log(overskrift[i])
-            // giver elementet den tekst der skal står.
             makeP.textContent = `${overskrift[i].innerText} ${counter[i]}`
-            // placere paragragh under ".oversigt"
             oversigt.appendChild(makeP)
             }
         })

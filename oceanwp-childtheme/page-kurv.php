@@ -36,7 +36,15 @@ get_header(); ?>
             width: 100%;
             justify-content: center;
         }
-
+        .trin{
+            display: grid;
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+            gap: 50px;
+            width: 100%;
+        }
+        .step{
+            display:none;
+        }
         input{
             color:black;
             font-size:1rem;
@@ -47,6 +55,12 @@ get_header(); ?>
                 --repeat:1;
                 display: grid;
                 grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 600px));
+            }
+             .trin{
+                display:none;
+             }
+            .step{
+                display: block;
             }
         }
 
@@ -67,7 +81,7 @@ get_header(); ?>
         .produkt img{
             max-width: 40%;
         }
-        .produkt h3{
+        .produkt h4{
             display: grid;
             align-items: center;
         }
@@ -75,7 +89,7 @@ get_header(); ?>
             display: grid;
             justify-items: end;
         }
-        .total h4, h3{
+        .total h4, h3, p{
             margin:0;
         }
 
@@ -102,7 +116,7 @@ get_header(); ?>
             min-height:100%;
 
         }    
-        .adresse h2{
+        .adresse h3{
             color:black;
         }
         .navn-tel{
@@ -136,7 +150,7 @@ get_header(); ?>
             
             min-height:100%;
         }
-        .betaling h2{
+        .betaling h3{
             color:black;
         }
         .datoer{
@@ -221,36 +235,43 @@ get_header(); ?>
         </template> -->
 <main>
 
-    <section id="first_section">
+    <section id="first_section" class="max-width">
+        <div class="trin">
+            <p>Step 1.</p>
+            <p>Step 2.</p>
+            <p>Step 3.</p>
+        </div>
         <div class="de-tre-felter">
             <div class="kurv">
-                <h2>Kurv</h2>
+                <p class="step step1">Step 1.</p>
+                <h3>Kurv</h3>
             
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/VITAMIN-BOOST-KOLLI_900x.jpg?v=1650460271" alt="">
                 <div>
-                <h3>Produkt 1</h3>
-                <p class="pris">150</p>
+                <h4>Produkt 1</h4>
+                <p class="pris">250</p>
                 </div>
-                <h3 class="remove">X</h3>
+                <h4 class="remove">X</h4>
                 </div>
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/HEALTHY-TEETH-KOLLI_900x.jpg?v=1650460506" alt="">
                 <div>
-                <h3>Produkt 2</h3>
+                <h4>Produkt 2</h4>
                 <p class="pris">250</p>
                 </div>
-                <h3 class="remove">X</h3>
+                <h4 class="remove">X</h4>
                 </div>
                 <div class="total">
                     <div>
-                        <h4>Total</h4>
-                        <h3 class="totalnr">250</h3>
+                        <p>Total</p>
+                        <h4 class="totalnr">250</h4>
                     </div>
                 </div>
             </div>
             <div class="adresse">
-                <h2>Adresse</h2>
+                <p class="step step2">Step 2.</p>
+                <h3>Adresse</h3>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
                 <input type="text" placeholder="Telefon">
@@ -263,7 +284,8 @@ get_header(); ?>
                 </div>
             </div>
             <div class="betaling">
-                <h2>Betalings Informationer</h2>
+                <p class="step step3">Step 2.</p>
+                <h3>Betalings Informationer</h3>
                 <div class="kort">
                     <div class="chipnbrand">
                     <div class="kortfigur"></div>
