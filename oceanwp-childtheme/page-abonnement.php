@@ -45,7 +45,6 @@ get_header(); ?>
     font-size: 4rem;
 
   }
-
  
   .filter-menu {
     --repeat: auto-fit;
@@ -96,7 +95,7 @@ get_header(); ?>
     border-top: solid 1px grey;
     gap: 20px;
     grid-template-columns: 1fr 2fr 1fr;
-     grid-template-rows: 200px;
+     grid-template-rows: 300px;
      padding:25px;
 
 }
