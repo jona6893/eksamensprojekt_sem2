@@ -367,7 +367,8 @@ height:25px;
     let minus = document.querySelectorAll(".minus")
     let plus = document.querySelectorAll(".plus")
     let tal = document.querySelectorAll(".add-tal")
-
+    let overskrfit = document.querySelectorAll(".produkt-navn")
+    
 
     tilføjTal(minus, plus, tal);
 }
@@ -375,6 +376,9 @@ height:25px;
 function tilføjTal(minus, plus, tal) {
     //opretter en tomt Array som vi senere fylder med 0 taller
     let counter = []
+    const oversigt = document.querySelector(".oversigt");
+    oversigt.appendChild(node)
+    
 
     console.log(minus, plus, tal)
     // en foreach function der skubber et 0 tal ind i "counter" for hvert element der er i tal variablen. 
@@ -393,6 +397,7 @@ function tilføjTal(minus, plus, tal) {
             // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
             // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
             tal[i].textContent = `${counter[i]}`;
+            if (counter )
         })
     })
 
@@ -406,6 +411,8 @@ function tilføjTal(minus, plus, tal) {
 
 
 }
+
+ /* ---------- Her starter Dropdown funktionen. ---------- */
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -425,19 +432,6 @@ window.onclick = function(event) {
     }
   }
 }
-
-/* ---------- Tilføjet til Kurv ---------- */ 
-
-
-
-
-
-
-
-
-
-
 </script>
-
 
 <?php get_footer(); ?>
