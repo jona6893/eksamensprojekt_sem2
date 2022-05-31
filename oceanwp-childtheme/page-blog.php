@@ -12,7 +12,9 @@
 get_header(); ?>
 
 <style>
-
+body{
+  background-color: black;
+}
 /*------------- første sektion ------------*/
    #first_section{
         display: grid;
