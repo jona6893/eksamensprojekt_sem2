@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* max-width på 1200px med 8px padding ude til siderne på mobil */
