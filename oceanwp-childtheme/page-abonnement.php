@@ -46,7 +46,7 @@ get_header(); ?>
     bottom: 30vh;
     left: 5%;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
    
   }
 
