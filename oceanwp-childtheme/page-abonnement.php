@@ -362,7 +362,7 @@ height:25px;
 
   function filterProdukter() {
     //bliver kaldt når knapperne klikkes på
-    filter = this.dataset.category; //variablen ændres til den knap man klikker på
+    filter = this.dataset.kategori; //variablen ændres til den knap man klikker på
     document.querySelector(".selected").classList.remove("selected");
     this.classList.add("selected");
 
