@@ -41,34 +41,55 @@ get_header(); ?>
   #splash-image h1 {
     position: absolute;
     bottom: 30vh;
-    left: 25%;
+    left: 20%;
     font-weight: 800;
     font-size: 4rem;
    
   }
+  #splash-image p {
+  position: absolute;
+    bottom: 24vh;
+    left: 20%;
+    font-size: 1rem;
+    max-width: 40ch
+    
+ }
 
   #filter-menu {
+    gap:30px;
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 500px;
+
   }
   
   .filter-btn {
-    color: var(--sort);
-    border: 1px var(--sort) solid;
-    background-color: transparent;
+    color: white;
+   /*  border: 1px var(--sort) solid; */
+    background-color: var(--sort);
     padding: 8px 12px;
-    width: 110px;
+    width: 160px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
+    border:none;
+    
+  }
+  .filter-btn:hover{
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   .filter-btn.selected {
-    color: white;
-    background-color: var(--sort);
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
+    
   }
 
   #produkter {
@@ -101,6 +122,7 @@ get_header(); ?>
       grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
       gap: 10px;
       overflow-x: scroll;
+      
     }
 
     .produkt-card {
@@ -372,12 +394,13 @@ get_header(); ?>
 
   <section id="splash-image">
     <h1>SHOP</h1>
+    <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
 </section>
 
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
-    <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
-    <button class="filter-btn" data-category="merchandise">Merchandise</button>
+    <button class="filter-btn" data-category="tyggegummi">TYGGEGUMMI</button>
+    <button class="filter-btn" data-category="merchandise">MERCHANDISE</button>
   </section>
 
   <section id="features" class="max-width">
