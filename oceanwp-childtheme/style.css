@@ -57,6 +57,9 @@ html {
   font-size: 100% !important;
   letter-spacing: 0.1px;
   background-color: black;
+}
+
+body {
   overflow-x: hidden;
 }
 
