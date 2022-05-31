@@ -277,6 +277,13 @@ height:25px;
 /* --------- MOBILE UDGAVE --------- */
 
 @media (max-width:974px) {
+
+  #splash-image p {
+    position: absolute;
+    bottom: 20vh;
+    left: 5%;
+    font-size: 1rem;
+}
     .produkt-card{
       grid-template-columns:1fr 0.2fr;
     }
