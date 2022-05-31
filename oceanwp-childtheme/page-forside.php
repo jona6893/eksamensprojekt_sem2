@@ -138,6 +138,7 @@ get_header(); ?>
     #splash-section {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
+      height: 150vw;
     }
 
     .column-left {
