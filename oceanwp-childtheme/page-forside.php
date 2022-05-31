@@ -12,11 +12,6 @@ get_header(); ?>
 
 <style>
 
-* {
-  z-index: 100;
-}
-
-
  body{
   background-color: var(--lyse-blaa); 
   
@@ -188,7 +183,6 @@ get_header(); ?>
     margin-top: 200px;
     margin-bottom: 200px;
     text-align: center;
-    position: relative;
 	}
 	#sort_bar1 h1, #sort_bar2 h1{
     font-family: "adrianna", sans-serif;
@@ -196,17 +190,31 @@ get_header(); ?>
     font-style: normal;
 		color:white;
 		font-size: 1.3rem;
-    position: fixed;
-    top: 40%;
-    z-index: 1;
 	}  
   .level {
     font-family: "adrianna", sans-serif;
   font-weight: 800;
   font-style: normal;
     color: var(--blaa);
-    
   }
+
+/* * */
+
+  #sort_bar1, #sort_bar2 {
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+  }
+
+  #sort_bar1 {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar1.png");
+  }
+
+  #sort_bar2 {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar2.png");
+  }
+
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
     display:grid;
@@ -323,8 +331,8 @@ get_header(); ?>
   
   #sort_bar2 {
     margin-top: -80px;
-    z-index: -10;
   }
+
   #forside_some {
     margin-top: -200px;
     display: grid;
@@ -368,8 +376,7 @@ get_header(); ?>
 </section>
 <section class="streger"></section>
 <section id="sort_bar1">
-	<h1>NEXT GENERATION CHEWING GUM </h1>
-
+	<!-- <h1>NEXT GENERATION CHEWING GUM </h1> -->
 </section>
 <section id="intro">
   <div class="intro_start">
@@ -415,7 +422,7 @@ get_header(); ?>
   </div>
 </section></section>
 <section id="sort_bar2">
-	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
+	<!-- <h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1> -->
 </section>
 
 <section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
