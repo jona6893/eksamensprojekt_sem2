@@ -38,6 +38,7 @@ header {
     position: sticky;
     width: 100%;
     top:0;
+    transition: 0.3s;
 }
 
 header img {
