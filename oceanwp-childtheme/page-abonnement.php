@@ -87,10 +87,16 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    
     transition: color 0.2s, background-color 0.2s;
+    border:none;
     
   } 
+  .filter-btn:hover{
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
+  }
 
   .filter-btn.selected {
     color: var(--sort);

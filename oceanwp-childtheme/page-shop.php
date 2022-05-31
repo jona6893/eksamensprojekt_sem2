@@ -63,7 +63,7 @@ get_header(); ?>
   
   .filter-btn {
     color: white;
-    /* border: 1px var(--sort) solid; */
+   /*  border: 1px var(--sort) solid; */
     background-color: var(--sort);
     padding: 8px 12px;
     width: 110px;
@@ -72,11 +72,20 @@ get_header(); ?>
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
+    border:none;
+  }
+  .filter-btn:hover{
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   #produkter {
