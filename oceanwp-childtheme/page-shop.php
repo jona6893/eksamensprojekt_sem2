@@ -394,8 +394,8 @@ get_header(); ?>
 
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
-    <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
-    <button class="filter-btn" data-category="merchandise">Merchandise</button>
+    <button class="filter-btn" data-category="tyggegummi">TYGGEGUMMI</button>
+    <button class="filter-btn" data-category="merchandise">MERCHANDISE</button>
   </section>
 
   <section id="features" class="max-width">
