@@ -63,7 +63,7 @@ get_header(); ?>
   .filter-menu {
     --repeat: auto-fit;
   }
-  
+  /* media quuery til vores ccs variable, bruges på vores grid */
     @media (min-width: 805px) {
   #filter-menu {
     --repeat: 4;
@@ -147,19 +147,6 @@ get_header(); ?>
    
     font-size: 1.5rem !important;
     margin-bottom: 4px;
-  }
-
-  @media (max-width:974px) {
-    .produkt-card{
-      grid-template-columns:1fr 0.2fr;
-    }
-    .om-produktet{
-  grid-column:1/2;
-}
-.add-container{
-   align-items: flex-end;
-   
-  }
   }
   .abo-img{
     position: relative;
@@ -286,6 +273,26 @@ height:25px;
 /* .this-width{
   max-width:900px;
 } */
+
+/* --------- MOBILE UDGAVE --------- */
+
+@media (max-width:974px) {
+    .produkt-card{
+      grid-template-columns:1fr 0.2fr;
+    }
+    .om-produktet{
+  grid-column:1/2;
+}
+.add-container{
+   align-items: flex-end;
+   
+  }
+  #grid-container-cart{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }
+
 </style>
 
 <main id="main-content">
