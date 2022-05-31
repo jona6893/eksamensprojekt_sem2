@@ -121,6 +121,7 @@ get_header(); ?>
     grid-template-columns: 1fr 2fr 1fr;
      grid-template-rows: 300px;
      padding:25px;
+    align-items:center;
 
 }
  p{
@@ -165,7 +166,9 @@ get_header(); ?>
     aspect-ratio:738 /1417 ;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
-    height: 100%;
+    height: 80%;
+  align-items:center;
+    
   }
   .add-container{
      display: flex;
@@ -198,6 +201,9 @@ get_header(); ?>
     display: grid;
     align-content: center;
     margin: 0%;
+    padding-left:5px;
+    padding-right:5px;
+
   }
 .add-grid-container{
        display: flex;
@@ -251,7 +257,7 @@ height:25px;
   display:grid;
   grid-template-columns: 2fr 1fr 1fr ;
   border-top:1px solid grey;
-  border-bottom:1px solid grey;
+ 
   padding-top:30px;
   padding-bottom:30px;
 }
@@ -259,16 +265,25 @@ height:25px;
   display:grid;
   gap:120px;
 }
+.box-2{
+  text-align:end;
+  padding-right:8px;
+}
 .oversigt{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1fr; 
+
 }
 .total{
   grid-column:2/3;
+  grid-row:4/5;
 }
 .next{
   width:120px;
 }
+/* .this-width{
+  max-width:900px;
+} */
 </style>
 
 <main id="main-content">
@@ -314,7 +329,7 @@ height:25px;
     <button class="filter-btn" data-kategori="collagen_boost">COLLAGEN BOOST</button>
   </section>
 
-  <section id="produkter" class="max-width"></section>
+  <section id="produkter" class="max-width this-width"> </section>
 
 <section id="add-cart" class="max-width">
   <div id="grid-container-cart">
@@ -326,7 +341,7 @@ height:25px;
     </div>
     </div>
     <div  class="box-2">
-    <h4>VÆLG HYPPIGHED</h4>
+    <h4>VÆLG HYPPIGHED:</h4>
     </div>
     <div  class="box-3">
       <div class="dropdown">
