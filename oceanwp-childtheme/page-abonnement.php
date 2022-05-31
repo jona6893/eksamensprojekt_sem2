@@ -278,9 +278,11 @@ height:25px;
   grid-column:2/3;
   grid-row:4/5;
 }
+  
 .next{
   width:120px;
 }
+
 /* .this-width{
   max-width:900px;
 } */
