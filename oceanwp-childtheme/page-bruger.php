@@ -106,8 +106,8 @@ get_header(); ?>
     <div class="login-container">
       <h3>Login på din Eacegum Konto</h3>
       <div class="login-felter">
-        <input type="text" placeholder="Brugernavn">
-        <input type="text" placeholder="Adgangskode">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Adgangskode">
       </div>
       <div class="login-knapper">
         <button class="knapper knap1">LOGIN</button>
@@ -118,8 +118,8 @@ get_header(); ?>
       <div class="opret-felter">
         <input type="text" placeholder="Fornavn">
         <input type="text" placeholder="Efternavn">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Adgangskode">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Adgangskode">
       </div>
       <div class="opret-knapper">
         <button class="knapper knap2">OPRET BRUGER</button>
