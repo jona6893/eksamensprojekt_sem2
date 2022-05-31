@@ -49,7 +49,7 @@ get_header(); ?>
   #splash-image p {
   position: absolute;
     bottom: 20vh;
-    left: 5%;
+    left: 20%;
     font-size: 1rem;
     max-width: 40ch
     
