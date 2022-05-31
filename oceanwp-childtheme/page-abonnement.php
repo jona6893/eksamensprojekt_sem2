@@ -302,14 +302,14 @@ height:25px;
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
-    <button class="filter-btn selected" data-category="alle">ALLE</button>
-    <button class="filter-btn" data-category="vitamin_boost">VITAMIN BOOST</button>
-    <button class="filter-btn" data-category="healthy_teeth">HEALTHY TEETH</button>
-    <button class="filter-btn" data-category="energy_boost">ENERGY BOOST</button>
-    <button class="filter-btn" data-category="defence_boost">DEFENCE BOOST</button>
-    <button class="filter-btn" data-category="focus">FOCUS</button>
-    <button class="filter-btn" data-category="relax">RELAX</button>
-    <button class="filter-btn" data-category="collagen_boost">COLLAGEN BOOST</button>
+    <button class="filter-btn selected" data-kategori="alle">ALLE</button>
+    <button class="filter-btn" data-kategori="vitamin_boost">VITAMIN BOOST</button>
+    <button class="filter-btn" data-kategori="healthy_teeth">HEALTHY TEETH</button>
+    <button class="filter-btn" data-kategori="energy_boost">ENERGY BOOST</button>
+    <button class="filter-btn" data-kategori="defence_boost">DEFENCE BOOST</button>
+    <button class="filter-btn" data-kategori="focus">FOCUS</button>
+    <button class="filter-btn" data-kategori="relax">RELAX</button>
+    <button class="filter-btn" data-kategori="collagen_boost">COLLAGEN BOOST</button>
   </section>
 
   <section id="produkter" class="max-width"></section>
