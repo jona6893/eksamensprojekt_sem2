@@ -11,57 +11,66 @@
 get_header(); ?>
 
 <style>
-    body {
-    background-color: #FFFDFC;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger2.png");
-    background-size: 110%;
-  }
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
     #section1{
         display: grid;
         justify-items: center;
-        margin: 100px 2%;
-    
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    #section1 p {
+        max-width: 45ch;
+        text-align: center;
     }
 /* ---------- SECTION2 ---------- */
     #section2{
         display:grid;
         grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
         gap: 50px;
-        padding: 0% 2%;
+        padding: 0% 11%;
         align-items: center;
-        justify-items: center;
-    }
-    #section2 p{
-        box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-        padding: 3%;
-        max-width: 48ch;
+    justify-items: center;
     }
     .foto{
         background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/omos-scaled.webp");
         background-size:cover;
         background-position: 48%;
-        width: 90%;
-        height:90%;
-        aspect-ratio: 1;
-    }
+        width: 100%;
+        height:100%;
 
-    #section3{
-    display: grid;
-    justify-items: center;
-    padding: 100px 0%;
     }
-    #section3 h2 {
-        margin: 100px;
-    }
-
-    #section4{
+    .blogpost-container {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+        width: 80%;
+        height: auto;
         display: grid;
-    justify-items: center;
-    padding: 100px 0%;
-    }
+        justify-items: start;
+        padding: 14% 3%;
+        min-height: 346px;
+      }
 /* ---------- SECTION3 ---------- */
+#section3 {
+    display: grid;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    justify-items: center;
+}
+
+.seti{
+    padding-top: 5%;
+    width: 60%;
+}
+/* ---------- SECTION4 ---------- */
+#section4 {
+    display: grid;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    justify-items: center;
+}
 
 /* -------------------- DESKTOP -------------------- */
 
@@ -76,19 +85,26 @@ get_header(); ?>
     <p>Vi elsker tyggegummi og vi elsker innovation. Derfor startede vi Eace Gum. </p>
 </section>
 <section id="section2">
+    <div class="blogpost-container">
+    <h3>Iværksætter duo</h3>
     <p>Eace Gum blev startet af iværksætter-duoen Asbjørn Dencker og Ziggi Harttung i 2019. Virksomheden blev stiftet med en mission om at skabe et tyggegummi der udover at smage godt, også skulle hjælpe folk i hverdagen, ligemeget hvad man står overfor. 
 <br><br>I maj 2020, lancerede Eace Gum deres første produkt i butikkerne, og siden er det gået stærkt. Idag har de tre fantastiske produkter: Vitamin Boost, der sørger for dine daglige essentials, Energy Boost der giver dig ekstra energi når du har brug for at gå et level op, og Healthy Teeth som sikrer frisk ånde og sunde tænder.</p>
+</div>
     <!-- <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/omos-scaled.webp" alt=""> -->
     <div class="foto"></div>
 </section>
+
 <section id="section3">
-    <h2>Set I</h2>
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/seti.png" alt="">
+    <h2>Set i</h2>
+    <img class="seti" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/seti.webp?_t=1653909501" alt="seti">
 </section>
+
 <section id="section4">
-    <h2>Mød Founders</h2>
-    <iframe title="vimeo-player" src="https://player.vimeo.com/video/671871303?h=a7c592fc40" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+    <h2>Mød founders</h2>
+    <iframe src="https://player.vimeo.com/video/671871303?h=a7c592fc40" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/671871303"></a><a href="https://vimeo.com/user103444425"></a><a href="https://vimeo.com"></a></p>
 </section>
+
 </main>
 
 <script>
