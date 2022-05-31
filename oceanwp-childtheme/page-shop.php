@@ -55,7 +55,7 @@ get_header(); ?>
   
   .filter-btn {
     color: var(--sort);
-    border: 1px var(--sort) solid;
+    /* border: 1px var(--sort) solid; */
     background-color: transparent;
     padding: 8px 12px;
     width: 110px;
