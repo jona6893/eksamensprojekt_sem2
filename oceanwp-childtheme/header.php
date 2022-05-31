@@ -35,6 +35,7 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 999;
+    
 }
 
 header img {
