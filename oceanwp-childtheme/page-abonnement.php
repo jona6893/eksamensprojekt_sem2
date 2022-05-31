@@ -87,6 +87,8 @@ get_header(); ?>
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   #produkter {
@@ -173,6 +175,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 height:25px;
 }
 /* drop-down menu til hyppighed */
+
 /* knappens udseende */
 .dropbtn {
   background-color: white;
@@ -180,6 +183,7 @@ height:25px;
   border: solid black 1px;
   cursor: pointer;
   text-align:end;
+  width:181px;
 }
 
 /* .dropbtn:hover, .dropbtn:focus {
@@ -232,6 +236,9 @@ height:25px;
 .total{
   grid-area:1/2;
 }
+.next{
+  width:120px;
+}
 </style>
 
 <main id="main-content">
@@ -259,8 +266,10 @@ height:25px;
   <section id="splash-image">
     <div id="grid-box">
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
-    <p class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
-    i din postkasse hver måned eller hver anden måned.</p>
+    <p class="abo-info">
+      Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+      i din postkasse hver måned eller hver anden måned.
+  </p>
     </div>
 </section>
  <!-- knapper til filtrering -->
@@ -286,23 +295,19 @@ height:25px;
       <p class="total">PAKKER I ALT:</p>
     </div>
     </div>
-
     <div  class="box-2">
     <h4>VÆLG HYPPIGHED</h4>
     </div>
-
     <div  class="box-3">
       <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">v</button>
-      <div id="myDropdown" class="dropdown-content">
-      <a href="#0">HVER MÅNED</a>
-      <a href="#0">HVER ANDEN MÅNED</a>
-      
-  </div>
-  </div>
-    <button> GÅ TIL KURV</button>
+       <div id="myDropdown" class="dropdown-content">
+       <a href="#0">HVER MÅNED</a>
+        <a href="#0">HVER ANDEN MÅNED</a>
+      </div>
     </div>
-
+    <button class="next"> GÅ TIL KURV</button>
+    </div>
   </div>
 
 </section>
