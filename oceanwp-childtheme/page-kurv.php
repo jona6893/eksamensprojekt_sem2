@@ -11,10 +11,16 @@
 get_header(); ?>
 
 <style>
-/* -------------------- MOBILE -------------------- */
-
+    body {
+    background-color: #FFFDFC;
+  }
+/* -------------------- MOBILE -------------------- *
         
     /* ---------- Layout ---------- */
+        h4{
+            margin:0;
+        }
+
         #first_section {
             display: grid;
             width: 100%;
@@ -24,16 +30,25 @@ get_header(); ?>
             padding: 5%;
             background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
             background-size: cover;
+            align-content: center;
         }
 
         .de-tre-felter {
             display: grid;
-            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
             gap: 50px;
             width: 100%;
             justify-content: center;
         }
-
+        .trin{
+            display: grid;
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+            gap: 50px;
+            width: 100%;
+        }
+        .step{
+            display:none;
+        }
         input{
             color:black;
             font-size:1rem;
@@ -43,7 +58,13 @@ get_header(); ?>
             .de-tre-felter{
                 --repeat:1;
                 display: grid;
-                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 600px));
+                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 400px));
+            }
+             .trin{
+                display:none;
+             }
+            .step{
+                display: block;
             }
         }
 
@@ -64,7 +85,7 @@ get_header(); ?>
         .produkt img{
             max-width: 40%;
         }
-        .produkt h3{
+        .produkt p{
             display: grid;
             align-items: center;
         }
@@ -72,13 +93,12 @@ get_header(); ?>
             display: grid;
             justify-items: end;
         }
-        .total h4, h3{
+        .total h4, h3, p{
             margin:0;
         }
 
         .total div{
             border: 1px solid black;
-            border-radius: 10px;
             display: grid;
             padding: 2%;
             align-items: center;
@@ -92,15 +112,14 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            border-radius: 10px;
-            padding: 50px 5%;
+            align-items: center;
+            padding: 20px;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
-            min-height:100%;
 
         }    
-        .adresse h2{
+        .adresse h3{
             color:black;
         }
         .navn-tel{
@@ -126,15 +145,15 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            border-radius: 10px;
-            padding: 50px 5%;
+            
+            padding: 10px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
             
             min-height:100%;
         }
-        .betaling h2{
+        .betaling h3{
             color:black;
         }
         .datoer{
@@ -219,40 +238,47 @@ get_header(); ?>
         </template> -->
 <main>
 
-    <section id="first_section">
+    <section id="first_section" class="max-width">
+        <div class="trin">
+            <p>Step 1.</p>
+            <p>Step 2.</p>
+            <p>Step 3.</p>
+        </div>
         <div class="de-tre-felter">
             <div class="kurv">
-                <h2>Kurv</h2>
+                <p class="step step1">Step 1.</p>
+                <h4>Kurv</h4>
             
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/VITAMIN-BOOST-KOLLI_900x.jpg?v=1650460271" alt="">
                 <div>
-                <h3>Produkt 1</h3>
-                <p class="pris">150</p>
+                <p>Produkt 1</p>
+                <p class="pris">250</p>
                 </div>
-                <h3 class="remove">X</h3>
+                <p class="remove">X</p>
                 </div>
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/HEALTHY-TEETH-KOLLI_900x.jpg?v=1650460506" alt="">
                 <div>
-                <h3>Produkt 2</h3>
+                <p>Produkt 2</p>
                 <p class="pris">250</p>
                 </div>
-                <h3 class="remove">X</h3>
+                <p class="remove">X</p>
                 </div>
                 <div class="total">
                     <div>
-                        <h4>Total</h4>
-                        <h3 class="totalnr">250</h3>
+                        <p>Total</p>
+                        <h4 class="totalnr">250</h4>
                     </div>
                 </div>
             </div>
             <div class="adresse">
-                <h2>Adresse</h2>
+                <p class="step step2">Step 2.</p>
+                <h4>Adresse</h4>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
-                <input type="text" placeholder="Telefon">
-                <input type="text" placeholder="E-Mail">
+                <input type="tel" placeholder="Telefon">
+                <input type="email" placeholder="E-Mail">
                 <input type="text" placeholder="Land">
                 </div>
                 <div class="by-post">
@@ -261,28 +287,29 @@ get_header(); ?>
                 </div>
             </div>
             <div class="betaling">
-                <h2>Betalings Informationer</h2>
+                <p class="step step3">Step 2.</p>
+                <h4>Betalings Informationer</h4>
                 <div class="kort">
                     <div class="chipnbrand">
                     <div class="kortfigur"></div>
                     <p>eace kredit</p>
                     </div>
-                    <p class="credit-navn">1234-1234-1234-1234</p>
+                    <p class="credit-navn">Jane Doe</p>
                     <div class="day-month">
                         <p class="credit-day">12</p>
                         <p>/</p>
                         <p class="credit-month">2022</p>
                     </div>
-                    <p class="credit-nr">Jane Doe</p>
+                    <p class="credit-nr">1234-1234-1234-1234</p>
                 </div>
                 <div class="kortnr">
                     <input class="cc-navn" type="text" placeholder="Navn"> 
-                    <input class="cc-nummer" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="19" placeholder="Kort Nummer"> 
+                    <input class="cc-nummer" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="16" placeholder="Kort Nummer"> 
                 </div>
                 <div class="datoer">
                     <input class="cc-mm" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="2" placeholder="MM">
                     <input class="cc-yyyy" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="4" placeholder="YYYY">
-                    <input type="number" placeholder="CVC">
+                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="3" placeholder="CVC">
                 </div>
                 <button class="betal">Betal</button>
             </div>

@@ -11,6 +11,10 @@
 get_header(); ?>
 
 <style>
+  body {
+    background-color: #FFFDFC;
+  }
+  
   /* -------------------- MOBILE -------------------- */
     /* ---------- LOGIN ---------- */
       #first_section{
@@ -61,7 +65,7 @@ get_header(); ?>
         color: white;
         border: none;
         width: 150px;
-        height: 30px;
+        height: 40px;
       }
     /* ---------- OPRET ---------- */
       .opret-container {
@@ -100,22 +104,22 @@ get_header(); ?>
     <h1>KONTO</h1>
     <div class="de-to-felter">
     <div class="login-container">
-      <h1>Login på din Eacegum Konto</h1>
+      <h3>Login på din Eacegum Konto</h3>
       <div class="login-felter">
-        <input type="text" placeholder="Brugernavn">
-        <input type="text" placeholder="Adgangskode">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Adgangskode">
       </div>
       <div class="login-knapper">
         <button class="knapper knap1">LOGIN</button>
       </div>
     </div>
     <div class="opret-container">
-      <h1>Login på din Eacegum Konto</h1>
+      <h3>Opret en Eacegum Konto</h3>
       <div class="opret-felter">
         <input type="text" placeholder="Fornavn">
         <input type="text" placeholder="Efternavn">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Adgangskode">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Adgangskode">
       </div>
       <div class="opret-knapper">
         <button class="knapper knap2">OPRET BRUGER</button>

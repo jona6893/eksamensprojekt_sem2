@@ -15,6 +15,9 @@ get_header(); ?>
   :root{
     --viste-produkter: 6;
   }
+  body {
+    background-color: #FFFDFC;
+  }
 /* splashbillede, samt placering af teksten oven på */
   #splash-image {
     position: relative;
@@ -35,7 +38,7 @@ get_header(); ?>
     top: 0;
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
     background-position: center;
-    
+    background-size: cover;
   }
 /* h1 på splashbilledet */
   #splash-image h1 {
@@ -162,12 +165,26 @@ get_header(); ?>
      height:25px;
      background-color: white;
     border:none;
+    padding:0%;
   }
   .minus{
     color: red;
   }
+  .minus:hover{
+    background: red;
+    color:white;
+  }
   .plus{
     color: green;
+  }
+  .plus:hover{
+    color: white;
+    background: green;
+  }
+  .add-tal{
+    display: grid;
+    align-content: center;
+    margin: 0%;
   }
 .add-grid-container{
        display: flex;
@@ -234,7 +251,7 @@ height:25px;
   grid-template-columns:1fr 1fr;
 }
 .total{
-  grid-area:1/2;
+  grid-column:2/3;
 }
 .next{
   width:120px;
@@ -286,7 +303,7 @@ height:25px;
 
   <section id="produkter" class="max-width"></section>
 
-<section id="add-cart">
+<section id="add-cart" class="max-width">
   <div id="grid-container-cart">
 
     <div class="box-1">
@@ -368,20 +385,24 @@ height:25px;
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
 
-    /* ---------- Her start tæller funktionen. ---------- */
+        /* ---------- Her starter tæller funktionen. ---------- */
 
     //De her variabler taget fat i all de elementer der har den valgte class. Da der er mere end en, indeholder hver variable en Array.
     let minus = document.querySelectorAll(".minus")
     let plus = document.querySelectorAll(".plus")
     let tal = document.querySelectorAll(".add-tal")
+    let overskrift = document.querySelectorAll(".produkt-navn")
+    
 
-
-    tilføjTal(minus, plus, tal);
+    tilføjTal(minus, plus, tal, overskrift);
 }
 
-function tilføjTal(minus, plus, tal) {
+function tilføjTal(minus, plus, tal, overskrift) {
     //opretter en tomt Array som vi senere fylder med 0 taller
     let counter = []
+    const oversigt = document.querySelector(".oversigt");
+    let total = 0
+    let allePriser = []
 
     console.log(minus, plus, tal)
     // en foreach function der skubber et 0 tal ind i "counter" for hvert element der er i tal variablen. 
@@ -400,6 +421,33 @@ function tilføjTal(minus, plus, tal) {
             // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
             // integer er et number i JS, string er tekst. tekst i JS kan også en holde tal, men så er det stadig en string og ikke en integer.
             tal[i].textContent = `${counter[i]}`;
+            
+            total = 0
+            allePriser = []
+            allePriser = Array.from(document.querySelectorAll(".add-tal"))
+            allePriser.forEach(e => {
+            total += parseInt(e.innerText)
+            })
+            console.log("Total = " + total)
+            document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
+
+
+            /* tjekker om de "p" tags vi laver eksistere */
+            const classExists = document.getElementsByClassName(`titel${[i]}`).length > 0;
+
+            if (classExists) {
+              console.log("overskrift findes allrede")
+              document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
+
+            } else if (tal[i].innerText <= 0){
+              console.log("tallet er 0")
+            } else{
+              let makeP = document.createElement("p")
+            makeP.classList.add(`titel${[i]}`)
+            console.log(overskrift[i])
+            makeP.textContent = `${overskrift[i].innerText} ${counter[i]}`
+            oversigt.appendChild(makeP)
+            }
         })
     })
 
@@ -408,11 +456,38 @@ function tilføjTal(minus, plus, tal) {
         e.addEventListener("click", () => {
             counter[i]--
             tal[i].textContent = `${counter[i]}`;
+            
+            /* Tæller det totale valg af pakker */
+            total = 0
+            allePriser = []
+            allePriser = Array.from(document.querySelectorAll(".add-tal"))
+            allePriser.forEach(e => {
+            total += parseInt(e.innerText)
+            })
+            console.log("Total = " + total)
+            document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
+            console.log(tal[i]) 
+            
+            if (tal[i].innerText == 0) {
+              console.log("tallet er 0")
+              document.querySelector(`.titel${[i]}`).remove()
+              /* document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}` */
+
+            } else if (tal[i].innerText >= 1){
+              console.log("tallet er større end 0")
+              document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
+            } else {
+              console.log("der er noget some ikke virker")
+            }
+
         })
     })
-
+  
+ 
 
 }
+
+/* --------- Her Stater Dropdown menu --------- */
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {

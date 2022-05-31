@@ -13,6 +13,11 @@ get_header(); ?>
 <style>
  body{
   background-color: var(--lyse-blaa); 
+  
+ }
+ .streger {
+   background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
+  background-size: cover;
  }
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
 #splash-section {
@@ -186,7 +191,11 @@ get_header(); ?>
 		font-size: 1.3rem;
 	}  
   .level {
+    font-family: "adrianna", sans-serif;
+  font-weight: 800;
+  font-style: normal;
     color: var(--blaa);
+    
   }
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
@@ -196,6 +205,7 @@ get_header(); ?>
   }
   #intro .intro_start {
     text-align:center;
+    margin-bottom: 100px;
   }
      /* -------------------- FIND OS HER SEKTION -------------------- */
   #find_os {
@@ -204,6 +214,11 @@ get_header(); ?>
     margin-top:100px;
     margin-bottom: 100px;
   }
+  #find_os h1 {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
@@ -211,10 +226,38 @@ get_header(); ?>
   }
   #forside_blog h1 {
     text-align: center;
+    margin-bottom: 100px;
+  }
+  #forside_blog .forside_hand {
+    display: grid;
+    justify-items: end;
+  }
+  /* -------------------- SoMe SEKTION -------------------- */
+  #forside_some {
+    margin-top: -100px;
+  }
+  
+  #forside_some .some {
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-size: cover;
+    background-position: 100% 20%;
+    height: 90vh;
+  }
+  #forside_some .some_text {
+    text-align: center;
+    margin: 20px;
+    font-weight: 800;
+    
+  }
+  #forside_some .some_text h2 {
+    margin-bottom: 50px;
   }
 
-  #forside_some {
-    margin-top: -200px;
+  #forside_some .some_text button {
+    background-color: transparent;
+    color: var(--sort);
+   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+   border: none;
   }
 
 
@@ -238,7 +281,7 @@ get_header(); ?>
   }
   #intro .intro_om_os_text {
     grid-column:2/3;
-    
+    max-width: 400px;
 
   }
   #find_os {
@@ -246,18 +289,44 @@ get_header(); ?>
     margin-top:200px;
     margin-bottom: 200px;
   }
+  #forside_blog .seneste_artikler {
+    padding: 2%;
+    padding-left: 100px;
+  }
+  .forside_hand img{
+    max-width: 65%;
+  }
+
   #forside_blog .forside_blog_indhold {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 75px;
     
   }
+  #forside_ blog .seneste_artikler {
+    grid-column: 1/2;
+  }
   #forside_blog .forside_hand {
-    max-width: 50%;
+    grid-column: 2/3;
+    grid-row: 1/3;
   }
   
   #sort_bar2 {
     margin-top: -80px;
     z-index: -10;
+  }
+  #forside_some {
+    margin-top: -200px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-size: cover;
+  }
+  #forside_some .some_text button {
+    font-size: 2rem;
+    padding: 3%;
   }
  
      
@@ -266,7 +335,7 @@ get_header(); ?>
 
 	</style>
 
-
+<main>
 <section id="splash-section">
   <div class="column-left">
 		<div class="splash_text">
@@ -287,7 +356,7 @@ get_header(); ?>
     <button class="fan-btn next">→</button>
   </div>
 </section>
-
+<section class="streger">
 <section id="sort_bar1">
 	<h1>NEXT GENERATION CHEWING GUM </h1>
 
@@ -305,41 +374,49 @@ get_header(); ?>
   </div>  
 </section>
 <section id="find_os">
+  <h1>Find Os Her</h1>
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
 </section>
+
+  
+
 <section id="forside_blog">
   <h1>BLOGINDLÆG</h1>
   <div class="forside_blog_indhold">
   <div class="seneste_artikler">
-    <h2>Seneste Artikler</h2>
+    <h3>Seneste Artikler</h3>
     <hr>
-    <h3>Alt om Energi Boost</h3>
+    <h4>Alt om Energi Boost</h4>
     <p>Maj 12, 2022</p>
     <hr>
-    <h3>Eace Sommerfest</h3>
+    <h4>Eace Sommerfest</h4>
     <p>Maj 04, 2022</p>
     <hr>
-    <h3>NEXT GENERATION MERCH</h3>
+    <h4>NEXT GENERATION MERCH</h4>
     <p>December 17, 2021</p>
     <hr>
-    <h3>EN LILLE HJÆLP I JULEDAGENE</h3>
+    <h4>EN LILLE HJÆLP I JULEDAGENE</h4>
     <p>December 07, 2021</p>
     <hr>
   </div>
   <div class="forside_hand">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="Eace Gum collagen boost">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="">
   </div>
   </div>
-</section>
+</section></section>
 <section id="sort_bar2">
 	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
 </section>
 
-<section id="forside_some">
-  <div class="some">
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png" alt="">
-  </div>
+<section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
+     <button>@eace_gum</button></div>
+    <div class="some">
+     
+    </div>
+    
+    
 </section>
+</main>
 
 <script>
 

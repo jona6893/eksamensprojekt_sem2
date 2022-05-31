@@ -11,6 +11,12 @@
 get_header(); ?>
 
 <style>
+    body {
+    background-color: #FFFDFC;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
+    background-size: cover;
+  }
+ 
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
 #section1 {
@@ -18,10 +24,14 @@ get_header(); ?>
     justify-items: center;
     padding-inline: 3%;
     padding-block: 100px;
+    margin-top: 20px;
 }
 
 #section1 p {
-    max-width: 48ch;
+    max-width: 44ch;
+    margin-top: 10px;
+    font-size: 0.8rem;
+
 }
 
 /* ---------- SECTION2 ---------- */
@@ -46,7 +56,10 @@ get_header(); ?>
 
 /* ---------- SECTION3 ---------- */
 #section3 {
-    padding: 5% 0;
+    padding: 100px 0;
+    display: grid;
+    justify-items: center;
+    gap:50px;
 }
 
 .container {
@@ -138,7 +151,7 @@ hr {
     .tekstcontainer1-d  p, .tekstcontainer2-d p{
         width:48ch;
     }
-    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4{
+    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4-d{
         display: grid;
         justify-items: center;
     }
@@ -162,6 +175,7 @@ hr {
 <section id="section2_mobile">
 
     <h2>Videnskaben</h2>
+    
     <div class="videntekst">
         <div class="afsnit1">
             <h4>Udviklet og produceret i Danmark</h4>
@@ -217,6 +231,7 @@ hr {
 <section id="section2_desktop">
 
     <h2>Videnskaben</h2>
+   
     <div class="videntekst-d">
       <div class="tekstcontainer1-d">
         <div class="afsnit1-d">
@@ -260,6 +275,7 @@ hr {
   
 </section> 
 <section id="section3">
+    <h3>DOKUMENTATION</h3>
     <div class="container">
         <div class="accordion">
             <div class="accordionItem" id="question1">
