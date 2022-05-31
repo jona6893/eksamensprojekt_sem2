@@ -13,6 +13,11 @@ get_header(); ?>
 <style>
  body{
   background-color: var(--lyse-blaa); 
+  
+ }
+ .streger {
+   background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
+  background-size: cover;
  }
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
 #splash-section {
@@ -190,7 +195,7 @@ get_header(); ?>
   font-weight: 800;
   font-style: normal;
     color: var(--blaa);
-    font-size: 1.3rem;
+    
   }
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
@@ -228,10 +233,10 @@ get_header(); ?>
     justify-items: end;
   }
   /* -------------------- SoMe SEKTION -------------------- */
-
   #forside_some {
-    margin-top: -200px;
+    margin-top: -100px;
   }
+  
   #forside_some .some {
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
     background-size: cover;
@@ -311,6 +316,7 @@ get_header(); ?>
     z-index: -10;
   }
   #forside_some {
+    margin-top: -200px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -350,7 +356,7 @@ get_header(); ?>
     <button class="fan-btn next">→</button>
   </div>
 </section>
-
+<section class="streger">
 <section id="sort_bar1">
 	<h1>NEXT GENERATION CHEWING GUM </h1>
 
@@ -371,6 +377,9 @@ get_header(); ?>
   <h1>Find Os Her</h1>
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
 </section>
+
+  
+
 <section id="forside_blog">
   <h1>BLOGINDLÆG</h1>
   <div class="forside_blog_indhold">
@@ -394,7 +403,7 @@ get_header(); ?>
     <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="">
   </div>
   </div>
-</section>
+</section></section>
 <section id="sort_bar2">
 	<h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1>
 </section>
