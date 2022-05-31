@@ -42,9 +42,11 @@ get_header(); ?>
 
       #heroimage h1{
         color: var(--sort);
-        font-size: 3rem;
-      
-
+        font-family: "sofia-pro", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.5rem;
+        font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
       }
 
 
