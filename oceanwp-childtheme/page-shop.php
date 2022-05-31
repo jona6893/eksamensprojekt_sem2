@@ -122,6 +122,7 @@ get_header(); ?>
       grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
       gap: 10px;
       overflow-x: scroll;
+      
     }
 
     .produkt-card {

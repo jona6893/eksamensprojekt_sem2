@@ -75,6 +75,8 @@ get_header(); ?>
     grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
     padding-bottom:60px;
     justify-items:center;
+    justify-content:center;
+    max-width:500px;
   }
   /* filtrerings knappers udseende */
   .filter-btn {
