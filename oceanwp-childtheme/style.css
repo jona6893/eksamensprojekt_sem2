@@ -129,6 +129,7 @@ main p {
   font-weight: normal;
   font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
   line-height: 1.1;
+  color:var(--sort);
 }
 
 button {

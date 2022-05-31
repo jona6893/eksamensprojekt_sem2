@@ -19,7 +19,7 @@ get_header(); ?>
 
     @media (min-width: 1121px) {
       .fngoals {
-        --repeat: 2;
+        --repeat: 3;
       }
 
     }
@@ -33,17 +33,16 @@ get_header(); ?>
       #heroimage{
         display: grid;
         width:100%;
-        height: 80vh;
-        background-image:url("https://ucarecdn.com/4f84cc15-95e5-4635-a781-fc4294a3148e/-/format/auto/-/preview/3000x3000/-/quality/lighter/");
-        background-size:cover;
-        background-position: 100%;
+        background-color:#FFFDFC;
         justify-items: center;
         align-items: center;
+        min-height: 314px;
+        box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
       }
 
       #heroimage h1{
-        color: white;
-      
+        color: var(--sort);
+        font-size: 3rem;
       
 
       }
@@ -67,7 +66,7 @@ get_header(); ?>
       #sidebar{
         padding-block: 50px;
         position: sticky;
-        top: 50px;
+        top: 0px;
         align-self: start;
         display: grid;
         gap: 20px;
@@ -75,9 +74,13 @@ get_header(); ?>
         padding-inline: 1.5rem;
         background-color: #ffffff8c;
         z-index:3;
-        margin-left: 2%;
+        height: 100vh;
       }
-
+      .sidebar_knapper{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
       #sidebar button{
         border: none;
         background-color: black;
@@ -87,7 +90,7 @@ get_header(); ?>
         width: 100%;
       }
       .sidebarSelect{
-        border: solid black 2px !important;
+        border: solid white 2px !important;
         background-color: white !important;
         color: black !important;
         text-align: start !important;
@@ -113,13 +116,20 @@ get_header(); ?>
       }
       .fngoals{
         display:grid;
-        grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+        grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 350px));
         gap: 20px;
+      }
+      .fngoals img{
+        max-height: 50%;
+      }
+      .fngoals h4{
+        margin:0;
       }
       .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
         display: grid;
         justify-items: center;
-        text-align:center;
+        text-align: center;
+        align-items: center;
       }
 
     /* ---------- CERTIFICERET EMBALLAGE ---------- */
@@ -132,6 +142,7 @@ get_header(); ?>
         justify-items: center;
         gap:20px;
         column-gap: 50px;
+        background-color: var(--lyse-blaa);
       }
 
       .overskrift2{
@@ -145,7 +156,7 @@ get_header(); ?>
       .sub2_indhold{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 20px;
         column-gap: 50px;
         align-items: center;
@@ -162,12 +173,16 @@ get_header(); ?>
         grid-area: 2/1;
         max-width: 48ch;
       }
-
+      .sub2_textcontainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
       .sub2_imgs{
         background-image: url(https://ucarecdn.com/39625410-2c45-4480-a772-79d32ad8a234/-/format/auto/-/preview/3000x3000/-/quality/lighter/);
         background-size: cover;
         background-position: 50%;
-        aspect-ratio: 1;
+        aspect-ratio: 1/1.4;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
@@ -423,12 +438,14 @@ get_header(); ?>
   <section id="maincontent" >
 
   <div id="sidebar">
+    <div class="sidebar_knapper">
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject1';">BÆREDYGTIG PRODUKTION</button>
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject2';">CERTIFICERET EMBALLAGE</button>
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject3';"">BÆREDYGTIGT MERCH</button>
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject4';">FOKUS PÅ SUNDHED</button>
     <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject5';">SME CLIMATE HUB</button>
-
+   </div>
+   <div class="sidebar_tomdiv"></div>
   </div>
   <div id="indhold">
 
@@ -464,12 +481,13 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div id="subject2" class="max-width">
-    <div class="overskrift2">
-    <h2>CERTIFICERET EMBALLAGE</h2>
-    <p>Alt emballage er, ligesom vores tyggegummi, også produceret i Danmark. Vores emballage har fået certifikaterne FSC, ClimateCalc og Svanemærket, for at garantere bæredygtig emballage og formindske vores indvirkning på miljøet så meget som muligt.</p>
+  <div id="subject2">
+    <div class="overskrift2 max-width">
+      <h2>CERTIFICERET EMBALLAGE</h2>
+      <p>Alt emballage er, ligesom vores tyggegummi, også produceret i Danmark. Vores emballage har fået certifikaterne FSC, ClimateCalc og Svanemærket, for at garantere bæredygtig emballage og formindske vores indvirkning på miljøet så meget som muligt.</p>
     </div>
-    <div class="sub2_indhold">
+    <div class="sub2_indhold max-width">
+      <div class="sub2_textcontainer">
     <div class="sub2_text1">
     <h4>FSC-CERTIFICERET KARTONNAGE</h4>
     <p>FSC®, Forest Stewardship Council, er et globalt certifikat. Det sikrer blandt andet, at skoven ikke lider overlast. I en FSC-skov fældes træer i takt med at der plantes nye.</p>
@@ -481,6 +499,7 @@ get_header(); ?>
     <div class="sub2_text3">
     <h4>SVANEMÆRKET KARTONNAGE</h4>
     <p>Svanemærket er Danmarks officielle miljømærke, og er en garanti for bæredygtigt papir og produktion. Alt Eace kartonnage er produceret på et svanemærket trykkeri i Danmark.</p>
+    </div>
     </div>
     <div class="sub2_imgs">
       
