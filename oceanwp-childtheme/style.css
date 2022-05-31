@@ -154,3 +154,7 @@ main hr {
   color: var(--sort);
   background-color: var(--sort);
 }
+
+.scroll{
+  background-color: white;
+}
