@@ -41,16 +41,10 @@ get_header(); ?>
   #splash-image h1 {
     position: absolute;
     bottom: 30vh;
-<<<<<<< HEAD
-    left: 0;
-    right: 0;
-    text-align: center;
-=======
     left: 25%;
     font-weight: 800;
     font-size: 4rem;
    
->>>>>>> 21faf671e2595985bbce702d5d6912def537d1df
   }
 
   #filter-menu {
