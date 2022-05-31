@@ -253,20 +253,11 @@ get_header(); ?>
       }
       /* ---------- section 1 ---------- */
         #heroimage{
-          display: grid;
-          width:100%;
-          height: 80vh;
-          background-image:url("https://ucarecdn.com/4f84cc15-95e5-4635-a781-fc4294a3148e/-/format/auto/-/preview/3000x3000/-/quality/lighter/");
-          background-position:50%;
-          background-size:cover;
-          justify-items: center;
-          align-items: center;
+          
         }
 
         #heroimage h1{
-          color: white;
-          font-size: 3rem;
-
+          
         }
 
       /* ---------- section 2 ---------- */

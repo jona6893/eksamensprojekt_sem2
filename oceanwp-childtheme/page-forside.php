@@ -21,13 +21,13 @@ get_header(); ?>
   background-size: cover;
  }
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
-#splash-section {
+  #splash-section {
     width: 100vw;
     height: 100vh;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    
   }
 
   .column-right {
@@ -144,6 +144,19 @@ get_header(); ?>
     color: #354E57;
     font-style: italic;
   }
+
+  @media (max-width: 800px) {
+    #splash-section {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .column-left {
+      display: grid;
+      grid-template-rows: 2fr 6fr 40vw;
+    }
+  }
+
      /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
   .splash_button {
     grid-row: 3/4;
@@ -350,6 +363,135 @@ get_header(); ?>
      
 }
 
+  /* -------------------- testimonial -------------------- */
+
+#testimonial {
+  position: relative;
+  padding-inline: 24px;
+  margin-block: 80px 40px;
+  height: 17.5rem;
+}
+
+.testimonial-container {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    width: clamp(100px, 25vw, 320px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateX(-50%);
+    transition: left 0.75s ease-out, opacity 0.375s ease-in-out;
+  } 
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  [data-jndex="1"] {
+    left: -20%;
+    opacity: 0;
+  }
+
+  [data-jndex="2"] {
+    left: 15%;
+    opacity: 1;
+  }
+
+  [data-jndex="3"] {
+    left: 50%;
+    opacity: 1;
+  }
+
+  [data-jndex="4"] {
+    left: 85%;
+    opacity: 1;
+  }
+
+  [data-jndex="5"] {
+    left: 120%;
+    opacity: 0;
+  }
+
+  /* viser 1 i stedet for 3 på mobil */
+  @media (max-width: 678px) {
+    .testimonial-container {
+      width: 80%;
+    }
+
+    [data-jndex="1"], [data-jndex="2"] {
+      left: -50%;
+      opacity: 0;
+    }
+
+    [data-jndex="3"] {
+      left: 50%;
+      opacity: 1;
+    }
+
+    [data-jndex="4"], [data-jndex="5"] {
+      left: 150%;
+      opacity: 0;
+    }
+  }
+
+  .carousel-btn {
+    position: absolute;
+    padding: 16px 8px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: background-color 0.3s, opacity 0.15s, transform 0.3s ease-in-out;
+    z-index: 10;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+
+  /* knapperne er altid synlige på mobil */
+  @media (hover: none) {
+    .carousel-btn {
+      opacity: 1;
+    }
+  }
+
+  #testimonial:hover .carousel-btn {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .previous2 {
+    left: 0px;
+    transform: translateX(-6px);
+  }
+
+  .next2 {
+    right: 0px;
+    transform: translateX(6px);
+  }
+
+  /* rykker knapperne lidt ud til siderne så de ikke er ovenpå teksten */
+  @media (min-width: 1200px) {
+    .previous2 {
+      left: -12px;
+    }
+
+    .next2 {
+      right: -12px;
+    }
+  }
+
+  .testimonial-container img {
+    width: 200px;
+    margin-inline: auto;
+  }
+
+  .testimonial-container > * {
+    margin: 0;
+  }
 
 	</style>
 
@@ -433,6 +575,37 @@ get_header(); ?>
     
     
 </section>
+
+<section id="testimonial" class="max-width">
+    <article class="testimonial-container" data-jndex="1">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Lækkert tyggegummi med dejlig frisk smag! Kan varmt anbefales som supplement til den daglige kost."</i></p>
+      <p class="quote_author"><b>Rasmus</b></p>
+    </article>
+    <article class="testimonial-container" data-jndex="2">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Når jeg alligevel tygger tyggegummi, så er det perfekt at jeg kan få mine vitaminer samtidigt"</i></p>
+      <p class="quote_author"><b>Philip</b></p>
+    </article>
+    <article class="testimonial-container" data-jndex="3">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Fantastisk vitamintyggegummi som jeg helt sikkert kan anbefale. Herudover er der ekstraordinær god service ved bestilling. Helt klart 5 stjerner!"</i></p>
+      <p class="quote_author"><b>Mikael</b></p>
+    </article>
+    <article class="testimonial-container" data-jndex="4">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Mega let måde at få mine vitaminer over den mørke vinter. Der udover giver den dig god mint-ånde."</i></p>
+      <p class="quote_author"><b>Søren</b></p>
+    </article>
+    <article class="testimonial-container" data-jndex="5">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/5_stars.svg" alt="5 stjerner">
+      <p class="quote"><i>"Skøn smag og en nem måde at få sine vitaminer. Får tilsendt en pakke månedligt og har aldrig haft nogen problemer."</i></p>
+      <p class="quote_author"><b>Josefine</b></p>
+    </article>
+    <button class="carousel-btn previous2">←</button>
+    <button class="carousel-btn next2">→</button>
+  </section>
+
 </main>
 
 <script>
@@ -474,5 +647,69 @@ get_header(); ?>
 	});
 
 </script>
+<script>
+  /* konfigurer nedestående variabler efter behov */
+	//antallet af anmeldelser
+	const maxRatingsIndex = 5;
+	/* ^------------------------------------------^ */
+
+	//laver en array af elementer med klassen .testimonial-container
+	const ratings = document.querySelectorAll(".testimonial-container");
+
+  const carousel = document.getElementById("testimonial");
+
+	//bladre frem knap
+  const next2 = document.querySelector(".next2");
+	next2.addEventListener("click", () => {
+    //hvis karrousellen IKKE har klassen .animating
+    if (!carousel.classList.contains("animating")) {
+      //tilføj klassen .animating og sætter knapperne på pause indtil animationen er færdig
+      carousel.classList.add("animating")
+      ratings.forEach((rating) => {
+        //hvis data-jndex værdien er lig med eller mindre end 1
+        if (rating.dataset.jndex <= 1) {
+          //sæt data-jndex værdien til antallet af produkter
+          rating.dataset.jndex = maxRatingsIndex;
+        } else {
+          //ellers træk 1 fra data-jndex værdien
+          rating.dataset.jndex--;
+        }
+      });
+
+      //fjerner klassen .animating når animationen er færdig efter 750ms og gør knapperne klikbart igen
+      setTimeout(() => {
+        carousel.classList.remove("animating")
+      }, "750") //750 millisekunder
+
+    }
+	});
+
+	//bladre tilbage knap
+  const previous2 = document.querySelector(".previous2");
+	previous2.addEventListener("click", () => {
+    //hvis karrousellen IKKE har klassen .animating
+    if (!carousel.classList.contains("animating")) {
+      //tilføj klassen .animating og sætter knapperne på pause indtil animationen er færdig
+      carousel.classList.add("animating")
+      ratings.forEach((rating) => {
+        //hvis data-jndex værdien er lig med eller større end antallet af produkter
+        if (rating.dataset.jndex >= maxRatingsIndex) {
+          //sæt data-jndex værdien til 1
+          rating.dataset.jndex = 1;
+        } else {
+          //ellers læg 1 til data-jndex værdien
+          rating.dataset.jndex++;
+        }
+      });
+
+      //fjerner klassen .animating når animationen er færdig efter 750ms og gør knapperne klikbart igen
+      setTimeout(() => {
+        carousel.classList.remove("animating")
+      }, "750") //750 millisekunder
+
+    }
+	});
+</script>
+
 
 <?php get_footer(); ?>
