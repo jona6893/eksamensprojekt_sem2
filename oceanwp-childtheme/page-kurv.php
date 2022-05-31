@@ -28,8 +28,7 @@ get_header(); ?>
             justify-items: center;
             gap: 20px;
             padding: 5%;
-            background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
-            background-size: cover;
+            
             align-content: center;
         }
 
@@ -49,10 +48,11 @@ get_header(); ?>
         .step{
             display:none;
         }
-        input{
-            color:black;
-            font-size:1rem;
+       
+        strong {
+            font-weight: 800;
         }
+        
 
         @media (max-width: 1112px) {
             .de-tre-felter{
@@ -71,9 +71,11 @@ get_header(); ?>
     /* ---------- Kurv ---------- */
         .kurv{
             display: grid;       
-            border-radius: 10px;
+            
             padding: 50px 5%;
             gap: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: white;
         }
 
         .produkt{
@@ -98,7 +100,7 @@ get_header(); ?>
         }
 
         .total div{
-            border: 1px solid black;
+            
             display: grid;
             padding: 2%;
             align-items: center;
@@ -107,17 +109,43 @@ get_header(); ?>
         .disapear{
             display:none !important;
         }
+        .kurv p {
+            font-size: 0.8rem;
+        }
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .info .titel {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin: 10px;
+        }
+        .info .pris {
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }   
+        .info .remove {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            text-align: end;
+        } 
+
+        
+        
+        
     /* ---------- Adresse ---------- */
         .adresse{
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            align-items: center;
-            padding: 20px;
+            
+            padding: 30px;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
-
+            
         }    
         .adresse h3{
             color:black;
@@ -134,10 +162,23 @@ get_header(); ?>
             background-color:rgb(0 0 0 / 0%);
             border: none;
             border-bottom: solid 1px black;
+            
+            
+
+        }
+        input [type="text"] {
+            color:black;
+            font-size: 0.9rem;
+            font-family: "sofia-pro", sans-serif;
+            font-style: 800; 
         }
 
         ::placeholder{
-            /* color:#ffffffa6; */
+            color:black;
+            font-size: 0.7rem;
+            font-family: "sofia-pro", sans-serif;
+            font-style: 800;
+            opacity: 0.5;
         }
         
     /* ---------- Betaling ---------- */
@@ -146,7 +187,7 @@ get_header(); ?>
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
             
-            padding: 10px 5%;
+            padding: 20px 8%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
@@ -165,14 +206,17 @@ get_header(); ?>
             background-color:rgb(0 0 0 / 0%);
             border: none;
             border-bottom: solid 1px black;
+            
         }
 
         .datoer input{
             width:50%;
+            
         }
 
         .kortnr input{
             width:100%;
+            
         }
         .kortnr{
             display: grid;
@@ -184,12 +228,17 @@ get_header(); ?>
             background-color: black;
             color:white;
             border: solid 1px black;
+            padding: 0px;
+            width: 150px;
+            height: 50px;
+            margin: auto;
         }
         .betal:hover{
             background-color: #ffffff00;
             color: black;
             border: solid 1px black;
         }
+        
         .kort p{
             color:white;
             margin:0;
@@ -240,59 +289,60 @@ get_header(); ?>
 
     <section id="first_section" class="max-width">
         <div class="trin">
-            <p>Step 1.</p>
-            <p>Step 2.</p>
-            <p>Step 3.</p>
+            <p><strong>Step 1:</strong> Kurv</p>
+            <p><strong>Step 2:</strong> Adresse</p>
+            <p><strong>Step 3:</strong> Betalingsinformationer</p>
         </div>
         <div class="de-tre-felter">
             <div class="kurv">
-                <p class="step step1">Step 1.</p>
-                <h4>Kurv</h4>
+                <p class="step step1"><strong>Step 1:</strong> Kurv</p>
+                
             
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/VITAMIN-BOOST-KOLLI_900x.jpg?v=1650460271" alt="">
-                <div>
-                <p>Produkt 1</p>
-                <p class="pris">250</p>
-                </div>
-                <p class="remove">X</p>
+                <div class="info">
+                <p class="titel">Vitamin Boost</p>
+                <p class="pris">250 DKK</p>
+                
+                <p class="remove">X</p></div>
                 </div>
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/HEALTHY-TEETH-KOLLI_900x.jpg?v=1650460506" alt="">
-                <div>
-                <p>Produkt 2</p>
-                <p class="pris">250</p>
-                </div>
-                <p class="remove">X</p>
+                <div class="info">
+                <p class="titel">Healthy Teeth </p>
+                <p class="pris">250 DKK</p>
+                
+                <p class="remove">X</p></div>
                 </div>
                 <div class="total">
                     <div>
                         <p>Total</p>
-                        <h4 class="totalnr">250</h4>
+                        <h5 class="totalnr">250</h5>
                     </div>
                 </div>
             </div>
             <div class="adresse">
-                <p class="step step2">Step 2.</p>
-                <h4>Adresse</h4>
+                <p class="step step2"><strong>Step 2:</strong> Adresse</p>
+                
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
                 <input type="tel" placeholder="Telefon">
                 <input type="email" placeholder="E-Mail">
                 <input type="text" placeholder="Land">
-                </div>
-                <div class="by-post">
                 <input type="text" placeholder="By">
                 <input type="text" placeholder="Post-nr">
                 </div>
+                <div class="by-post">
+                
+                </div>
             </div>
             <div class="betaling">
-                <p class="step step3">Step 2.</p>
-                <h4>Betalings Informationer</h4>
+                <p class="step step3"><strong>Step 3:</strong> betalingsinformationer</p>
+                
                 <div class="kort">
                     <div class="chipnbrand">
                     <div class="kortfigur"></div>
-                    <p>eace kredit</p>
+                    <p>EACE kredit</p>
                     </div>
                     <p class="credit-navn">Jane Doe</p>
                     <div class="day-month">

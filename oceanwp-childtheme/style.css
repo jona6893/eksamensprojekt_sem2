@@ -145,6 +145,7 @@ button {
   font-style: bold;
   transition: color 0.2s, background-color 0.2s;
 }
+
 main hr {
   color: var(--sort);
   background-color: var(--sort);
