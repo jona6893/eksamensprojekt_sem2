@@ -24,7 +24,7 @@
 .menulinks {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 30px;
 }
 
 header {
@@ -42,7 +42,7 @@ header img {
 }
 
 .drop-down-menu {
-    position: fixed;
+    position: absolute;
     display: grid;
     background-color: #ffffff;
     z-index: 100;
@@ -53,8 +53,27 @@ header img {
     display: none;
 }
 
+.hover-mig {
+    position: relative;
+}
+
 .hover-mig:hover .hidemenu {
     display: grid;
+}
+a {
+    color: var(--sort);
+}
+.menulinks a:hover {
+color: #7CB5FF;
+}
+
+@media (min-width: 900px) {
+  .hover-mig:hover .hidemenu {
+    gap: 8px;
+    width: 110%;
+    left: -16px;
+    background-color: #FFFDFC;
+	}
 }
 
 .menu-ikoner {

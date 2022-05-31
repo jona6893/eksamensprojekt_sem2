@@ -11,6 +11,12 @@
 get_header(); ?>
 
 <style>
+
+* {
+  z-index: 100;
+}
+
+
  body{
   background-color: var(--lyse-blaa); 
   
@@ -181,14 +187,18 @@ get_header(); ?>
     justify-items: center;
     margin-top: 200px;
     margin-bottom: 200px;
-
+    text-align: center;
+    position: relative;
 	}
 	#sort_bar1 h1, #sort_bar2 h1{
     font-family: "adrianna", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+    font-weight: 800;
+    font-style: normal;
 		color:white;
 		font-size: 1.3rem;
+    position: fixed;
+    top: 40%;
+    z-index: 1;
 	}  
   .level {
     font-family: "adrianna", sans-serif;
@@ -356,7 +366,7 @@ get_header(); ?>
     <button class="fan-btn next">→</button>
   </div>
 </section>
-<section class="streger">
+<section class="streger"></section>
 <section id="sort_bar1">
 	<h1>NEXT GENERATION CHEWING GUM </h1>
 

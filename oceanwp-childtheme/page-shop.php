@@ -25,7 +25,6 @@ get_header(); ?>
     background-size: cover;
     height: 65vh;
     margin-bottom: 80px;
-    
   }
 
   #splash-image::before {
@@ -64,7 +63,6 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    
     transition: color 0.2s, background-color 0.2s;
   }
 
@@ -82,7 +80,7 @@ get_header(); ?>
   }
 
   .produkt-card {
-    aspect-ratio: 1 / 2;
+    aspect-ratio: 7 / 13;
     width: 100%;
     display: grid;
     grid-template-rows: 6fr 8fr;
@@ -242,8 +240,8 @@ get_header(); ?>
     flex-direction: column;
     gap: 16px;
     transform: translateX(-50%);
-    transition: left 0.75s ease-out, opacity 0.75s ease-in-out;
-  }
+    transition: left 0.75s ease-out, opacity 0.375s ease-in-out;
+  } 
 
   .quote {
     font-size: 1rem;
