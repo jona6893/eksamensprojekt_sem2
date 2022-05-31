@@ -220,7 +220,7 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     font-family: "adrianna", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: var(--blaa);
+    color: #A2D8E5;
   }
 
   #sort_bar1, #sort_bar2 {
