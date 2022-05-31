@@ -297,13 +297,13 @@ height:25px;
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">ALLE</button>
-    <button class="filter-btn" data-category="tyggegummi">VITAMIN BOOST</button>
-    <button class="filter-btn" data-category="merchandise">HEALTHY TEETH</button>
-    <button class="filter-btn" data-category="merchandise">ENERGY BOOST</button>
-    <button class="filter-btn" data-category="merchandise">DEFENCE BOOST</button>
-    <button class="filter-btn" data-category="merchandise">FOCUS</button>
-    <button class="filter-btn" data-category="merchandise">RELAX</button>
-    <button class="filter-btn" data-category="merchandise">COLLAGEN BOOST</button>
+    <button class="filter-btn" data-category="vitamin_boost">VITAMIN BOOST</button>
+    <button class="filter-btn" data-category="healthy_teeth">HEALTHY TEETH</button>
+    <button class="filter-btn" data-category="energy_boost">ENERGY BOOST</button>
+    <button class="filter-btn" data-category="defence_boost">DEFENCE BOOST</button>
+    <button class="filter-btn" data-category="focus">FOCUS</button>
+    <button class="filter-btn" data-category="relax">RELAX</button>
+    <button class="filter-btn" data-category="collagen_boost">COLLAGEN BOOST</button>
   </section>
 
   <section id="produkter" class="max-width"></section>
