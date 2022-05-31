@@ -75,11 +75,13 @@ get_header(); ?>
     grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
     padding-bottom:60px;
     justify-items:center;
+    justify-content:center;
+    max-width:500px;
   }
   /* filtrerings knappers udseende */
   .filter-btn {
     color: white;
-    border: 1px var(--sort) solid;
+    /* border: 1px var(--sort) solid; */
     background-color:var(--sort) ;
     padding: 8px 12px;
     width: 160px;
@@ -87,10 +89,16 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    
     transition: color 0.2s, background-color 0.2s;
+    border:none;
     
   } 
+  .filter-btn:hover{
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
+  }
 
   .filter-btn.selected {
     color: var(--sort);
@@ -113,6 +121,7 @@ get_header(); ?>
     grid-template-columns: 1fr 2fr 1fr;
      grid-template-rows: 300px;
      padding:25px;
+    align-items:center;
 
 }
  p{
@@ -157,7 +166,9 @@ get_header(); ?>
     aspect-ratio:738 /1417 ;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
-    height: 100%;
+    height: 80%;
+  align-items:center;
+    
   }
   .add-container{
      display: flex;
@@ -190,6 +201,9 @@ get_header(); ?>
     display: grid;
     align-content: center;
     margin: 0%;
+    padding-left:5px;
+    padding-right:5px;
+
   }
 .add-grid-container{
        display: flex;
@@ -243,7 +257,7 @@ height:25px;
   display:grid;
   grid-template-columns: 2fr 1fr 1fr ;
   border-top:1px solid grey;
-  border-bottom:1px solid grey;
+ 
   padding-top:30px;
   padding-bottom:30px;
 }
@@ -251,16 +265,25 @@ height:25px;
   display:grid;
   gap:120px;
 }
+.box-2{
+  text-align:end;
+  padding-right:8px;
+}
 .oversigt{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1fr; 
+
 }
 .total{
   grid-column:2/3;
+  grid-row:4/5;
 }
 .next{
   width:120px;
 }
+/* .this-width{
+  max-width:900px;
+} */
 </style>
 
 <main id="main-content">
@@ -296,17 +319,17 @@ height:25px;
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
-    <button class="filter-btn selected" data-category="alle">ALLE</button>
-    <button class="filter-btn" data-category="vitamin_boost">VITAMIN BOOST</button>
-    <button class="filter-btn" data-category="healthy_teeth">HEALTHY TEETH</button>
-    <button class="filter-btn" data-category="energy_boost">ENERGY BOOST</button>
-    <button class="filter-btn" data-category="defence_boost">DEFENCE BOOST</button>
-    <button class="filter-btn" data-category="focus">FOCUS</button>
-    <button class="filter-btn" data-category="relax">RELAX</button>
-    <button class="filter-btn" data-category="collagen_boost">COLLAGEN BOOST</button>
+    <button class="filter-btn selected" data-kategori="alle">ALLE</button>
+    <button class="filter-btn" data-kategori="vitamin_boost">VITAMIN BOOST</button>
+    <button class="filter-btn" data-kategori="healthy_teeth">HEALTHY TEETH</button>
+    <button class="filter-btn" data-kategori="energy_boost">ENERGY BOOST</button>
+    <button class="filter-btn" data-kategori="defence_boost">DEFENCE BOOST</button>
+    <button class="filter-btn" data-kategori="focus">FOCUS</button>
+    <button class="filter-btn" data-kategori="relax">RELAX</button>
+    <button class="filter-btn" data-kategori="collagen_boost">COLLAGEN BOOST</button>
   </section>
 
-  <section id="produkter" class="max-width"></section>
+  <section id="produkter" class="max-width this-width"> </section>
 
 <section id="add-cart" class="max-width">
   <div id="grid-container-cart">
@@ -318,7 +341,7 @@ height:25px;
     </div>
     </div>
     <div  class="box-2">
-    <h4>VÆLG HYPPIGHED</h4>
+    <h4>VÆLG HYPPIGHED:</h4>
     </div>
     <div  class="box-3">
       <div class="dropdown">

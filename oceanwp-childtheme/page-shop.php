@@ -56,27 +56,40 @@ get_header(); ?>
  }
 
   #filter-menu {
+    gap:30px;
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 500px;
+
   }
   
   .filter-btn {
-    color: var(--sort);
-    border: 1px var(--sort) solid;
-    background-color: transparent;
+    color: white;
+   /*  border: 1px var(--sort) solid; */
+    background-color: var(--sort);
     padding: 8px 12px;
-    width: 110px;
+    width: 160px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
+    border:none;
+    
+  }
+  .filter-btn:hover{
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   .filter-btn.selected {
-    color: white;
-    background-color: var(--sort);
+    color: var(--sort);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
+    
   }
 
   #produkter {
@@ -109,6 +122,7 @@ get_header(); ?>
       grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
       gap: 10px;
       overflow-x: scroll;
+      
     }
 
     .produkt-card {
@@ -385,8 +399,8 @@ get_header(); ?>
 
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
-    <button class="filter-btn" data-category="tyggegummi">Tyggegummi</button>
-    <button class="filter-btn" data-category="merchandise">Merchandise</button>
+    <button class="filter-btn" data-category="tyggegummi">TYGGEGUMMI</button>
+    <button class="filter-btn" data-category="merchandise">MERCHANDISE</button>
   </section>
 
   <section id="features" class="max-width">

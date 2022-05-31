@@ -127,7 +127,7 @@ main h4 {
 main p {
   font-family: "Helvetica", sans-serif ;
   font-weight: normal;
-  font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
+  font-size: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
   line-height: 1.1;
   color:var(--sort);
 }
