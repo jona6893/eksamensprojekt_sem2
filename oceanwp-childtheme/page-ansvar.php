@@ -25,6 +25,8 @@ get_header(); ?>
     }
     body {
       background-color: #FFFDFC;
+      background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger2.png);
+      background-size: cover;
     }
   
   /* -------------------- DESKTOP -------------------- */
@@ -53,7 +55,7 @@ get_header(); ?>
     /* ---------- section 2 ---------- */
       #maincontent{
           display: grid;
-          grid-template-columns: 250px minmax(10px, 1fr);
+          grid-template-columns: 1fr;
           grid-gap: 1.5rem;
           padding-top: 1.5rem;
       }
@@ -65,80 +67,51 @@ get_header(); ?>
       a:hover {
         color: none !important;
       }
-      #sidebar{
-        padding-block: 50px;
-        position: sticky;
-        top: 0px;
-        align-self: start;
-        display: grid;
-        gap: 20px;
-        grid-area:1/1;
-        padding-inline: 1.5rem;
-        background-color: #ffffff8c;
-        z-index:3;
-        height: 100vh;
-      }
-      .sidebar_knapper{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      #sidebar button{
-        border: none;
-        background-color: black;
-        color: white;
-        text-align: start;
-        padding-inline: 3%;
-        width: 100%;
-      }
-      .sidebarSelect{
-        border: solid white 2px !important;
-        background-color: white !important;
-        color: black !important;
-        text-align: start !important;
-        padding-inline: 3% !important;
-      }
+     
 
     /* ---------- Bæredygtigt produktion ---------- */
       #subject1{
         display:grid;
         grid-area: 1/3;
-        padding-left: 250px;
         padding-block: 5%;
         padding-right: 1.5rem;
         justify-items: center;
-        gap: 50px;
+  
       }
       .overskrift1{
         display: grid;
-        justify-items: center;
+        justify-items: start;
+        align-items: end;
       }
       .overskrift1 p{
         max-width: 48ch;
       }
       .fngoals{
         display:grid;
-        grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 350px));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 20px;
+        width: 100%;
       }
       .fngoals img{
         max-height: 50%;
       }
       .fngoals h4{
         margin:0;
+        font-size: clamp(0.750rem, calc( 12px + 0.600vw ), 0.900rem);
+        line-height: 1.1;
       }
       .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
-        display: grid;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
+          display: grid;
+          justify-items: center;
+          text-align: center;
+          align-items: end;
+          gap: 20px;
       }
 
     /* ---------- CERTIFICERET EMBALLAGE ---------- */
       #subject2{
         display:grid;
         grid-area: 2/3;
-        padding-left: 250px;
         padding-block: 5%;
         padding-right: 1.5rem;
         justify-items: center;
@@ -189,9 +162,9 @@ get_header(); ?>
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
         display:grid;
-        grid-area: 3/3;
+ 
         grid-template-columns: 1fr 1fr;
-        padding-left: 250px;
+  
         padding-block: 5%;
         gap: 20px;
         padding-right: 1.5rem;
@@ -213,24 +186,25 @@ get_header(); ?>
     /* ---------- FOKUS PÅ SUNDHED ---------- */
       #subject4 {
         display: grid;
-        grid-template-columns: 250px 1fr 2%;
-        grid-area: 4/3;
+        grid-template-columns: 1fr 0.5fr 0.1fr;
         padding-block: 5%;
         grid-template-rows: 1fr;
         justify-items: end;
+        align-items: center;
       }
       .overskrift4 {
         display: grid;
         z-index: 2;
-        grid-column: 2/3;
-        grid-row: 2/2;
+        grid-column: 1/3;
+        grid-row: 1/3;
         background-color: white;
         justify-items: start;
         align-items: center;
         padding-inline: 2%;
         max-width: 48ch;
-        margin-left: 2%;
+        margin-left: -10%;
         padding-block: 2%;
+        max-height: 100%;
       }
       .overskrift4 p{
         max-width: 48ch;
@@ -257,8 +231,7 @@ get_header(); ?>
     /* ---------- SME CLIMATE HUB ---------- */
       #subject5{
         display:grid;
-        grid-area: 5/3;
-        padding-left: 250px;
+
         grid-template-columns: 1fr 1fr;
         padding-block: 5%;
         padding-right: 1.5rem;
@@ -311,7 +284,7 @@ get_header(); ?>
       /* ---------- Bæredygtigt produktion ---------- */
           #subject1 {
             display: grid;
-            grid-area: 1/1;
+
             padding-left: 0px;
             padding-block: 5%;
             padding-right: 0rem;
@@ -332,7 +305,7 @@ get_header(); ?>
       /* ---------- CERTIFICERET EMBALLAGE ---------- */
         #subject2 {
           display: grid;
-          grid-area: 2/1;
+
           padding-left: 0px;
           padding-block: 5%;
           padding-right: 0rem;
@@ -385,10 +358,9 @@ get_header(); ?>
         #subject4 {
           display: grid;
           grid-template-columns: 1fr;
-          grid-area: 4/3;
-          padding-block: 5%;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: 0.5fr 1fr;
           justify-items: center;
+          align-items: center;
         }
         .overskrift4 {
           display: grid;
@@ -396,13 +368,14 @@ get_header(); ?>
           grid-column: 1/2;
           grid-row: 2/3;
           background-color: white;
-          justify-items: center;
-          align-items: center;
           padding-inline: 2%;
           max-width: 48ch;
-          margin-left: 0%;
-          padding-bottom: 1%;
-          padding-inline: 2%;
+          margin-left: 0;
+          padding-block: 2%;
+          max-height: 100%;
+          align-content: center;
+          align-items: center;
+  
         }
         .video_container {
           grid-column: 1/3;
@@ -438,17 +411,6 @@ get_header(); ?>
   <h1>ANSVAR</h1>
   </section>
   <section id="maincontent" >
-
-  <div id="sidebar">
-    <div class="sidebar_knapper">
-    <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject1';">BÆREDYGTIG PRODUKTION</button>
-    <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject2';">CERTIFICERET EMBALLAGE</button>
-    <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject3';"">BÆREDYGTIGT MERCH</button>
-    <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject4';">FOKUS PÅ SUNDHED</button>
-    <button onclick="window.location.href = 'https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/#subject5';">SME CLIMATE HUB</button>
-   </div>
-   <div class="sidebar_tomdiv"></div>
-  </div>
   <div id="indhold">
 
   <div id="subject1" class="max-width">
