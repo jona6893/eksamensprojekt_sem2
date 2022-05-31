@@ -140,9 +140,8 @@ get_header(); ?>
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 80%;
-  align-items:center;
-    
   }
+  
   .add-container{
      display: flex;
     justify-content: flex-end;
@@ -256,9 +255,7 @@ height:25px;
   width:120px;
 }
 
-/* .this-width{
-  max-width:900px;
-} */
+
 /* .om-produktet{
   display:grid;
   grid-template-rows:2fr 1fr;
@@ -283,6 +280,7 @@ height:25px;
     grid-column:1/2;
     gap:10px;
     
+    
 }
 .add-container{
    align-items: flex-end;
@@ -302,6 +300,9 @@ height:25px;
     grid-column: 1/2;
     grid-row: 8/9;
 }
+}
+.read-more{
+
 }
 </style>
 <!-- html begynder -->
