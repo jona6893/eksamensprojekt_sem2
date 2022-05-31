@@ -570,7 +570,7 @@ get_header(); ?>
 	<h2>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h2>
 </section>
 
-<section id="forside_some" class="max-width"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
+<section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
      <button>@eace_gum</button></div>
     <div class="some">
      
