@@ -36,24 +36,29 @@ get_header(); ?>
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
-    background-position: center;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille_splash2.png");
     background-size: cover;
+    background-color: var(--lyse-blaa);
   }
 /* h1 på splashbilledet */
-  #splash-image h1 {
+#splash-image h1 {
     position: absolute;
     bottom: 30vh;
-    left: 0;
-    right: 0;
-    text-align: center;
+    left: 5%;
+    font-weight: 800;
+    font-size: 3rem;
+   
+  }
 
-  }
  /* grid til teksten på splashbilledet */
-  #grid-box{
-    display:grid;
-    justify-items: center;
-  }
+ #splash-image p {
+  position: absolute;
+    bottom: 24vh;
+    left: 5%;
+    font-size: 1rem;
+    
+    
+ }
 /* ? */
   .filter-menu {
     --repeat: auto-fit;
@@ -90,6 +95,8 @@ get_header(); ?>
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
   }
 
   #produkter {
@@ -190,6 +197,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 height:25px;
 }
 /* drop-down menu til hyppighed */
+
 /* knappens udseende */
 .dropbtn {
   background-color: white;
@@ -197,6 +205,7 @@ height:25px;
   border: solid black 1px;
   cursor: pointer;
   text-align:end;
+  width:181px;
 }
 
 /* .dropbtn:hover, .dropbtn:focus {
@@ -249,6 +258,9 @@ height:25px;
 .total{
   grid-column:2/3;
 }
+.next{
+  width:120px;
+}
 </style>
 
 <main id="main-content">
@@ -274,11 +286,13 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <div id="grid-box">
+    
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
-    <p class="abo-info">Få 12 pakker tyggegummi til 199kr efter eget valg leveret
-    i din postkasse hver måned eller hver anden måned.</p>
-    </div>
+    <p class="abo-info">
+      Få 12 pakker tyggegummi til 199kr efter eget valg leveret
+      i din postkasse hver måned eller hver anden måned.
+  </p>
+    
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
@@ -303,23 +317,19 @@ height:25px;
       <p class="total">PAKKER I ALT:</p>
     </div>
     </div>
-
     <div  class="box-2">
     <h4>VÆLG HYPPIGHED</h4>
     </div>
-
     <div  class="box-3">
       <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">v</button>
-      <div id="myDropdown" class="dropdown-content">
-      <a href="#0">HVER MÅNED</a>
-      <a href="#0">HVER ANDEN MÅNED</a>
-      
-  </div>
-  </div>
-    <button> GÅ TIL KURV</button>
+       <div id="myDropdown" class="dropdown-content">
+       <a href="#0">HVER MÅNED</a>
+        <a href="#0">HVER ANDEN MÅNED</a>
+      </div>
     </div>
-
+    <button class="next"> GÅ TIL KURV</button>
+    </div>
   </div>
 
 </section>
