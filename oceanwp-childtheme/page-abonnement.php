@@ -49,6 +49,9 @@ get_header(); ?>
     text-align: center;
 
   }
+  #splash-image p{
+    color:var(--sort);
+  }
  /* grid til teksten på splashbilledet */
   #grid-box{
     display:grid;
