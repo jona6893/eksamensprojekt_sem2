@@ -57,6 +57,7 @@ html {
   font-size: 100% !important;
   letter-spacing: 0.1px;
   background-color: black;
+  overflow-x: hidden;
 }
 
 /* max-width på 1200px med 8px padding ude til siderne på mobil */
@@ -95,7 +96,7 @@ main h1 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2.587rem);
+  font-size: clamp(1.913rem, calc(12px + 2.475vw), 2.587rem);
   line-height: 1.1;
   color: var(--sort);
 }
@@ -104,7 +105,7 @@ main h2 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 2.025rem);
+  font-size: clamp(1.575rem, calc(12px + 1.8vw), 2.025rem);
   line-height: 1.1;
 }
 
@@ -112,7 +113,7 @@ main h3 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.688rem);
+  font-size: clamp(1.282rem, calc(12px + 1.35vw), 1.688rem);
   line-height: 1.1;
 }
 
@@ -120,16 +121,16 @@ main h4 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
+  font-size: clamp(1.125rem, calc(12px + 0.9vw), 1.35rem);
   line-height: 1.1;
 }
 
 main p {
-  font-family: "Helvetica", sans-serif ;
+  font-family: "Helvetica", sans-serif;
   font-weight: normal;
-  font-size: clamp(0.920rem, calc( 12px + 0.480vw ), 1.000rem);
+  font-size: clamp(0.92rem, calc(12px + 0.48vw), 1rem);
   line-height: 1.1;
-  color:var(--sort);
+  color: var(--sort);
 }
 
 button {
@@ -150,4 +151,3 @@ main hr {
   color: var(--sort);
   background-color: var(--sort);
 }
-
