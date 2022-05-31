@@ -66,13 +66,14 @@ get_header(); ?>
    /*  border: 1px var(--sort) solid; */
     background-color: var(--sort);
     padding: 8px 12px;
-    width: 110px;
+    width: 160px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
     border:none;
+    
   }
   .filter-btn:hover{
     color: var(--sort);
