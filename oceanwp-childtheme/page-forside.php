@@ -542,7 +542,7 @@ get_header(); ?>
 
   
 
-<section id="forside_blog" class="max-width">
+<section id="forside_blog">
   <h2>BLOGINDLÆG</h2>
   <div class="forside_blog_indhold">
   <div class="seneste_artikler">
