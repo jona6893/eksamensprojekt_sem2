@@ -274,8 +274,8 @@ get_header(); ?>
                 <h3>Adresse</h3>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
-                <input type="text" placeholder="Telefon">
-                <input type="text" placeholder="E-Mail">
+                <input type="tel" placeholder="Telefon">
+                <input type="email" placeholder="E-Mail">
                 <input type="text" placeholder="Land">
                 </div>
                 <div class="by-post">
@@ -291,22 +291,22 @@ get_header(); ?>
                     <div class="kortfigur"></div>
                     <p>eace kredit</p>
                     </div>
-                    <p class="credit-navn">1234-1234-1234-1234</p>
+                    <p class="credit-navn">Jane Doe</p>
                     <div class="day-month">
                         <p class="credit-day">12</p>
                         <p>/</p>
                         <p class="credit-month">2022</p>
                     </div>
-                    <p class="credit-nr">Jane Doe</p>
+                    <p class="credit-nr">1234-1234-1234-1234</p>
                 </div>
                 <div class="kortnr">
                     <input class="cc-navn" type="text" placeholder="Navn"> 
-                    <input class="cc-nummer" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="19" placeholder="Kort Nummer"> 
+                    <input class="cc-nummer" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="16" placeholder="Kort Nummer"> 
                 </div>
                 <div class="datoer">
                     <input class="cc-mm" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="2" placeholder="MM">
                     <input class="cc-yyyy" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="4" placeholder="YYYY">
-                    <input type="number" placeholder="CVC">
+                    <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="3" placeholder="CVC">
                 </div>
                 <button class="betal">Betal</button>
             </div>
