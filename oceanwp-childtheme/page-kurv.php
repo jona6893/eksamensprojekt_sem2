@@ -14,10 +14,13 @@ get_header(); ?>
     body {
     background-color: #FFFDFC;
   }
-/* -------------------- MOBILE -------------------- */
-
+/* -------------------- MOBILE -------------------- *
         
     /* ---------- Layout ---------- */
+        h4{
+            margin:0;
+        }
+
         #first_section {
             display: grid;
             width: 100%;
@@ -27,18 +30,19 @@ get_header(); ?>
             padding: 5%;
             background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
             background-size: cover;
+            align-content: center;
         }
 
         .de-tre-felter {
             display: grid;
-            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
             gap: 50px;
             width: 100%;
             justify-content: center;
         }
         .trin{
             display: grid;
-            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
             gap: 50px;
             width: 100%;
         }
@@ -54,7 +58,7 @@ get_header(); ?>
             .de-tre-felter{
                 --repeat:1;
                 display: grid;
-                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 600px));
+                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 400px));
             }
              .trin{
                 display:none;
@@ -81,7 +85,7 @@ get_header(); ?>
         .produkt img{
             max-width: 40%;
         }
-        .produkt h4{
+        .produkt p{
             display: grid;
             align-items: center;
         }
@@ -108,12 +112,11 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            
-            padding: 50px 5%;
+            align-items: center;
+            padding: 20px;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
-            min-height:100%;
 
         }    
         .adresse h3{
@@ -143,7 +146,7 @@ get_header(); ?>
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
             
-            padding: 50px 5%;
+            padding: 10px 5%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
@@ -244,23 +247,23 @@ get_header(); ?>
         <div class="de-tre-felter">
             <div class="kurv">
                 <p class="step step1">Step 1.</p>
-                <h3>Kurv</h3>
+                <h4>Kurv</h4>
             
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/VITAMIN-BOOST-KOLLI_900x.jpg?v=1650460271" alt="">
                 <div>
-                <h4>Produkt 1</h4>
+                <p>Produkt 1</p>
                 <p class="pris">250</p>
                 </div>
-                <h4 class="remove">X</h4>
+                <p class="remove">X</p>
                 </div>
                 <div class="produkt pro">
                 <img src="https://cdn.shopify.com/s/files/1/0510/4300/8670/products/HEALTHY-TEETH-KOLLI_900x.jpg?v=1650460506" alt="">
                 <div>
-                <h4>Produkt 2</h4>
+                <p>Produkt 2</p>
                 <p class="pris">250</p>
                 </div>
-                <h4 class="remove">X</h4>
+                <p class="remove">X</p>
                 </div>
                 <div class="total">
                     <div>
@@ -271,7 +274,7 @@ get_header(); ?>
             </div>
             <div class="adresse">
                 <p class="step step2">Step 2.</p>
-                <h3>Adresse</h3>
+                <h4>Adresse</h4>
                 <div class="navn-tel">
                 <input type="text" placeholder="Navn">
                 <input type="tel" placeholder="Telefon">
@@ -285,7 +288,7 @@ get_header(); ?>
             </div>
             <div class="betaling">
                 <p class="step step3">Step 2.</p>
-                <h3>Betalings Informationer</h3>
+                <h4>Betalings Informationer</h4>
                 <div class="kort">
                     <div class="chipnbrand">
                     <div class="kortfigur"></div>
