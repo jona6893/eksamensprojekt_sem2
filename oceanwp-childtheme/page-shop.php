@@ -56,9 +56,11 @@ get_header(); ?>
  }
 
   #filter-menu {
+    gap:30px;
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 500px;
+
   }
   
   .filter-btn {
@@ -87,6 +89,7 @@ get_header(); ?>
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border:none;
+    
   }
 
   #produkter {
