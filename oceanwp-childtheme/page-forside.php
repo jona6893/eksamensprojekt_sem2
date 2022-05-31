@@ -108,25 +108,11 @@ get_header(); ?>
     right: 12px;
   }
 
-		#splashimage{
-			width: 100%;
-			height: 90vh;
-			background-color: #F5F8FA;
-			display:grid;
-			grid-template-columns: 1fr 1fr;
-			align-items: center;
-		}
-	#splashimage h1{
-		font-size: 4rem;
-	}
-	.swiper {
-  width: 37vh;
-    height: auto;
-}
-.column-left {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr
-}
+  .column-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr
+  }
+
 	.splash_text{
     font-family: "termina", sans-serif;
     font-weight: 800;
@@ -136,13 +122,16 @@ get_header(); ?>
 		align-items: center;
     justify-items: center;
     grid-row: 2/3;
+    white-space: pre-line;
 	}
+
   .splash_text h1 {
     font-size: 3rem;
   }
-  .splash_vitamin {
-    color: #354E57;
+
+  .gum_type {
     font-style: italic;
+    color: #c4ad84;
   }
 
   @media (max-width: 800px) {
@@ -157,7 +146,7 @@ get_header(); ?>
     }
   }
 
-     /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
+  /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
   .splash_button {
     grid-row: 3/4;
     display: flex;
@@ -165,17 +154,18 @@ get_header(); ?>
     gap: 20px;
     
   }
+
   .til_shop_knap {
     font-family: "termina", sans-serif !important;
     font-weight: 400;
     font-style: normal;
     background-color: transparent;
     color: var(--sort);
-   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-   border: none;
-   min-width: 200px;
-   
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border: none;
+    min-width: 200px;
   }
+
   .til_abonnement_knap {
     font-family: "termina", sans-serif !important;
     font-weight: 400;
@@ -185,8 +175,8 @@ get_header(); ?>
     border: none;
     min-width: 200px;
   }
-  /* -------------------- DE SORTE BARRER -------------------- */
 
+  /* -------------------- DE SORTE BARRER -------------------- */
 	#sort_bar1,	#sort_bar2{
 		background-color: var(--sort);
 		height: 200px;
@@ -197,21 +187,22 @@ get_header(); ?>
     margin-bottom: 200px;
     text-align: center;
 	}
-	#sort_bar1 h1, #sort_bar2 h1{
+
+	#sort_bar1 h2, #sort_bar2 h2{
     font-family: "adrianna", sans-serif;
     font-weight: 800;
     font-style: normal;
 		color:white;
 		font-size: 1.3rem;
+    visibility: hidden;
 	}  
+
   .level {
     font-family: "adrianna", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+    font-weight: 800;
+    font-style: normal;
     color: var(--blaa);
   }
-
-/* * */
 
   #sort_bar1, #sort_bar2 {
     background-size: contain;
@@ -226,6 +217,17 @@ get_header(); ?>
 
   #sort_bar2 {
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar2.png");
+  }
+
+  /* ingen parallax til mobil */
+  @media (hover: none) {
+    #sort_bar1, #sort_bar2 {
+      background-image: none;
+    }
+
+    #sort_bar1 h2, #sort_bar2 h2{
+      visibility: visible;
+    }
   }
 
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
@@ -245,7 +247,7 @@ get_header(); ?>
     margin-top:100px;
     margin-bottom: 100px;
   }
-  #find_os h1 {
+  #find_os h2 {
     text-align: center;
     margin-bottom: 100px;
   }
@@ -255,7 +257,7 @@ get_header(); ?>
     padding: 2%;
 
   }
-  #forside_blog h1 {
+  #forside_blog h2 {
     text-align: center;
     margin-bottom: 100px;
   }
@@ -298,7 +300,7 @@ get_header(); ?>
     #sort_bar1, #sort_bar2{
       height: 400px;
     }
-    #sort_bar1 h1, #sort_bar2 h1{
+    #sort_bar1 h2, #sort_bar2 h2{
 		font-size: 4.5rem;
 	}
   #intro .intro_om_os {
@@ -499,7 +501,7 @@ get_header(); ?>
 <section id="splash-section">
   <div class="column-left">
 		<div class="splash_text">
-  		<h1>GUM + <strong class="splash_vitamin"><br>VITAMIN <br>BOOST</strong> </h1>
+  		<h1 class="heading">GUM + <strong class="gum_type"><br>VITAMIN <br>BOOST</strong> </h1>
       <div class="splash_button">
         <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
         <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Design dit eget abonnement</button>
@@ -518,11 +520,11 @@ get_header(); ?>
 </section>
 <section class="streger"></section>
 <section id="sort_bar1">
-	<!-- <h1>NEXT GENERATION CHEWING GUM </h1> -->
+	<h2>NEXT GENERATION CHEWING GUM </h2>
 </section>
 <section id="intro">
   <div class="intro_start">
-  <h1>EACE GUM</h1>
+  <h2>EACE GUM</h2>
   <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
   <div class="intro_om_os">
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
@@ -532,15 +534,15 @@ get_header(); ?>
 </div>
   </div>  
 </section>
-<section id="find_os">
-  <h1>Find Os Her</h1>
+<section id="find_os" class="max-width">
+  <h2>Find Os Her</h2>
   <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
 </section>
 
   
 
-<section id="forside_blog">
-  <h1>BLOGINDLÆG</h1>
+<section id="forside_blog" class="max-width">
+  <h2>BLOGINDLÆG</h2>
   <div class="forside_blog_indhold">
   <div class="seneste_artikler">
     <h3>Seneste Artikler</h3>
@@ -562,12 +564,12 @@ get_header(); ?>
     <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="">
   </div>
   </div>
-</section></section>
+</section>
 <section id="sort_bar2">
-	<!-- <h1>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h1> -->
+	<h2>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h2>
 </section>
 
-<section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
+<section id="forside_some" class="max-width"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
      <button>@eace_gum</button></div>
     <div class="some">
      
@@ -610,6 +612,12 @@ get_header(); ?>
 
 <script>
 
+  //reference variabel til switch statement
+  let theIndex;
+
+  //vælger teksten
+  const gumType = document.querySelector(".gum_type");
+
 	/* konfigurer nedestående variabler efter behov */
 	//antallet af produkter som er vist på splashbilledet
 	const maxProductsIndex = 3;
@@ -620,6 +628,7 @@ get_header(); ?>
 
 	//bladre frem knap
 	document.querySelector(".next").addEventListener("click", () => {
+    changeText();
 		products.forEach((product) => {
 			//hvis data-index værdien er lig med eller mindre end 1
 			if (product.dataset.index <= 1) {
@@ -629,6 +638,7 @@ get_header(); ?>
 				//ellers træk 1 fra data-index værdien
 				product.dataset.index--;
 			}
+    changeText();
 		});
 	});
 
@@ -643,9 +653,31 @@ get_header(); ?>
 				//ellers læg 1 til data-index værdien
 				product.dataset.index++;
 			}
+    changeText();
 		});
 	});
 
+  function changeText() {
+    theIndex = document.querySelector(".vitamin-boost").dataset.index;
+
+    //ændre teksten
+    switch(theIndex) {
+      case "1":
+        gumType.style.color = "#c4ad84";
+        gumType.textContent = "\r\nVITAMIN\nBOOST";
+        break;
+      
+      case "2":
+        gumType.style.color = "#449682";
+        gumType.textContent = "\r\nHEALTHY\nTEETH";
+        break;
+
+      case "3":
+        gumType.style.color = "#57abc9";
+        gumType.textContent = "\r\nENERGY\nBOOST";
+        break;
+    }
+  }
 </script>
 <script>
   /* konfigurer nedestående variabler efter behov */
