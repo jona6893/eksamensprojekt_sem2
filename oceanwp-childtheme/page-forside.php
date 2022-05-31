@@ -325,11 +325,14 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
   #intro .intro_om_os {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+    margin: auto;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
-    max-width: 70%;
-    margin: auto;
+    
+    justify-content: right;
+    
   }
   #intro .intro_om_os_text {
     grid-column:2/3;
