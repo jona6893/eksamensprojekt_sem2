@@ -287,12 +287,21 @@ height:25px;
    align-items: flex-end;
    
   }
-  #grid-container-cart{
-    display:grid;
-    grid-template-columns:1fr;
-  }
-  }
-
+  #grid-container-cart {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    padding: 25px;
+}
+.oversigt {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+  .total {
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+}
 </style>
 
 <main id="main-content">
