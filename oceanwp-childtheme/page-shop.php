@@ -128,6 +128,9 @@ get_header(); ?>
     .produkt-card {
       box-shadow: 1px 3px 32px rgba(0, 0, 0, 0.04);
     }
+    .produkt-card {
+      box-shadow: 1px 3px 32px rgba(0, 0, 0, 0.04);
+    }
   }
 
   .produkt-image, .produkt-hoverimage {
