@@ -11,12 +11,8 @@
 get_header(); ?>
 
 <style>
-    body {
-    background-color: #FFFDFC;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger.png");
-    background-size: cover;
-  }
- 
+    body{
+        background-color: #FFFDFC;}
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
 #section1 {
@@ -24,14 +20,28 @@ get_header(); ?>
     justify-items: center;
     padding-inline: 3%;
     padding-block: 100px;
-    margin-top: 20px;
+    background-color: white;
+    /*boksen rundt om*/
+    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+    width: 100%;
+    gap: -9px;
+    padding: 7% 1%;
+    min-height: 314px;
 }
 
 #section1 p {
-    max-width: 44ch;
+    max-width: 87ch;
     margin-top: 10px;
     font-size: 0.8rem;
+    text-align: center;
+}
 
+#section1 h1 {
+    font-family: "sofia-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
 }
 
 /* ---------- SECTION2 ---------- */
@@ -56,10 +66,7 @@ get_header(); ?>
 
 /* ---------- SECTION3 ---------- */
 #section3 {
-    padding: 100px 0;
-    display: grid;
-    justify-items: center;
-    gap:50px;
+    padding: 5% 0;
 }
 
 .container {
@@ -118,6 +125,11 @@ hr {
     color: black;
     border: none;
 }
+.a_2_knap{
+    background-color:var(--sort);
+    color: white;
+
+}
 
 /* -------------------- DESKTOP -------------------- */
 
@@ -136,35 +148,43 @@ hr {
 
     .videntekst-d {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 50px;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: center;
     }
     
-
-    .tekstcontainer1-d, .tekstcontainer2-d {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
-    }
     .tekstcontainer1-d  p, .tekstcontainer2-d p{
         width:48ch;
     }
-    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4-d{
+    .afsnit1-d, .afsnit2-d, .afsnit3-d, .afsnit4{
         display: grid;
-        justify-items: center;
     }
     
-
     .imagecontainer-d {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     width: 80%;
     }
+
+    #section2_desktop h2 {
+ font-family: "sofia-pro", sans-serif !important;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
+    }
+    #section2_desktop h4 {
+  font-family: "sofia-pro", sans-serif !important;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.18rem + 0.3500000000000001vw, 1.6rem);
+    }
 }
+
 </style>
+
 <main>
 <section id="section1">
     <h1>PRODUKTION</h1>
@@ -175,7 +195,6 @@ hr {
 <section id="section2_mobile">
 
     <h2>Videnskaben</h2>
-    
     <div class="videntekst">
         <div class="afsnit1">
             <h4>Udviklet og produceret i Danmark</h4>
@@ -231,7 +250,6 @@ hr {
 <section id="section2_desktop">
 
     <h2>Videnskaben</h2>
-   
     <div class="videntekst-d">
       <div class="tekstcontainer1-d">
         <div class="afsnit1-d">
@@ -249,13 +267,6 @@ hr {
             Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre produkternes effekt. 
           </p>
         </div>
-      </div>
-      <div class="imagecontainer-d">
-        <img src="https://ucarecdn.com/bb6f27e9-df38-4daf-8c5c-68934bfd49d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.36.51.png" alt="">
-        <img src="https://ucarecdn.com/4c959399-154f-49a7-a416-7f8a2f07069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202022-01-11%20kl.%2009.17.53.png" alt="">
-        <img src="https://ucarecdn.com/58fc6808-c0c7-4772-a4ab-acb204ebee3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.41.38.png" alt="">
-      </div>
-      <div class="tekstcontainer2-d"> 
           <div class="afsnit3-d">
           <h4>Research</h4>
           <p>
@@ -270,12 +281,16 @@ hr {
             Dette betyder at virkningen af næringsstofferne, som f.eks. koffeiner væsentligt hurtigere, end ved andre former for indtag. 
           </p>
         </div>
+        </div>
+       <div class="imagecontainer-d">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab1.png?_t=1653984776" alt="videnskab1">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab2.png?_t=1653984776" alt="videnskab2">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab3.png?_t=1653984776" alt="videnskab3">
       </div>
     </div>
   
 </section> 
-<section id="section3">
-    <h3>DOKUMENTATION</h3>
+<section id="section3" class="max-width">
     <div class="container">
         <div class="accordion">
             <div class="accordionItem" id="question1">
@@ -291,7 +306,8 @@ hr {
                         fysiske proces i tygningen - nogle studier viste helt op til 25-40% stigning. Dette øger
                         samtidig mængden af ilt i hjernen, hvilket forbedrer hukommelsen and andre kognitive funktioner.
                     </p>
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4449949/">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4449949/';">Læs Hele Studiet Her</button>
+                    
                 </div>
             </div>
             <div class="accordionItem" id="question2">
@@ -307,7 +323,7 @@ hr {
                         holde sig vågne længere. Tyggegummi med myntesmag menes at være særligt nyttigt til dette
                         formål.
                     </p>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/20132649/">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://pubmed.ncbi.nlm.nih.gov/20132649/';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question3">
@@ -323,7 +339,7 @@ hr {
                         Konklusionen blev at tyggegummi – en behagelig vane for mange – kan være en strategi til at
                         reducere vitaminmangel rundt omkring i verden.
                     </p>
-                    <a href="https://www.sciencedaily.com/releases/2018/10/181010105610.htm">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://www.sciencedaily.com/releases/2018/10/181010105610.htm';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question4">
@@ -339,7 +355,7 @@ hr {
                         tænder, der forårsager forfald. Sørg altid for, at dit tyggegummi er sukkerfrit, da
                         sukkerholdige tyggegummier faktisk kan bidrage til syreopbygningen.
                     </p>
-                    <a href="https://www.mouthhealthy.org/en/az-topics/c/chewing-gum">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://www.mouthhealthy.org/en/az-topics/c/chewing-gum';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question5">
@@ -360,7 +376,7 @@ hr {
                         dental fluorose. Den høje tilstedeværelse af fluor i spyt efter brug af tyggegummi med fluor kan
                         være væsentlig for at forhindre karies.
                     </p>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/27352462/">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://pubmed.ncbi.nlm.nih.gov/27352462/';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question6">
@@ -375,7 +391,7 @@ hr {
                         såsom neglebidning og benrystelser, når du føler dig stresset. Dette bakkes op af undersøgelser,
                         som viser, at tyggegummi var med til at reducere stresshormonet kortisol hos mange testpersoner.
                     </p>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/19268676/)">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://pubmed.ncbi.nlm.nih.gov/19268676/)';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question7">
@@ -390,9 +406,7 @@ hr {
                         effekt. Blandt andet nedenstående videnskabelige artikel med test af catechin tilsætning til
                         tyggegummi og deres effekt til at nedbryde dårlig ånde forbindelser som CH3SH.
                     </p>
-                    <a
-                        href="https://books.google.dk/books?hl=da&lr=&id=W8g5kVehRLYC&oi=fnd&pg=PA275&dq=deodorizing+mechanism+of+epigallocatechin+and+chewing+gum+containing+tea+extracts&ots=K4wq5pKQmh&sig=IL3L2jzi31Wo9DR1Pcy10WHEfuQ&redir_esc=y#v=onepage&q=deodorizing%20mechanism%20of%20epigallocatechin%20and%20chewing%20gum%20containing%20tea%20extracts&f=false">Læs
-                        Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://books.google.dk/books?hl=da&lr=&id=W8g5kVehRLYC&oi=fnd&pg=PA275&dq=deodorizing+mechanism+of+epigallocatechin+and+chewing+gum+containing+tea+extracts&ots=K4wq5pKQmh&sig=IL3L2jzi31Wo9DR1Pcy10WHEfuQ&redir_esc=y#v=onepage&q=deodorizing%20mechanism%20of%20epigallocatechin%20and%20chewing%20gum%20containing%20tea%20extracts&f=false';">Læs Hele Studiet Her</button>
                 </div>
             </div>
             <div class="accordionItem" id="question8">
@@ -408,7 +422,7 @@ hr {
                         buccal absorption af koffein – og dermed en hurtigere virkning end indtag via piller/kapsler og
                         energi drik.
                     </p>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/11839447/">Læs Hele Studiet Her</a>
+                    <button onclick="window.location.href='https://pubmed.ncbi.nlm.nih.gov/11839447/';">Læs Hele Studiet Her</button>
                 </div>
             </div>
         </div>
