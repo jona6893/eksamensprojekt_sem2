@@ -33,18 +33,24 @@ get_header(); ?>
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
-    background-position: center;
-    color: var(--lyse-blaa);
-    opacity: 0.5;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille_splash2.png");
+    background-size: cover;
+    background-color: var(--lyse-blaa);
   }
 
   #splash-image h1 {
     position: absolute;
     bottom: 30vh;
+<<<<<<< HEAD
     left: 0;
     right: 0;
     text-align: center;
+=======
+    left: 25%;
+    font-weight: 800;
+    font-size: 4rem;
+   
+>>>>>>> 21faf671e2595985bbce702d5d6912def537d1df
   }
 
   #filter-menu {

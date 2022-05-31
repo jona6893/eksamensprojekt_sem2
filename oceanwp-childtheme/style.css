@@ -95,8 +95,8 @@ main h1 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
-  font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
+  font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2.587rem);
+  line-height: 1.1;
   color: var(--sort);
 }
 
@@ -104,31 +104,32 @@ main h2 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
+  font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 2.025rem);
+  line-height: 1.1;
 }
 
 main h3 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.6rem;
-  font-size: clamp(1.6rem, 1.52rem + 0.3999999999999999vw, 2rem);
+  font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.688rem);
+  line-height: 1.1;
 }
 
 main h4 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.18rem + 0.3500000000000001vw, 1.6rem);
+  font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
+  line-height: 1.1;
 }
 
 main p {
   font-family: "Helvetica", sans-serif ;
   font-weight: normal;
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
+  line-height: 1.1;
+  color:var(--sort);
 }
 
 button {

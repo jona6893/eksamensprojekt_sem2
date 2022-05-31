@@ -24,7 +24,7 @@
 .menulinks {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 30px;
 }
 
 header {
@@ -59,6 +59,12 @@ header img {
 
 .hover-mig:hover .hidemenu {
     display: grid;
+}
+a {
+    color: var(--sort);
+}
+.menulinks a:hover {
+color: #7CB5FF;
 }
 
 @media (min-width: 900px) {
