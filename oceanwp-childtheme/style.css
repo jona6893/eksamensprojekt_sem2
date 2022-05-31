@@ -93,7 +93,7 @@ html {
 
 main h1 {
   font-family: "sofia-pro", sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2.587rem);
   line-height: 1.1;
@@ -145,6 +145,7 @@ button {
   font-style: bold;
   transition: color 0.2s, background-color 0.2s;
 }
+
 main hr {
   color: var(--sort);
   background-color: var(--sort);
