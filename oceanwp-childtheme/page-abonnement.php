@@ -79,7 +79,7 @@ get_header(); ?>
   /* filtrerings knappers udseende */
   .filter-btn {
     color: white;
-    border: 1px var(--sort) solid;
+    /* border: 1px var(--sort) solid; */
     background-color:var(--sort) ;
     padding: 8px 12px;
     width: 160px;

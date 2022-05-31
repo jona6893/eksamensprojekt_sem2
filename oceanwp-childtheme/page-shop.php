@@ -41,11 +41,19 @@ get_header(); ?>
   #splash-image h1 {
     position: absolute;
     bottom: 30vh;
-    left: 25%;
+    left: 20%;
     font-weight: 800;
     font-size: 4rem;
    
   }
+  #splash-image p {
+  position: absolute;
+    bottom: 24vh;
+    left: 20%;
+    font-size: 1rem;
+    max-width: 40ch
+    
+ }
 
   #filter-menu {
     display: flex;
@@ -54,9 +62,9 @@ get_header(); ?>
   }
   
   .filter-btn {
-    color: var(--sort);
-    border: 1px var(--sort) solid;
-    background-color: transparent;
+    color: white;
+    /* border: 1px var(--sort) solid; */
+    background-color: var(--sort);
     padding: 8px 12px;
     width: 110px;
     text-align: center;
@@ -67,8 +75,8 @@ get_header(); ?>
   }
 
   .filter-btn.selected {
-    color: white;
-    background-color: var(--sort);
+    color: var(--sort);
+    background-color: white;
   }
 
   #produkter {
@@ -372,6 +380,7 @@ get_header(); ?>
 
   <section id="splash-image">
     <h1>SHOP</h1>
+    <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
 </section>
 
   <section id="filter-menu" class="max-width">
