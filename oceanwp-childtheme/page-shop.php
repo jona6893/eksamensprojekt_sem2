@@ -43,12 +43,12 @@ get_header(); ?>
     bottom: 30vh;
     left: 20%;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
    
   }
   #splash-image p {
   position: absolute;
-    bottom: 24vh;
+    bottom: 20vh;
     left: 20%;
     font-size: 1rem;
     max-width: 40ch

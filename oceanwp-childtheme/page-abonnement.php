@@ -46,7 +46,7 @@ get_header(); ?>
     bottom: 30vh;
     left: 5%;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
    
   }
 
@@ -63,7 +63,7 @@ get_header(); ?>
   .filter-menu {
     --repeat: auto-fit;
   }
-  
+  /* media quuery til vores ccs variable, bruges på vores grid */
     @media (min-width: 805px) {
   #filter-menu {
     --repeat: 4;
@@ -147,19 +147,6 @@ get_header(); ?>
    
     font-size: 1.5rem !important;
     margin-bottom: 4px;
-  }
-
-  @media (max-width:974px) {
-    .produkt-card{
-      grid-template-columns:1fr 0.2fr;
-    }
-    .om-produktet{
-  grid-column:1/2;
-}
-.add-container{
-   align-items: flex-end;
-   
-  }
   }
   .abo-img{
     position: relative;
@@ -278,12 +265,50 @@ height:25px;
   grid-column:2/3;
   grid-row:4/5;
 }
+  
 .next{
   width:120px;
 }
+
 /* .this-width{
   max-width:900px;
 } */
+
+/* --------- MOBILE UDGAVE --------- */
+
+@media (max-width:974px) {
+
+  #splash-image p {
+    position: absolute;
+    bottom: 20vh;
+    left: 5%;
+    font-size: 1rem;
+}
+    .produkt-card{
+      grid-template-columns:1fr 0.2fr;
+    }
+    .om-produktet{
+  grid-column:1/2;
+}
+.add-container{
+   align-items: flex-end;
+   
+  }
+  #grid-container-cart {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    padding: 25px;
+}
+.oversigt {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+  .total {
+    grid-column: 1/2;
+    grid-row: 8/9;
+}
+}
 </style>
 
 <main id="main-content">
