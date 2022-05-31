@@ -36,27 +36,29 @@ get_header(); ?>
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/splashbillede_produkt.png");
-    background-position: center;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille_splash2.png");
     background-size: cover;
+    background-color: var(--lyse-blaa);
   }
 /* h1 på splashbilledet */
-  #splash-image h1 {
+#splash-image h1 {
     position: absolute;
     bottom: 30vh;
-    left: 0;
-    right: 0;
-    text-align: center;
+    left: 5%;
+    font-weight: 800;
+    font-size: 3rem;
+   
+  }
 
-  }
-  #splash-image p{
-    color:var(--sort);
-  }
  /* grid til teksten på splashbilledet */
-  #grid-box{
-    display:grid;
-    justify-items: center;
-  }
+ #splash-image p {
+  position: absolute;
+    bottom: 24vh;
+    left: 5%;
+    font-size: 1rem;
+    
+    
+ }
 /* ? */
   .filter-menu {
     --repeat: auto-fit;
@@ -284,13 +286,13 @@ height:25px;
   </template>
 
   <section id="splash-image">
-    <div id="grid-box">
+    
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
     <p class="abo-info">
       Få 12 pakker tyggegummi til 199kr efter eget valg leveret
       i din postkasse hver måned eller hver anden måned.
   </p>
-    </div>
+    
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
