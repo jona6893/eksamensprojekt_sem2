@@ -62,9 +62,9 @@ get_header(); ?>
   }
   
   .filter-btn {
-    color: var(--sort);
+    color: white;
     /* border: 1px var(--sort) solid; */
-    background-color: transparent;
+    background-color: var(--sort);
     padding: 8px 12px;
     width: 110px;
     text-align: center;
@@ -75,8 +75,8 @@ get_header(); ?>
   }
 
   .filter-btn.selected {
-    color: white;
-    background-color: var(--sort);
+    color: var(--sort);
+    background-color: white;
   }
 
   #produkter {
