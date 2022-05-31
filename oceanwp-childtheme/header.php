@@ -35,7 +35,10 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 999;
-    
+    position: sticky;
+    width: 100%;
+    top:0;
+    transition: 0.3s;
 }
 
 header img {

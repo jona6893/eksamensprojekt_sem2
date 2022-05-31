@@ -370,7 +370,7 @@ height:25px;
     </div>
     <div  class="box-3">
       <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">v</button>
+      <button onclick="dropMenu()" class="dropbtn">v</button>
        <div id="myDropdown" class="dropdown-content">
        <a href="#0">HVER MÅNED</a>
         <a href="#0">HVER ANDEN MÅNED</a>
@@ -535,31 +535,37 @@ function tilføjTal(minus, plus, tal, overskrift) {
 
         })
     })
-  
- 
 
 }
 
 /* --------- Her Stater Dropdown menu --------- */
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+  function dropMenu() {
+    console.log("DropMenu start")
+    document.getElementById("myDropdown").classList.add("show")
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
   }
-}
+document.addEventListener("click", function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest(".dropdown")) return;
+
+	// If user clicks outside the element, hide it!
+	document.getElementById("myDropdown").classList.remove("show")
+
+});
+  
+let droppunkter = document.getElementById("myDropdown").children
+  punkerArray = Array.from(droppunkter)
+  console.log(punkerArray)
+punkerArray.forEach(e => {
+  console.log("et punkt er klikket." + e)
+  e.addEventListener("click", () =>{
+    document.querySelector(".dropbtn").innerText = `${e.innerText}`
+    document.getElementById("myDropdown").classList.remove("show")
+  })
+})
+
+
+
 </script>
 
 <?php get_footer(); ?>
