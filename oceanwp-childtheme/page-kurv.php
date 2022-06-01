@@ -74,7 +74,7 @@ get_header(); ?>
             min-height: 500px;
             padding: 50px 5%;
             gap: 20px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
             background-color: white;
         }
 
@@ -144,7 +144,7 @@ get_header(); ?>
             min-height: 500px;
             padding: 30px;
             gap:20px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
             background-color: white;
             
         }    
@@ -190,7 +190,7 @@ get_header(); ?>
             min-height: 500px;
             padding: 20px 8%;
             gap:20px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
             background-color: white;
         }
         .betaling h3{
