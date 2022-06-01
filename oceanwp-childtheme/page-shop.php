@@ -38,18 +38,20 @@ get_header(); ?>
     background-color: var(--lyse-blaa);
   }
 
-  #splash-image h1 {
+  #splash-image div {
     position: absolute;
     top: 40%;
     left: 10%;
+    display: grid;
+    gap: 20px;
+  }
+
+  #splash-image div h1 {
     font-weight: 800;
     font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
   }
 
-  #splash-image p {
-    position: absolute;
-    top: 55%;
-    left: 10%;
+  #splash-image div p {
     font-size: 1rem;
     max-width: 40ch
  }
@@ -447,9 +449,11 @@ get_header(); ?>
   </template>
 
   <section id="splash-image">
-    <h1>SHOP</h1>
-    <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
-</section>
+    <div>
+      <h1>SHOP</h1>
+      <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
+    </div>
+  </section>
 
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
