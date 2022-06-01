@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       /* en if/else statement der tjekker langt ned man har scrolled . */
       if (
         /* hvis den er scrolled mere ind 280px sætter den klassen "scroll" på vores header. */
-        document.body.scrollTop >= 280 ||
-        document.documentElement.scrollTop >= 280
+        document.body.scrollTop >= 80 ||
+        document.documentElement.scrollTop >= 80
       ) {
         myNav.classList.add("scroll");
       } else {
