@@ -11,6 +11,7 @@
 get_header(); ?>
 
 <style>
+    body{background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger4-1.png);}
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
     #section1{
@@ -33,22 +34,26 @@ get_header(); ?>
     justify-items: center;
     }
     .foto{
-        background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/omos-scaled.webp");
-        background-size:cover;
+        background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/omos-scaled.webp);
+        background-size: cover;
         background-position: 48%;
         width: 100%;
-        height:100%;
+        height: 100%;
+        aspect-ratio: 1;
 
     }
     .blogpost-container {
         background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-        width: 80%;
+        box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+        width: 100%;
         height: auto;
         display: grid;
         justify-items: start;
-        padding: 14% 3%;
-        min-height: 346px;
+        padding: 25px;
+        /* min-height: 346px; */
+        gap: 20px;
+        height: 100%;
+
       }
 /* ---------- SECTION3 ---------- */
 #section3 {
@@ -58,10 +63,23 @@ get_header(); ?>
     padding-bottom: 5%;
     justify-items: center;
 }
+.parallax-seti{
+    height: 250px;
+    width: 100%;
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/seti.png);
+    background-size: 80%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
 
 .seti{
     padding-top: 5%;
     width: 60%;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
 }
 /* ---------- SECTION4 ---------- */
 #section4 {
@@ -80,11 +98,11 @@ get_header(); ?>
 }
 </style>
 <main>
-<section id="section1">
+<section id="section1" class="max-width">
     <h1>VORES HISTORIE</h1>
-    <p>Vi elsker tyggegummi og vi elsker innovation. Derfor startede vi Eace Gum. </p>
+    <p>Vi elsker tyggegummi og vi elsker innovation.<br>Derfor startede vi Eace Gum. </p>
 </section>
-<section id="section2">
+<section id="section2" class="max-width">
     <div class="blogpost-container">
     <h3>Iværksætter duo</h3>
     <p>Eace Gum blev startet af iværksætter-duoen Asbjørn Dencker og Ziggi Harttung i 2019. Virksomheden blev stiftet med en mission om at skabe et tyggegummi der udover at smage godt, også skulle hjælpe folk i hverdagen, ligemeget hvad man står overfor. 
@@ -96,10 +114,11 @@ get_header(); ?>
 
 <section id="section3">
     <h2>Set i</h2>
-    <img class="seti" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/seti.webp?_t=1653909501" alt="seti">
+    <div class="parallax-seti">
+    </div>
 </section>
 
-<section id="section4">
+<section id="section4" class="max-width">
     <h2>Mød founders</h2>
     <iframe src="https://player.vimeo.com/video/671871303?h=a7c592fc40" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/671871303"></a><a href="https://vimeo.com/user103444425"></a><a href="https://vimeo.com"></a></p>

@@ -236,12 +236,8 @@ get_header(); ?>
         margin-block: 10px;
       }
       /* ---------- section 1 ---------- */
-        #heroimage{
-          
-        }
-
-        #heroimage h1{
-          
+        #indhold h1{
+          padding-inline: 2%;
         }
 
       /* ---------- section 2 ---------- */
@@ -416,7 +412,7 @@ get_header(); ?>
 
   <section id="maincontent" >
   <div id="indhold">
-  <h1>ANSVAR</h1>
+  <h1>SOCIALT ANSVAR</h1>
   <div id="subject1" class="max-width">
   <div class="overskrift1">
     <h2>BÆREDYGTIG PRODUKTION</h2>

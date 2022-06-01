@@ -380,11 +380,12 @@ get_header(); ?>
     padding: 64px 16px 16px 16px;
     overflow-y: scroll;
     margin: auto;
-    border: none;
+    border: 3px solid var(--sort);
   }
 
   dialog::backdrop {
     backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   dialog[open] {
