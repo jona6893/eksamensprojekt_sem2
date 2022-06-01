@@ -557,7 +557,7 @@ get_header(); ?>
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
             clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
             clone.querySelector(".produkt-info").textContent = `${abonnement.loop_beskrivelse}`;
-            clone.querySelector("article").addEventListener("click", () => modalView(abonnement)); //gør kortene klikbart og kalder på modalView med produkt som parameter
+            clone.querySelector(".read-more").addEventListener("click", () => modalView(abonnement)); //gør kortene klikbart og kalder på modalView med produkt som parameter
             mainContent.appendChild(clone);
             visteProdukter = document.getElementById("produkter").childElementCount;
         }
