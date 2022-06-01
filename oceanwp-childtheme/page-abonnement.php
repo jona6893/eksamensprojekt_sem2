@@ -415,16 +415,17 @@ get_header(); ?>
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.4);
   }
-
+/*kun synlig når den er åben*/
   dialog[open] {
     visibility: visible;
   }
 
   .modal-image {
-    width: 100%;
+    width: 80%;
     aspect-ratio: 566 / 1082;
     background-size: cover;
     background-repeat: no-repeat;
+    
   }
 
   dialog h3 {
@@ -434,14 +435,19 @@ get_header(); ?>
   dialog p {
     padding-bottom: 24px;
   }
+/*modal/single view til mobil*/
 
   @media (max-width: 768px) {
     dialog {
       grid-template-rows: 1fr auto;
       grid-template-columns: 1fr;
     }
+    .modal-image {
+    width: 40%;
+    
   }
-
+  }
+/*container til knappen (krydset)*/
   dialog form {
     position: absolute;
     top: 0;
@@ -451,7 +457,7 @@ get_header(); ?>
     display: flex;
     flex-direction: row-reverse;
   }
-
+/*knappens (krydset) højte  */
   #close {
     height: 48px;
   }
@@ -462,8 +468,10 @@ get_header(); ?>
 
   <template>
     <article class="produkt-card">
-      <div class="img-container"><div class="abo-img">
-      </div ></div>
+      
+      <div class="img-container">
+        <div class="abo-img"></div >
+    </div>
         <h3 class="produkt-navn"></h3>
         <p class="produkt-info"></p>
         <button class="read-more">LÆS MERE</button>
@@ -539,7 +547,8 @@ get_header(); ?>
     </select>
     <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/kurv/';" class="next"> GÅ TIL KURV</button>
     </div>
-  </div> <dialog id="modal">
+  </div> 
+  <dialog id="modal">
     <form method="dialog">
       <button id="close">⨉</button>
     </form>
@@ -621,20 +630,20 @@ get_header(); ?>
     modal.querySelector(".modal-navn").textContent = `${abonnement.title.rendered}`;
     if (abonnement.info !== "") {//hvis produktet har en kort beskrivelse
       modal.querySelector(".h3-info").textContent = "Produkt info";
-      modal.querySelector(".modal-info").innerHTML = `${abonnement.info}`;
+      modal.querySelector(".modal-info").innerHTML = `${abonnement.produkt_info}`;
     } else {
       modal.querySelector(".h3-info").textContent = "";
       modal.querySelector(".modal-info").innerHTML = "";
     }
     if (abonnement.funktioner !== "") {//hvis produktet har paragraf om funktioner
-      modal.querySelector(".h3-funktioner").textContent = "Produkt funktioner";
+      modal.querySelector(".h3-funktioner").textContent = "Funktioner";
       modal.querySelector(".modal-funktioner").innerHTML = `${abonnement.funktioner}`;
     } else {
       modal.querySelector(".h3-funktioner").textContent = "";
       modal.querySelector(".modal-funktioner").innerHTML = "";
     }
     if (abonnement.anvendelse !== "") {//hvis produktet har paragraf om anvendelse
-      modal.querySelector(".h3-anvendelse").textContent = "Produkt anvendelse";
+      modal.querySelector(".h3-anvendelse").textContent = "Anvendelse";
       modal.querySelector(".modal-anvendelse").innerHTML = `${abonnement.anvendelse}`;
     } else {
       modal.querySelector(".h3-anvendelse").textContent = "";
