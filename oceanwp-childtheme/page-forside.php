@@ -449,9 +449,9 @@ get_header(); ?>
     box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset;
   }
   #forside_blog .seneste_artikler {
-    max-width: 500px;
+    width: 500px;
     display: grid;
-    
+    margin-left: auto;
   }
   .seneste_artikler h4, .seneste_artikler p {
     margin: 0px;
@@ -465,7 +465,7 @@ get_header(); ?>
   #forside_blog .forside_blog_indhold {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 75px;
+    grid-template-rows: 400px 75px;
     
   }
   #forside_ blog .seneste_artikler {
@@ -477,7 +477,7 @@ get_header(); ?>
   }
   
   #sort_bar2 {
-    margin-top: -80px;
+    margin-top: 40px;
   }
 
   #forside_some {
