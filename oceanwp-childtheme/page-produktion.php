@@ -16,6 +16,9 @@ get_header(); ?>
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger4-1.png");
     background-size: cover;
 }
+a:hover {
+color: #7CB5FF;
+}
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
 #section1 {
@@ -23,29 +26,16 @@ get_header(); ?>
     justify-items: center;
     padding-inline: 3%;
     padding-block: 100px;
-    background-color: white;
-    /*boksen rundt om*/
-    box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
-    width: 100%;
-    gap: -9px;
-    padding: 7% 1%;
-    min-height: 314px;
+    
+    
 }
 
 #section1 p {
     max-width: 87ch;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    text-align: center;
+    
 }
 
-#section1 h1 {
-    font-family: "sofia-pro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2.5rem;
-  font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
-}
+
 
 /* ---------- SECTION2 ---------- */
 #section2_desktop {
@@ -68,6 +58,12 @@ get_header(); ?>
 }
 
 /* ---------- SECTION3 ---------- */
+h2 {
+    text-align: center;
+}
+p {
+    padding-top: 2%;
+}
 #section3 {
     padding: 5% 0;
 }
@@ -170,20 +166,7 @@ hr {
     width: 80%;
     }
 
-    #section2_desktop h2 {
- font-family: "sofia-pro", sans-serif !important;
-  font-weight: 650;
-  font-style: normal;
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
-    }
-    #section2_desktop h4 {
-  font-family: "sofia-pro", sans-serif !important;
-  font-weight: 650;
-  font-style: normal;
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.18rem + 0.3500000000000001vw, 1.6rem);
-    }
+    
 }
 
 </style>
@@ -263,7 +246,7 @@ hr {
         </p>
         </div>
         <div class="afsnit2-d">
-          <h4>Teknologien</h4>
+          <h4>Teknologi</h4>
           <p>
             Eace Gum bliver lavet med en patenteret kold og tør teknik, som sikrer atnæringsstofferne holder sig aktive under produktionen. 
             
@@ -294,6 +277,7 @@ hr {
   
 </section> 
 <section id="section3" class="max-width">
+    <h2>Dokumentation</h2>
     <div class="container">
         <div class="accordion">
             <div class="accordionItem" id="question1">
