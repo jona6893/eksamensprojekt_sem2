@@ -107,6 +107,22 @@ get_header(); ?>
     border:none;
   }
 
+
+  /* ---------- Section2 ---------- */
+
+  #section2{
+    display: grid;
+    grid-template-columns: repeat(var(--repeat, auto-fit), minmax(85px, 40px));
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 25px;
+  }
+     @media (max-width: 475px) {
+  #section2 {
+    --repeat: 2;
+  }
+}
+
   #produkter {
     display: flex;
    flex-direction: column
@@ -428,7 +444,24 @@ get_header(); ?>
     <button class="filter-btn" data-kategori="relax">RELAX</button>
     <button class="filter-btn" data-kategori="collagen_boost">COLLAGEN BOOST</button>
   </section>
-
+  <section id="section2" class="max-width">
+    <figure id="mint">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint_sort.svg">
+      <caption>Frisk & langvarig mint smag</caption>
+    </figure>
+    <figure id="dk">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_dk_sort.svg">
+      <caption>Udviklet & produceret i Danmark</caption>
+    </figure>
+    <figure id="levering">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_levering_sort.svg">
+      <caption>Effektiv levering</caption>
+    </figure>
+    <figure id="sukkerfrit">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_sukkerfrit_sort.svg">
+      <caption>Sukkerfrit tyggegummi</caption>
+    </figure>
+  </section>
   <section id="produkter" class="max-width this-width"> </section>
 
 <section id="add-cart" class="max-width">
