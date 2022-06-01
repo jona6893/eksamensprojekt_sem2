@@ -422,7 +422,7 @@ get_header(); ?>
 
   .modal-image {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 566 / 1082;
     background-size: cover;
     background-repeat: no-repeat;
   }
