@@ -12,22 +12,28 @@ get_header(); ?>
 
 <style>
 
- body{
-  background-color: var(--lyse-blaa); 
-  
- }
- .streger {
-   background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
-  background-size: cover;
- }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    background-color: var(--lyse-blaa); 
+  }
+
+  .streger {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
+    background-size: cover;
+  }
+
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
   #splash-section {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    position: relative;
   }
 
   .column-right {
@@ -38,7 +44,26 @@ get_header(); ?>
     height: 100%;
   }
 
-  .product-container{
+  .se_mere {
+    position: absolute;
+    bottom: 0;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png");
+    background-repeat: no-repeat;
+    background-position-y: 24px;
+    background-size: contain;
+    aspect-ratio: 1 / 1;
+    width: 48px;
+    height: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation-name: click-me;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+  .product-container {
     position: relative;
     display: grid;
     place-items: center center;
@@ -162,6 +187,38 @@ get_header(); ?>
     .product {
       transform-origin: 35% 145%;
     }
+
+    .product-container{
+      right: 7vw;
+    }
+
+    .se_mere {
+      bottom: -30vh;
+    }
+  }
+
+  @keyframes click-me {
+    0%{
+      animation-timing-function: ease-in;
+      background-position-y: 24px;
+    }
+
+    25%{
+      background-position-y: 0;
+    }
+
+    50%{
+      animation-timing-function: cubic-bezier(0.33, 2.25, 0.65, 0.75);
+      background-position-y: 0;
+    }
+
+    75%{
+      background-position-y: 24px;
+    }
+
+    100%{
+      transform: translateX(-50%) translateY(0px);
+    }
   }
 
   /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
@@ -193,20 +250,6 @@ get_header(); ?>
     border: none;
     min-width: 200px;
   }
-  .se_mere {
-    display: grid;
-    margin-top: -110px;
-  }
-  .se_mere p {
-    text-align: center;
-  }
-  .se_mere .pil {
-    font-size: 4rem;
-    color: #80808054;
-text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
-    
-  }
- 
 
   /* -------------------- DE SORTE BARRER -------------------- */
 	#sort_bar1,	#sort_bar2{
@@ -338,8 +381,9 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
   #intro .intro_om_os {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 50%;
+    max-width: 60%;
     margin: auto;
+    gap: 60px;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
@@ -552,9 +596,8 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     <button class="fan-btn previous">←</button>
     <button class="fan-btn next">→</button>
   </div>
+  <a href="#intro" class="se_mere"></a>
 </section>
-<div class="se_mere"><p><strong class="pil">v</strong>
-</p></div>
   
 
 <section class="streger"></section>
