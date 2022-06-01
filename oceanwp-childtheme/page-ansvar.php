@@ -32,21 +32,16 @@ get_header(); ?>
   /* -------------------- DESKTOP -------------------- */
 
     /* ---------- section 1 ---------- */
-      #heroimage{
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        min-height: 314px;
-    
-      }
-
-      #heroimage h1{
+      #indhold h1{
         color: var(--sort);
         font-family: "sofia-pro", sans-serif;
         font-weight: 700;
         font-style: normal;
         font-size: 2.5rem;
         font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%; 
       }
 
 
@@ -70,28 +65,25 @@ get_header(); ?>
     /* ---------- Bæredygtigt produktion ---------- */
       #subject1{
         display:grid;
-        grid-area: 1/3;
-        padding-block: 5%;
+        grid-template-columns: 1fr 1fr;
         padding-right: 1.5rem;
         justify-items: center;
+        justify-content: end;
+        padding-bottom: 8%;
   
       }
       .overskrift1{
         display: grid;
-        justify-items: start;
-        align-items: end;
+       align-items: center;
+       align-content: center;
       }
       .overskrift1 p{
         max-width: 48ch;
       }
       .fngoals{
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
-        width: 100%;
-      }
-      .fngoals img{
-        max-height: 50%;
+        width: 78%;
       }
       .fngoals h4{
         margin:0;
@@ -108,17 +100,21 @@ get_header(); ?>
 
     /* ---------- CERTIFICERET EMBALLAGE ---------- */
       #subject2{
-        display:grid;
-        grid-area: 2/3;
-        padding-block: 5%;
-        padding-right: 1.5rem;
-        justify-items: center;
-        gap:20px;
-        column-gap: 50px;
-        background-color: var(--lyse-blaa);
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 5%;
+    padding-right: 1.5rem;
+    background-color: var(--lyse-blaa);
+    align-items: end;
       }
-
-      .overskrift2{
+#subject2 h4 {
+  font-family: "sofia-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(0.1rem, calc(5.25px + 0.925vw), 1.57rem);
+    line-height: 1.1;
+}
+      /* .overskrift2{
         display: grid;
         justify-items: start;
         align-items: center;
@@ -128,11 +124,15 @@ get_header(); ?>
       }
       .sub2_indhold{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 20px;
-        column-gap: 50px;
-        align-items: center;
+    gap: 20px;
+    column-gap: 50px;
+    justify-items: end;
+    align-items: center;
+      }
+*/
+      .sub2_text{
+        grid-area: 1/1;
+        max-width: 48ch;
       }
       .sub2_text1{
         grid-area: 1/1;
@@ -146,29 +146,29 @@ get_header(); ?>
         grid-area: 2/1;
         max-width: 48ch;
       }
-      .sub2_textcontainer{
+     /*  .sub2_textcontainer{
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+      }  */
       .sub2_imgs{
-        background-image: url(https://ucarecdn.com/39625410-2c45-4480-a772-79d32ad8a234/-/format/auto/-/preview/3000x3000/-/quality/lighter/);
-        background-size: cover;
-        background-position: 50%;
-        aspect-ratio: 1/1.4;
+width: 30%;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
-        display:grid;
- 
-        grid-template-columns: 1fr 1fr;
-  
-        padding-block: 5%;
-        gap: 20px;
-        padding-right: 1.5rem;
-        justify-items: center;
-          align-items: center;
-      }
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 5%;
+    gap: 20px;
+    padding-right: 1.5rem;
+    justify-items: center;
+    align-items: end;
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger4-1.png);
+    background-size: cover;
+}
+
+
 
       .overskrift3{
         max-width: 48ch;
@@ -185,7 +185,6 @@ get_header(); ?>
       #subject4 {
         display: grid;
         grid-template-columns: 1fr 0.5fr 0.1fr;
-        padding-block: 5%;
         grid-template-rows: 1fr;
         justify-items: end;
         align-items: center;
@@ -265,6 +264,9 @@ get_header(); ?>
             padding-top: 1.5rem;
             grid-template-columns: 1fr;
           }
+          .overskrift1 {
+
+          }
           #indhold{
             grid-column:1/1;
             grid-row: 1/1;
@@ -273,11 +275,11 @@ get_header(); ?>
       /* ---------- Bæredygtigt produktion ---------- */
           #subject1 {
             display: grid;
-
             padding-left: 0px;
             padding-block: 5%;
             padding-right: 0rem;
             justify-items: center;
+            
           }
           .overskrift1 {
             display: grid;
@@ -288,7 +290,6 @@ get_header(); ?>
           .fngoals {
             display: grid;
             grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
-            gap: 20px;
             padding-inline: 2%;
           }
       /* ---------- CERTIFICERET EMBALLAGE ---------- */
@@ -396,51 +397,43 @@ get_header(); ?>
 
 </style>
 <main>
-  <section id="heroimage">
-  <h1>ANSVAR</h1>
-  </section>
+
   <section id="maincontent" >
   <div id="indhold">
-
+  <h1>ANSVAR</h1>
   <div id="subject1" class="max-width">
-    <div class="overskrift1">
+  <div class="overskrift1">
     <h2>BÆREDYGTIG PRODUKTION</h2>
     <p>Alle Eace-produkter er produceret i Danmark, for at sikre transparens og bedst mulig kvalitet. Tyggegummiet produceres med FN’s principper for bæredygtig udvikling og FN’s 17 verdensmål. De mest relevante verdensmål som indgår i vores produktion er:</p>
     </div>
     <div class="fngoals">
       <div class="goal_one">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/3_maal.png" alt="">
-      <h4>3. SUNDHED OG TRIVSEL</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3">
       </div>
       <div class="goal_two">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/5_maal.png" alt="">
-      <h4>5. LIGESTILLING MELLEM KØNNENE</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5">
       </div>
       <div class="goal_three">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/12_maal.png" alt="">
-      <h4>12. ANSVARLIGT FORBRUG OG PRODUKTION</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_12.svg" alt="maal12">
       </div>
       <div class="goal_fouth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/13_maal.png" alt="">
-      <h4>13. KLIMAINDSATS</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_13.svg" alt="maal13">
       </div>
       <div class="goal_fith">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/15_maal.png" alt="">
-      <h4>15. LIVET PÅ LAND</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_15.svg" alt="maal15">
       </div>
       <div class="goal_sixth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/16_maal.png" alt="">
-      <h4>16. FRED, RETFÆRDIGHED OG STÆRKE INSTITUTIONER</h4>
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_16.svg" alt="maal16">
       </div>
     </div>
   </div>
   <div id="subject2">
-    <div class="overskrift2 max-width">
-      <h2>CERTIFICERET EMBALLAGE</h2>
-      <p>Alt emballage er, ligesom vores tyggegummi, også produceret i Danmark. Vores emballage har fået certifikaterne FSC, ClimateCalc og Svanemærket, for at garantere bæredygtig emballage og formindske vores indvirkning på miljøet så meget som muligt.</p>
-    </div>
     <div class="sub2_indhold max-width">
       <div class="sub2_textcontainer">
+      <h2>CERTIFICERET EMBALLAGE</h2>
+      <div class="sub2_text">
+      <p>Alt emballage er, ligesom vores tyggegummi, også produceret i Danmark. Vores emballage har fået certifikaterne FSC, ClimateCalc og Svanemærket, for at garantere bæredygtig emballage og formindske vores indvirkning på miljøet så meget som muligt.</p>
+      </div>
     <div class="sub2_text1">
     <h4>FSC-CERTIFICERET KARTONNAGE</h4>
     <p>FSC®, Forest Stewardship Council, er et globalt certifikat. Det sikrer blandt andet, at skoven ikke lider overlast. I en FSC-skov fældes træer i takt med at der plantes nye.</p>
@@ -454,10 +447,12 @@ get_header(); ?>
     <p>Svanemærket er Danmarks officielle miljømærke, og er en garanti for bæredygtigt papir og produktion. Alt Eace kartonnage er produceret på et svanemærket trykkeri i Danmark.</p>
     </div>
     </div>
-    <div class="sub2_imgs">
-      
-    </div></div>
   </div>
+  <div class="sub2_imgs">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/maerker.png?_t=1654075831" alt="maerker">
+    </div>
+  </div>
+
   <div id="subject3" class="max-width">
     <div class="sub3_img">
       <img src="https://ucarecdn.com/21ed9a7e-7ea7-45d2-9e96-729851d3e280/-/format/auto/-/preview/3000x3000/-/quality/lighter/BAEREDYGTIGT-MERCH.jpg" alt="">
@@ -496,7 +491,7 @@ get_header(); ?>
       <br><br>SME Climate Hub er et banebrydende globalt initiativ, fra International Chamber of Commerce, Exponential Roadmap Initiative, We Mean Business coalition og United Nations Race to Zero</p>
   </div>
   <div class="sub5_img">
-    <img src="https://ucarecdn.com/6cd852de-2fb8-43b2-bdf9-1553a7d04419/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/sme.png?_t=1654079705" alt="">
   </div>
   </div>
 
