@@ -323,8 +323,9 @@ get_header(); ?>
     background-attachment: revert;
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 75vh;
+    height: 50vh;
     width: 100%;
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset;
   }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
@@ -416,7 +417,6 @@ get_header(); ?>
     font-size: 5rem;
   }
   #find_os {
-    padding: 40px;
     margin-top:200px;
     margin-bottom: 200px;
   } 
