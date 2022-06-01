@@ -40,7 +40,7 @@ get_header(); ?>
 
   #splash-image h1 {
     position: absolute;
-    bottom: 40%;
+    top: 40%;
     left: 10%;
     font-weight: 800;
     font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
@@ -48,7 +48,7 @@ get_header(); ?>
 
   #splash-image p {
     position: absolute;
-    bottom: 20%;
+    top: 55%;
     left: 10%;
     font-size: 1rem;
     max-width: 40ch
