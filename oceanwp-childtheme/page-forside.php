@@ -168,6 +168,7 @@ get_header(); ?>
   .gum-info {
     max-width: 36ch;
     padding-left: 60px;
+    height: 130px;
   }
 
   /* splash billede mobil */
