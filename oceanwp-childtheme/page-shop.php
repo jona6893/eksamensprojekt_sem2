@@ -153,13 +153,15 @@ get_header(); ?>
   }
 
   .bottom-row {
-    padding: 0px 8px 20px 8px;
-    text-align: center;
+    padding: 20px;
+    text-align: start;
+    height: 100%;
+    position: relative;
   }
 
   .produkt-navn {
     color: var(--black);
-    
+    text-align: center;
     font-size: 1.5rem !important;
     margin-bottom: 4px;
   }
@@ -173,25 +175,18 @@ get_header(); ?>
 
   .produkt-beskrivelse {
     color: var(--black);
-    
     font-size: 0.75rem !important;
     margin-bottom: 2px;
-    padding-inline: 16px;
+    max-width: 60ch;
   }
 
   .pris {
     color: var(--black);
-    
     font-size: 1.5rem;
     position: absolute;
-    bottom: 56px;
+    bottom: clamp(60px, 10vw, 100px);
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .bottom-row {
-    height: 100%;
-    position: relative;
   }
 
   .bottom-row button {
