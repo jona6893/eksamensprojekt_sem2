@@ -111,22 +111,27 @@ main h2 {
   font-style: normal;
   font-size: clamp(1.575rem, calc(12px + 1.8vw), 2.025rem);
   line-height: 1.1;
+  color: var(--sort);
 }
 
 main h3 {
   font-family: "sofia-pro", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: clamp(1.282rem, calc(12px + 1.35vw), 1.688rem);
   line-height: 1.1;
+  color: var(--sort);
+  margin: 0;
 }
 
 main h4 {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.5rem, calc(12.25px + 0.925vw), 1.57rem);
+  font-size: clamp(1.1rem, calc(9px + 0.925vw), 1.57rem);
   line-height: 1.1;
+  color: var(--sort);
+  margin: 0;
 }
 
 main p {
@@ -135,6 +140,7 @@ main p {
   font-size: clamp(0.92rem, calc(12px + 0.48vw), 1rem);
   line-height: 1.1;
   color: var(--sort);
+  margin: 0;
 }
 
 button {
@@ -152,8 +158,8 @@ button {
 }
 
 main hr {
-  color: var(--sort);
-  background-color: var(--sort);
+  border-top: 1px solid var(--sort);
+  margin: 0;
 }
 
 .scroll {
