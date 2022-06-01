@@ -12,22 +12,29 @@ get_header(); ?>
 
 <style>
 
- body{
-  background-color: var(--lyse-blaa); 
-  
- }
- .streger {
-   background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
-  background-size: cover;
- }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 160px;
+  }
+
+  body{
+    background-color: var(--lyse-blaa); 
+  }
+
+  .streger {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
+    background-size: cover;
+  }
+
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
   #splash-section {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    position: relative;
   }
 
   .column-right {
@@ -38,12 +45,31 @@ get_header(); ?>
     height: 100%;
   }
 
-  .product-container{
+  .se_mere {
+    position: absolute;
+    bottom: 0;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png");
+    background-repeat: no-repeat;
+    background-position-y: 24px;
+    background-size: contain;
+    aspect-ratio: 1 / 1;
+    width: 48px;
+    height: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation-name: click-me;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+  .product-container {
     position: relative;
     display: grid;
     place-items: center center;
     width: 35%;
-    right: 4vw;
+    right: 5vw;
     top: -10%;
   }
 
@@ -108,7 +134,7 @@ get_header(); ?>
   }
 
   .next {
-    right: 12px;
+    right: 20px;
   }
 
   .column-left {
@@ -162,6 +188,38 @@ get_header(); ?>
     .product {
       transform-origin: 35% 145%;
     }
+
+    .product-container{
+      right: 7vw;
+    }
+
+    .se_mere {
+      bottom: -30vh;
+    }
+  }
+
+  @keyframes click-me {
+    0%{
+      animation-timing-function: ease-in;
+      background-position-y: 24px;
+    }
+
+    25%{
+      background-position-y: 0;
+    }
+
+    50%{
+      animation-timing-function: cubic-bezier(0.33, 2.25, 0.65, 0.75);
+      background-position-y: 0;
+    }
+
+    75%{
+      background-position-y: 24px;
+    }
+
+    100%{
+      transform: translateX(-50%) translateY(0px);
+    }
   }
 
   /* -------------------- KNAPPER PÅ SPLASHBILLEDE -------------------- */
@@ -193,20 +251,6 @@ get_header(); ?>
     border: none;
     min-width: 200px;
   }
-  .se_mere {
-    display: grid;
-    margin-top: -110px;
-  }
-  .se_mere p {
-    text-align: center;
-  }
-  .se_mere .pil {
-    font-size: 4rem;
-    color: #80808054;
-text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
-    
-  }
- 
 
   /* -------------------- DE SORTE BARRER -------------------- */
 	#sort_bar1,	#sort_bar2{
@@ -251,16 +295,7 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar2.png");
   }
 
-  /* ingen parallax til mobil */
-  @media (hover: none) {
-    #sort_bar1, #sort_bar2 {
-      background-image: none;
-    }
-
-    #sort_bar1 h2, #sort_bar2 h2{
-      visibility: visible;
-    }
-  }
+ 
 
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
@@ -272,18 +307,25 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     text-align:center;
     margin-bottom: 100px;
   }
-     /* -------------------- FIND OS HER SEKTION -------------------- */
-  #find_os {
-    position: sticky;
-    padding: 20px;
-    margin-top:100px;
-    margin-bottom: 100px;
+  #intro .intro_start h2 {
+    font-size: 4rem;
   }
+     /* -------------------- FIND OS HER SEKTION -------------------- */
+ 
   #find_os h2 {
     text-align: center;
     margin-bottom: 100px;
+  } 
+ 
+  #find_os .find_os_bar {
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png);
+    background-size: 75%;
+    background-attachment: revert;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 75vh;
+    width: 100%;
   }
-
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
@@ -323,12 +365,29 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     color: var(--sort);
    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
    border: none;
+  } /* ingen parallax til mobil */
+  
+  @media (hover: none) {
+    #sort_bar1, #sort_bar2, .find_os_bar  {
+      background-image: none;
+    }
+
+    #sort_bar1 h2, #sort_bar2 h2{
+      visibility: visible;
+    }
   }
 
 
   /* -------------------- DESKTOP -------------------- */
 
   @media (min-width: 750px) {
+    .previous {
+    left: -15px;
+  }
+
+  .next {
+    right: 55px;
+  }
     #sort_bar1, #sort_bar2{
       height: 400px;
     }
@@ -338,8 +397,9 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
   #intro .intro_om_os {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 50%;
+    max-width: 60%;
     margin: auto;
+    gap: 60px;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
@@ -352,10 +412,16 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     max-width: 400px;
 
   }
+  #intro .intro_start h2 {
+    font-size: 5rem;
+  }
   #find_os {
     padding: 40px;
     margin-top:200px;
     margin-bottom: 200px;
+  } 
+  #find_os .find_os_bar {
+    background-attachment: fixed;
   }
   #forside_blog .seneste_artikler {
     padding: 2%;
@@ -552,9 +618,8 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
     <button class="fan-btn previous">←</button>
     <button class="fan-btn next">→</button>
   </div>
+  <a href="#intro" class="se_mere"></a>
 </section>
-<div class="se_mere"><p><strong class="pil">v</strong>
-</p></div>
   
 
 <section class="streger"></section>
@@ -573,9 +638,9 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
 </div>
   </div>  
 </section>
-<section id="find_os" class="max-width">
+<section id="find_os">
   <h2>Find Os Her</h2>
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
+  <div class="find_os_bar"></div>
 </section>
 
   

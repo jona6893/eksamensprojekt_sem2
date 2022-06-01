@@ -145,7 +145,7 @@ color: #7CB5FF;
         position: relative;
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: #fff9f1;
         z-index: 100;
         align-items: center;
         padding: 0;

@@ -116,12 +116,17 @@ get_header(); ?>
 .produkt-card {
     display: grid;
     border-top: solid 1px grey;
-    gap: 20px;
-    grid-template-columns: 1fr 2fr 1fr;
-     grid-template-rows: 300px;
-     padding:25px;
-    align-items:center;
+    gap: 50px;
+    grid-template-columns: 1fr 2fr 0.3fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    padding: 25px;
+    align-items: center;
+    
 
+}
+.read-more {
+    width: 100px;
+    height: 40px;
 }
  p{
   max-width:55ch;
@@ -130,30 +135,56 @@ get_header(); ?>
 
   .produkt-navn {
     color: var(--black);
-   
     font-size: 1.5rem !important;
     margin-bottom: 4px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .produkt-info{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .read-more {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+  .img-container{
+    display: grid;
+    grid-column: 1/2;
+    width: 100%;
+    grid-row: 1/4;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
   }
   .abo-img{
     position: relative;
-    aspect-ratio:738 /1417 ;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    aspect-ratio: 	566 / 1082;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     background-size: cover;
+    grid-column: 1/2;
+    /* background-position: 50%; */
+    grid-row: 1/4;
     height: 80%;
+    /* width: 100%; */
+    justify-content: center;
   }
   
-  .add-container{
-     display: flex;
-    justify-content: flex-end;
-    align-items:center;
-  }
+  .add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
 
 .add-container button{
-     width:25px;
-     height:25px;
-     background-color: white;
-    border:none;
-    padding:0%;
+     width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    padding: 0%;
   }
   .minus{
     color: red;
@@ -178,9 +209,9 @@ get_header(); ?>
 
   }
 .add-grid-container{
-       display: flex;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-height:25px;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    height: 100%;
 }
 /* drop-down menu til hyppighed */
 
@@ -247,15 +278,19 @@ height:25px;
 
 }
 .total{
-  grid-column:2/3;
-  grid-row:4/5;
+
 }
   
 .next{
   width:120px;
 }
-
-
+.total-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-container-cart h4{
+  font:clamp(1.2rem, calc(12.25px + 0.925vw), 1.57rem);
+}
 /* .om-produktet{
   display:grid;
   grid-template-rows:2fr 1fr;
@@ -265,7 +300,7 @@ height:25px;
 
 /* --------- MOBILE UDGAVE --------- */
 
-@media (max-width:974px) {
+@media (max-width:600px) {
 
   #splash-image p {
     position: absolute;
@@ -274,16 +309,58 @@ height:25px;
     font-size: 1rem;
 }
     .produkt-card{
-      grid-template-columns:1fr 0.2fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap:25px;
+      padding: 15px;
     }
-    .om-produktet{
-    grid-column:1/2;
-    gap:10px;
-    
-    
+    .img-container {
+    display: grid;
+    grid-column: 1/2;
+    width: 100%;
+    grid-row: 1/3;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
-.add-container{
-   align-items: flex-end;
+.abo-img {
+    position: relative;
+    aspect-ratio: 566 / 1082;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    background-size: cover;
+    grid-column: 1/2;
+    /* background-position: 50%; */
+    grid-row: 1/4;
+    height: 100%;
+    /* width: 100%; */
+    justify-content: center;
+}
+.add-grid-container {
+    display: flex;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    height: 100%;
+}
+.add-container button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    padding: 0%;
+}
+.read-more{
+  height: 40px;
+  width: 100px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+  .add-container{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
    
   }
   #grid-container-cart {
@@ -300,6 +377,12 @@ height:25px;
     grid-column: 1/2;
     grid-row: 8/9;
 }
+.box-3 {
+    display: grid;
+    gap: 25px;
+}
+
+
 }
 .read-more{
 
@@ -310,27 +393,18 @@ height:25px;
 
   <template>
     <article class="produkt-card">
-    <div class="abo-img">
-    </div >
-    
-    <div class="om-produktet">
-
-      
+      <div class="img-container"><div class="abo-img">
+      </div ></div>
         <h3 class="produkt-navn"></h3>
         <p class="produkt-info"></p>
-      
         <button class="read-more">LÆS MERE</button>
-    
-
-    </div>
-    
-    <div class="add-container">
+      <div class="add-container">
       <div class="add-grid-container">
-     <button class="minus">-</button>
-     <p class="add-tal">0</p>
-     <button class="plus">+</button>
-     </div>
-    </div>
+      <button class="minus">-</button>
+      <p class="add-tal">0</p>
+      <button class="plus">+</button>
+      </div>
+      </div>
     </article>
   </template>
 
@@ -361,23 +435,23 @@ height:25px;
   <div id="grid-container-cart">
 
     <div class="box-1">
-    <h4>TILFØJET TIL DIT ABONNEMENT</h4>
+    <h4>TILFØJET TIL DIT ABONNEMENT:</h4>
     <div class="oversigt">
-      <p class="total">PAKKER I ALT:</p>
-    </div>
+      </div>
+      <div class="total-container">
+        <p class="total">PAKKER I ALT:</p>
+      </div>
     </div>
     <div  class="box-2">
     <h4>VÆLG HYPPIGHED:</h4>
     </div>
     <div  class="box-3">
-      <div class="dropdown">
-      <button onclick="dropMenu()" class="dropbtn">v</button>
-       <div id="myDropdown" class="dropdown-content">
-       <a href="#0">HVER MÅNED</a>
-        <a href="#0">HVER ANDEN MÅNED</a>
-      </div>
-    </div>
-    <button class="next"> GÅ TIL KURV</button>
+     
+    <select name="cars" id="cars">
+      <option value="hver måned">HVER MÅNED</option>
+      <option value="hver anden måned">HVER ANDEN MÅNED</option>
+    </select>
+    <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/kurv/';" class="next"> GÅ TIL KURV</button>
     </div>
   </div>
 
@@ -431,7 +505,7 @@ height:25px;
             const clone = template.cloneNode(true);
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
             clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
-            clone.querySelector(".produkt-info").textContent = `${abonnement.produkt_info}`;
+            clone.querySelector(".produkt-info").textContent = `${abonnement.loop_beskrivelse}`;
             //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
             mainContent.appendChild(clone);
             visteProdukter = document.getElementById("produkter").childElementCount;
@@ -455,6 +529,7 @@ function tilføjTal(minus, plus, tal, overskrift) {
     //opretter en tomt Array som vi senere fylder med 0 taller
     let counter = []
     const oversigt = document.querySelector(".oversigt");
+    const totalContainer = document.querySelector(".total-container");
     let total = 0
     let allePriser = []
 
@@ -540,32 +615,6 @@ function tilføjTal(minus, plus, tal, overskrift) {
  
 
 }
-
-/* --------- Her Stater Dropdown menu --------- */
-  function dropMenu() {
-    console.log("DropMenu start")
-    document.getElementById("myDropdown").classList.add("show")
-
-  }
-document.addEventListener("click", function(event) {
-	// If user clicks inside the element, do nothing
-	if (event.target.closest(".dropdown")) return;
-
-	// If user clicks outside the element, hide it!
-	document.getElementById("myDropdown").classList.remove("show")
-
-});
-  
-let droppunkter = document.getElementById("myDropdown").children
-  punkerArray = Array.from(droppunkter)
-  console.log(punkerArray)
-punkerArray.forEach(e => {
-  console.log("et punkt er klikket." + e)
-  e.addEventListener("click", () =>{
-    document.querySelector(".dropbtn").innerText = `${e.innerText}`
-    document.getElementById("myDropdown").classList.remove("show")
-  })
-})
 
 </script>
 
