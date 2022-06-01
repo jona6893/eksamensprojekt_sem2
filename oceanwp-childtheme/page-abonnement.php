@@ -109,7 +109,6 @@ get_header(); ?>
 
   #produkter {
     display: flex;
-   /*  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
    flex-direction: column
   }
 
@@ -128,19 +127,6 @@ get_header(); ?>
   max-width:55ch;
 }
 
-/*   @media (max-width: 730px) {
-    #produkter {
-      grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
-      gap: 10px;
-      overflow-x: scroll;
-    }
-
-    .produkt-card {
-      box-shadow: 1px 3px 32px rgba(0, 0, 0, 0.04);
-      display: flex;
-
-    }
-  } */
 
   .produkt-navn {
     color: var(--black);
@@ -154,9 +140,8 @@ get_header(); ?>
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 80%;
-  align-items:center;
-    
   }
+  
   .add-container{
      display: flex;
     justify-content: flex-end;
@@ -270,8 +255,12 @@ height:25px;
   width:120px;
 }
 
-/* .this-width{
-  max-width:900px;
+
+/* .om-produktet{
+  display:grid;
+  grid-template-rows:2fr 1fr;
+  justify-content:auto;
+  gap:60px;
 } */
 
 /* --------- MOBILE UDGAVE --------- */
@@ -288,7 +277,10 @@ height:25px;
       grid-template-columns:1fr 0.2fr;
     }
     .om-produktet{
-  grid-column:1/2;
+    grid-column:1/2;
+    gap:10px;
+    
+    
 }
 .add-container{
    align-items: flex-end;
@@ -309,18 +301,27 @@ height:25px;
     grid-row: 8/9;
 }
 }
-</style>
+.read-more{
 
+}
+</style>
+<!-- html begynder -->
 <main id="main-content">
 
   <template>
     <article class="produkt-card">
     <div class="abo-img">
     </div >
+    
     <div class="om-produktet">
-      <h3 class="produkt-navn"></h3>
-      <p class="produkt-info"></p>
-      <button class="read-more">LÆS MERE</button>
+
+      
+        <h3 class="produkt-navn"></h3>
+        <p class="produkt-info"></p>
+      
+        <button class="read-more">LÆS MERE</button>
+    
+
     </div>
     
     <div class="add-container">
@@ -370,7 +371,7 @@ height:25px;
     </div>
     <div  class="box-3">
       <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">v</button>
+      <button onclick="dropMenu()" class="dropbtn">v</button>
        <div id="myDropdown" class="dropdown-content">
        <a href="#0">HVER MÅNED</a>
         <a href="#0">HVER ANDEN MÅNED</a>
@@ -541,25 +542,31 @@ function tilføjTal(minus, plus, tal, overskrift) {
 }
 
 /* --------- Her Stater Dropdown menu --------- */
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+  function dropMenu() {
+    console.log("DropMenu start")
+    document.getElementById("myDropdown").classList.add("show")
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
   }
-}
+document.addEventListener("click", function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest(".dropdown")) return;
+
+	// If user clicks outside the element, hide it!
+	document.getElementById("myDropdown").classList.remove("show")
+
+});
+  
+let droppunkter = document.getElementById("myDropdown").children
+  punkerArray = Array.from(droppunkter)
+  console.log(punkerArray)
+punkerArray.forEach(e => {
+  console.log("et punkt er klikket." + e)
+  e.addEventListener("click", () =>{
+    document.querySelector(".dropbtn").innerText = `${e.innerText}`
+    document.getElementById("myDropdown").classList.remove("show")
+  })
+})
+
 </script>
 
 <?php get_footer(); ?>

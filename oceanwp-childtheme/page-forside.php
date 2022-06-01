@@ -44,7 +44,7 @@ get_header(); ?>
     place-items: center center;
     width: 35%;
     right: 4vw;
-    top: -5%;
+    top: -10%;
   }
 
   .product {
@@ -59,14 +59,17 @@ get_header(); ?>
   }
 
   .vitamin-boost {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     background-image: url("https://ucarecdn.com/21559504-fb8f-4ef1-84f9-d4b00609a601/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202021-11-12%20kl.%2016.45.52.png");
   }
 
   .energy-boost {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     background-image: url("https://ucarecdn.com/103a14b8-1b2b-4986-97ee-d77280cf8ed2/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202021-11-12%20kl.%2014.34.32.png");
   }
 
   .healthy-teeth {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     background-image: url("https://ucarecdn.com/6dfe6abf-ff50-4566-93bd-d95bacf05b3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/EACE%20HEALTHY%20TEETH%20MOCKUP%20ISOLATED.jpg");
   }
 
@@ -123,6 +126,7 @@ get_header(); ?>
     justify-items: center;
     grid-row: 2/3;
     white-space: pre-line;
+    
 	}
 
   .splash_text h1 {
@@ -134,6 +138,7 @@ get_header(); ?>
     color: #c4ad84;
   }
 
+  /* splash billede mobil */
   @media (max-width: 800px) {
     #splash-section {
       grid-template-rows: 1fr 1fr;
@@ -144,6 +149,18 @@ get_header(); ?>
     .column-left {
       display: grid;
       grid-template-rows: 2fr 6fr 40vw;
+    }
+
+    [data-index="1"] {
+      transform: rotateZ(-10deg);
+    }
+
+    [data-index="3"] {
+      transform: rotateZ(20deg);
+    }
+
+    .product {
+      transform-origin: 35% 145%;
     }
   }
 
@@ -157,7 +174,7 @@ get_header(); ?>
   }
 
   .til_shop_knap {
-    font-family: "termina", sans-serif !important;
+    
     font-weight: 400;
     font-style: normal;
     background-color: transparent;
@@ -168,7 +185,7 @@ get_header(); ?>
   }
 
   .til_abonnement_knap {
-    font-family: "termina", sans-serif !important;
+    
     font-weight: 400;
     font-style: normal;
     background-color: var(--sort);
@@ -176,6 +193,20 @@ get_header(); ?>
     border: none;
     min-width: 200px;
   }
+  .se_mere {
+    display: grid;
+    margin-top: -110px;
+  }
+  .se_mere p {
+    text-align: center;
+  }
+  .se_mere .pil {
+    font-size: 4rem;
+    color: #80808054;
+text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
+    
+  }
+ 
 
   /* -------------------- DE SORTE BARRER -------------------- */
 	#sort_bar1,	#sort_bar2{
@@ -202,7 +233,7 @@ get_header(); ?>
     font-family: "adrianna", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: var(--blaa);
+    color: #A2D8E5;
   }
 
   #sort_bar1, #sort_bar2 {
@@ -217,7 +248,7 @@ get_header(); ?>
   }
 
   #sort_bar2 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar2.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar2.png");
   }
 
   /* ingen parallax til mobil */
@@ -307,11 +338,14 @@ get_header(); ?>
   #intro .intro_om_os {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+    margin: auto;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
-    max-width: 70%;
-    margin: auto;
+    
+    justify-content: right;
+    
   }
   #intro .intro_om_os_text {
     grid-column:2/3;
@@ -467,12 +501,12 @@ get_header(); ?>
   }
 
   .previous2 {
-    left: 0px;
+    left: 8px;
     transform: translateX(-6px);
   }
 
   .next2 {
-    right: 0px;
+    right: 8px;
     transform: translateX(6px);
   }
 
@@ -505,7 +539,7 @@ get_header(); ?>
   		<h1 class="heading">GUM + <strong class="gum_type"><br>VITAMIN <br>BOOST</strong> </h1>
       <div class="splash_button">
         <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
-        <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Design dit eget abonnement</button>
+        <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Abonnement</button>
       </div>
 		</div>
 	</div>
@@ -519,6 +553,10 @@ get_header(); ?>
     <button class="fan-btn next">→</button>
   </div>
 </section>
+<div class="se_mere"><p><strong class="pil">v</strong>
+</p></div>
+  
+
 <section class="streger"></section>
 <section id="sort_bar1">
 	<h2>NEXT GENERATION CHEWING GUM </h2>

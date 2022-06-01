@@ -35,6 +35,10 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 999;
+    position: sticky;
+    width: 100%;
+    top:0;
+    transition: 0.3s;
 }
 
 header img {
@@ -141,7 +145,7 @@ color: #7CB5FF;
         position: relative;
         display: flex;
         flex-direction: column;
-        background-color: #fff9f1;
+        background-color: white;
         z-index: 100;
         align-items: center;
         padding: 0;
