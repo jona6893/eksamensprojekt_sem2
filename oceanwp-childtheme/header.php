@@ -38,7 +38,7 @@ header {
     position: sticky;
     width: 100%;
     top:0;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 header img {
@@ -106,6 +106,9 @@ color: #7CB5FF;
         width: 50px;
         z-index: 999;
     }
+    .arrow-down{
+        display: none;
+    }
 
     .burger-ikon img {
         width: 40px;
@@ -172,7 +175,7 @@ color: #7CB5FF;
                 alt="">
             <div class="drop-down-menu hidemenu">
                 <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
-                <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
+                <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">SOCIALT ANSVAR</a>
             </div>
         </div>
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/vores-historie/">VORES HISTORIE</a>
