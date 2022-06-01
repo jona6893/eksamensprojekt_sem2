@@ -145,6 +145,7 @@
 				<li><a href="#">Butikker</a></li>
 				<li><a href="#">Privacy Policy</a></li>
 				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">FAQ</a></li>
 			</ul>
 		</article>
 		<article class="footer-content footer-contact">

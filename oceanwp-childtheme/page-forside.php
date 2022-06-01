@@ -25,6 +25,7 @@ get_header(); ?>
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger3.png");
     background-size: cover;
   }
+  /* -------------------- MOBIL -------------------- */
 
     /* -------------------- SPLASHBILLEDE SEKTION -------------------- */
   #splash-section {
@@ -323,12 +324,17 @@ get_header(); ?>
     background-attachment: revert;
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 75vh;
+    height: 50vh;
     width: 100%;
+    
   }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
-    padding: 2%;
+    padding: 2% 10%;
+
+  }
+  .seneste_artikler h4, .seneste_artikler p {
+    margin: 5px;
 
   }
   #forside_blog h2 {
@@ -365,7 +371,8 @@ get_header(); ?>
     color: var(--sort);
    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
    border: none;
-  } /* ingen parallax til mobil */
+  } 
+  /* ingen parallax til mobil */
   
   @media (hover: none) {
     #sort_bar1, #sort_bar2, .find_os_bar  {
@@ -380,7 +387,7 @@ get_header(); ?>
 
   /* -------------------- DESKTOP -------------------- */
 
-  @media (min-width: 750px) {
+  @media (min-width: 800px) {
     .previous {
     left: -15px;
   }
@@ -416,17 +423,23 @@ get_header(); ?>
     font-size: 5rem;
   }
   #find_os {
-    padding: 40px;
     margin-top:200px;
     margin-bottom: 200px;
   } 
   #find_os .find_os_bar {
     background-attachment: fixed;
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset;
   }
   #forside_blog .seneste_artikler {
-    padding: 2%;
-    padding-left: 100px;
+    max-width: 500px;
+    display: grid;
+    
   }
+  .seneste_artikler h4, .seneste_artikler p {
+    margin: 0px;
+
+  }
+
   .forside_hand img{
     max-width: 65%;
   }

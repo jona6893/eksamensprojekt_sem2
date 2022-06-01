@@ -184,7 +184,7 @@ get_header(); ?>
     color: var(--black);
     font-size: 1.5rem;
     position: absolute;
-    bottom: clamp(60px, 10vw, 100px);
+    bottom: clamp(80px, 10vw, 100px);
     left: 50%;
     transform: translateX(-50%);
   }
@@ -202,7 +202,6 @@ get_header(); ?>
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
-    
     transition: opacity 0.3s;
   }
 
@@ -371,6 +370,64 @@ get_header(); ?>
   .testimonial-container > * {
     margin: 0;
   }
+
+
+  dialog {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: calc(260px + 10vw) 40vw;
+    gap: 16px;
+    padding: 64px 16px 16px 16px;
+    overflow-y: scroll;
+    margin: auto;
+    border: 3px solid var(--sort);
+  }
+
+  dialog::backdrop {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  dialog[open] {
+    visibility: visible;
+  }
+
+  .modal-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  dialog h3 {
+    padding-bottom: 8px;
+  }
+
+  dialog p {
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    dialog {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  dialog form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #close {
+    height: 48px;
+  }
+
 </style>
 
 <main id="main-content">
@@ -452,6 +509,26 @@ get_header(); ?>
     <button class="carousel-btn next">→</button>
   </section>
 
+  <dialog id="modal">
+    <form method="dialog">
+      <button id="close">⨉</button>
+    </form>
+    <div class="left-column">
+      <div class="modal-image"></div>
+    </div>
+    <div class="right-column">
+      <h2 class="modal-navn"></h2>
+      <h3 class="h3-info"></h3>
+      <p class="modal-info"></p>
+      <h3 class="h3-funktioner"></h3>
+      <p class="modal-funktioner"></p>
+      <h3 class="h3-anvendelse"></h3>
+      <p class="modal-anvendelse"></p>
+      <h3 class="h3-ingredienser"></h3>
+      <p class="modal-ingredienser"></p>
+    </div>
+  </dialog>
+
 </main>
 
 <script>
@@ -502,15 +579,52 @@ get_header(); ?>
         clone.querySelector(".produkt-hoverimage").style.backgroundImage = `url(${produkt.hoverbillede.guid})`;
         clone.querySelector(".produkt-navn").textContent = `${produkt.title.rendered}`;
         clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
-        clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.beskrivelsekort}`;
+        clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.info}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
-        //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
+        clone.querySelector("article").addEventListener("click", () => modalView(produkt)); //gør kortene klikbart og kalder på modalView med produkt som parameter
         mainContent.appendChild(clone);
         visteProdukter = document.getElementById("produkter").childElementCount;
       }
     });
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
   }
+
+  function modalView(produkt) {
+    const modal = document.querySelector("dialog");
+    modal.querySelector(".modal-image").style.backgroundImage = `url(${produkt.billede.guid})`;
+    modal.querySelector(".modal-navn").textContent = `${produkt.title.rendered}`;
+    if (produkt.info !== "") {//hvis produktet har en kort beskrivelse
+      modal.querySelector(".h3-info").textContent = "Produkt info";
+      modal.querySelector(".modal-info").innerHTML = `${produkt.info}`;
+    } else {
+      modal.querySelector(".h3-info").textContent = "";
+      modal.querySelector(".modal-info").innerHTML = "";
+    }
+    if (produkt.funktioner !== "") {//hvis produktet har paragraf om funktioner
+      modal.querySelector(".h3-funktioner").textContent = "Produkt funktioner";
+      modal.querySelector(".modal-funktioner").innerHTML = `${produkt.funktioner}`;
+    } else {
+      modal.querySelector(".h3-funktioner").textContent = "";
+      modal.querySelector(".modal-funktioner").innerHTML = "";
+    }
+    if (produkt.anvendelse !== "") {//hvis produktet har paragraf om anvendelse
+      modal.querySelector(".h3-anvendelse").textContent = "Produkt anvendelse";
+      modal.querySelector(".modal-anvendelse").innerHTML = `${produkt.anvendelse}`;
+    } else {
+      modal.querySelector(".h3-anvendelse").textContent = "";
+      modal.querySelector(".modal-anvendelse").innerHTML = "";
+    }
+    if (produkt.ingredienser !== "") {//hvis produktet har paragraf om ingredienser
+      modal.querySelector(".h3-ingredienser").textContent = "Produkt ingredienser";
+      modal.querySelector(".modal-ingredienser").innerHTML = `${produkt.ingredienser}`;
+    } else {
+      modal.querySelector(".h3-ingredienser").textContent = "";
+      modal.querySelector(".modal-ingredienser").innerHTML = "";
+    }
+
+    modal.showModal(); //viser pop up
+  }
+
 </script>
 <script>
   /* konfigurer nedestående variabler efter behov */

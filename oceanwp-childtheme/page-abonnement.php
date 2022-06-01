@@ -18,7 +18,7 @@ get_header(); ?>
   body {
     background-color: #FFFDFC;
   }
-/* splashbillede, samt placering af teksten oven på */
+/* splashbillede */
   #splash-image {
     position: relative;
     background-size: cover;
@@ -29,7 +29,7 @@ get_header(); ?>
     align-items:center;
 
   }
-/* selve splashbilledet og placering */
+/*  */
   #splash-image::before {
     content: "";
     position: absolute;
@@ -106,6 +106,22 @@ get_header(); ?>
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border:none;
   }
+
+
+  /* ---------- Section2 ---------- */
+
+  #section2{
+    display: grid;
+    grid-template-columns: repeat(var(--repeat, auto-fit), minmax(85px, 40px));
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 25px;
+  }
+     @media (max-width: 475px) {
+  #section2 {
+    --repeat: 2;
+  }
+}
 
   #produkter {
     display: flex;
@@ -428,7 +444,24 @@ get_header(); ?>
     <button class="filter-btn" data-kategori="relax">RELAX</button>
     <button class="filter-btn" data-kategori="collagen_boost">COLLAGEN BOOST</button>
   </section>
-
+  <section id="section2" class="max-width">
+    <figure id="mint">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint_sort.svg">
+      <caption>Frisk & langvarig mint smag</caption>
+    </figure>
+    <figure id="dk">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_dk_sort.svg">
+      <caption>Udviklet & produceret i Danmark</caption>
+    </figure>
+    <figure id="levering">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_levering_sort.svg">
+      <caption>Effektiv levering</caption>
+    </figure>
+    <figure id="sukkerfrit">
+      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_sukkerfrit_sort.svg">
+      <caption>Sukkerfrit tyggegummi</caption>
+    </figure>
+  </section>
   <section id="produkter" class="max-width this-width"> </section>
 
 <section id="add-cart" class="max-width">
@@ -453,7 +486,25 @@ get_header(); ?>
     </select>
     <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/kurv/';" class="next"> GÅ TIL KURV</button>
     </div>
-  </div>
+  </div> <dialog id="modal">
+    <form method="dialog">
+      <button id="close">⨉</button>
+    </form>
+    <div class="left-column">
+      <div class="modal-image"></div>
+    </div>
+    <div class="right-column">
+      <h2 class="modal-navn"></h2>
+      <h3 class="h3-info"></h3>
+      <p class="modal-info"></p>
+      <h3 class="h3-funktioner"></h3>
+      <p class="modal-funktioner"></p>
+      <h3 class="h3-anvendelse"></h3>
+      <p class="modal-anvendelse"></p>
+      <h3 class="h3-ingredienser"></h3>
+      <p class="modal-ingredienser"></p>
+    </div>
+  </dialog>
 
 </section>
 
@@ -506,12 +557,47 @@ get_header(); ?>
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
             clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
             clone.querySelector(".produkt-info").textContent = `${abonnement.loop_beskrivelse}`;
-            //clone.querySelector("article").addEventListener("click", () => location.href = `${produkt.link}`); //gør kortene klikbart og kalder på showPopUp() funktionen med city som parameter
+            clone.querySelector("article").addEventListener("click", () => modalView(abonnement)); //gør kortene klikbart og kalder på modalView med produkt som parameter
             mainContent.appendChild(clone);
             visteProdukter = document.getElementById("produkter").childElementCount;
         }
     });
-    document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
+    function modalView(abonnement) {
+    const modal = document.querySelector("dialog");
+    modal.querySelector(".modal-image").style.backgroundImage = `url(${abonnement.billede.guid})`;
+    modal.querySelector(".modal-navn").textContent = `${abonnement.title.rendered}`;
+    if (produkt.info !== "") {//hvis produktet har en kort beskrivelse
+      modal.querySelector(".h3-info").textContent = "Produkt info";
+      modal.querySelector(".modal-info").innerHTML = `${abonnement.info}`;
+    } else {
+      modal.querySelector(".h3-info").textContent = "";
+      modal.querySelector(".modal-info").innerHTML = "";
+    }
+    if (produkt.funktioner !== "") {//hvis produktet har paragraf om funktioner
+      modal.querySelector(".h3-funktioner").textContent = "Produkt funktioner";
+      modal.querySelector(".modal-funktioner").innerHTML = `${abonnement.funktioner}`;
+    } else {
+      modal.querySelector(".h3-funktioner").textContent = "";
+      modal.querySelector(".modal-funktioner").innerHTML = "";
+    }
+    if (produkt.anvendelse !== "") {//hvis produktet har paragraf om anvendelse
+      modal.querySelector(".h3-anvendelse").textContent = "Produkt anvendelse";
+      modal.querySelector(".modal-anvendelse").innerHTML = `${abonnement.anvendelse}`;
+    } else {
+      modal.querySelector(".h3-anvendelse").textContent = "";
+      modal.querySelector(".modal-anvendelse").innerHTML = "";
+    }
+    if (produkt.ingredienser !== "") {//hvis produktet har paragraf om ingredienser
+      modal.querySelector(".h3-ingredienser").textContent = "Produkt ingredienser";
+      modal.querySelector(".modal-ingredienser").innerHTML = `${abonnement.ingredienser}`;
+    } else {
+      modal.querySelector(".h3-ingredienser").textContent = "";
+      modal.querySelector(".modal-ingredienser").innerHTML = "";
+    }
+
+    modal.showModal(); //viser pop up
+  }
+   
 
         /* ---------- Her starter tæller funktionen. ---------- */
 
