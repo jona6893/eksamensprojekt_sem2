@@ -12,9 +12,6 @@
 get_header(); ?>
 
 <style>
-  body {
-    background-color: black;
-  }
 /*------------- første sektion ------------*/
    #first_section{
         display: grid;
@@ -196,6 +193,7 @@ get_header(); ?>
 		display: grid;
 		align-items: center;
     justify-items: center;
+
 	}
 	#sort_bar1 h1{
     font-family: "adrianna", sans-serif;
@@ -203,9 +201,8 @@ get_header(); ?>
     font-weight: 800;
   font-style: normal;
 		color:white;
-		
 	}
- 
+  
   
 
 
@@ -214,7 +211,7 @@ get_header(); ?>
 <main id="main-content">
 
 <section id="first_section">
-<h1>Eace Blog</h1>
+<h1>EACE BLOG</h1>
     <div class="laeseom">
     <div class="laeseom-container">
       <h2 class="h2laes">Hvad vil du læse om?</h2>
