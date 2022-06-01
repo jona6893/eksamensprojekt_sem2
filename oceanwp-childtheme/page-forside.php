@@ -289,7 +289,7 @@ get_header(); ?>
   }
 
   #sort_bar1 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar1.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar1.png");
   }
 
   #sort_bar2 {
