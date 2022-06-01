@@ -564,7 +564,7 @@ get_header(); ?>
     });
     function modalView(abonnement) {
     const modal = document.querySelector("dialog");
-    modal.querySelector(".modal-image").style.backgroundImage = `url(${abonnement.billede.guid})`;
+    modal.querySelector(".modal-image").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
     modal.querySelector(".modal-navn").textContent = `${abonnement.title.rendered}`;
     if (produkt.info !== "") {//hvis produktet har en kort beskrivelse
       modal.querySelector(".h3-info").textContent = "Produkt info";
