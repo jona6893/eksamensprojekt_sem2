@@ -158,6 +158,8 @@ get_header(); ?>
 
   .splash_text h1 {
     font-size: 3rem;
+    padding-left: 60px;
+    width: 320px;
   }
 
   .gum_type {
