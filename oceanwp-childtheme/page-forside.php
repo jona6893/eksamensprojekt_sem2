@@ -69,7 +69,7 @@ get_header(); ?>
     display: grid;
     place-items: center center;
     width: 35%;
-    right: 4vw;
+    right: 5vw;
     top: -10%;
   }
 
@@ -134,7 +134,7 @@ get_header(); ?>
   }
 
   .next {
-    right: 12px;
+    right: 20px;
   }
 
   .column-left {
@@ -295,16 +295,7 @@ get_header(); ?>
     background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar2.png");
   }
 
-  /* ingen parallax til mobil */
-  @media (hover: none) {
-    #sort_bar1, #sort_bar2 {
-      background-image: none;
-    }
-
-    #sort_bar1 h2, #sort_bar2 h2{
-      visibility: visible;
-    }
-  }
+ 
 
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
@@ -316,17 +307,16 @@ get_header(); ?>
     text-align:center;
     margin-bottom: 100px;
   }
-     /* -------------------- FIND OS HER SEKTION -------------------- */
-  #find_os {
-    position: sticky;
-    padding: 20px;
-    margin-top:100px;
-    margin-bottom: 100px;
+  #intro .intro_start h2 {
+    font-size: 4rem;
   }
+     /* -------------------- FIND OS HER SEKTION -------------------- */
+ 
   #find_os h2 {
     text-align: center;
     margin-bottom: 100px;
-  }
+  } 
+ 
 
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
@@ -367,12 +357,29 @@ get_header(); ?>
     color: var(--sort);
    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
    border: none;
+  } /* ingen parallax til mobil */
+  
+  @media (hover: none) {
+    #sort_bar1, #sort_bar2, .find_os_bar  {
+      background-image: none;
+    }
+
+    #sort_bar1 h2, #sort_bar2 h2{
+      visibility: visible;
+    }
   }
 
 
   /* -------------------- DESKTOP -------------------- */
 
   @media (min-width: 750px) {
+    .previous {
+    left: -15px;
+  }
+
+  .next {
+    right: 55px;
+  }
     #sort_bar1, #sort_bar2{
       height: 400px;
     }
@@ -397,10 +404,22 @@ get_header(); ?>
     max-width: 400px;
 
   }
+  #intro .intro_start h2 {
+    font-size: 5rem;
+  }
   #find_os {
     padding: 40px;
     margin-top:200px;
     margin-bottom: 200px;
+  } 
+  #find_os .find_os_bar {
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png");
+    background-size: 75%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 75vh;
+    width: 100%
   }
   #forside_blog .seneste_artikler {
     padding: 2%;
@@ -617,9 +636,9 @@ get_header(); ?>
 </div>
   </div>  
 </section>
-<section id="find_os" class="max-width">
+<section id="find_os">
   <h2>Find Os Her</h2>
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png" alt="Find Eace Gum Tyggegummi i disse butikker">
+  <div class="find_os_bar"></div>
 </section>
 
   
