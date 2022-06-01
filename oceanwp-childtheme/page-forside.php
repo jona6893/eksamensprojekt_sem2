@@ -138,6 +138,7 @@ get_header(); ?>
     color: #c4ad84;
   }
 
+  /* splash billede mobil */
   @media (max-width: 800px) {
     #splash-section {
       grid-template-rows: 1fr 1fr;
@@ -148,6 +149,18 @@ get_header(); ?>
     .column-left {
       display: grid;
       grid-template-rows: 2fr 6fr 40vw;
+    }
+
+    [data-index="1"] {
+      transform: rotateZ(-10deg);
+    }
+
+    [data-index="3"] {
+      transform: rotateZ(20deg);
+    }
+
+    .product {
+      transform-origin: 35% 145%;
     }
   }
 
@@ -235,7 +248,7 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
   }
 
   #sort_bar2 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar2.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar2.png");
   }
 
   /* ingen parallax til mobil */
@@ -488,12 +501,12 @@ text-shadow: rgba(0, 0, 0, 0.27) 0px 6px 3px;
   }
 
   .previous2 {
-    left: 0px;
+    left: 8px;
     transform: translateX(-6px);
   }
 
   .next2 {
-    right: 0px;
+    right: 8px;
     transform: translateX(6px);
   }
 
