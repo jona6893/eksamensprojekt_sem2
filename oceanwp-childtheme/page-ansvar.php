@@ -319,6 +319,12 @@ get_header(); ?>
           grid-area: 3/1;
           max-width: 48ch;
         }
+        #subject2 h4{
+          padding-bottom: 3%;
+        }
+        .sub2_text, .sub2_text1, .sub2_text2, .sub2_text3{
+          padding-bottom: 3%;
+        }
 
       /* ---------- BÆREDYGTIGT MERCH ---------- */
         #subject3 {
@@ -333,11 +339,12 @@ get_header(); ?>
           justify-items: center;
           align-items: center;
         }
-
+        #subject3 h4{
+          padding-bottom: 3%;
+        }
         .overskrift3{
           padding-inline: 2%;
         }
-
       /* ---------- FOKUS PÅ SUNDHED ---------- */
         #subject4 {
           display: grid;
@@ -492,7 +499,7 @@ get_header(); ?>
     <button>SE VIDEO</button>
   </div>
   <div class="video_container">
-    <img class="mobil-video" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/ansvar_mobil_video.gif" alt="Gif af 2 kvinder med tyggegummi og blomster">
+    <img class="mobil-video" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/ezgif.com-gif-maker.gif" alt="Gif af 2 kvinder med tyggegummi og blomster">
     <video src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/VB-H264-Proxy-half-size.mov" autoplay loop muted></video>
   </div>
   </div>
