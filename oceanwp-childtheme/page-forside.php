@@ -471,9 +471,17 @@ get_header(); ?>
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
     background-size: cover;
   }
-  #forside_some .some_text button {
-    font-size: 2rem;
+  #forside_some p {
+    font-family: "termina", sans-serif;
+    font-size: 1.5rem;
     padding: 3%;
+    font-weight: 700;
+    
+  }
+  #forside_some .platforme {
+    font-family: "sofia-pro", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
   }
  
      
@@ -687,7 +695,8 @@ get_header(); ?>
 </section>
 
 <section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
-     <button>@eace_gum</button></div>
+     <p>@eace_gum <br> <strong class="platforme">på alle platforme</strong></p>
+    </div>
     <div class="some">
      
     </div>
