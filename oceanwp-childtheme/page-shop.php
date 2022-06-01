@@ -379,7 +379,7 @@ get_header(); ?>
     padding: 64px 16px 16px 16px;
     overflow-y: scroll;
     margin: auto;
-    border: 3px solid var(--sort);
+    border: none;
   }
 
   dialog::backdrop {
