@@ -101,35 +101,16 @@ get_header(); ?>
     /* ---------- CERTIFICERET EMBALLAGE ---------- */
       #subject2{
         display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-block: 5%;
-    padding-right: 1.5rem;
-    background-color: var(--lyse-blaa);
-    align-items: end;
+        padding-block: 5%;
+    
+        background-color: var(--lyse-blaa);
       }
-#subject2 h4 {
-  font-family: "sofia-pro", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: clamp(0.1rem, calc(5.25px + 0.925vw), 1.57rem);
-    line-height: 1.1;
-}
-      /* .overskrift2{
-        display: grid;
-        justify-items: start;
+      .sub2-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
         align-items: center;
       }
-      .overskrift2 p {
-        max-width: 48ch;
-      }
-      .sub2_indhold{
-        display: grid;
-    gap: 20px;
-    column-gap: 50px;
-    justify-items: end;
-    align-items: center;
-      }
-*/
       .sub2_text{
         grid-area: 1/1;
         max-width: 48ch;
@@ -146,14 +127,14 @@ get_header(); ?>
         grid-area: 2/1;
         max-width: 48ch;
       }
-     /*  .sub2_textcontainer{
-        display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-end;
-      }  */
+
       .sub2_imgs{
-width: 30%;
+        display: grid;
+        justify-items: center;
+        width: 100%;
+      }
+      .sub2_imgs img{
+        width:50%;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
@@ -224,6 +205,9 @@ width: 30%;
         object-fit: cover;
         pointer-events:none;
       }
+      .mobil-video{
+        display:none;
+      }
 
     /* ---------- SME CLIMATE HUB ---------- */
       #subject5{
@@ -247,6 +231,9 @@ width: 30%;
     @media (max-width: 750px) {
       #sidebar{
         display:none;
+      }
+      button{
+        margin-block: 10px;
       }
       /* ---------- section 1 ---------- */
         #heroimage{
@@ -279,7 +266,7 @@ width: 30%;
             padding-block: 5%;
             padding-right: 0rem;
             justify-items: center;
-            
+            grid-template-columns:1fr;
           }
           .overskrift1 {
             display: grid;
@@ -289,7 +276,7 @@ width: 30%;
           }
           .fngoals {
             display: grid;
-            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+            grid-template-columns: repeat(var(--repeat, auto-fit), minmax(150px, 1fr));
             padding-inline: 2%;
           }
       /* ---------- CERTIFICERET EMBALLAGE ---------- */
@@ -301,6 +288,12 @@ width: 30%;
           padding-right: 0rem;
           justify-items: center;
           gap: 20px;
+        }
+        .sub2-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-items: center;
+          align-items: center;
         }
         .sub2_indhold {
           display: grid;
@@ -333,7 +326,8 @@ width: 30%;
           grid-area: 3/3;
           grid-template-columns: 1fr;
           padding-left: 0px;
-          padding-block: 5%;
+          padding-block: 0%; 
+          padding-bottom: 5%;
           gap: 20px;
           padding-right: 0rem;
           justify-items: center;
@@ -367,9 +361,24 @@ width: 30%;
           align-items: center;
   
         }
+        
         .video_container {
           grid-column: 1/3;
           grid-row: 1/2;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16/9;
+        }
+        .video_container video{
+          display:none;
+          width:100%;
+          height:100%;
+          object-fit: cover;
+          pointer-events:none;
+        }
+        .mobil-video{
+          display:block;
+          width:100%;
         }
 
       /* ---------- SME CLIMATE HUB ---------- */
@@ -378,7 +387,7 @@ width: 30%;
             grid-area: 5/3;
             padding-left: 0px;
             grid-template-columns: 1fr;
-            padding-block: 0%;
+            padding-block: 5%;
             padding-top: 5%;
             padding-right: 0rem;
             align-items: center;
@@ -428,6 +437,7 @@ width: 30%;
     </div>
   </div>
   <div id="subject2">
+    <div class="sub2-container max-width">
     <div class="sub2_indhold max-width">
       <div class="sub2_textcontainer">
       <h2>CERTIFICERET EMBALLAGE</h2>
@@ -450,6 +460,7 @@ width: 30%;
   </div>
   <div class="sub2_imgs">
       <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/maerker.png?_t=1654075831" alt="maerker">
+    </div>
     </div>
   </div>
 
@@ -481,6 +492,7 @@ width: 30%;
     <button>SE VIDEO</button>
   </div>
   <div class="video_container">
+    <img class="mobil-video" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/ansvar_mobil_video.gif" alt="Gif af 2 kvinder med tyggegummi og blomster">
     <video src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/VB-H264-Proxy-half-size.mov" autoplay loop muted></video>
   </div>
   </div>
@@ -501,71 +513,6 @@ width: 30%;
   </section>
 </main>
 <script>
-
-window.addEventListener('scroll', function() {
-	const element1 = document.querySelector('#subject1');
-	const element2 = document.querySelector('#subject2');
-	const element3 = document.querySelector('#subject3');
-	const element4 = document.querySelector('#subject4');
-	const element5 = document.querySelector('#subject5');
-	let position1 = element1.getBoundingClientRect();
-	let position2 = element2.getBoundingClientRect();
-	let position3 = element3.getBoundingClientRect();
-	let position4 = element4.getBoundingClientRect();
-	let position5 = element5.getBoundingClientRect();
-
-  const collection = document.querySelector("#sidebar").children;
-
-	// checking whether fully visible
-	if(position1.top >= 0 && position1.bottom <= window.innerHeight) {
-		console.log('Element1 in view');
-    if(collection[0].classList.contains("sidebarSelect") || collection[1].classList.contains("sidebarSelect") || collection[2].classList.contains("sidebarSelect") || collection[3].classList.contains("sidebarSelect") || collection[4].classList.contains("sidebarSelect")){
-      collection[1].classList.remove("sidebarSelect")
-      collection[2].classList.remove("sidebarSelect")
-      collection[3].classList.remove("sidebarSelect")
-      collection[4].classList.remove("sidebarSelect")}
-    collection[0].classList.add("sidebarSelect")
-
-	}
-
-  if(position2.top >= 0 && position2.bottom <= window.innerHeight) {
-		console.log('Element2 in view');
-    if(collection[0].classList.contains("sidebarSelect") || collection[1].classList.contains("sidebarSelect") || collection[2].classList.contains("sidebarSelect") || collection[3].classList.contains("sidebarSelect") || collection[4].classList.contains("sidebarSelect")){
-      collection[0].classList.remove("sidebarSelect")
-      collection[2].classList.remove("sidebarSelect")
-      collection[3].classList.remove("sidebarSelect")
-      collection[4].classList.remove("sidebarSelect")}
-    collection[1].classList.add("sidebarSelect")
-	}
-  if(position3.top >= 0 && position3.bottom <= window.innerHeight) {
-		console.log('Element3 in view');
-    if(collection[0].classList.contains("sidebarSelect") || collection[1].classList.contains("sidebarSelect") || collection[2].classList.contains("sidebarSelect") || collection[3].classList.contains("sidebarSelect") || collection[4].classList.contains("sidebarSelect")){
-      collection[1].classList.remove("sidebarSelect")
-      collection[0].classList.remove("sidebarSelect")
-      collection[3].classList.remove("sidebarSelect")
-      collection[4].classList.remove("sidebarSelect")}
-    collection[2].classList.add("sidebarSelect")
-	}
-  if(position4.top >= 0 && position4.bottom <= window.innerHeight) {
-		console.log('Element4 in view');
-    if(collection[0].classList.contains("sidebarSelect") || collection[1].classList.contains("sidebarSelect") || collection[2].classList.contains("sidebarSelect") || collection[3].classList.contains("sidebarSelect") || collection[4].classList.contains("sidebarSelect")){
-      collection[1].classList.remove("sidebarSelect")
-      collection[2].classList.remove("sidebarSelect")
-      collection[0].classList.remove("sidebarSelect")
-      collection[4].classList.remove("sidebarSelect")}
-    collection[3].classList.add("sidebarSelect")
-	}
-  if(position5.top >= 0 && position5.bottom <= window.innerHeight) {
-		console.log('Element5 in view');
-    if(collection[0].classList.contains("sidebarSelect") || collection[1].classList.contains("sidebarSelect") || collection[2].classList.contains("sidebarSelect") || collection[3].classList.contains("sidebarSelect") || collection[4].classList.contains("sidebarSelect")){
-      collection[1].classList.remove("sidebarSelect")
-      collection[2].classList.remove("sidebarSelect")
-      collection[3].classList.remove("sidebarSelect")
-      collection[0].classList.remove("sidebarSelect")}
-    collection[4].classList.add("sidebarSelect")
-	}
-
-});
     
 </script>
 
