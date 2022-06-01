@@ -348,12 +348,12 @@ get_header(); ?>
   }
 
   .previous {
-    left: 0px;
+    left: 8px;
     transform: translateX(-6px);
   }
 
   .next {
-    right: 0px;
+    right: 8px;
     transform: translateX(6px);
   }
 

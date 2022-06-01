@@ -34,12 +34,10 @@ get_header(); ?>
     /* ---------- section 1 ---------- */
       #heroimage{
         display: grid;
-        width:100%;
-        background-color:#FFFDFC;
         justify-items: center;
         align-items: center;
         min-height: 314px;
-        box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+    
       }
 
       #heroimage h1{

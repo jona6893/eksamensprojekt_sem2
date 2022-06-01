@@ -109,7 +109,6 @@ get_header(); ?>
 
   #produkter {
     display: flex;
-   /*  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
    flex-direction: column
   }
 
@@ -128,19 +127,6 @@ get_header(); ?>
   max-width:55ch;
 }
 
-/*   @media (max-width: 730px) {
-    #produkter {
-      grid-template-columns: repeat(var(--viste-produkter), minmax(320px, 1fr));
-      gap: 10px;
-      overflow-x: scroll;
-    }
-
-    .produkt-card {
-      box-shadow: 1px 3px 32px rgba(0, 0, 0, 0.04);
-      display: flex;
-
-    }
-  } */
 
   .produkt-navn {
     color: var(--black);
@@ -154,9 +140,8 @@ get_header(); ?>
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     height: 80%;
-  align-items:center;
-    
   }
+  
   .add-container{
      display: flex;
     justify-content: flex-end;
@@ -270,8 +255,12 @@ height:25px;
   width:120px;
 }
 
-/* .this-width{
-  max-width:900px;
+
+/* .om-produktet{
+  display:grid;
+  grid-template-rows:2fr 1fr;
+  justify-content:auto;
+  gap:60px;
 } */
 
 /* --------- MOBILE UDGAVE --------- */
@@ -288,7 +277,10 @@ height:25px;
       grid-template-columns:1fr 0.2fr;
     }
     .om-produktet{
-  grid-column:1/2;
+    grid-column:1/2;
+    gap:10px;
+    
+    
 }
 .add-container{
    align-items: flex-end;
@@ -309,18 +301,27 @@ height:25px;
     grid-row: 8/9;
 }
 }
-</style>
+.read-more{
 
+}
+</style>
+<!-- html begynder -->
 <main id="main-content">
 
   <template>
     <article class="produkt-card">
     <div class="abo-img">
     </div >
+    
     <div class="om-produktet">
-      <h3 class="produkt-navn"></h3>
-      <p class="produkt-info"></p>
-      <button class="read-more">LÆS MERE</button>
+
+      
+        <h3 class="produkt-navn"></h3>
+        <p class="produkt-info"></p>
+      
+        <button class="read-more">LÆS MERE</button>
+    
+
     </div>
     
     <div class="add-container">
@@ -369,13 +370,17 @@ height:25px;
     <h4>VÆLG HYPPIGHED:</h4>
     </div>
     <div  class="box-3">
-      <div class="dropdown">
+      <!-- <div class="dropdown">
       <button onclick="dropMenu()" class="dropbtn">v</button>
        <div id="myDropdown" class="dropdown-content">
        <a href="#0">HVER MÅNED</a>
         <a href="#0">HVER ANDEN MÅNED</a>
       </div>
-    </div>
+    </div> -->
+    <select name="cars" id="cars">
+      <option value="hver måned">HVER MÅNED</option>
+      <option value="hver anden måned">HVER ANDEN MÅNED</option>
+    </select>
     <button class="next"> GÅ TIL KURV</button>
     </div>
   </div>
@@ -540,7 +545,7 @@ function tilføjTal(minus, plus, tal, overskrift) {
 
 }
 
-/* --------- Her Stater Dropdown menu --------- */
+/* --------- Her Stater Dropdown menu --------- 
   function dropMenu() {
     console.log("DropMenu start")
     document.getElementById("myDropdown").classList.add("show")
@@ -565,7 +570,7 @@ punkerArray.forEach(e => {
     document.getElementById("myDropdown").classList.remove("show")
   })
 })
-
+*/
 </script>
 
 <?php get_footer(); ?>
