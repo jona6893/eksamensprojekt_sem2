@@ -370,13 +370,17 @@ height:25px;
     <h4>VÆLG HYPPIGHED:</h4>
     </div>
     <div  class="box-3">
-      <div class="dropdown">
+      <!-- <div class="dropdown">
       <button onclick="dropMenu()" class="dropbtn">v</button>
        <div id="myDropdown" class="dropdown-content">
        <a href="#0">HVER MÅNED</a>
         <a href="#0">HVER ANDEN MÅNED</a>
       </div>
-    </div>
+    </div> -->
+    <select name="cars" id="cars">
+      <option value="hver måned">HVER MÅNED</option>
+      <option value="hver anden måned">HVER ANDEN MÅNED</option>
+    </select>
     <button class="next"> GÅ TIL KURV</button>
     </div>
   </div>
@@ -541,7 +545,7 @@ function tilføjTal(minus, plus, tal, overskrift) {
 
 }
 
-/* --------- Her Stater Dropdown menu --------- */
+/* --------- Her Stater Dropdown menu --------- 
   function dropMenu() {
     console.log("DropMenu start")
     document.getElementById("myDropdown").classList.add("show")
@@ -566,7 +570,7 @@ punkerArray.forEach(e => {
     document.getElementById("myDropdown").classList.remove("show")
   })
 })
-
+*/
 </script>
 
 <?php get_footer(); ?>
