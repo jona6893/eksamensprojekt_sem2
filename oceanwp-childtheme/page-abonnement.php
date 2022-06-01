@@ -421,20 +421,18 @@ get_header(); ?>
   }
 
   .modal-image {
-    width: 80%;
+    width: 70%;
     aspect-ratio: 566 / 1082;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-inline:auto;
     
   }
 
-  dialog h3 {
+  /* dialog h3 {
     padding-bottom: 8px;
-  }
+  } */
 
-  dialog p {
-    padding-bottom: 24px;
-  }
 /*modal/single view til mobil*/
 
   @media (max-width: 768px) {
@@ -443,8 +441,8 @@ get_header(); ?>
       grid-template-columns: 1fr;
     }
     .modal-image {
-    width: 40%;
-    
+    width: 30%;
+    margin-inline:auto;
   }
   }
 /*container til knappen (krydset)*/
@@ -468,7 +466,7 @@ get_header(); ?>
 
   <template>
     <article class="produkt-card">
-      
+
       <div class="img-container">
         <div class="abo-img"></div >
     </div>
@@ -548,13 +546,17 @@ get_header(); ?>
     <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/kurv/';" class="next"> GÅ TIL KURV</button>
     </div>
   </div> 
+
   <dialog id="modal">
+
     <form method="dialog">
       <button id="close">⨉</button>
     </form>
+
     <div class="left-column">
       <div class="modal-image"></div>
     </div>
+
     <div class="right-column">
       <h2 class="modal-navn"></h2>
       <h3 class="h3-info"></h3>
@@ -650,7 +652,7 @@ get_header(); ?>
       modal.querySelector(".modal-anvendelse").innerHTML = "";
     }
     if (abonnement.ingredienser !== "") {//hvis produktet har paragraf om ingredienser
-      modal.querySelector(".h3-ingredienser").textContent = "Produkt ingredienser";
+      modal.querySelector(".h3-ingredienser").textContent = "Ingredienser";
       modal.querySelector(".modal-ingredienser").innerHTML = `${abonnement.ingredienser}`;
     } else {
       modal.querySelector(".h3-ingredienser").textContent = "";
