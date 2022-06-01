@@ -131,16 +131,14 @@ main h4 {
   font-size: clamp(1.1rem, calc(9px + 0.925vw), 1.57rem);
   line-height: 1.1;
   color: var(--sort);
-
 }
 
 main p {
   font-family: "Helvetica", sans-serif;
   font-weight: normal;
   font-size: clamp(0.92rem, calc(12px + 0.48vw), 1rem);
-  line-height: 1.1;
+  line-height: 1.75rem;
   color: var(--sort);
-  
 }
 
 button {
