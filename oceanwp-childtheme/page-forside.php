@@ -317,7 +317,14 @@ get_header(); ?>
     margin-bottom: 100px;
   } 
  
-
+  #find_os .find_os_bar {
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png);
+    background-size: 75%;
+    background-attachment: revert;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 75vh;
+    width: 100%;
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
@@ -413,13 +420,7 @@ get_header(); ?>
     margin-bottom: 200px;
   } 
   #find_os .find_os_bar {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png");
-    background-size: 75%;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    height: 75vh;
-    width: 100%
   }
   #forside_blog .seneste_artikler {
     padding: 2%;
