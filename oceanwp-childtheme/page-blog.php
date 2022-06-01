@@ -13,7 +13,9 @@ get_header(); ?>
 
 <style>
   body {
-    background-color: black;
+    background-color: #FFFDFC;
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger2.png");
+    background-size: cover;
   }
 /*------------- første sektion ------------*/
    #first_section{
