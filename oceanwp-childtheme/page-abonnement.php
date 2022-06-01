@@ -408,7 +408,7 @@ get_header(); ?>
     padding: 64px 16px 16px 16px;
     overflow-y: scroll;
     margin: auto;
-    border: 3px solid var(--sort);
+    border:none;
   }
 
   dialog::backdrop {
@@ -429,9 +429,7 @@ get_header(); ?>
     
   }
 
-  /* dialog h3 {
-    padding-bottom: 8px;
-  } */
+  
 
 /*modal/single view til mobil*/
 
