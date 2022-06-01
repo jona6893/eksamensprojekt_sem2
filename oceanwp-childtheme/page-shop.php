@@ -40,19 +40,18 @@ get_header(); ?>
 
   #splash-image h1 {
     position: absolute;
-    bottom: 30vh;
-    left: 20%;
+    top: 40%;
+    left: 10%;
     font-weight: 800;
     font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
-   
   }
+
   #splash-image p {
-  position: absolute;
-    bottom: 20vh;
-    left: 20%;
+    position: absolute;
+    top: 55%;
+    left: 10%;
     font-size: 1rem;
     max-width: 40ch
-    
  }
 
   #filter-menu {
@@ -60,7 +59,6 @@ get_header(); ?>
     display: flex;
     justify-content: space-between;
     max-width: 500px;
-
   }
   
   .filter-btn {
@@ -178,6 +176,7 @@ get_header(); ?>
     font-size: 0.75rem !important;
     margin-bottom: 2px;
     max-width: 60ch;
+    line-height: 0.9rem;
   }
 
   .pris {
