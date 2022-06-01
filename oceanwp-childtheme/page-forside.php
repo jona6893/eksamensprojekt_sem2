@@ -301,8 +301,14 @@ get_header(); ?>
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
     display:grid;
-    margin-left: 50px;
-    margin-right: 50px;
+  }
+  .intro_om_os{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  } 
+  .intro_om_os_text p{
+    max-width: 48ch;
   }
   #intro .intro_start {
     text-align:center;
@@ -401,12 +407,18 @@ get_header(); ?>
     #sort_bar1 h2, #sort_bar2 h2{
 		font-size: 4.5rem;
 	}
-  #intro .intro_om_os {
-    display:grid;
+    #intro .intro_om_os{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 60%;
+    max-width: 100%;
     margin: auto;
     gap: 60px;
+    align-items: center;
+    justify-items: center;
+  }
+  #intro .intro_start {
+    text-align:center;
+    margin-bottom: 100px;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
@@ -414,6 +426,12 @@ get_header(); ?>
     justify-content: right;
     
   }
+  #intro {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
   #intro .intro_om_os_text {
     grid-column:2/3;
     max-width: 400px;
@@ -647,7 +665,7 @@ get_header(); ?>
 <section id="sort_bar1">
 	<h2>NEXT GENERATION CHEWING GUM </h2>
 </section>
-<section id="intro">
+<section id="intro" class="max-width">
   <div class="intro_start">
   <h2>EACE GUM</h2>
   <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
