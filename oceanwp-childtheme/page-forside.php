@@ -140,7 +140,7 @@ get_header(); ?>
 
   .column-left {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: 2fr 6fr 1fr
   }
 
 	.splash_text{
@@ -163,6 +163,11 @@ get_header(); ?>
   .gum_type {
     font-style: italic;
     color: #c4ad84;
+  }
+
+  .gum-info {
+    max-width: 36ch;
+    padding-left: 60px;
   }
 
   /* splash billede mobil */
@@ -642,6 +647,7 @@ get_header(); ?>
   <div class="column-left">
 		<div class="splash_text">
   		<h1 class="heading">GUM + <strong class="gum_type"><br>VITAMIN <br>BOOST</strong> </h1>
+      <p class="gum-info">Ét tyggegummi indeholder 25% af det anbefalede daglige indtag af 10 essentielle vitaminer: C, D, E, K, B1, B3, B6, B7, B9, B12.</p>
       <div class="splash_button">
         <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
         <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Abonnement</button>
@@ -761,6 +767,7 @@ get_header(); ?>
 
   //vælger teksten
   const gumType = document.querySelector(".gum_type");
+  const gumInfo = document.querySelector(".gum-info");
 
 	/* konfigurer nedestående variabler efter behov */
 	//antallet af produkter som er vist på splashbilledet
@@ -806,19 +813,22 @@ get_header(); ?>
 
     //ændre teksten
     switch(theIndex) {
-      case "1":
+      case "1": //vitamin boost
         gumType.style.color = "#c4ad84";
         gumType.textContent = "\r\nVITAMIN\nBOOST";
+        gumInfo.textContent = "Ét tyggegummi indeholder 25% af det anbefalede daglige indtag af 10 essentielle vitaminer: C, D, E, K, B1, B3, B6, B7, B9, B12.";
         break;
       
-      case "2":
+      case "2": //healthy teeth
         gumType.style.color = "#449682";
         gumType.textContent = "\r\nHEALTHY\nTEETH";
+        gumInfo.textContent = "Eace Gum + Healthy Teeth er et fantastisk godt tyggegummi, som indeholder fluor og grøn te ekstrakt, der sikrer frisk ånde og sunde tænder.";
         break;
 
-      case "3":
+      case "3": //energy boost
         gumType.style.color = "#57abc9";
         gumType.textContent = "\r\nENERGY\nBOOST";
+        gumInfo.textContent = "Eace Gum + Energy Boost er et friskt tyggegummi, som indeholder koffein og B-vitaminer, der giver et øjeblikkeligt energi-tilskud.";
         break;
     }
   }
