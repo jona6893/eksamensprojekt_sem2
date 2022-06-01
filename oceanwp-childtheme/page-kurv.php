@@ -58,7 +58,7 @@ get_header(); ?>
             .de-tre-felter{
                 --repeat:1;
                 display: grid;
-                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 400px));
+                grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 350px));
             }
              .trin{
                 display:none;
@@ -71,7 +71,7 @@ get_header(); ?>
     /* ---------- Kurv ---------- */
         .kurv{
             display: grid;       
-            
+            min-height: 500px;
             padding: 50px 5%;
             gap: 20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -86,6 +86,7 @@ get_header(); ?>
 
         .produkt img{
             max-width: 40%;
+            max-height:40%;
         }
         .produkt p{
             display: grid;
@@ -115,7 +116,7 @@ get_header(); ?>
         .info {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
         }
         .info .titel {
             grid-column: 1/2;
@@ -124,7 +125,7 @@ get_header(); ?>
         }
         .info .pris {
             grid-column: 3/4;
-            grid-row: 3/4;
+            grid-row: 2/3;
         }   
         .info .remove {
             grid-column: 3/4;
@@ -140,7 +141,7 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            
+            min-height: 500px;
             padding: 30px;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -186,13 +187,11 @@ get_header(); ?>
             display:grid;
             /* background: rgb(2,0,36);
             background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(51,51,80,1) 100%, rgba(0,212,255,0) 100%); */
-            
+            min-height: 500px;
             padding: 20px 8%;
             gap:20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: white;
-            
-            min-height:100%;
         }
         .betaling h3{
             color:black;
