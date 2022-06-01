@@ -325,6 +325,7 @@ get_header(); ?>
     background-position: 50%;
     height: 75vh;
     width: 100%;
+  }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
     padding: 2%;
