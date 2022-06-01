@@ -40,25 +40,28 @@ get_header(); ?>
     background-size: cover;
     background-color: var(--lyse-blaa);
   }
-/* h1 på splashbilledet */
-#splash-image h1 {
+
+  /* container til tekst på splash billede*/
+  #splash-image div {
     position: absolute;
-    bottom: 30vh;
-    left: 5%;
+    top: 40%;
+    left: 10%;
+    display: grid;
+    gap: 20px;
+  }
+
+/* h1 på splashbilledet */
+  #splash-image div h1 {
     font-weight: 800;
-    font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
-   
+    font-size: clamp(2.338rem, calc( 4px + 3.025vw ), 3.163rem);
   }
 
  /* grid til teksten på splashbilledet */
- #splash-image p {
-  position: absolute;
-    bottom: 24vh;
-    left: 5%;
+  #splash-image div p {
     font-size: 1rem;
-    
-    
- }
+    max-width: 40ch
+  }
+
 /* ? */
   .filter-menu {
     --repeat: auto-fit;
@@ -318,12 +321,12 @@ get_header(); ?>
 
 @media (max-width:600px) {
 
-  #splash-image p {
+/*  #splash-image p {
     position: absolute;
     bottom: 20vh;
     left: 5%;
     font-size: 1rem;
-}
+}*/
     .produkt-card{
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
@@ -483,12 +486,14 @@ get_header(); ?>
 
   <section id="splash-image">
     
+  <div>
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
     <p class="abo-info">
       Få 12 pakker tyggegummi til 199kr efter eget valg leveret
       i din postkasse hver måned eller hver anden måned.
-  </p>
-    
+    </p>
+  </div>
+
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
