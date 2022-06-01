@@ -110,7 +110,9 @@ p {
 }
 
 .accordionItem:target .answer {
-    max-height: 20rem;
+    max-height: 100%;
+    display: grid;
+    gap: 25px;
 }
 
 .accordionItem:target .plusadd {
@@ -128,6 +130,9 @@ hr {
     background-color:var(--sort);
     color: white;
 
+}
+button{
+    width: 170px;
 }
 
 /* -------------------- DESKTOP -------------------- */
