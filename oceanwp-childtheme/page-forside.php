@@ -14,6 +14,7 @@ get_header(); ?>
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 160px;
   }
 
   body{
@@ -596,7 +597,7 @@ get_header(); ?>
     <button class="fan-btn previous">←</button>
     <button class="fan-btn next">→</button>
   </div>
-  <a href="#intro_start" class="se_mere"></a>
+  <a href="#intro" class="se_mere"></a>
 </section>
   
 
