@@ -9,7 +9,7 @@
 
 <style>
 	footer#footer {
-		background-color: #F2F2F2;
+		background-color: var(--sort);
 		padding-block: 32px;
 	}
 
@@ -31,13 +31,25 @@
 	}
 
 	.footer-content h2 {
-		border-bottom: 1px solid var(--sort);
+		border-bottom: 1px solid white;
 	}
 
 	.footer-links {
 		flex: 1 1 260px;
 	}
 
+	footer a{
+		color:white;
+	} 
+	footer h2{
+		color:white;
+	} 
+	footer p{
+		color:white;
+	} 
+	footer i{
+		color:white;
+	} 
 	.links-container {
 		margin: 0;
 	}
@@ -65,10 +77,11 @@
 
 	.social-media {
 		grid-row: 1/2;
-		grid-column: 2/3;
+    	grid-column: 2/3;
 		display: flex;
 		flex-direction: row-reverse;
-		gap: 24px;
+		gap: 30px;
+		justify-content: flex-end;
 	}
 
 	.icon-facebook {
@@ -80,6 +93,7 @@
 		align-self: center;
 		margin-bottom: 20px;
 		transition: opacity 0.3s;
+		filter: invert(1);
 	}
 
 	.icon-instagram {
@@ -91,6 +105,7 @@
 		align-self: center;
 		margin-bottom: 20px;
 		transition: opacity 0.3s;
+		filter: invert(1);
 	}
 
 	.social-media a:hover {
@@ -100,8 +115,15 @@
 	.opening-time {
 		grid-row: 2/3;
 		grid-column: 1/3;
+		display: grid;
+		grid-template-columns: 1fr 1.7fr;
 	}
-
+	.flex-tider{
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
 	.footer-newsletter {
 		flex: 1 1 380px;
 	}
@@ -114,8 +136,8 @@
 	.btn-signup {
 		padding: 8px 24px;
 		border: none;
-		background-color: var(--sort);
-		color: white;
+		background-color: white;
+		color: black;
 		transition: opacity 0.3s;
 		width: 120px;
 	}
@@ -125,14 +147,14 @@
 	}
 
 	.feedback {
-		color: green;
+		color: #33e833;
 		display: none;
 	}
 
 	.btn-signup.disabled {
 		cursor: default;
-		opacity: 0.4;
-		background-color: green;
+		opacity: 0.6;
+		background-color: #33e833;
 	}
 </style>
 
@@ -160,12 +182,12 @@
 					<a class="icon-instagram" href="https://www.instagram.com/eace_gum/" target="_blank"></a>
 				</div>
 				<div class="opening-time">
-					<div class="flex-items">
+					<div class="flex-dage">
 						<p>Mandag - Fredag:</p>
-						<p><i>09:00 - 18:00</i></p>
-					</div>
-					<div class="flex-items">
 						<p>Lørdag:</p>
+					</div>
+					<div class="flex-tider">
+						<p><i>09:00 - 18:00</i></p>
 						<p><i>10:00 - 16:00</i></p>
 					</div>
 				</div>
