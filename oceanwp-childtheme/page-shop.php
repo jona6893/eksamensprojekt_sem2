@@ -375,7 +375,7 @@ get_header(); ?>
     display: none;
     grid-template-columns: calc(260px + 10vw) 40vw;
     gap: 16px;
-    padding: 64px 16px 16px 16px;
+    padding: 64px 24px 16px 16px;
     overflow-y: scroll;
     margin: auto;
     border: none;
@@ -419,7 +419,7 @@ get_header(); ?>
     right: 0;
     background-color: white;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   #close {
@@ -453,7 +453,7 @@ get_header(); ?>
   </section>
 
   <section id="filter-menu" class="max-width">
-    <button class="filter-btn selected" data-category="alle">Alle</button>
+    <button class="filter-btn selected" data-category="alle">ALLE</button>
     <button class="filter-btn" data-category="tyggegummi">TYGGEGUMMI</button>
     <button class="filter-btn" data-category="merchandise">MERCHANDISE</button>
   </section>
@@ -623,6 +623,9 @@ get_header(); ?>
     }
 
     modal.showModal(); //viser pop up
+    document.addEventListener("click", function(event) {
+      if (event.target == modal) modal.close(); //lukker pop up når man klikker uden for den
+    });
   }
 
 </script>
