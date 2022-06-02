@@ -167,13 +167,13 @@ get_header(); ?>
         display: grid;
         grid-template-columns: 1fr 0.5fr 0.1fr;
         grid-template-rows: 1fr;
-        justify-items: end;
+        justify-items: center;
         align-items: center;
       }
       .overskrift4 {
         display: grid;
         z-index: 2;
-        grid-column: 1/3;
+        grid-column: 2/3;
         grid-row: 1/3;
         background-color: white;
         justify-items: start;
