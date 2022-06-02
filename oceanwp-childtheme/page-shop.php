@@ -458,6 +458,8 @@ get_header(); ?>
     <button class="filter-btn" data-category="merchandise">MERCHANDISE</button>
   </section>
 
+  <section id="produkter" class="max-width"></section>
+
   <section id="features" class="max-width">
     <figure id="mint">
       <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/ikon_mint_sort.svg">
@@ -476,8 +478,6 @@ get_header(); ?>
       <caption>Sukkerfrit tyggegummi</caption>
     </figure>
   </section>
-
-  <section id="produkter" class="max-width"></section>
 
   <section id="testimonial" class="max-width">
     <article class="testimonial-container" data-index="1">
