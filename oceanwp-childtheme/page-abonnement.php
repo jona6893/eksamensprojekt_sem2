@@ -40,25 +40,28 @@ get_header(); ?>
     background-size: cover;
     background-color: var(--lyse-blaa);
   }
-/* h1 på splashbilledet */
-#splash-image h1 {
+
+  /* container til tekst på splash billede*/
+  #splash-image div {
     position: absolute;
-    bottom: 30vh;
-    left: 5%;
+    top: 40%;
+    left: 10%;
+    display: grid;
+    gap: 20px;
+  }
+
+/* h1 på splashbilledet */
+  #splash-image div h1 {
     font-weight: 800;
-    font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
-   
+    font-size: clamp(2.338rem, calc( 4px + 3.025vw ), 3.163rem);
   }
 
  /* grid til teksten på splashbilledet */
- #splash-image p {
-  position: absolute;
-    bottom: 24vh;
-    left: 5%;
+  #splash-image div p {
     font-size: 1rem;
-    
-    
- }
+    max-width: 40ch
+  }
+
 /* ? */
   .filter-menu {
     --repeat: auto-fit;
@@ -81,8 +84,7 @@ get_header(); ?>
   /* filtrerings knappers udseende */
   .filter-btn {
     color: white;
-    /* border: 1px var(--sort) solid; */
-    background-color:var(--sort) ;
+    background-color: var(--sort);
     padding: 8px 12px;
     width: 160px;
     text-align: center;
@@ -90,21 +92,20 @@ get_header(); ?>
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
-    border:none;
-    
-  } 
+    border: none;
+  }
+  
   .filter-btn:hover{
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
+    /* border: 1px var(--sort) solid; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
 
@@ -318,12 +319,12 @@ get_header(); ?>
 
 @media (max-width:600px) {
 
-  #splash-image p {
+/*  #splash-image p {
     position: absolute;
     bottom: 20vh;
     left: 5%;
     font-size: 1rem;
-}
+}*/
     .produkt-card{
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
@@ -400,17 +401,72 @@ get_header(); ?>
 
 
 }
-.read-more{
+  dialog {
+    display: none;
+    grid-template-columns: calc(260px + 10vw) 40vw;
+    gap: 16px;
+    padding: 64px 16px 16px 16px;
+    overflow-y: scroll;
+    margin: auto;
+    border: none;
+  }
 
-}
+  dialog::backdrop {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+/*kun synlig når den er åben*/
+  dialog[open] {
+    display: grid;
+  }
+
+  .modal-image {
+    width: 70%;
+    aspect-ratio: 566 / 1082;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-inline: auto;
+  }
+
+  
+
+/*modal/single view til mobil*/
+
+  @media (max-width: 768px) {
+    dialog {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+    }
+    .modal-image {
+    width: 30%;
+    margin-inline:auto;
+  }
+  }
+/*container til knappen (krydset)*/
+  dialog form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+/*knappens (krydset) højte  */
+  #close {
+    height: 48px;
+  }
+
 </style>
 <!-- html begynder -->
 <main id="main-content">
 
   <template>
     <article class="produkt-card">
-      <div class="img-container"><div class="abo-img">
-      </div ></div>
+
+      <div class="img-container">
+        <div class="abo-img"></div >
+    </div>
         <h3 class="produkt-navn"></h3>
         <p class="produkt-info"></p>
         <button class="read-more">LÆS MERE</button>
@@ -426,12 +482,14 @@ get_header(); ?>
 
   <section id="splash-image">
     
+  <div>
     <h1>SKRÆDDERSY DIT ABONNEMENT</h1>
     <p class="abo-info">
       Få 12 pakker tyggegummi til 199kr efter eget valg leveret
       i din postkasse hver måned eller hver anden måned.
-  </p>
-    
+    </p>
+  </div>
+
 </section>
  <!-- knapper til filtrering -->
   <section id="filter-menu" class="max-width">
@@ -486,13 +544,18 @@ get_header(); ?>
     </select>
     <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/kurv/';" class="next"> GÅ TIL KURV</button>
     </div>
-  </div> <dialog id="modal">
+  </div> 
+
+  <dialog id="modal">
+
     <form method="dialog">
       <button id="close">⨉</button>
     </form>
+
     <div class="left-column">
       <div class="modal-image"></div>
     </div>
+
     <div class="right-column">
       <h2 class="modal-navn"></h2>
       <h3 class="h3-info"></h3>
@@ -557,38 +620,38 @@ get_header(); ?>
             clone.querySelector(".abo-img").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
             clone.querySelector(".produkt-navn").textContent = `${abonnement.title.rendered}`;
             clone.querySelector(".produkt-info").textContent = `${abonnement.loop_beskrivelse}`;
-            clone.querySelector("article").addEventListener("click", () => modalView(abonnement)); //gør kortene klikbart og kalder på modalView med produkt som parameter
+            clone.querySelector(".read-more").addEventListener("click", () => modalView(abonnement)); //gør kortene klikbart og kalder på modalView med produkt som parameter
             mainContent.appendChild(clone);
             visteProdukter = document.getElementById("produkter").childElementCount;
         }
     });
     function modalView(abonnement) {
     const modal = document.querySelector("dialog");
-    modal.querySelector(".modal-image").style.backgroundImage = `url(${abonnement.billede.guid})`;
+    modal.querySelector(".modal-image").style.backgroundImage = `url(${abonnement.produkt_foto.guid})`;
     modal.querySelector(".modal-navn").textContent = `${abonnement.title.rendered}`;
-    if (produkt.info !== "") {//hvis produktet har en kort beskrivelse
+    if (abonnement.info !== "") {//hvis produktet har en kort beskrivelse
       modal.querySelector(".h3-info").textContent = "Produkt info";
-      modal.querySelector(".modal-info").innerHTML = `${abonnement.info}`;
+      modal.querySelector(".modal-info").innerHTML = `${abonnement.produkt_info}`;
     } else {
       modal.querySelector(".h3-info").textContent = "";
       modal.querySelector(".modal-info").innerHTML = "";
     }
-    if (produkt.funktioner !== "") {//hvis produktet har paragraf om funktioner
-      modal.querySelector(".h3-funktioner").textContent = "Produkt funktioner";
+    if (abonnement.funktioner !== "") {//hvis produktet har paragraf om funktioner
+      modal.querySelector(".h3-funktioner").textContent = "Funktioner";
       modal.querySelector(".modal-funktioner").innerHTML = `${abonnement.funktioner}`;
     } else {
       modal.querySelector(".h3-funktioner").textContent = "";
       modal.querySelector(".modal-funktioner").innerHTML = "";
     }
-    if (produkt.anvendelse !== "") {//hvis produktet har paragraf om anvendelse
-      modal.querySelector(".h3-anvendelse").textContent = "Produkt anvendelse";
+    if (abonnement.anvendelse !== "") {//hvis produktet har paragraf om anvendelse
+      modal.querySelector(".h3-anvendelse").textContent = "Anvendelse";
       modal.querySelector(".modal-anvendelse").innerHTML = `${abonnement.anvendelse}`;
     } else {
       modal.querySelector(".h3-anvendelse").textContent = "";
       modal.querySelector(".modal-anvendelse").innerHTML = "";
     }
-    if (produkt.ingredienser !== "") {//hvis produktet har paragraf om ingredienser
-      modal.querySelector(".h3-ingredienser").textContent = "Produkt ingredienser";
+    if (abonnement.ingredienser !== "") {//hvis produktet har paragraf om ingredienser
+      modal.querySelector(".h3-ingredienser").textContent = "Ingredienser";
       modal.querySelector(".modal-ingredienser").innerHTML = `${abonnement.ingredienser}`;
     } else {
       modal.querySelector(".h3-ingredienser").textContent = "";
@@ -631,6 +694,7 @@ function tilføjTal(minus, plus, tal, overskrift) {
     // hvert element i en array har et index.
     plus.forEach((e, i) => {
         e.addEventListener("click", () => {
+          if (total < 12) {
             // tilføjer et til det objekt i counter der er = "i", altså dens index number.
             counter[i]++
             // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
@@ -663,38 +727,40 @@ function tilføjTal(minus, plus, tal, overskrift) {
             makeP.textContent = `${overskrift[i].innerText} ${counter[i]}`
             oversigt.appendChild(makeP)
             }
+          }
         })
     })
 
     // denne forEach funktion gør det samme som for oven, den fjerner bare et tal med "counter--" i stedet for "counter++"
     minus.forEach((e, i) => {
         e.addEventListener("click", () => {
-            counter[i]--
-            tal[i].textContent = `${counter[i]}`;
-            
-            /* Tæller det totale valg af pakker */
-            total = 0
-            allePriser = []
-            allePriser = Array.from(document.querySelectorAll(".add-tal"))
-            allePriser.forEach(e => {
-            total += parseInt(e.innerText)
-            })
-            console.log("Total = " + total)
-            document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
-            console.log(tal[i]) 
-            
-            if (tal[i].innerText == 0) {
-              console.log("tallet er 0")
-              document.querySelector(`.titel${[i]}`).remove()
-              /* document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}` */
+            if (tal[i].innerText > "0") {
+              counter[i]--
+              tal[i].textContent = `${counter[i]}`;
+              /* Tæller det totale valg af pakker */
 
-            } else if (tal[i].innerText >= 1){
-              console.log("tallet er større end 0")
-              document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
-            } else {
-              console.log("der er noget some ikke virker")
+              total = 0
+              allePriser = []
+              allePriser = Array.from(document.querySelectorAll(".add-tal"))
+              allePriser.forEach(e => {
+              total += parseInt(e.innerText)
+              })
+              console.log("Total = " + total)
+              document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
+              console.log(tal[i]) 
+              
+              if (tal[i].innerText == 0) {
+                console.log("tallet er 0")
+                document.querySelector(`.titel${[i]}`).remove()
+                /* document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}` */
+
+              } else if (tal[i].innerText >= 1){
+                console.log("tallet er større end 0")
+                document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
+              } else {
+                console.log("der er noget some ikke virker")
+              }
             }
-
         })
     })
   

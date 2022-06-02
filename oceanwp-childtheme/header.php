@@ -38,7 +38,7 @@ header {
     position: sticky;
     width: 100%;
     top:0;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 header img {
@@ -59,6 +59,9 @@ header img {
 
 .hover-mig {
     position: relative;
+}
+.hover-mig:first-child{
+    pointer-events: none;
 }
 
 .hover-mig:hover .hidemenu {
@@ -105,6 +108,9 @@ color: #7CB5FF;
         display: block;
         width: 50px;
         z-index: 999;
+    }
+    .arrow-down{
+        display: none;
     }
 
     .burger-ikon img {
@@ -166,13 +172,13 @@ color: #7CB5FF;
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/">ABONNEMENTER</a>
         <div class="hover-mig">
-            <a href="">BAG OM EACEGUM</a>
+            <a href="#">BAG OM EACEGUM</a>
             <img class="arrow-down"
                 src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/expand_more_FILL0_wght400_GRAD0_opsz48.png"
                 alt="">
             <div class="drop-down-menu hidemenu">
                 <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/produktion/">PRODUKTION</a>
-                <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">ANSVAR</a>
+                <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/ansvar/">SOCIALT ANSVAR</a>
             </div>
         </div>
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/vores-historie/">VORES HISTORIE</a>

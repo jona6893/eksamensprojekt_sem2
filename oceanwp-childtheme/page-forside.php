@@ -140,7 +140,7 @@ get_header(); ?>
 
   .column-left {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: 2fr 6fr 1fr
   }
 
 	.splash_text{
@@ -158,11 +158,19 @@ get_header(); ?>
 
   .splash_text h1 {
     font-size: 3rem;
+    padding-left: 60px;
+    width: 320px;
   }
 
   .gum_type {
     font-style: italic;
     color: #c4ad84;
+  }
+
+  .gum-info {
+    max-width: 36ch;
+    padding-left: 60px;
+    height: 130px;
   }
 
   /* splash billede mobil */
@@ -289,7 +297,7 @@ get_header(); ?>
   }
 
   #sort_bar1 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/sort_bar1.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar1.png");
   }
 
   #sort_bar2 {
@@ -301,8 +309,14 @@ get_header(); ?>
    /* -------------------- SEKTION OM OS MED PERNILLE BLUME -------------------- */
   #intro {
     display:grid;
-    margin-left: 50px;
-    margin-right: 50px;
+  }
+  .intro_om_os{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  } 
+  .intro_om_os_text p{
+    max-width: 48ch;
   }
   #intro .intro_start {
     text-align:center;
@@ -401,12 +415,18 @@ get_header(); ?>
     #sort_bar1 h2, #sort_bar2 h2{
 		font-size: 4.5rem;
 	}
-  #intro .intro_om_os {
-    display:grid;
+    #intro .intro_om_os{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 60%;
+    max-width: 100%;
     margin: auto;
     gap: 60px;
+    align-items: center;
+    justify-items: center;
+  }
+  #intro .intro_start {
+    text-align:center;
+    margin-bottom: 100px;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
@@ -414,6 +434,12 @@ get_header(); ?>
     justify-content: right;
     
   }
+  #intro {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
   #intro .intro_om_os_text {
     grid-column:2/3;
     max-width: 400px;
@@ -431,9 +457,9 @@ get_header(); ?>
     box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset;
   }
   #forside_blog .seneste_artikler {
-    max-width: 500px;
+    width: 500px;
     display: grid;
-    
+    margin-left: auto;
   }
   .seneste_artikler h4, .seneste_artikler p {
     margin: 0px;
@@ -447,7 +473,7 @@ get_header(); ?>
   #forside_blog .forside_blog_indhold {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 75px;
+    grid-template-rows: 400px 75px;
     
   }
   #forside_ blog .seneste_artikler {
@@ -459,7 +485,7 @@ get_header(); ?>
   }
   
   #sort_bar2 {
-    margin-top: -80px;
+    margin-top: 40px;
   }
 
   #forside_some {
@@ -471,9 +497,17 @@ get_header(); ?>
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
     background-size: cover;
   }
-  #forside_some .some_text button {
-    font-size: 2rem;
+  #forside_some p {
+    font-family: "termina", sans-serif;
+    font-size: 1.5rem;
     padding: 3%;
+    font-weight: 700;
+    
+  }
+  #forside_some .platforme {
+    font-family: "sofia-pro", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
   }
  
      
@@ -616,6 +650,7 @@ get_header(); ?>
   <div class="column-left">
 		<div class="splash_text">
   		<h1 class="heading">GUM + <strong class="gum_type"><br>VITAMIN <br>BOOST</strong> </h1>
+      <p class="gum-info">Ét tyggegummi indeholder 25% af det anbefalede daglige indtag af 10 essentielle vitaminer: C, D, E, K, B1, B3, B6, B7, B9, B12.</p>
       <div class="splash_button">
         <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
         <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Abonnement</button>
@@ -639,7 +674,7 @@ get_header(); ?>
 <section id="sort_bar1">
 	<h2>NEXT GENERATION CHEWING GUM </h2>
 </section>
-<section id="intro">
+<section id="intro" class="max-width">
   <div class="intro_start">
   <h2>EACE GUM</h2>
   <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
@@ -687,7 +722,8 @@ get_header(); ?>
 </section>
 
 <section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
-     <button>@eace_gum</button></div>
+     <p>@eace_gum <br> <strong class="platforme">på alle platforme</strong></p>
+    </div>
     <div class="some">
      
     </div>
@@ -734,6 +770,7 @@ get_header(); ?>
 
   //vælger teksten
   const gumType = document.querySelector(".gum_type");
+  const gumInfo = document.querySelector(".gum-info");
 
 	/* konfigurer nedestående variabler efter behov */
 	//antallet af produkter som er vist på splashbilledet
@@ -779,19 +816,22 @@ get_header(); ?>
 
     //ændre teksten
     switch(theIndex) {
-      case "1":
+      case "1": //vitamin boost
         gumType.style.color = "#c4ad84";
         gumType.textContent = "\r\nVITAMIN\nBOOST";
+        gumInfo.textContent = "Ét tyggegummi indeholder 25% af det anbefalede daglige indtag af 10 essentielle vitaminer: C, D, E, K, B1, B3, B6, B7, B9, B12.";
         break;
       
-      case "2":
+      case "2": //healthy teeth
         gumType.style.color = "#449682";
         gumType.textContent = "\r\nHEALTHY\nTEETH";
+        gumInfo.textContent = "Eace Gum + Healthy Teeth er et fantastisk godt tyggegummi, som indeholder fluor og grøn te ekstrakt, der sikrer frisk ånde og sunde tænder.";
         break;
 
-      case "3":
+      case "3": //energy boost
         gumType.style.color = "#57abc9";
         gumType.textContent = "\r\nENERGY\nBOOST";
+        gumInfo.textContent = "Eace Gum + Energy Boost er et friskt tyggegummi, som indeholder koffein og B-vitaminer, der giver et øjeblikkeligt energi-tilskud.";
         break;
     }
   }

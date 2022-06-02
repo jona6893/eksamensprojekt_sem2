@@ -38,34 +38,33 @@ get_header(); ?>
     background-color: var(--lyse-blaa);
   }
 
-  #splash-image h1 {
+  #splash-image div {
     position: absolute;
-    bottom: 30vh;
-    left: 20%;
+    top: 40%;
+    left: 10%;
+    display: grid;
+    gap: 20px;
+  }
+
+  #splash-image div h1 {
     font-weight: 800;
     font-size: clamp(2.338rem, calc( 12px + 3.025vw ), 3.163rem);
-   
   }
-  #splash-image p {
-  position: absolute;
-    bottom: 20vh;
-    left: 20%;
+
+  #splash-image div p {
     font-size: 1rem;
     max-width: 40ch
-    
- }
+  }
 
   #filter-menu {
-    gap:30px;
+    gap: 30px;
     display: flex;
     justify-content: space-between;
     max-width: 500px;
-
   }
   
   .filter-btn {
     color: white;
-   /*  border: 1px var(--sort) solid; */
     background-color: var(--sort);
     padding: 8px 12px;
     width: 160px;
@@ -74,22 +73,20 @@ get_header(); ?>
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
-    border:none;
-    
+    border: none;
   }
+  
   .filter-btn:hover{
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
-    
+    /* border: 1px var(--sort) solid; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
   #produkter {
@@ -138,6 +135,7 @@ get_header(); ?>
     aspect-ratio: 8 / 7;
     width: 100%;
     background-size: cover;
+    cursor: pointer;
   }
 
   .produkt-hoverimage {
@@ -178,6 +176,7 @@ get_header(); ?>
     font-size: 0.75rem !important;
     margin-bottom: 2px;
     max-width: 60ch;
+    line-height: 0.9rem;
   }
 
   .pris {
@@ -373,14 +372,13 @@ get_header(); ?>
 
 
   dialog {
-    visibility: hidden;
-    display: grid;
+    display: none;
     grid-template-columns: calc(260px + 10vw) 40vw;
     gap: 16px;
     padding: 64px 16px 16px 16px;
     overflow-y: scroll;
     margin: auto;
-    border: 3px solid var(--sort);
+    border: none;
   }
 
   dialog::backdrop {
@@ -389,7 +387,7 @@ get_header(); ?>
   }
 
   dialog[open] {
-    visibility: visible;
+    display: grid;
   }
 
   .modal-image {
@@ -448,9 +446,11 @@ get_header(); ?>
   </template>
 
   <section id="splash-image">
-    <h1>SHOP</h1>
-    <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
-</section>
+    <div>
+      <h1>SHOP</h1>
+      <p>Shop vores forskellige varianter af tyggegummi og Eace merchandise af økologisk bomuld</p>
+    </div>
+  </section>
 
   <section id="filter-menu" class="max-width">
     <button class="filter-btn selected" data-category="alle">Alle</button>
@@ -581,7 +581,7 @@ get_header(); ?>
         clone.querySelector(".produkt-slogan").textContent = `${produkt.slogan}`;
         clone.querySelector(".produkt-beskrivelse").innerHTML = `${produkt.info}`;
         clone.querySelector(".pris").textContent = `${produkt.pris}`;
-        clone.querySelector("article").addEventListener("click", () => modalView(produkt)); //gør kortene klikbart og kalder på modalView med produkt som parameter
+        clone.querySelector(".produkt-image").addEventListener("click", () => modalView(produkt)); //gør kortene klikbart og kalder på modalView med produkt som parameter
         mainContent.appendChild(clone);
         visteProdukter = document.getElementById("produkter").childElementCount;
       }
