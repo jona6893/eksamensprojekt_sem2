@@ -69,9 +69,10 @@ get_header(); ?>
     position: relative;
     display: grid;
     place-items: center center;
-    width: 35%;
-    right: 5vw;
-    top: -10%;
+    width: 190px;
+    /* right: 5vw; */
+    /* top: -10%; */
+    bottom: -7.5%;
   }
 
   .product {
@@ -79,9 +80,9 @@ get_header(); ?>
     aspect-ratio: 64 / 120;
     background-color: black;
     width: 100%;
-    transform-origin: 40% 140%;
+    /* transform-origin: 40% 140%; */
     background-size: cover;
-    filter: brightness(0.4);
+    /* filter: brightness(0.4); */
     transition: transform 0.3s cubic-bezier(0.5, 1, 0.66, 1), width 0.3s cubic-bezier(0.5, 1, 0.66, 1), filter 0.3s cubic-bezier(0.5, 1, 0.66, 1);
   }
 
@@ -107,14 +108,25 @@ get_header(); ?>
     filter: brightness(1);
   }
 
+  [data-index="2"]::after {
+    content: "";
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/gum_pakke.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: translateY(-30%);
+    background-size: 100%;
+  }
+
   [data-index="2"] {
     z-index: 2;
-    transform: rotateZ(5deg);
+    transform: rotateZ(-15deg);
   }
 
   [data-index="3"] {
     z-index: 1;
-    transform: rotateZ(25deg);
+    transform: rotateZ(-15deg);
   }
 
   .fan-btn {
@@ -135,12 +147,14 @@ get_header(); ?>
   }
 
   .next {
-    right: 20px;
+    right: 12px;
   }
 
   .column-left {
     display: grid;
-    grid-template-rows: 2fr 6fr 1fr
+    grid-template-rows: 2fr 6fr 1fr;
+    max-height: 600px;
+    margin-block: auto;
   }
 
 	.splash_text{
@@ -178,7 +192,7 @@ get_header(); ?>
     #splash-section {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
-      height: 150vw;
+      height: 200vw;
     }
 
     .column-left {
@@ -186,24 +200,14 @@ get_header(); ?>
       grid-template-rows: 2fr 6fr 40vw;
     }
 
-    [data-index="1"] {
-      transform: rotateZ(-10deg);
+    .product-container {
+      width: calc(50% - 50px);
+      bottom: -25%;
     }
-
-    [data-index="3"] {
-      transform: rotateZ(20deg);
-    }
-
-    .product {
-      transform-origin: 35% 145%;
-    }
-
-    .product-container{
-      right: 7vw;
-    }
-
+    
     .se_mere {
-      bottom: -30vh;
+      /* bottom: -30vh; */
+      display: none;
     }
   }
 
@@ -297,11 +301,11 @@ get_header(); ?>
   }
 
   #sort_bar1 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar1.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/next_gen_1.svg");
   }
 
   #sort_bar2 {
-    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/sort_bar2.png");
+    background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/level_up.svg");
   }
 
  
@@ -329,7 +333,7 @@ get_header(); ?>
  
   #find_os h2 {
     text-align: center;
-    margin-bottom: 100px;
+    margin-top: 100px;
   } 
  
   #find_os .find_os_bar {
@@ -340,7 +344,7 @@ get_header(); ?>
     background-position: 50%;
     height: 50vh;
     width: 100%;
-    
+    background-color: white;
   }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
@@ -353,7 +357,7 @@ get_header(); ?>
   }
   #forside_blog h2 {
     text-align: center;
-    margin-bottom: 100px;
+    margin-block: 80px 20px;
   }
   #forside_blog .forside_hand {
     display: grid;
@@ -402,12 +406,12 @@ get_header(); ?>
   /* -------------------- DESKTOP -------------------- */
 
   @media (min-width: 800px) {
-    .previous {
-    left: -15px;
+  .previous {
+    /* left: -15px; */
   }
 
   .next {
-    right: 55px;
+    /* right: 55px; */
   }
     #sort_bar1, #sort_bar2{
       height: 400px;
@@ -454,7 +458,8 @@ get_header(); ?>
   } 
   #find_os .find_os_bar {
     background-attachment: fixed;
-    box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset;
+    /* box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset; */
+    background-color: white;
   }
   #forside_blog .seneste_artikler {
     width: 500px;
@@ -646,7 +651,7 @@ get_header(); ?>
 	</style>
 
 <main>
-<section id="splash-section">
+<section id="splash-section" class="max-width">
   <div class="column-left">
 		<div class="splash_text">
   		<h1 class="heading">GUM + <strong class="gum_type"><br>VITAMIN <br>BOOST</strong> </h1>
