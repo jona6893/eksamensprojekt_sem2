@@ -98,8 +98,8 @@ get_header(); ?>
         height: 100%;
         justify-items: center;
         gap: 20px;
-        padding-right: 15%;
-        padding-left: 15%;
+        padding-right: 7%;
+        padding-left: 7%;
         padding-bottom: 4%;
         padding-top: 4%;
 }
@@ -138,7 +138,7 @@ get_header(); ?>
     justify-items: center;
 
 	}
-	#sort_bar1 h1{
+	#sort_bar1 h2{
     font-family: "adrianna", sans-serif;
 		font-size: 5rem;
     font-weight: 800;
@@ -391,23 +391,23 @@ get_header(); ?>
   </section>
 
   <section id="sort_bar1">
-	<h1>PUT YOUR MIND AT EACE</h1>
+	<h2>PUT YOUR MIND AT EACE</h2>
 
 </section>
 
   <section id="second_section" class="max-width">
-    <h1>Blog indlæg</h1>
+    <h2>Blog indlæg</h2>
     <div class="blogpost1">
     <div class="blogpost-container">
       <div class="grid">
       <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_032.png?_t=1654080646" alt="blogbillede1">
       <div class="tekstogknap">
-      <h2>ALT OM ENERGY BOOST</h2>
+      <h3>ALT OM ENERGY BOOST</h3>
      <p>Energy Boost var det andet produkt Eace Gum lancerede. Det kom ud i december 2021, lidt over et år efter Vitamin Boost landede i butikkerne. Det er på rekordtid blevet et meget populært tyggegummi og ligger i butikkerne landet over. Her på siden kan du læse alt der er værd at vide om Energy Boost!  Idéen til Energy Boost…</p>
      <div class="lilletekstogknap">
      <p class="lilletekst">Shopify API <br> maj 12, 2022 <br> 0 kommentarer</p>
     <div class="knapper">
-        <button class="knapper knap1">LÆS MERE</button>
+        <button onclick="window.location.href='https://eacegum.com/blogs/blogindlaeg/alt-om-energy-boost';" class="knapper knap1">LÆS MERE</button>
         </div>
         </div>
         </div>
@@ -422,12 +422,12 @@ get_header(); ?>
       <div class="grid">
       <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_051.png?_t=1654080646" alt="blogbillede2">
      <div class="tekstogknap">
-     <h2>Eace Sommerfest</h2>
+     <h3>Eace Sommerfest</h3>
       <p>Eace Gum inviterer til årets første og fedeste sommerfest! Vi skyder sommeren igang, fejrer at vi igen kan mødes under normale omstændigheder og byder på en aften med live musik, events, festlig stemning under åben himmel, mad og kolde drinks samt dj til langt ud på natten.</p>
      <div class="lilletekstogknap">
      <p class="lilletekst">Shopify API <br> maj 04, 2022 <br> 0 kommentarer</p>
     <div class="knapper">
-        <button class="knapper knap1">LÆS MERE</button>
+        <button onclick="window.location.href='https://eacegum.com/blogs/blogindlaeg/eace-sommerfest';" class="knapper knap1">LÆS MERE</button>
         </div>
         </div>
       </div>
@@ -442,12 +442,12 @@ get_header(); ?>
       <div class="grid">
       <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_046.png?_t=1654080646" alt="blogbillede3">
       <div class="tekstogknap">
-      <h2>NEXT GENERATION MERCH</h2>
+      <h3>NEXT GENERATION MERCH</h3>
       <p>Vi er next generation chewing gum. Nu har vi lavet next generation merch. I samarbejde med Neutral har vi lavet en bæredygtigt merch kollektion i høj kvalitet. Læs meget mere om vores merch kollektion i dette blogindlæg.</p>
      <div class="lilletekstogknap">
      <p class="lilletekst">Shopify API <br> december 17, 2021<br> 0 kommentarer</p>
     <div class="knapper">
-        <button class="knapper knap1">LÆS MERE</button>
+        <button onclick="window.location.href='https://eacegum.com/blogs/blogindlaeg/next-generation-merch';" class="knapper knap1">LÆS MERE</button>
         </div>
         </div>
       </div>
