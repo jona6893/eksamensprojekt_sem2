@@ -66,13 +66,12 @@ get_header(); ?>
 .parallax-seti{
     height: 500px;
     width: 100%;
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/seti.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/seti.webp);
     background-size: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: white;
-    filter: invert(1);
 }
 
 .seti{
