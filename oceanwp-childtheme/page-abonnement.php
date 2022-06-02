@@ -84,8 +84,7 @@ get_header(); ?>
   /* filtrerings knappers udseende */
   .filter-btn {
     color: white;
-    /* border: 1px var(--sort) solid; */
-    background-color:var(--sort) ;
+    background-color: var(--sort);
     padding: 8px 12px;
     width: 160px;
     text-align: center;
@@ -93,21 +92,20 @@ get_header(); ?>
     display: inline-block;
     font-size: 0.875rem;
     transition: color 0.2s, background-color 0.2s;
-    border:none;
-    
-  } 
+    border: none;
+  }
+  
   .filter-btn:hover{
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
   .filter-btn.selected {
     color: var(--sort);
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border:none;
+    /* border: 1px var(--sort) solid; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
 
 
@@ -403,15 +401,14 @@ get_header(); ?>
 
 
 }
- dialog {
-    visibility: hidden;
-    display: grid;
+  dialog {
+    display: none;
     grid-template-columns: calc(260px + 10vw) 40vw;
     gap: 16px;
     padding: 64px 16px 16px 16px;
     overflow-y: scroll;
     margin: auto;
-    border:none;
+    border: none;
   }
 
   dialog::backdrop {
@@ -420,7 +417,7 @@ get_header(); ?>
   }
 /*kun synlig når den er åben*/
   dialog[open] {
-    visibility: visible;
+    display: grid;
   }
 
   .modal-image {
@@ -428,8 +425,7 @@ get_header(); ?>
     aspect-ratio: 566 / 1082;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-inline:auto;
-    
+    margin-inline: auto;
   }
 
   
@@ -698,6 +694,7 @@ function tilføjTal(minus, plus, tal, overskrift) {
     // hvert element i en array har et index.
     plus.forEach((e, i) => {
         e.addEventListener("click", () => {
+          if (total < 12) {
             // tilføjer et til det objekt i counter der er = "i", altså dens index number.
             counter[i]++
             // bruger textCentent til at sætte det ind i html, på den måde ændres værdien på siden. "${}" bruger til at lave en integer om til en string.
@@ -730,38 +727,40 @@ function tilføjTal(minus, plus, tal, overskrift) {
             makeP.textContent = `${overskrift[i].innerText} ${counter[i]}`
             oversigt.appendChild(makeP)
             }
+          }
         })
     })
 
     // denne forEach funktion gør det samme som for oven, den fjerner bare et tal med "counter--" i stedet for "counter++"
     minus.forEach((e, i) => {
         e.addEventListener("click", () => {
-            counter[i]--
-            tal[i].textContent = `${counter[i]}`;
-            
-            /* Tæller det totale valg af pakker */
-            total = 0
-            allePriser = []
-            allePriser = Array.from(document.querySelectorAll(".add-tal"))
-            allePriser.forEach(e => {
-            total += parseInt(e.innerText)
-            })
-            console.log("Total = " + total)
-            document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
-            console.log(tal[i]) 
-            
-            if (tal[i].innerText == 0) {
-              console.log("tallet er 0")
-              document.querySelector(`.titel${[i]}`).remove()
-              /* document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}` */
+            if (tal[i].innerText > "0") {
+              counter[i]--
+              tal[i].textContent = `${counter[i]}`;
+              /* Tæller det totale valg af pakker */
 
-            } else if (tal[i].innerText >= 1){
-              console.log("tallet er større end 0")
-              document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
-            } else {
-              console.log("der er noget some ikke virker")
+              total = 0
+              allePriser = []
+              allePriser = Array.from(document.querySelectorAll(".add-tal"))
+              allePriser.forEach(e => {
+              total += parseInt(e.innerText)
+              })
+              console.log("Total = " + total)
+              document.querySelector(".total").innerText = `PAKKER I ALT: ${total}`
+              console.log(tal[i]) 
+              
+              if (tal[i].innerText == 0) {
+                console.log("tallet er 0")
+                document.querySelector(`.titel${[i]}`).remove()
+                /* document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}` */
+
+              } else if (tal[i].innerText >= 1){
+                console.log("tallet er større end 0")
+                document.querySelector(`.titel${[i]}`).innerText = `${overskrift[i].innerText} ${tal[i].innerText}`
+              } else {
+                console.log("der er noget some ikke virker")
+              }
             }
-
         })
     })
   
