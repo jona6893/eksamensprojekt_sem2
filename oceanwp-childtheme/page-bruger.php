@@ -12,7 +12,7 @@ get_header(); ?>
 
 <style>
   body {
-    background-color: #FFFDFC;
+    background-color: #FFFDFC !important;
   }
   
   /* -------------------- MOBILE -------------------- */
