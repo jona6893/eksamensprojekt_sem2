@@ -252,6 +252,8 @@ get_header(); ?>
       grid-row: 3/4;
       box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     }
+
+  
 /*------------- anden sektion ------------*/
 #second_section {
   display: grid;
@@ -360,7 +362,7 @@ get_header(); ?>
 
 <main id="main-content">
 
-<section id="first_section">
+<section id="first_section" class="max-width">
 <h1>EACE BLOG</h1>
     <div class="laeseom">
     <div class="laeseom-container">
@@ -375,7 +377,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="image-container">
-<img class="grid1" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid1.png?_t=1653994813" alt="grid1">
+  <img class="grid1" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid1.png?_t=1653994813" alt="grid1">
 <img class="grid2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid2.png?_t=1653994776" alt="grid2">
 <img class="grid3" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid3.png?_t=1653994776" alt="grid3">
 <img class="grid4" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid4.png?_t=1653994776" alt="grid4">
@@ -393,7 +395,7 @@ get_header(); ?>
 
 </section>
 
-  <section id="second_section">
+  <section id="second_section" class="max-width">
     <h1>Blog indlæg</h1>
     <div class="blogpost1">
     <div class="blogpost-container">
@@ -414,7 +416,7 @@ get_header(); ?>
     </div>
   </section>
 
-  <section id="third_section">
+  <section id="third_section" class="max-width">
     <div class="blogpost2">
     <div class="blogpost-container">
       <div class="grid">
@@ -434,12 +436,12 @@ get_header(); ?>
   </div>
   </section>
 
-  <section id="fourth_section">
+  <section id="fourth_section" class="max-width">
     <div class="blogpost3">
     <div class="blogpost-container">
       <div class="grid">
       <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_046.png?_t=1654080646" alt="blogbillede3">
-      <div class="tekstog knap">
+      <div class="tekstogknap">
       <h2>NEXT GENERATION MERCH</h2>
       <p>Vi er next generation chewing gum. Nu har vi lavet next generation merch. I samarbejde med Neutral har vi lavet en bæredygtigt merch kollektion i høj kvalitet. Læs meget mere om vores merch kollektion i dette blogindlæg.</p>
      <div class="lilletekstogknap">
