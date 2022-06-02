@@ -66,12 +66,13 @@ get_header(); ?>
 .parallax-seti{
     height: 500px;
     width: 100%;
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/seti.webp);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/butikker.png);
     background-size: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: white;
+    filter: invert(1);
 }
 
 .seti{
@@ -114,7 +115,7 @@ get_header(); ?>
 </section>
 
 <section id="section3">
-    <h2>Set i</h2>
+   <!--  <h2>Set i</h2> -->
     <div class="parallax-seti">
     </div>
 </section>

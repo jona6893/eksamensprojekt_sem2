@@ -675,7 +675,7 @@ get_header(); ?>
 </section>
   
 
-<section class="streger"></section>
+<section class="streger">
 <section id="sort_bar1">
 	<h2>NEXT GENERATION CHEWING GUM </h2>
 </section>
@@ -722,10 +722,11 @@ get_header(); ?>
   </div>
   </div>
 </section>
+
 <section id="sort_bar2">
 	<h2>"WHEN YOU NEED TO <strong class="level">LEVEL</strong> UP"</h2>
 </section>
-
+</section>
 <section id="forside_some"><div class="some_text"><h2>FØLG OS PÅ SOCIALE MEDIER</h2>
      <p>@eace_gum <br> <strong class="platforme">på alle platforme</strong></p>
     </div>
