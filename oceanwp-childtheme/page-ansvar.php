@@ -167,7 +167,7 @@ get_header(); ?>
         display: grid;
         grid-template-columns: 1fr 0.5fr 0.1fr;
         grid-template-rows: 1fr;
-        justify-items: end;
+        justify-items: center;
         align-items: center;
       }
       .overskrift4 {
