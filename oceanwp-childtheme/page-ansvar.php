@@ -173,7 +173,7 @@ get_header(); ?>
       .overskrift4 {
         display: grid;
         z-index: 2;
-        grid-column: 1/3;
+        grid-column: 2/3;
         grid-row: 1/3;
         background-color: white;
         justify-items: start;

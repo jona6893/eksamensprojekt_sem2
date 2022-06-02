@@ -30,7 +30,6 @@ get_header(); ?>
         display:grid;
         grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
         gap: 50px;
-        padding: 0% 11%;
         align-items: center;
     justify-items: center;
     }
@@ -65,13 +64,15 @@ get_header(); ?>
     justify-items: center;
 }
 .parallax-seti{
-    height: 250px;
+    height: 500px;
     width: 100%;
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/seti.png);
     background-size: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50%;
+    background-color: white;
+    filter: invert(1);
 }
 
 .seti{

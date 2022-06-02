@@ -56,7 +56,7 @@ font-style: normal; */
 html {
   font-size: 100% !important;
   letter-spacing: 0.1px;
-  background-color: black;
+  background-color: #F2F2F2;
   scroll-behavior: smooth;
 }
 
