@@ -208,7 +208,29 @@ get_header(); ?>
       .mobil-video{
         display:none;
       }
-
+      .popup-video{
+        display:none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        top: 0%;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: auto;
+        backdrop-filter: blur(8px);
+        margin: auto;
+      }
+      .popup-video iframe{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 25%;
+      }
+      .popup-video button{
+        /* position: absolute;
+        top: 19%;
+        left: 77%; */
+      }
     /* ---------- SME CLIMATE HUB ---------- */
       #subject5{
         display:grid;
@@ -479,7 +501,7 @@ get_header(); ?>
     <br><br>Kollektionen består af tre produkter: Hoodie, T-shirt og totebag. Alle tre produkter er med et simpelt design og citater, der udtrykker vores værdier.
 
     <br><br>Vi ønsker at vores merch produkter er i orden for alle. For vores planet. Landmænd. Arbejdere. Og for alle jer. Derfor er alle vores produkter fremstillet og certificeret ifølge de højeste miljømæssige, sociale og etiske standarder i verden!</p>
-    <button>KØB NU</button>
+    <button onclick="window.location.href='https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/';">KØB NU</button>
   </div>
   </div>
   <div id="subject4">
@@ -492,7 +514,7 @@ get_header(); ?>
     <br><br>Vores Weekend Getaway kampagne handler netop om at sætte fokus på dette. 
     Du kan se kampagnen nedenfor.
     </p>
-    <button>SE VIDEO</button>
+    <button onclick="window.location.href='https://vimeo.com/497241068';">SE VIDEO</button>
   </div>
   <div class="video_container">
     <img class="mobil-video" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/ezgif.com-gif-maker.gif" alt="Gif af 2 kvinder med tyggegummi og blomster">
@@ -517,6 +539,14 @@ get_header(); ?>
 </main>
 <script>
     
+ /*    function videopopup() {
+      console.log("clicked")
+      document.querySelector(".popup-video").style.display = "block"
+    }
+    document.querySelector(".popup-video").addEventListener("click", () =>{
+      console.log("popup click")
+      document.querySelector(".popup-video").style.display = "none"
+    }) */
 </script>
 
 <?php get_footer(); ?>
