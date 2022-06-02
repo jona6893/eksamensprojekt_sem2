@@ -337,7 +337,7 @@ get_header(); ?>
   } 
  
   #find_os .find_os_bar {
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/butikker.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/butikker.png);
     background-size: 75%;
     background-attachment: revert;
     background-repeat: no-repeat;
@@ -692,7 +692,7 @@ get_header(); ?>
   </div>  
 </section>
 <section id="find_os">
-  <h2>Find Os Her</h2>
+  <!-- <h2>Find Os Her</h2> -->
   <div class="find_os_bar"></div>
 </section>
 
