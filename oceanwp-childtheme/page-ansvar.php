@@ -94,7 +94,7 @@ get_header(); ?>
         transition: 0.3s;
       }
       .fngoals div:hover{
-        box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+        /* box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px; */
         transform: scale(1.05);
       }
       .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
