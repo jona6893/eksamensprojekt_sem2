@@ -450,22 +450,22 @@ get_header(); ?>
     </div>
     <div class="fngoals">
       <div class="goal_one">
-      <a href=""><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3"></a>
+      <a href="https://www.verdensmaalene.dk/maal/3"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3"></a>
       </div>
       <div class="goal_two">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5">
+      <a href="https://www.verdensmaalene.dk/maal/5"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5"></a>
       </div>
       <div class="goal_three">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_12.svg" alt="maal12">
+      <a href="https://www.verdensmaalene.dk/maal/12"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_12.svg" alt="maal12"></a>
       </div>
       <div class="goal_fouth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_13.svg" alt="maal13">
+      <a href="https://www.verdensmaalene.dk/maal/13"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_13.svg" alt="maal13"></a>
       </div>
       <div class="goal_fith">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_15.svg" alt="maal15">
+      <a href="https://www.verdensmaalene.dk/maal/15"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_15.svg" alt="maal15"></a>
       </div>
       <div class="goal_sixth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_16.svg" alt="maal16">
+      <a href="https://www.verdensmaalene.dk/maal/16"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_16.svg" alt="maal16"></a>
       </div>
     </div>
   </div>
