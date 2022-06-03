@@ -543,7 +543,7 @@ get_header(); ?>
       <br><br>SME Climate Hub er et banebrydende globalt initiativ, fra International Chamber of Commerce, Exponential Roadmap Initiative, We Mean Business coalition og United Nations Race to Zero</p>
   </div>
   <div class="sub5_img">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/sme.png?_t=1654079705" alt="">
+    <a href="https://smeclimatehub.org/"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/sme.png?_t=1654079705" alt=""></a>
   </div>
   </div>
 
