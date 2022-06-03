@@ -90,6 +90,13 @@ get_header(); ?>
         font-size: clamp(0.750rem, calc( 12px + 0.600vw ), 0.900rem);
         line-height: 1.1;
       }
+      .fngoals div{
+        transition: 0.3s;
+      }
+      .fngoals div:hover{
+        /* box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px; */
+        transform: scale(1.05);
+      }
       .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
           display: grid;
           justify-items: center;
@@ -131,10 +138,18 @@ get_header(); ?>
       .sub2_imgs{
         display: grid;
         justify-items: center;
+        align-items: center;
         width: 100%;
+        height:100%;
       }
       .sub2_imgs img{
         width:50%;
+      }
+      p{
+        margin-bottom:25px;
+      }
+      h4{
+        margin-bottom: 10px;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
@@ -442,22 +457,22 @@ get_header(); ?>
     </div>
     <div class="fngoals">
       <div class="goal_one">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3">
+      <a href="https://www.verdensmaalene.dk/maal/3"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3"></a>
       </div>
       <div class="goal_two">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5">
+      <a href="https://www.verdensmaalene.dk/maal/5"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5"></a>
       </div>
       <div class="goal_three">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_12.svg" alt="maal12">
+      <a href="https://www.verdensmaalene.dk/maal/12"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_12.svg" alt="maal12"></a>
       </div>
       <div class="goal_fouth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_13.svg" alt="maal13">
+      <a href="https://www.verdensmaalene.dk/maal/13"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_13.svg" alt="maal13"></a>
       </div>
       <div class="goal_fith">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_15.svg" alt="maal15">
+      <a href="https://www.verdensmaalene.dk/maal/15"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_15.svg" alt="maal15"></a>
       </div>
       <div class="goal_sixth">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_16.svg" alt="maal16">
+      <a href="https://www.verdensmaalene.dk/maal/16"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_16.svg" alt="maal16"></a>
       </div>
     </div>
   </div>
@@ -528,7 +543,7 @@ get_header(); ?>
       <br><br>SME Climate Hub er et banebrydende globalt initiativ, fra International Chamber of Commerce, Exponential Roadmap Initiative, We Mean Business coalition og United Nations Race to Zero</p>
   </div>
   <div class="sub5_img">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/sme.png?_t=1654079705" alt="">
+    <a href="https://smeclimatehub.org/"><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/sme.png?_t=1654079705" alt=""></a>
   </div>
   </div>
 

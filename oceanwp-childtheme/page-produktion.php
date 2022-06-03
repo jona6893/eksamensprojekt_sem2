@@ -165,12 +165,19 @@ button{
     }
     
     .imagecontainer-d {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    width: 80%;
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
     }
-
+    h4{
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 25px;
+    }
     
 }
 
