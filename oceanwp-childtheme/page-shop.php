@@ -388,6 +388,11 @@ get_header(); ?>
 
   dialog[open] {
     display: grid;
+    animation-name: open-dialog;
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.4, 1.5, 0.6, 1);
   }
 
   .modal-image {
@@ -437,6 +442,16 @@ get_header(); ?>
 
     dialog form {
       grid-column: 1 / 2;
+    }
+  }
+
+  @keyframes open-dialog {
+    0%{
+      transform: scale(0);
+    }
+
+    100%{
+      transform: scale(1);
     }
   }
 
