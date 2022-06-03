@@ -90,6 +90,13 @@ get_header(); ?>
         font-size: clamp(0.750rem, calc( 12px + 0.600vw ), 0.900rem);
         line-height: 1.1;
       }
+      .fngoals div{
+        transition: 0.3s;
+      }
+      .fngoals div:hover{
+        box-shadow: rgb(0 0 0 / 10%) -4px 9px 25px -6px;
+        transform: scale(1.05);
+      }
       .goal_one, .goal_two, .goal_three, .goal_fouth, .goal_fith, .goal_sixth{
           display: grid;
           justify-items: center;
