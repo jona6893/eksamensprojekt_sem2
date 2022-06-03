@@ -261,8 +261,6 @@ get_header(); ?>
         height: 100%;
         justify-items: center;
         gap: 20px;
-        padding-right: 15%;
-        padding-left: 15%;
         padding-bottom: 4%;
         padding-top: 4%;
 }
@@ -280,8 +278,6 @@ get_header(); ?>
         height: 100%;
         justify-items: center;
         gap: 20px;
-        padding-right: 15%;
-        padding-left: 15%;
         padding-bottom: 4%;
 }
 /*------------- fourth sektion ------------*/
@@ -291,8 +287,6 @@ get_header(); ?>
         height: 100%;
         justify-items: center;
         gap: 20px;
-        padding-right: 15%;
-        padding-left: 15%;
         padding-bottom: 4%;
 }
 #blogbillede{
@@ -338,6 +332,7 @@ get_header(); ?>
     font-weight: normal;
     font-size: 1rem;
     font-size: clamp(0rem, 0.5rem + 0.25vw, 1.25rem);
+    line-height: 1rem;
 }
 /* -------------------- DEn SORTE BAR -------------------- */
 #sort_bar1{
