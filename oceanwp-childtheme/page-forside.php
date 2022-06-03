@@ -673,7 +673,9 @@ get_header(); ?>
   .testimonial-container > * {
     margin: 0;
   }
-
+.musover{
+  cursor: pointer;
+}
 	</style>
 
 <main>
@@ -733,18 +735,18 @@ get_header(); ?>
   <h2>BLOGINDLÆG</h2>
   <div class="forside_blog_indhold">
   <div class="seneste_artikler">
-    <h3>Seneste Artikler</h3>
+    <h3>Seneste Blogindlæg</h3>
     <hr>
-    <h4>Alt om Energi Boost</h4>
+    <h4 class="musover" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/blog/";'>Alt om Energi Boost</h4>
     <p>Maj 12, 2022</p>
     <hr>
-    <h4>Eace Sommerfest</h4>
+    <h4 class="musover" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/blog/";'>Eace Sommerfest</h4>
     <p>Maj 04, 2022</p>
     <hr>
-    <h4>NEXT GENERATION MERCH</h4>
+    <h4 class="musover" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/blog/";'>NEXT GENERATION MERCH</h4>
     <p>December 17, 2021</p>
     <hr>
-    <h4>EN LILLE HJÆLP I JULEDAGENE</h4>
+    <h4 class="musover" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/blog/";'>EN LILLE HJÆLP I JULEDAGENE</h4>
     <p>December 07, 2021</p>
     <hr>
   </div>
