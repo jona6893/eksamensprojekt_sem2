@@ -428,13 +428,12 @@ get_header(); ?>
     grid-template-columns: 1fr 1fr;
     max-width: 100%;
     margin: auto;
-    gap: 60px;
     align-items: center;
     justify-items: center;
   }
   #intro .intro_start {
     text-align:center;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   #intro .intro_om_os img {
     grid-column: 1/2;
@@ -442,6 +441,11 @@ get_header(); ?>
     justify-content: right;
     
   }
+
+  .pernille2{
+    width: 90%;
+  }
+
   #intro {
     display: grid;
     justify-items: center;
@@ -449,10 +453,28 @@ get_header(); ?>
     width: 100%;
 }
   #intro .intro_om_os_text {
-    grid-column:2/3;
-    max-width: 400px;
-
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
   }
+  .omos{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .citat{
+    text-align: center;
+    font-style: italic; 
+    padding-top: 10%;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    max-width
+  }
+  .citat h3{
+  font-style: italic; 
+}
+
   #intro .intro_start h2 {
     font-size: 5rem;
   }
@@ -688,11 +710,15 @@ get_header(); ?>
   <h2>EACE GUM</h2>
   <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
   <div class="intro_om_os">
-  <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
+  <img class="pernille2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
   <div class="intro_om_os_text">
+    <div class="omos">
   <h2>Om Os</h2>
   <p>Vi er tyggegummi eksperter. Vi laver danskproduceret kvalitetstyggegummi, der kan meget mere end bare at smage ekstremt godt og give frisk ånde. Eace Gum indeholder nemlig samtidig funktioner for sundhed og velvære. Vi vil nemlig være en hjælpende hånd, som styrker dig i hverdagen, lige meget hvad du står overfor.</p>
-  <h3 class="citat">"Jeg har altid vitamin tyggegummi fra Eace liggende i min taske" <br> - Pernille Blume</h3>
+</div>
+<div class="citat">
+<h3>"Jeg har altid vitamin tyggegummi fra Eace liggende i min taske" <br> <br> - Pernille Blume</h3>
+</div>
 </div>
   </div>  
 </section>
