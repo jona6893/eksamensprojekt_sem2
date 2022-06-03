@@ -404,8 +404,8 @@ get_header(); ?>
   dialog {
     display: none;
     grid-template-columns: calc(260px + 10vw) 40vw;
-    gap: 16px;
-    padding: 64px 16px 16px 16px;
+    gap: 0 16px;
+    /* padding: 64px 16px 16px 16px; */
     overflow-y: scroll;
     margin: auto;
     border: none;
@@ -426,35 +426,48 @@ get_header(); ?>
     background-size: cover;
     background-repeat: no-repeat;
     margin-inline: auto;
+    position: sticky;
+    top: 48px;
+
   }
 
-  
+  .left-column, .right-column {
+    padding: 0 16px;
+  }  
 
-/*modal/single view til mobil*/
 
-  @media (max-width: 768px) {
-    dialog {
-      grid-template-rows: 1fr auto;
-      grid-template-columns: 1fr;
-    }
-    .modal-image {
-    width: 30%;
-    margin-inline:auto;
-  }
-  }
 /*container til knappen (krydset)*/
   dialog form {
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     background-color: white;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    grid-column: span 2;
   }
 /*knappens (krydset) højte  */
   #close {
     height: 48px;
+  }
+
+/*modal/single view til mobil*/
+
+@media (max-width: 768px) {
+    dialog {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+      gap: 16px
+    }
+
+    .modal-image {
+    width: 30%;
+    margin-inline:auto;
+    position: static;
+    }
+
+    dialog form {
+      grid-column: 1 / 2;
+    }
   }
 
 </style>
@@ -659,6 +672,9 @@ get_header(); ?>
     }
 
     modal.showModal(); //viser pop up
+    document.addEventListener("click", function(event) {
+      if (event.target == modal) modal.close(); //lukker pop up når man klikker uden for den
+    });
   }
    
 
