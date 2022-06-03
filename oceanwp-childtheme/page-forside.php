@@ -344,7 +344,7 @@ get_header(); ?>
     background-position: 50%;
     height: 50vh;
     width: 100%;
-    background-color: white;
+    background-color: black;
   }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
@@ -459,7 +459,7 @@ get_header(); ?>
   #find_os .find_os_bar {
     background-attachment: fixed;
     /* box-shadow: rgb(0 0 0 / 24%) 0px 0px 9px inset; */
-    background-color: white;
+    background-color: black;
   }
   #forside_blog .seneste_artikler {
     width: 500px;
