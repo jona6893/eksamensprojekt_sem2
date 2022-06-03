@@ -132,7 +132,9 @@ get_header(); ?>
             grid-row: 1/2;
             text-align: end;
         } 
-
+        .remove{
+            cursor: pointer;
+        }
         
         
         
