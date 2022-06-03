@@ -337,7 +337,7 @@ get_header(); ?>
   } 
  
   #find_os .find_os_bar {
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/butikker.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/seti_1.png);
     background-size: 75%;
     background-attachment: revert;
     background-repeat: no-repeat;
