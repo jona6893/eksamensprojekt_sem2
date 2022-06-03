@@ -329,6 +329,10 @@ get_header(); ?>
   #intro .intro_start h2 {
     font-size: 4rem;
   }
+  .citat{
+    text-align: center;
+    padding-top: 5%;
+  }
      /* -------------------- FIND OS HER SEKTION -------------------- */
  
   #find_os h2 {
@@ -688,6 +692,7 @@ get_header(); ?>
   <div class="intro_om_os_text">
   <h2>Om Os</h2>
   <p>Vi er tyggegummi eksperter. Vi laver danskproduceret kvalitetstyggegummi, der kan meget mere end bare at smage ekstremt godt og give frisk ånde. Eace Gum indeholder nemlig samtidig funktioner for sundhed og velvære. Vi vil nemlig være en hjælpende hånd, som styrker dig i hverdagen, lige meget hvad du står overfor.</p>
+  <h3 class="citat">"Jeg har altid vitamin tyggegummi fra Eace liggende i min taske" <br> - Pernille Blume</h3>
 </div>
   </div>  
 </section>
