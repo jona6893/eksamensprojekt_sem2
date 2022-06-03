@@ -374,8 +374,8 @@ get_header(); ?>
   dialog {
     display: none;
     grid-template-columns: calc(260px + 10vw) 40vw;
-    gap: 16px;
-    padding: 64px 24px 16px 16px;
+    gap: 0 16px;
+    /* padding: 64px 24px 16px 16px; */
     overflow-y: scroll;
     margin: auto;
     border: none;
@@ -395,6 +395,8 @@ get_header(); ?>
     aspect-ratio: 1 / 1;
     background-size: cover;
     background-repeat: no-repeat;
+    position: sticky;
+    top: 48px;
   }
 
   dialog h3 {
@@ -405,25 +407,37 @@ get_header(); ?>
     padding-bottom: 24px;
   }
 
-  @media (max-width: 768px) {
-    dialog {
-      grid-template-rows: 1fr auto;
-      grid-template-columns: 1fr;
-    }
+  .left-column, .right-column {
+    padding: 0 16px;
   }
 
   dialog form {
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     background-color: white;
     display: flex;
     flex-direction: row;
+    grid-column: span 2;
   }
 
   #close {
     height: 48px;
+  }
+
+  @media (max-width: 768px) {
+    dialog {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+      gap: 16px
+    }
+
+    .modal-image {
+      position: static;
+    }
+
+    dialog form {
+      grid-column: 1 / 2;
+    }
   }
 
 </style>
