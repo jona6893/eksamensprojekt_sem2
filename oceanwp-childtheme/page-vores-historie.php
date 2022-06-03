@@ -12,7 +12,10 @@ get_header(); ?>
 
 <style>
     body{background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/streger4-1.png);
-        background-size: cover;}
+        background-size: cover;
+        background-color: #fffdfc;
+    }
+
 /* -------------------- MOBILE -------------------- */
 /* ---------- SECTION1 ---------- */
     #section1{
@@ -66,13 +69,12 @@ get_header(); ?>
 .parallax-seti{
     height: 500px;
     width: 100%;
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/butikker.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/seti.png?_t=1654246478);
     background-size: 80%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-color: white;
-    filter: invert(1);
+    background-color: var(--sort);
 }
 
 .seti{

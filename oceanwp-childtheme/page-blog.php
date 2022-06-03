@@ -339,21 +339,44 @@ get_header(); ?>
     font-size: 1rem;
     font-size: clamp(0rem, 0.5rem + 0.25vw, 1.25rem);
 }
+/* -------------------- DEn SORTE BAR -------------------- */
 #sort_bar1{
-		background-color:black;
-    height: 203px;
+		background-color: var(--sort);
+		height: 300px;
 		display: grid;
 		align-items: center;
     justify-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+	}
 
-	}
-	#sort_bar1 h1{
+	#sort_bar1 h2, #sort_bar2 h2{
     font-family: "adrianna", sans-serif;
-		font-size: 5rem;
     font-weight: 800;
-  font-style: normal;
+    font-style: normal;
 		color:white;
-	}
+		font-size: 1.3rem;
+    visibility: hidden;
+	}  
+
+  .eace {
+    font-family: "adrianna", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #A2D8E5;
+  }
+
+  #sort_bar1{
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+  }
+
+  #sort_bar1{
+  background-image: url("https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/blogbar.svg")
+}
 }
   
 
@@ -391,7 +414,7 @@ get_header(); ?>
   </section>
 
   <section id="sort_bar1">
-	<h2>PUT YOUR MIND AT EACE</h2>
+	<h2>PUT YOUR MIND AT<strong class="eace"> EACE</strong> </h2>
 
 </section>
 
