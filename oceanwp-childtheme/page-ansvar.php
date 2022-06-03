@@ -131,10 +131,18 @@ get_header(); ?>
       .sub2_imgs{
         display: grid;
         justify-items: center;
+        align-items: center;
         width: 100%;
+        height:100%;
       }
       .sub2_imgs img{
         width:50%;
+      }
+      p{
+        margin-bottom:25px;
+      }
+      h4{
+        margin-bottom: 10px;
       }
     /* ---------- BÆREDYGTIGT MERCH ---------- */
       #subject3{
@@ -442,7 +450,7 @@ get_header(); ?>
     </div>
     <div class="fngoals">
       <div class="goal_one">
-      <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3">
+      <a href=""><img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_3.svg" alt="maal3"></a>
       </div>
       <div class="goal_two">
       <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/vm_5.svg" alt="maal5">
