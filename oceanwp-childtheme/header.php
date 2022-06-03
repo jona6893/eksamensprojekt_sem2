@@ -39,7 +39,6 @@ header {
     width: 100%;
     top:0;
     transition: 0.2s;
-    color: #FFFDFC;
 }
 
 header img {
