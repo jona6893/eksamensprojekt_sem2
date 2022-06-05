@@ -289,6 +289,7 @@ get_header(); ?>
 <main>
 
     <section id="first_section" class="max-width">
+        <h1>KURV</h1>
         <div class="trin">
             <p><strong>Step 1:</strong> Kurv</p>
             <p><strong>Step 2:</strong> Adresse</p>
