@@ -373,7 +373,7 @@ get_header(); ?>
   }
   
   #forside_some .some {
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/43-1-scaled.webp);
     background-size: cover;
     background-position: 100% 20%;
     height: 90vh;
@@ -525,7 +525,7 @@ get_header(); ?>
     align-items: center;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/43.png);
+    background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/43-1-scaled.webp);
     background-size: cover;
   }
   #forside_some p {
@@ -712,7 +712,7 @@ get_header(); ?>
   <h2>EACE GUM</h2>
   <p>Tyggegummi med funktioner for sundhed og velvære </p></div>
   <div class="intro_om_os">
-  <img class="pernille2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/pernille.png" alt="Pernille Blume">
+  <img class="pernille2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/pernille.webp" alt="Pernille Blume">
   <div class="intro_om_os_text">
     <div class="omos">
   <h2>Om Os</h2>
@@ -751,7 +751,7 @@ get_header(); ?>
     <hr>
   </div>
   <div class="forside_hand">
-    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/05/hand_pakke-1.png" alt="">
+    <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/hand_pakke-1.webp" alt="">
   </div>
   </div>
 </section>
