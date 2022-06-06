@@ -204,7 +204,7 @@ button{
                  så vi er helt sikre på at levere hver eneste gang.
             </p>
         </div>
-        <img src="https://ucarecdn.com/bb6f27e9-df38-4daf-8c5c-68934bfd49d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.36.51.png"
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-4.webp"
             alt="">
         <div class="afsnit2">
             <h4>Teknologien</h4>
@@ -217,7 +217,7 @@ button{
                 produkternes effekt.
             </p>
         </div>
-        <img src="https://ucarecdn.com/4c959399-154f-49a7-a416-7f8a2f07069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202022-01-11%20kl.%2009.17.53.png"
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-8.webp"
             alt="">
         <div class="afsnit3">
             <h4>Research</h4>
@@ -229,7 +229,7 @@ button{
                 bio-tilgængelighed.
             </p>
         </div>
-        <img src="https://ucarecdn.com/58fc6808-c0c7-4772-a4ab-acb204ebee3e/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.41.38.png"
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image.webp"
             alt="">
         <div class="afsnit4">
             <h4>Hvordan virker det?</h4>
@@ -281,9 +281,9 @@ button{
         </div>
         </div>
        <div class="imagecontainer-d">
-        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab1.png?_t=1653984776" alt="videnskab1">
-        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab2.png?_t=1653984776" alt="videnskab2">
-        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/videnskab3.png?_t=1653984776" alt="videnskab3">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-4.webp" alt="videnskab1">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-8.webp" alt="videnskab2">
+        <img src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image.webp" alt="videnskab3">
       </div>
     </div>
   

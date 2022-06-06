@@ -129,7 +129,7 @@ color: #7CB5FF;
         padding-top: 200px;
         width: 100vw;
         height: 100vh;
-        background-color: #fff9f1;
+        background-color: #FFFDFC;
         top: 0%;
         left: 100%;
         z-index: 998;
