@@ -108,15 +108,18 @@ get_header(); ?>
     filter: brightness(1);
   }
 
-  [data-index="2"]::after {
+  [data-index="1"]::after {
     content: "";
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/gum_pakke.svg);
     position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: 0;
-    transform: translateY(-30%);
+    height: 30%;
+    top: -30%;
     background-size: 100%;
+    animation-name: animate-up;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
   }
 
   [data-index="2"] {
@@ -236,6 +239,17 @@ get_header(); ?>
 
     100%{
       transform: translateX(-50%) translateY(0px);
+    }
+  }
+
+  @keyframes animate-up {
+    0%{
+      height: 0%;
+      top: 0%;
+    }
+    100%{
+      height: 30%;
+      top: -30%;
     }
   }
 
