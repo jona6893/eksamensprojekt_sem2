@@ -341,7 +341,7 @@ get_header(); ?>
       justify-content: center;
       justify-items: center;
       align-items: center;
-      min-height: 100px;
+      min-height: 200px;
     }
 
     .produkt-navn {
