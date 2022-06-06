@@ -192,7 +192,7 @@ get_header(); ?>
     #splash-section {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
-      height: 200vw;
+      height: 210vw;
     }
 
     .column-left {
@@ -208,6 +208,10 @@ get_header(); ?>
     .se_mere {
       /* bottom: -30vh; */
       display: none;
+    }
+
+    .gum-info {
+      padding-left: 50px;
     }
   }
 
@@ -342,13 +346,14 @@ get_header(); ?>
  
   #find_os .find_os_bar {
     background-image: url(https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/find%20os.png);
-    background-size: 75%;
+    background-size: 100%;
     background-attachment: revert;
     background-repeat: no-repeat;
     background-position: 50%;
     height: 50vh;
     width: 100%;
     background-color: var(--sort);
+    margin-top: 80px;
   }
      /* -------------------- BLOG SEKTION -------------------- */
   #forside_blog .seneste_artikler{
