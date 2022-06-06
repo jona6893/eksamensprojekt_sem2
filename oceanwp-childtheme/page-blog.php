@@ -418,7 +418,7 @@ get_header(); ?>
     <div class="blogpost1">
     <div class="blogpost-container">
       <div class="grid">
-      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_032.png?_t=1654080646" alt="blogbillede1">
+      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/2021_EACE_WEB_032.webp" alt="blogbillede1">
       <div class="tekstogknap">
       <h3>ALT OM ENERGY BOOST</h3>
      <p>Energy Boost var det andet produkt Eace Gum lancerede. Det kom ud i december 2021, lidt over et år efter Vitamin Boost landede i butikkerne. Det er på rekordtid blevet et meget populært tyggegummi og ligger i butikkerne landet over. Her på siden kan du læse alt der er værd at vide om Energy Boost!  Idéen til Energy Boost…</p>
