@@ -196,12 +196,12 @@ button{
     <div class="videntekst">
         <div class="afsnit1">
             <h4>Udviklet og produceret i Danmark</h4>
-            <p>Alle Eace Gum produkter er udviklet og produceret i Danmark. De aktive Ingredienser er nøje udvalgt og
-                af højeste kvalitet, for at sikre at de kan hjælpe dig i din hverdag.
+            <p>Alle Eace Gum produkter er udviklet og produceret i Danmark. De aktive Ingredienser er nøje udvalgt og
+                af højeste kvalitet, for at sikre at de kan hjælpe dig i din hverdag.
 
-                Inden ingredienserne puttes i produkterne testes de seperat forat sikre kvaliteten. Der laves desuden
-                et ”certificate of analysis” på hvert produktions-batch for at sikre produkternes indhold og kvalitet,
-                så vi er helt sikre på at levere hver eneste gang.
+                Inden ingredienserne puttes i produkterne testes de seperat for at sikre kvaliteten. Der laves desuden
+                et ”certificate of analysis” på hvert produktions-batch for at sikre produkternes indhold og kvalitet,
+                 så vi er helt sikre på at levere hver eneste gang.
             </p>
         </div>
         <img src="https://ucarecdn.com/bb6f27e9-df38-4daf-8c5c-68934bfd49d5/-/format/auto/-/preview/3000x3000/-/quality/lighter/Sk%C3%A6rmbillede%202020-03-13%20kl.%2020.36.51.png"
@@ -209,11 +209,11 @@ button{
         <div class="afsnit2">
             <h4>Teknologien</h4>
             <p>
-                Eace Gum bliver lavet med en patenteret kold og tør teknik, som sikrer atnæringsstofferne holder sig
+                Eace Gum bliver lavet med en patenteret kold og tør teknik, som sikrer at næringsstofferne holder sig
                 aktive under produktionen.
 
-                Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at
-                næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre
+                Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at
+                næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre
                 produkternes effekt.
             </p>
         </div>
@@ -222,10 +222,10 @@ button{
         <div class="afsnit3">
             <h4>Research</h4>
             <p>
-                Hos Eace Gum er det essentielt at der er dokumentation for voresprodukters funktionalitet. Derfor
-                benytter vi kun næringsstoffer vis egenskaber er godkendt af European Food Safety Authority (EFSA), og
+                Hos Eace Gum er det essentielt at der er dokumentation for vores produkters funktionalitet. Derfor
+                benytter vi kun næringsstoffer vis egenskaber er godkendt af European Food Safety Authority (EFSA), og
                 hvor der er videnskabelige studier der påviser deres effekt.
-                Desuden er produkterne testet med både stabilitets-studier, udtygnings-tests og næringsstofferne for
+                Desuden er produkterne testet med både stabilitets-studier, udtygnings-tests og næringsstofferne for
                 bio-tilgængelighed.
             </p>
         </div>
@@ -234,9 +234,9 @@ button{
         <div class="afsnit4">
             <h4>Hvordan virker det?</h4>
             <p>
-                Når man tygger Eace Gum, bliver mange af de aktive ingredienser absorberet i mundhulen, også kaldet
+                Når man tygger Eace Gum, bliver mange af de aktive ingredienser absorberet i mundhulen, også kaldet
                 buccal absorbtion.
-                Dette betyder at virkningen af næringsstofferne, som f.eks. koffeiner væsentligt hurtigere, end ved
+                Dette betyder at virkningen af næringsstofferne, som f.eks. koffein er væsentligt hurtigere, end ved
                 andre former for indtag.
             </p>
         </div>
@@ -252,31 +252,31 @@ button{
       <div class="tekstcontainer1-d">
         <div class="afsnit1-d">
         <h4>Udviklet og produceret i Danmark</h4>
-        <p>Alle Eace Gum produkter er udviklet og produceret i Danmark. De aktive Ingredienser er nøje udvalgt og af højeste kvalitet, for at sikre at de kan hjælpe dig i din hverdag. 
+        <p>Alle Eace Gum produkter er udviklet og produceret i Danmark. De aktive Ingredienser er nøje udvalgt og af højeste kvalitet, for at sikre at de kan hjælpe dig i din hverdag. 
 
-          Inden ingredienserne puttes i produkterne testes de seperat forat sikre kvaliteten. Der laves desuden et ”certificate of analysis” på hvert produktions-batch for at sikre produkternes indhold og kvalitet, så vi er helt sikre på at levere hver eneste gang. 
+          Inden ingredienserne puttes i produkterne testes de seperat for at sikre kvaliteten. Der laves desuden et ”certificate of analysis” på hvert produktions-batch for at sikre produkternes indhold og kvalitet, så vi er helt sikre på at levere hver eneste gang. 
         </p>
         </div>
         <div class="afsnit2-d">
           <h4>Teknologi</h4>
           <p>
-            Eace Gum bliver lavet med en patenteret kold og tør teknik, som sikrer atnæringsstofferne holder sig aktive under produktionen. 
+            Eace Gum bliver lavet med en patenteret kold og tør teknik, som sikrer at næringsstofferne holder sig aktive under produktionen. 
             
-            Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre produkternes effekt. 
+            Normalt bliver tyggegummi lavet under høj varme og højt tryk, hvilket ville resultere i at næringsstofferne ville blive inaktive. Derfor er denne teknologi helt essentiel for at sikre produkternes effekt. 
           </p>
         </div>
           <div class="afsnit3-d">
           <h4>Research</h4>
           <p>
-            Hos Eace Gum er det essentielt at der er dokumentation for voresprodukters funktionalitet. Derfor benytter vi kun næringsstoffer vis egenskaber er godkendt af European Food Safety Authority (EFSA), og hvor der er videnskabelige studier der påviser deres effekt. 
-            Desuden er produkterne testet med både stabilitets-studier, udtygnings-tests og næringsstofferne for bio-tilgængelighed. 
+            Hos Eace Gum er det essentielt at der er dokumentation for vores produkters funktionalitet. Derfor benytter vi kun næringsstoffer vis egenskaber er godkendt af European Food Safety Authority (EFSA), og hvor der er videnskabelige studier der påviser deres effekt. 
+            Desuden er produkterne testet med både stabilitets-studier, udtygnings-tests og næringsstofferne for bio-tilgængelighed. 
           </p>
         </div>
         <div class="afsnit4-d">
           <h4>Hvordan virker det?</h4>
           <p>
-            Når man tygger Eace Gum, bliver mange af de aktive ingredienser absorberet i mundhulen, også kaldet buccal absorbtion. 
-            Dette betyder at virkningen af næringsstofferne, som f.eks. koffeiner væsentligt hurtigere, end ved andre former for indtag. 
+            Når man tygger Eace Gum, bliver mange af de aktive ingredienser absorberet i mundhulen, også kaldet buccal absorbtion. 
+            Dette betyder at virkningen af næringsstofferne, som f.eks. koffein er væsentligt hurtigere, end ved andre former for indtag. 
           </p>
         </div>
         </div>
