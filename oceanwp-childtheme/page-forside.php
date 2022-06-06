@@ -284,7 +284,12 @@ get_header(); ?>
     transition: color 0.2s, background-color 0.2s;
   }
 
-  .til_shop_knap:hover, .til_abonnement_knap:hover {
+  .til_shop_knap:hover {
+    color: white;
+    background-color: var(--sort);
+  }
+  
+  .til_abonnement_knap:hover {
     color: var(--sort);
     background-color: white;
   }
