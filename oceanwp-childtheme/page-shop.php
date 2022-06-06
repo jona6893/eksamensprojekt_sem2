@@ -12,7 +12,7 @@
 get_header(); ?>
 
 <style>
-  /* variabel brugt til horisontal scroll som reference tal*/
+  /* variabel brugt til horisontal scroll som reference tal */
   :root{
     --viste-produkter: 6;
   }
@@ -20,6 +20,7 @@ get_header(); ?>
     background-color: #FFFDFC;
   }
 
+  /* #region splashimage */
   #splash-image {
     position: relative;
     background-size: cover;
@@ -56,6 +57,9 @@ get_header(); ?>
     max-width: 40ch
   }
 
+  /* #endregion splashimage */
+
+  /* #region filter */
   #filter-menu {
     gap: 30px;
     display: flex;
@@ -88,6 +92,10 @@ get_header(); ?>
     /* border: 1px var(--sort) solid; */
     box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 20px;
   }
+
+  /* #endregion filter */
+
+  /* #region produkter */
 
   #produkter {
     display: grid;
@@ -208,6 +216,10 @@ get_header(); ?>
     opacity: 0.8;
   }
 
+  /* #endregion produkter */
+
+  /* #region features */
+  
   #features {
     display: flex;
     justify-content: space-around;
@@ -218,6 +230,7 @@ get_header(); ?>
     max-width: 600px;
   }
 
+  /* laver grid om til 4 rækker */
   @media (max-width: 570px) {
     #features {
       gap: 100px;
@@ -241,6 +254,10 @@ get_header(); ?>
     aspect-ratio: 1 / 1;
     width: 80%;
   }
+
+  /* #endregion features */
+
+  /* #region testimonial */
 
   #testimonial {
     position: relative;
@@ -370,6 +387,9 @@ get_header(); ?>
     margin: 0;
   }
 
+  /* #endregion testimonial */
+
+  /* #region pop up */
 
   dialog {
     display: none;
@@ -429,6 +449,7 @@ get_header(); ?>
     height: 48px;
   }
 
+  /* laver grid om til 1 kolonne */
   @media (max-width: 768px) {
     dialog {
       grid-template-rows: 1fr auto;
@@ -454,6 +475,8 @@ get_header(); ?>
       transform: scale(1);
     }
   }
+
+  /* #endregion pop up */
 
 </style>
 
@@ -615,6 +638,7 @@ get_header(); ?>
         visteProdukter = document.getElementById("produkter").childElementCount;
       }
     });
+    //variabel brugt til horisontal scroll som reference tal
     document.querySelector(":root").style.setProperty("--viste-produkter", visteProdukter);
   }
 
@@ -721,4 +745,5 @@ get_header(); ?>
     }
 	});
 </script>
+
 <?php get_footer(); ?>
