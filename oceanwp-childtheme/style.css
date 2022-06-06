@@ -64,6 +64,10 @@ body {
   overflow-x: clip;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 /* max-width på 1200px med 8px padding ude til siderne på mobil */
 .max-width {
   max-width: 1200px;
