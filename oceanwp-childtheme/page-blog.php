@@ -395,15 +395,15 @@ get_header(); ?>
       </div>
     </div>
     <div class="image-container">
-  <img class="grid1" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid1.png?_t=1653994813" alt="grid1">
-<img class="grid2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid2.png?_t=1653994776" alt="grid2">
-<img class="grid3" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid3.png?_t=1653994776" alt="grid3">
-<img class="grid4" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid4.png?_t=1653994776" alt="grid4">
-<img class="grid5" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid5.png?_t=1653994776" alt="grid5">
-<img class="grid6" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid6.png?_t=1653994776" alt="grid6">
-<img class="grid7" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid7.png?_t=1653994776" alt="grid7">
-<img class="grid8" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid8.png?_t=1653994776" alt="grid8">
-<img class="grid9" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/grid9.png?_t=1653994776" alt="grid9">
+  <img class="grid1" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-1.webp" alt="grid1">
+<img class="grid2" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-9.webp" alt="grid2">
+<img class="grid3" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-5.webp" alt="grid3">
+<img class="grid4" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-2.webp" alt="grid4">
+<img class="grid5" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-10.webp" alt="grid5">
+<img class="grid6" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-12.webp" alt="grid6">
+<img class="grid7" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-11.webp" alt="grid7">
+<img class="grid8" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-7.webp" alt="grid8">
+<img class="grid9" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-6.webp" alt="grid9">
   </div>
     </div>
   </section>
@@ -438,7 +438,7 @@ get_header(); ?>
     <div class="blogpost2">
     <div class="blogpost-container">
       <div class="grid">
-      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_051.png?_t=1654080646" alt="blogbillede2">
+      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/2021_EACE_WEB_051.webp" alt="blogbillede2">
      <div class="tekstogknap">
      <h3>Eace Sommerfest</h3>
       <p>Eace Gum inviterer til årets første og fedeste sommerfest! Vi skyder sommeren igang, fejrer at vi igen kan mødes under normale omstændigheder og byder på en aften med live musik, events, festlig stemning under åben himmel, mad og kolde drinks samt dj til langt ud på natten.</p>
@@ -458,7 +458,7 @@ get_header(); ?>
     <div class="blogpost3">
     <div class="blogpost-container">
       <div class="grid">
-      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/themes/oceanwp-childtheme/svg/2021_EACE_WEB_046.png?_t=1654080646" alt="blogbillede3">
+      <img id="blogbillede" src="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/wp-content/uploads/2022/06/image-3.webp" alt="blogbillede3">
       <div class="tekstogknap">
       <h3>NEXT GENERATION MERCH</h3>
       <p>Vi er next generation chewing gum. Nu har vi lavet next generation merch. I samarbejde med Neutral har vi lavet en bæredygtigt merch kollektion i høj kvalitet. Læs meget mere om vores merch kollektion i dette blogindlæg.</p>

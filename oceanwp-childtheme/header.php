@@ -129,7 +129,7 @@ color: #7CB5FF;
         padding-top: 200px;
         width: 100vw;
         height: 100vh;
-        background-color: #fff9f1;
+        background-color: #FFFDFC;
         top: 0%;
         left: 100%;
         z-index: 998;
@@ -151,7 +151,7 @@ color: #7CB5FF;
         position: relative;
         display: flex;
         flex-direction: column;
-        background-color: #fff9f1;
+        background-color: #FFFDFC;
         z-index: 100;
         align-items: center;
         padding: 0;
@@ -174,7 +174,7 @@ color: #7CB5FF;
     </div>
     <div class="menulinks">
         <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/">SHOP</a>
-        <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/">ABONNEMENTER</a>
+        <a href="https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/">ABONNEMENT</a>
         <div class="hover-mig">
             <a href="#">BAG OM EACEGUM</a>
             <img class="arrow-down"
