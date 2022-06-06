@@ -41,7 +41,7 @@ get_header(); ?>
 
   #splash-image div {
     position: absolute;
-    top: 40%;
+    bottom: 20%;
     left: clamp(24px, calc(45% - 240px), 400px);;
     display: grid;
     gap: 20px;

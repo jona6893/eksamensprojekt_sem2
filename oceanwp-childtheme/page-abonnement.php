@@ -44,7 +44,7 @@ get_header(); ?>
   /* container til tekst på splash billede*/
   #splash-image div {
     position: absolute;
-    top: 40%;
+    bottom: 20%;
     left: clamp(24px, calc(30% - 280px), 400px);
     display: grid;
     gap: 20px;
