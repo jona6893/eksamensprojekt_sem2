@@ -270,7 +270,7 @@ get_header(); ?>
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
     min-width: 200px;
-    transition: opacity 0.3s;
+    transition: color 0.2s, background-color 0.2s;
   }
 
   .til_abonnement_knap {
@@ -281,11 +281,12 @@ get_header(); ?>
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
     min-width: 200px;
-    transition: opacity 0.3s;
+    transition: color 0.2s, background-color 0.2s;
   }
 
   .til_shop_knap:hover, .til_abonnement_knap:hover {
-    opacity: 0.8;
+    color: var(--sort);
+    background-color: white;
   }
 
   /* -------------------- DE SORTE BARRER -------------------- */
