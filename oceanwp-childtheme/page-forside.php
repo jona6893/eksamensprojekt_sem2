@@ -259,18 +259,18 @@ get_header(); ?>
     display: flex;
     flex-direction:column;
     gap: 20px;
-    
   }
 
   .til_shop_knap {
     
     font-weight: 400;
     font-style: normal;
-    background-color: transparent;
+    background-color: white;
     color: var(--sort);
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
     min-width: 200px;
+    transition: opacity 0.3s;
   }
 
   .til_abonnement_knap {
@@ -281,6 +281,11 @@ get_header(); ?>
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border: none;
     min-width: 200px;
+    transition: opacity 0.3s;
+  }
+
+  .til_shop_knap:hover, .til_abonnement_knap:hover {
+    opacity: 0.8;
   }
 
   /* -------------------- DE SORTE BARRER -------------------- */
@@ -705,7 +710,7 @@ get_header(); ?>
       <p class="gum-info">Ét tyggegummi indeholder 25% af det anbefalede daglige indtag af 10 essentielle vitaminer: C, D, E, K, B1, B3, B6, B7, B9, B12.</p>
       <div class="splash_button">
         <button class="til_shop_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/shop/";'>Shop Produkter</button>
-        <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Abonnement</button>
+        <button class="til_abonnement_knap" onClick = 'location.href = "https://victor-ly.dk/kea/10_eksamensprojekt/eacegum/abonnement/";'>Opret abonnement</button>
       </div>
 		</div>
 	</div>

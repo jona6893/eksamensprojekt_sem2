@@ -157,6 +157,7 @@ button {
   font-family: "sofia-pro", sans-serif;
   font-style: bold;
   transition: color 0.2s, background-color 0.2s;
+  text-transform: uppercase;
 }
 
 main hr {

@@ -61,7 +61,7 @@ get_header(); ?>
 
   /* #region filter */
   #filter-menu {
-    gap: 30px;
+    gap: 10px;
     display: flex;
     justify-content: space-between;
     max-width: 500px;
