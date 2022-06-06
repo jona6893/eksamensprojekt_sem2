@@ -374,11 +374,13 @@ get_header(); ?>
 
 
 <script>
-
+/* .querySelectorAll vælger alle html element der har samme klasse eller type, og laver et array ud fra dem. */
 const remove = document.querySelectorAll(".remove");
 const pris = document.querySelectorAll(".pris");
 const pro = document.querySelectorAll(".pro");
+/* allPrices = [] - altså et tomt array */
 let allPrices = []
+/* totalvalue = 0 - 0 er et interger(tal) i js, hvis der havde været quotes roundt om "0" havde det været en string(tekst)) */
 let totalvalue = 0
 let creditname = document.querySelector(".cc-navn")
 let creditnumber = document.querySelector(".cc-nummer")
@@ -387,9 +389,12 @@ let credityear = document.querySelector(".cc-yyyy")
 
 console.log(remove)
 
+/* Lytter til når der bliver skrevet i tekst felterne, ved hjælpe af "input". placere derefter det skrivet tekst i det valgt feltet */
 creditname.addEventListener("input", () => {
+        /* $ betyder at der er inde i {} skal være i string form. string er den type tekst som vi skriver i html */
     document.querySelector(".credit-navn").textContent = `${creditname.value}`
 })
+/* gentager det som sker ovenover bag på nogle andre felter. */
 creditnumber.addEventListener("input", () => {
     document.querySelector(".credit-nr").textContent = `${creditnumber.value}`
 })
@@ -410,31 +415,38 @@ credityear.addEventListener("input", () => {
 
 
 console.log(pris)
+/* start funktionen printValue */
 printValue();
 
 function printValue () {
+/* laver vores variabler og nustiller dem */
     allPrices = []
     totalvalue = 0
-
+/* forEach funktion, da "pris" er et array.vi siger altså for hvert element(e) i vores array(pris) skal vi starte en funktion */
 pris.forEach(e =>{
-
-   allPrices.push(parseInt(e.textContent))
+/* ".push er en metode til at skubbe element ind i en array. da "allPrices" er et tomt array, skubber vi hvert element i "pris" ind i "allPrices"  */
+   allPrices.push(parseInt(e.textContent/* "parseInt" tager inholdet i () og laver det om et en Interger(et helt tal i JS).*/))
    console.log(allPrices)
 });
 
 
 allPrices.forEach(e => {
+    /* for hvert element i "allPrices" skal vi pluse dem sammen og tilføje dem til "totalvalue */
     totalvalue += e
     console.log(totalvalue)
 });
-
+    /* Print indholdet af "totalvalue i string format efterfulgt af DKK" */
     document.querySelector(".totalnr").textContent = `${totalvalue} DKK`;
 };
-
+/* fjerner det valgt element fra siden ved at tilføje klassen ".disapear" */
 remove.forEach((e, i) => {
     e.addEventListener("click", () => {
-    pris[i].textContent = "0"    
+    /* i er index nummert i vores array "remove", hvert element i et array har et index nummer. det første element i et array har index nummert 0 derefter tæller den for hvert element.  */
+    pris[i].textContent = "0" 
+    /* [] bruges til at vælge et element inde i et array. Hvis vi gerne ville have element nummer 2, skriver vi "pris[1]", da index nummert start fra 0 af. 
+  i respræsentere altså index nmummert på det valgt element fra arrayen "remove" */
     pro[i].classList.add("disapear")
+    /* start vores printValue funktion. */
     printValue();
 })
 })
