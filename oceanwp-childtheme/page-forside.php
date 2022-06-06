@@ -119,7 +119,7 @@ get_header(); ?>
     animation-name: animate-up;
     animation-iteration-count: 1;
     animation-duration: 0.3s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
   }
 
   [data-index="2"] {
