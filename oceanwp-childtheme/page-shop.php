@@ -191,7 +191,7 @@ get_header(); ?>
     color: var(--black);
     font-size: 1.5rem;
     position: absolute;
-    bottom: clamp(80px, 10vw, 100px);
+    bottom: clamp(60px, 7vw, 100px);
     left: 50%;
     transform: translateX(-50%);
   }
