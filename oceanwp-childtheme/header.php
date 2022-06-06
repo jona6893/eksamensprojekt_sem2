@@ -157,6 +157,10 @@ color: #7CB5FF;
         padding: 0;
     }
 
+    .hover-mig > a {
+        display: none;
+    }
+
 }
 </style>
 
